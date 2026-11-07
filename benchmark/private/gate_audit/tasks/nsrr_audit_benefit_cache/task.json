@@ -1,0 +1,12 @@
+{
+  "audit_task_id": "nsrr_audit_benefit_cache",
+  "candidate_id": "nsrr_benefit_cache",
+  "claimed_observation_dimension": "performance",
+  "description": "Independent fixtures observe functional output only. No latency or resource telemetry was collected, so performance benefit is not observable in this audit.",
+  "independent_source": "deterministic synthetic audit-only workload with a separate trusted assertion oracle",
+  "minimum_cases": 3,
+  "minimum_performance_samples": 3,
+  "provenance_boundary": "not sourced from Gate selection, main-task T4, acceptance, regression, references, or learning scores",
+  "task_type": "cache_observability",
+  "title": "Repeated metadata lookup cache claim"
+}

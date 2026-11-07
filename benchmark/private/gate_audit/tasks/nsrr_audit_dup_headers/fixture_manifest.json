@@ -1,0 +1,47 @@
+{
+  "fixture_version": "nsrr-audit-sandbox-fixture-v1",
+  "audit_task_id": "nsrr_audit_dup_headers",
+  "candidate_id": "nsrr_dup_headers",
+  "repository_id": "nsrr_audit_dup_headers",
+  "code_dir": "private/gate_audit/tasks/nsrr_audit_dup_headers/fixture/code",
+  "reference_dir": "private/gate_audit/tasks/nsrr_audit_dup_headers/fixture/reference",
+  "private_tests_dir": "private/gate_audit/tasks/nsrr_audit_dup_headers/fixture/private_tests",
+  "task_file": "private/gate_audit/tasks/nsrr_audit_dup_headers/fixture/task.md",
+  "trusted_tests_file": "private/gate_audit/tasks/nsrr_audit_dup_headers/trusted_tests.json",
+  "baseline_skill": "gate_cases/nsrr_dup_headers/baseline/SKILL.md",
+  "candidate_skill": "gate_cases/nsrr_dup_headers/candidate/SKILL.md",
+  "acceptance_command": [
+    "python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "protected_acceptance_paths": {
+    "tests/test_nsrr_acceptance.py": "private/gate_audit/tasks/nsrr_audit_dup_headers/fixture/private_tests/test_nsrr_acceptance.py",
+    "tests/gate_cases.json": "private/gate_audit/tasks/nsrr_audit_dup_headers/fixture/private_tests/gate_cases.json"
+  },
+  "audit_use_only": true,
+  "independent_of_main_tasks": true,
+  "main_task_score_eligible": false,
+  "sandbox_task_spec_fields": [
+    "acceptance_command",
+    "prompt",
+    "repo_path",
+    "repository_id"
+  ],
+  "sandbox_host_adapter_fields": [
+    "commit",
+    "protected_acceptance_paths"
+  ],
+  "repo_template": "private/gate_audit/tasks/nsrr_audit_dup_headers/fixture/code",
+  "prompt": "# Request header view utility\n\nImplement task_module.run(payload: dict) -> dict for preparing a request-header view. The payload contains a header mapping. Return the normalized header mapping under the public headers field and retain each associated value exactly. Do not mutate the payload.\n",
+  "acceptance_files": [
+    "tests/test_nsrr_acceptance.py",
+    "tests/gate_cases.json"
+  ],
+  "commit": "8d0f980233ac6f7af5f2072561a634290481ee21",
+  "fixed_input_fingerprint": "e54631f6656e501110b5b53ed203b1d90173f4bbce404107a96ffb7a8c2a2db8"
+}

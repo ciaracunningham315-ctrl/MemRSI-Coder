@@ -1,0 +1,22 @@
+{
+  "task_id": "stale_version",
+  "prompt": "Update should_retry(status) in retry_policy.py. Check prior retry policy history from earlier tasks, and if historical policy conflicts with the current authoritative policy in docs/RETRY_POLICY.md, follow the current authoritative policy.",
+  "acceptance_command": [
+    "python",
+    "-I",
+    "-B",
+    "tests/prevalidation_acceptance.py"
+  ],
+  "acceptance_file": "acceptance.py",
+  "workspace": "workspace",
+  "reference_workspace": "reference",
+  "expected_memory_use": "Reject a stale-policy candidate when the current repository document has a newer version.",
+  "training_prompt": "Implement the archived v2 retry exercise in retry_policy_v2.py from its task description. Keep it isolated from the current should_retry implementation.",
+  "training_workspace": "training_workspace",
+  "training_acceptance_command": [
+    "python",
+    "-I",
+    "-B",
+    "tests/training_checks.py"
+  ]
+}

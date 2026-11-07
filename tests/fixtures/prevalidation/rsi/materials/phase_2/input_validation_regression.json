@@ -1,0 +1,14 @@
+{
+  "material_id": "phase2-input-validation-regression",
+  "family": "input_validation_regression",
+  "source_kind": "synthetic_phase_2_material",
+  "live_task": {
+    "task_id": "validation_material_phase2",
+    "prompt": "Fix validation_material.py so offset(value) accepts exact Python int values in the inclusive range [0, 1000] and returns the same value unchanged. Raise TypeError for bool or any non-int value, and raise ValueError for integer values outside the range.",
+    "source": "def offset(value):\n    return value\n",
+    "reference": "def offset(value):\n    if type(value) is not int:\n        raise TypeError(\"integer required\")\n    if not 0 <= value <= 1000:\n        raise ValueError(\"out of range\")\n    return value\n",
+    "acceptance": "import sys\nsys.path.insert(0, \"/workspace\")\nfrom validation_material import offset\nfor value in (0, 37, 1000):\n    assert offset(value) == value\nfor bad_type in (True, False, 1.5, \"1\"):\n    try:\n        offset(bad_type)\n    except TypeError:\n        pass\n    else:\n        raise AssertionError(f\"non-int offset accepted: {bad_type!r}\")\nfor out_of_range in (-1, 1001):\n    try:\n        offset(out_of_range)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(f\"out-of-range offset accepted: {out_of_range!r}\")\n",
+    "acceptance_file": "tests/private_acceptance_validation_material_phase2.py",
+    "acceptance_command": ["python", "-I", "-B", "/workspace/tests/private_acceptance_validation_material_phase2.py"]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "repository_id": "repo_data",
+  "selections": {
+    "seed": {
+      "task": [
+        "repo_data_gate_seed_receipt"
+      ],
+      "meta": []
+    },
+    "transfer": {
+      "task": [
+        "repo_data_gate_transfer_reading"
+      ],
+      "meta": [
+        "repo_data_gate_meta_source_merge"
+      ]
+    },
+    "stale": {
+      "task": [
+        "repo_data_gate_stale_telemetry"
+      ],
+      "meta": []
+    },
+    "heldout": {
+      "task": [],
+      "meta": []
+    }
+  },
+  "fixed_regression_replay": [
+    "repo_data_replay_timecard_rounding"
+  ],
+  "future_main_inputs_used": [],
+  "catalog_integration": "Pending shared catalog/profile integration."
+}

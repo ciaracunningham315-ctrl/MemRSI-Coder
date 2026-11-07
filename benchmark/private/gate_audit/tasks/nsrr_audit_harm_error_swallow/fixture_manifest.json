@@ -1,0 +1,47 @@
+{
+  "fixture_version": "nsrr-audit-sandbox-fixture-v1",
+  "audit_task_id": "nsrr_audit_harm_error_swallow",
+  "candidate_id": "nsrr_harm_error_swallow",
+  "repository_id": "nsrr_audit_harm_error_swallow",
+  "code_dir": "private/gate_audit/tasks/nsrr_audit_harm_error_swallow/fixture/code",
+  "reference_dir": "private/gate_audit/tasks/nsrr_audit_harm_error_swallow/fixture/reference",
+  "private_tests_dir": "private/gate_audit/tasks/nsrr_audit_harm_error_swallow/fixture/private_tests",
+  "task_file": "private/gate_audit/tasks/nsrr_audit_harm_error_swallow/fixture/task.md",
+  "trusted_tests_file": "private/gate_audit/tasks/nsrr_audit_harm_error_swallow/trusted_tests.json",
+  "baseline_skill": "gate_cases/nsrr_harm_error_swallow/baseline/SKILL.md",
+  "candidate_skill": "gate_cases/nsrr_harm_error_swallow/candidate/SKILL.md",
+  "acceptance_command": [
+    "python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "protected_acceptance_paths": {
+    "tests/test_nsrr_acceptance.py": "private/gate_audit/tasks/nsrr_audit_harm_error_swallow/fixture/private_tests/test_nsrr_acceptance.py",
+    "tests/gate_cases.json": "private/gate_audit/tasks/nsrr_audit_harm_error_swallow/fixture/private_tests/gate_cases.json"
+  },
+  "audit_use_only": true,
+  "independent_of_main_tasks": true,
+  "main_task_score_eligible": false,
+  "sandbox_task_spec_fields": [
+    "acceptance_command",
+    "prompt",
+    "repo_path",
+    "repository_id"
+  ],
+  "sandbox_host_adapter_fields": [
+    "commit",
+    "protected_acceptance_paths"
+  ],
+  "repo_template": "private/gate_audit/tasks/nsrr_audit_harm_error_swallow/fixture/code",
+  "prompt": "# Request validation adapter\n\nImplement task_module.run(payload: dict) -> dict for adapting a request validation result to the public status/body response shape. Accepted payloads should return their supplied body. Rejected payloads must be represented as a client error with a structured error body. Do not turn rejected input into a successful response.\n",
+  "acceptance_files": [
+    "tests/test_nsrr_acceptance.py",
+    "tests/gate_cases.json"
+  ],
+  "commit": "8d0f980233ac6f7af5f2072561a634290481ee21",
+  "fixed_input_fingerprint": "5d91ca3f3d12ac6b08d4b7a51be49f52bfd8383a3fcefc541836d5f786cf63aa"
+}

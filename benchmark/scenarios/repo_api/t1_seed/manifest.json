@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "task_id": "repo_api_t1",
+  "repository_id": "repo_api",
+  "stage": "seed",
+  "code_dir": "scenarios/repo_api/t1_seed/code",
+  "task_file": "scenarios/repo_api/t1_seed/task.md",
+  "private_tests_dir": "private/acceptance/repo_api/t1_seed",
+  "regression_tests_dir": "private/regression/repo_api/t1_seed",
+  "reference_dir": "private/references/repo_api/t1_seed/code",
+  "acceptance_command": [
+    "python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests"
+  ],
+  "representative_bad_patches": [
+    {
+      "name": "skip_validation",
+      "category": "remove_validation",
+      "overlay_dir": "private/references/repo_api/t1_seed/bad_patches/skip_validation"
+    },
+    {
+      "name": "swallow_failure",
+      "category": "swallow_exception",
+      "overlay_dir": "private/references/repo_api/t1_seed/bad_patches/swallow_failure"
+    },
+    {
+      "name": "hardcode_example",
+      "category": "hardcode",
+      "overlay_dir": "private/references/repo_api/t1_seed/bad_patches/hardcode_example"
+    }
+  ],
+  "runtime": {
+    "python_minimum": "3.10",
+    "dependencies": []
+  },
+  "git_stage_package": "git_stage_packages/repo_api_t1_seed.tar.gz",
+  "visible_head_sha": "edfc6fd7007b585d7f34fe7d1f7ec6aa1635574b",
+  "allowed_ancestor_shas": [],
+  "git_object_shas": [
+    "177140d538ee48eb80dd435aff867a7fd4aec942",
+    "23a8c1c17959682ab89072d2c8b98f3fd6a04e7f",
+    "558147a598accaf59d7763f2014ea3f60e2834d5",
+    "5d400cc6b35cc845491d5b4e790545251ba2a7f7",
+    "6c6f88d89168f410d0d9c466b96ab6ea4c8f4fcb",
+    "726794106069d59621c98d863ddcf849af40faaa",
+    "83c455a80df3a9d761b7627f735afd49ca16d050",
+    "8d9c2d3ccb5419160450183f0929155ef477b7e3",
+    "925783dbbeb363b37d26c66bc7a54fd5a78820a4",
+    "a606fda2d3b57f56daa7c456072b1af9164801ce",
+    "be6a29a70a84bb7aa3b931376837f422ab7e5a41",
+    "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "eb6aa980d97af6075c500c191812030bdd930784",
+    "edfc6fd7007b585d7f34fe7d1f7ec6aa1635574b",
+    "ee513ef6c838f9cd641788ce683e8dca4d2c94fa",
+    "ff2788ee8e4b1eab0baaf4da755bf572abf87485"
+  ],
+  "code_snapshot_sha256": "c8e95d7e401b92a989ad878719902a5c2def0ea659ef45f0b178c33561052733",
+  "git_stage_package_sha256": "d8095d65a1c7fe17ba0a07d06a726ebd082a4cc32ebad7cca32af2849a100cbc",
+  "dataset_revision": "repo_api_contracts_v2_2026-11-06",
+  "public_contract_file": "docs/api-contract.md",
+  "cumulative_routes": [
+    "/health",
+    "/inventory",
+    "/reservations"
+  ],
+  "reference_ablation_note": "Reference-only file ablations demonstrate independent obligations in this implementation; scoring accepts any implementation satisfying observable contracts and never requires a file count."
+}

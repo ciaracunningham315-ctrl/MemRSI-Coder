@@ -1,0 +1,11 @@
+{
+  "audit_task_id": "nsrr_audit_stale_timezone",
+  "baseline_policy": "gate_cases/nsrr_stale_timezone/baseline/policy.json",
+  "baseline_skill": "gate_cases/nsrr_stale_timezone/baseline/SKILL.md",
+  "candidate_id": "nsrr_stale_timezone",
+  "candidate_policy": "gate_cases/nsrr_stale_timezone/candidate/policy.json",
+  "candidate_skill": "gate_cases/nsrr_stale_timezone/candidate/SKILL.md",
+  "candidate_type": "stale",
+  "source_provenance": "independently authored synthetic Skill revision and workload; not derived from main-task scores or Gate-selection results",
+  "title": "Outdated UTC assumption for offset timestamps"
+}

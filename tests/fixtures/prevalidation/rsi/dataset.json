@@ -1,0 +1,47 @@
+{
+  "dataset_id": "evocode-rsi-prevalidation-v3",
+  "execution_claim": "synthetic_fixture_preflight_only",
+  "sequence_design": {
+    "phase_1": "two learning materials per family run sequentially through normal HTTP Agent tasks with idle synchronization after each task",
+    "phase_2": "two independent phase_2 materials per family run sequentially through normal HTTP Agent tasks after phase_1 reaches an idle boundary",
+    "selection": "held by the service for automatic candidate evaluation and never run as a phase task",
+    "held_out": "four frozen tasks (two per family) cloned independently from each branch snapshot after both training phases finish"
+  },
+  "families": {
+    "api_compatibility": {
+      "learning": [
+        "learning-api-compatibility",
+        "learning-api-optional-scheme-compatibility"
+      ],
+      "phase_2": [
+        "phase2-api-compatibility",
+        "phase2-api-request-headers"
+      ],
+      "selection": [
+        "selection-api-compatibility"
+      ],
+      "held_out": [
+        "api_compatibility_01",
+        "api_compatibility_02"
+      ]
+    },
+    "input_validation_regression": {
+      "learning": [
+        "learning-input-validation-regression",
+        "learning-namespace-input-validation"
+      ],
+      "phase_2": [
+        "phase2-input-validation-regression",
+        "phase2-input-page-window"
+      ],
+      "selection": [
+        "selection-input-validation-regression"
+      ],
+      "held_out": [
+        "input_validation_regression_01",
+        "input_validation_regression_02"
+      ]
+    }
+  },
+  "split_policy": "learning, phase_2, selection, and held-out identifiers are disjoint; each family has two learning and two phase_2 live Agent tasks to reach batch_task_count=2 in both phases; phase_2 materials are not used as selection evaluator examples; held-out code and acceptance are never used to construct Meta-Skills or Task Skills"
+}

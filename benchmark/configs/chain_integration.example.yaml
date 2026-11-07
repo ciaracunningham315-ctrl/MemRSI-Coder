@@ -1,0 +1,72 @@
+# Copy to chain_integration.local.yaml and set environment variables locally.
+# Do not put API keys or account-specific endpoints in this file.
+data_dir: .runtime/chain_integration
+
+models:
+  local:
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    model_id: qwen3.8-flash
+    api_key_env: QWEN_API_KEY
+    max_context_tokens: 131072
+    max_output_tokens: 8192
+    timeout: 120
+    thinking: disabled
+  evolution:
+    base_url: https://api.deepseek.com/v1
+    model_id: deepseek-flash
+    api_key_env: EVOLUTION_API_KEY
+    max_context_tokens: 131072
+    max_output_tokens: 8192
+    timeout: 120
+
+raw_rag:
+  enabled: true
+  index_when_disabled: false
+  background_indexing: false
+  qdrant_url: http://127.0.0.1:6333
+  collection: evocode_benchmark_example
+  embedding_base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+  embedding_model: qwen3.7-text-embedding-flash
+  embedding_api_key_env: QWEN_API_KEY
+  embedding_dimensions: 1024
+  rerank_enabled: true
+  rerank_url: https://dashscope.aliyuncs.com/api/v1/services/rerank/text-rerank/text-rerank
+  rerank_model: qwen3.7-text-rerank
+  rerank_api_key_env: QWEN_API_KEY
+  rerank_provider: dashscope
+  rerank_top_k: 5
+  dense_top_k: 5
+  final_evidence_count: 3
+  max_context_tokens: 131072
+
+skills:
+  enabled: true
+  max_loaded_skills: 3
+
+evolution:
+  enabled: true
+  auto_trigger_enabled: false
+  auto_evaluate: false
+  auto_publish: false
+  freeze_meta_skill: false
+  proposal_format: json_object
+  allow_remote_code_context: true
+  batch_task_count: 8
+  similar_issue_threshold: 3
+  meta_review_after_runs: 25
+  sandbox_image: python:3.12-slim
+  timeout: 300
+  target_metric: tool_calls
+
+runtime:
+  max_tool_calls: 80
+  max_turns: 40
+  max_replans: 3
+  tool_timeout: 120
+  planner_context_tokens: 131072
+  coder_context_tokens: 131072
+  checkpoint_every_events: 30
+  execution_backend: docker
+  docker_image: python:3.12-slim
+  max_output_chars: 24000
+  context_safety_margin_tokens: 3000

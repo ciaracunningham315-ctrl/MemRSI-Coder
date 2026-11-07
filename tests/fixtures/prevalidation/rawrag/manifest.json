@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "name": "EvoCode Raw-RAG prevalidation dataset",
+  "task_count": 4,
+  "design": "Four held-out tasks. Each live task is evaluated as an aligned ON/OFF pair using the same task spec and workspace template.",
+  "provenance": "These authored fixtures contain no input training traces or fabricated run results. The black-box runner submits warmup and held-out tasks through independent public EvoCode API instances and records their real outcomes.",
+  "tasks": [
+    {
+      "task_id": "convention_reuse",
+      "task_spec": "convention_reuse/task.json",
+      "workspace": "convention_reuse/workspace",
+      "reference_workspace": "convention_reuse/reference",
+      "acceptance_file": "convention_reuse/acceptance.py",
+      "expected_memory_use": "Reuse an observed repository convention for three-part cache keys.",
+      "training_workspace": "convention_reuse/training_workspace",
+      "training_prompt": "Add session_cache_key(session_id) using the established identity namespace convention already used in this project.",
+      "training_acceptance_command": [
+        "python",
+        "-I",
+        "-B",
+        "tests/training_checks.py"
+      ],
+      "training_scope": "same_project_mapped"
+    },
+    {
+      "task_id": "similar_bug_transfer",
+      "task_spec": "similar_bug_transfer/task.json",
+      "workspace": "similar_bug_transfer/workspace",
+      "reference_workspace": "similar_bug_transfer/reference",
+      "acceptance_file": "similar_bug_transfer/acceptance.py",
+      "expected_memory_use": "Transfer a previously observed header-normalization fix to a similar case.",
+      "training_workspace": "similar_bug_transfer/training_workspace",
+      "training_prompt": "Update get_header(headers, name) to read request IDs correctly from the legacy adapter.",
+      "training_acceptance_command": [
+        "python",
+        "-I",
+        "-B",
+        "tests/training_checks.py"
+      ],
+      "training_scope": "same_project_mapped"
+    },
+    {
+      "task_id": "stale_version",
+      "task_spec": "stale_version/task.json",
+      "workspace": "stale_version/workspace",
+      "reference_workspace": "stale_version/reference",
+      "acceptance_file": "stale_version/acceptance.py",
+      "expected_memory_use": "Reject a stale-policy candidate when the current repository document has a newer version.",
+      "training_workspace": "stale_version/training_workspace",
+      "training_prompt": "Implement the archived v2 retry exercise in retry_policy_v2.py from its task description. Keep it isolated from the current should_retry implementation.",
+      "training_acceptance_command": [
+        "python",
+        "-I",
+        "-B",
+        "tests/training_checks.py"
+      ],
+      "training_scope": "same_project_mapped"
+    },
+    {
+      "task_id": "wrong_scope",
+      "task_spec": "wrong_scope/task.json",
+      "workspace": "wrong_scope/workspace",
+      "reference_workspace": "wrong_scope/reference",
+      "acceptance_file": "wrong_scope/acceptance.py",
+      "expected_memory_use": "Reject cross-repository evidence even when its text looks relevant.",
+      "training_workspace": "wrong_scope/training_workspace",
+      "training_prompt": "In the current workspace, update visible_evidence in evidence.py to follow this repository's README: return the shared pool without filtering out records from other repositories.",
+      "training_acceptance_command": [
+        "python",
+        "-I",
+        "-B",
+        "tests/training_checks.py"
+      ],
+      "training_scope": "foreign_scope_unmapped"
+    }
+  ]
+}

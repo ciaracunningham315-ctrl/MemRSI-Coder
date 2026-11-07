@@ -1,0 +1,22 @@
+{
+  "task_id": "convention_reuse",
+  "prompt": "Fix profile_cache_key(user_id) in cache_keys.py so it prepends the established project three-part cache key namespace prefix used in earlier session cache work, and keep the helper pure.",
+  "acceptance_command": [
+    "python",
+    "-I",
+    "-B",
+    "tests/prevalidation_acceptance.py"
+  ],
+  "acceptance_file": "acceptance.py",
+  "workspace": "workspace",
+  "reference_workspace": "reference",
+  "expected_memory_use": "Reuse an observed repository convention for three-part cache keys.",
+  "training_prompt": "Add session_cache_key(session_id) using the established identity namespace convention already used in this project.",
+  "training_workspace": "training_workspace",
+  "training_acceptance_command": [
+    "python",
+    "-I",
+    "-B",
+    "tests/training_checks.py"
+  ]
+}

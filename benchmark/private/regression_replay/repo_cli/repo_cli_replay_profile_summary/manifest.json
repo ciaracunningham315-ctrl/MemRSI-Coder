@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "task_id": "repo_cli_replay_profile_summary",
+  "repository_id": "repo_cli",
+  "stage": "seed",
+  "kind": "regression",
+  "available_after_stage": "seed",
+  "latest_mechanism_stage": "seed",
+  "independent_of_main_tasks": true,
+  "code_dir": "private/regression_replay/repo_cli/repo_cli_replay_profile_summary/code",
+  "task_file": "private/regression_replay/repo_cli/repo_cli_replay_profile_summary/task.md",
+  "private_tests_dir": "private/regression_replay/repo_cli/repo_cli_replay_profile_summary/acceptance",
+  "regression_tests_dir": "private/regression_replay/repo_cli/repo_cli_replay_profile_summary/regression",
+  "reference_dir": "private/regression_replay/repo_cli/repo_cli_replay_profile_summary/reference/code",
+  "acceptance_command": [
+    "python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "mechanisms": [
+    "per_option_source_precedence",
+    "strict_bounded_integer",
+    "validate_before_mutation"
+  ],
+  "future_main_inputs_used": [],
+  "mechanism_trace": {
+    "topic": "configuration_source_precedence_and_parameter_bounds",
+    "stage_boundary": "seed",
+    "future_main_inputs_used": [],
+    "fixture_origin": "independently authored repo_cli gate data"
+  },
+  "fingerprints": {
+    "code_dir": {
+      "cli/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "cli/__main__.py": "5be35d80fa32d64992f2c2191f1e28239517ff6573f1d5b97f80f6195ee70278",
+      "cli/app.py": "22404ac5f01b79eb575ca0fe60c119e07c5804ca06aa254b961e05d2bd92a463",
+      "cli/config.py": "957f33c5fcac1d63d1794b93c1c232c0a5669bc6cea7675faed0560813a4f957",
+      "cli/state.py": "75b7eb1ad52a112b61e9dec857c2d343e91b377efa51cc4733b69e18fe400060",
+      "cli/validation.py": "aa97f2273f06a6134741ed01a32f17d89a72ca1e1fe3572eda899e82f0a763f9",
+      "docs/contract.md": "09270c081d08a4571c76eff0b47dbbfd93329b3363e64600dc3d3feb8bdc0fbd",
+      "tests/test_public.py": "75fdd4c20f277a1b7d34e23dae0e94c4aae114116373958ca6d64addbbf5fead"
+    },
+    "private_tests_dir": {
+      "test_private_gate.py": "c3fdc3f850624efe6981cde0ccf33dd5e62ccc2bccf7c9a1fa85b94c95b764af"
+    },
+    "regression_tests_dir": {
+      "test_routes.py": "af6f2476b70039d3667c0f87918a23f87ae1bfcd2637540f9565af929b554464"
+    },
+    "reference_dir": {
+      "cli/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "cli/__main__.py": "5be35d80fa32d64992f2c2191f1e28239517ff6573f1d5b97f80f6195ee70278",
+      "cli/app.py": "22404ac5f01b79eb575ca0fe60c119e07c5804ca06aa254b961e05d2bd92a463",
+      "cli/config.py": "084158ff7d8980304337b30d46079da2cd430728ea23befa1c3fca0036071593",
+      "cli/state.py": "75b7eb1ad52a112b61e9dec857c2d343e91b377efa51cc4733b69e18fe400060",
+      "cli/validation.py": "aa97f2273f06a6134741ed01a32f17d89a72ca1e1fe3572eda899e82f0a763f9",
+      "docs/contract.md": "09270c081d08a4571c76eff0b47dbbfd93329b3363e64600dc3d3feb8bdc0fbd",
+      "tests/test_public.py": "75fdd4c20f277a1b7d34e23dae0e94c4aae114116373958ca6d64addbbf5fead"
+    },
+    "task_file": "12de4dbe105d9c7ce836d964dad6fc7e9da7bd9ecbb5447209bcffc1693497ca"
+  }
+}

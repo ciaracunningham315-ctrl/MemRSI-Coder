@@ -1,0 +1,203 @@
+{
+  "task_id": "repo_cli_gate_stale_release",
+  "manifest": "private/gate_selection/repo_cli/repo_cli_gate_stale_release/manifest.json",
+  "kind": "task",
+  "stage": "stale",
+  "checks": {
+    "baseline_public_passes": true,
+    "baseline_target_fails": true,
+    "baseline_regression_passes": true,
+    "reference_all_passes": true
+  },
+  "passed": true,
+  "manifest_sha256": "f570266d239360425359f4fb854f61fcffcb3bf5e8c38947f2022b4516426c3e",
+  "fingerprints": {
+    "code_dir": {
+      "cli/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "cli/__main__.py": "5be35d80fa32d64992f2c2191f1e28239517ff6573f1d5b97f80f6195ee70278",
+      "cli/app.py": "cb837e34178e01307c7f579a685f82a306e6c581813750f70589625cfff4bbe1",
+      "cli/config.py": "c571c5fed57edd151def5e85857e1e6943dc82d22c53254cf7e571ccc1e159b3",
+      "cli/state.py": "75b7eb1ad52a112b61e9dec857c2d343e91b377efa51cc4733b69e18fe400060",
+      "cli/validation.py": "aa97f2273f06a6134741ed01a32f17d89a72ca1e1fe3572eda899e82f0a763f9",
+      "docs/contract.md": "c83183489f1f919b557612143f0d659367521922bb094d41a73c7babfbeee2e4",
+      "tests/test_public.py": "1ffd494de3faca47d4c0bcff5be314444d0e9e978258e902809ed34a66f44f4b"
+    },
+    "private_tests_dir": {
+      "test_private_gate.py": "6aad06a1a88a2b940353c881e81c02485833495b46e88cc69cba994201ddd360"
+    },
+    "regression_tests_dir": {
+      "test_routes.py": "909b7c1290510b5a1a5ed08c0486ad4ef19ff44f5b040455d44c45ba27a64f69"
+    },
+    "reference_dir": {
+      "cli/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "cli/__main__.py": "5be35d80fa32d64992f2c2191f1e28239517ff6573f1d5b97f80f6195ee70278",
+      "cli/app.py": "cb837e34178e01307c7f579a685f82a306e6c581813750f70589625cfff4bbe1",
+      "cli/config.py": "bc0c1d38d419caccddb4de589dbab420de92c5d23cbabad61ee7add0e6337c46",
+      "cli/state.py": "75b7eb1ad52a112b61e9dec857c2d343e91b377efa51cc4733b69e18fe400060",
+      "cli/validation.py": "aa97f2273f06a6134741ed01a32f17d89a72ca1e1fe3572eda899e82f0a763f9",
+      "docs/contract.md": "c83183489f1f919b557612143f0d659367521922bb094d41a73c7babfbeee2e4",
+      "tests/test_public.py": "1ffd494de3faca47d4c0bcff5be314444d0e9e978258e902809ed34a66f44f4b"
+    },
+    "task_file": "c66dbdf9511320ba58d5a7dbc0f4d4dbb8c1c22fb37ca6a1f64fc1813139e383"
+  },
+  "commands": {
+    "baseline": {
+      "public": {
+        "argv": [
+          "python",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-v"
+        ],
+        "cwd": ".runtime/gate_qualification_f3f212914a9a4d6885961baac1df3542/repo_cli_gate_stale_release/baseline/public",
+        "exit_code": 0,
+        "timed_out": false,
+        "error": null,
+        "duration_seconds": 0.0397,
+        "tests_run": 1,
+        "test_failures": 0,
+        "test_errors": 0
+      },
+      "target": {
+        "argv": [
+          "python",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-v"
+        ],
+        "cwd": ".runtime/gate_qualification_f3f212914a9a4d6885961baac1df3542/repo_cli_gate_stale_release/baseline/target",
+        "exit_code": 1,
+        "timed_out": false,
+        "error": null,
+        "duration_seconds": 0.0407,
+        "tests_run": 3,
+        "test_failures": 1,
+        "test_errors": 0
+      },
+      "regression": {
+        "argv": [
+          "python",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-v"
+        ],
+        "cwd": ".runtime/gate_qualification_f3f212914a9a4d6885961baac1df3542/repo_cli_gate_stale_release/baseline/regression",
+        "exit_code": 0,
+        "timed_out": false,
+        "error": null,
+        "duration_seconds": 0.0401,
+        "tests_run": 2,
+        "test_failures": 0,
+        "test_errors": 0
+      },
+      "combined": {
+        "argv": [
+          "python",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-v"
+        ],
+        "cwd": ".runtime/gate_qualification_f3f212914a9a4d6885961baac1df3542/repo_cli_gate_stale_release/baseline/combined",
+        "exit_code": 1,
+        "timed_out": false,
+        "error": null,
+        "duration_seconds": 0.0393,
+        "tests_run": 4,
+        "test_failures": 1,
+        "test_errors": 0
+      }
+    },
+    "reference": {
+      "public": {
+        "argv": [
+          "python",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-v"
+        ],
+        "cwd": ".runtime/gate_qualification_f3f212914a9a4d6885961baac1df3542/repo_cli_gate_stale_release/reference/public",
+        "exit_code": 0,
+        "timed_out": false,
+        "error": null,
+        "duration_seconds": 0.0391,
+        "tests_run": 1,
+        "test_failures": 0,
+        "test_errors": 0
+      },
+      "target": {
+        "argv": [
+          "python",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-v"
+        ],
+        "cwd": ".runtime/gate_qualification_f3f212914a9a4d6885961baac1df3542/repo_cli_gate_stale_release/reference/target",
+        "exit_code": 0,
+        "timed_out": false,
+        "error": null,
+        "duration_seconds": 0.0392,
+        "tests_run": 3,
+        "test_failures": 0,
+        "test_errors": 0
+      },
+      "regression": {
+        "argv": [
+          "python",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-v"
+        ],
+        "cwd": ".runtime/gate_qualification_f3f212914a9a4d6885961baac1df3542/repo_cli_gate_stale_release/reference/regression",
+        "exit_code": 0,
+        "timed_out": false,
+        "error": null,
+        "duration_seconds": 0.0372,
+        "tests_run": 2,
+        "test_failures": 0,
+        "test_errors": 0
+      },
+      "combined": {
+        "argv": [
+          "python",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-v"
+        ],
+        "cwd": ".runtime/gate_qualification_f3f212914a9a4d6885961baac1df3542/repo_cli_gate_stale_release/reference/combined",
+        "exit_code": 0,
+        "timed_out": false,
+        "error": null,
+        "duration_seconds": 0.0407,
+        "tests_run": 4,
+        "test_failures": 0,
+        "test_errors": 0
+      }
+    }
+  },
+  "model_calls": 0,
+  "formal_results": false
+}

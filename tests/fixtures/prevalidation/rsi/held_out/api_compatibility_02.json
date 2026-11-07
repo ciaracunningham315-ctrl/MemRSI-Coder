@@ -1,0 +1,11 @@
+{
+  "task_id": "api_compatibility_02",
+  "family": "api_compatibility",
+  "title": "Keep response alias fields and optional metadata mapping with backward-compatible signature rules",
+  "prompt": "Update response.py with backward-compatible signature rules so serialize(resource_id, *, metadata=None) preserves existing positional calls and returns both 'id' and 'resource_id' fields with the same value. When optional keyword-only metadata is supplied, validate that it is a Mapping (raising TypeError for non-Mapping inputs) and store an independent shallow dict copy under 'metadata' without mutating caller input. When metadata is omitted, return only the two existing fields. Do not edit the protected acceptance file.",
+  "source": "def serialize(resource_id):\n    return {\"resource_id\": resource_id}\n",
+  "reference": "from collections.abc import Mapping\n\ndef serialize(resource_id, *, metadata=None):\n    result = {\"id\": resource_id, \"resource_id\": resource_id}\n    if metadata is not None:\n        if not isinstance(metadata, Mapping):\n            raise TypeError(\"metadata must be a mapping\")\n        result[\"metadata\"] = dict(metadata)\n    return result\n",
+  "acceptance": "import sys\nsys.path.insert(0, \"/workspace\")\nfrom response import serialize\nresult = serialize(17)\nassert result == {\"id\": 17, \"resource_id\": 17}\nmeta = {\"env\": \"prod\"}\nwith_meta = serialize(17, metadata=meta)\nassert with_meta == {\"id\": 17, \"resource_id\": 17, \"metadata\": {\"env\": \"prod\"}}\nassert with_meta[\"metadata\"] is not meta\nfor bad in ([], \"env=prod\", 42):\n    try:\n        serialize(17, metadata=bad)\n    except TypeError:\n        pass\n    else:\n        raise AssertionError(f\"non-mapping metadata accepted: {bad!r}\")\n",
+  "acceptance_file": "tests/private_acceptance_api_compatibility_02.py",
+  "acceptance_command": ["python", "-I", "-B", "/workspace/tests/private_acceptance_api_compatibility_02.py"]
+}

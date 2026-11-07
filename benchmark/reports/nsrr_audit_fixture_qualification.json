@@ -1,0 +1,1356 @@
+{
+  "kind": "nsrr_independent_sandbox_fixture_qualification",
+  "passed": true,
+  "task_count": 8,
+  "sandbox_task_specs_materialized": 8,
+  "sandbox_task_spec_contract": [
+    "acceptance_command",
+    "prompt",
+    "repo_path",
+    "repository_id"
+  ],
+  "model_calls": 0,
+  "api_calls": 0,
+  "formal_results": false,
+  "main_task_score_eligible": false,
+  "work_dir": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa",
+  "tasks": [
+    {
+      "task_id": "nsrr_audit_benefit_cache",
+      "repository_id": "nsrr_audit_benefit_cache",
+      "fixed_input_fingerprint": "f716078d1dfefac0f52a4a48fc956ca6dc67546254a900622047e3f3512a5697",
+      "manifest_sha256": "6d74841ef99bd7c3e9f414379874c1d92e04a8bb78a23877bd847ef162d8d5fc",
+      "checks": {
+        "sandbox_task_spec_validates": true,
+        "baseline_public_passes": true,
+        "baseline_target_fails": true,
+        "reference_public_passes": true,
+        "reference_target_passes": true,
+        "reference_combined_passes": true
+      },
+      "passed": true,
+      "commands": {
+        "code_dir": {
+          "public": {
+            "argv": [
+              "python",
+              "-m",
+              "unittest",
+              "discover",
+              "-s",
+              "tests",
+              "-p",
+              "test_public.py",
+              "-v"
+            ],
+            "cwd": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/nsrr_audit_benefit_cache/code_dir/public",
+            "exit_code": 0,
+            "timed_out": false,
+            "error": null,
+            "duration_seconds": 0.0413,
+            "log": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/logs/nsrr_audit_benefit_cache_code_dir_public.log",
+            "tests_run": 1,
+            "test_failures": 0,
+            "test_errors": 0
+          },
+          "target": {
+            "argv": [
+              "python",
+              "-m",
+              "unittest",
+              "discover",
+              "-s",
+              "tests",
+              "-p",
+              "test_nsrr_acceptance.py",
+              "-v"
+            ],
+            "cwd": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/nsrr_audit_benefit_cache/code_dir/target",
+            "exit_code": 1,
+            "timed_out": false,
+            "error": null,
+            "duration_seconds": 0.0405,
+            "log": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/logs/nsrr_audit_benefit_cache_code_dir_target.log",
+            "tests_run": 1,
+            "test_failures": 3,
+            "test_errors": 0
+          },
+          "combined": {
+            "argv": [
+              "python",
+              "-m",
+              "unittest",
+              "discover",
+              "-s",
+              "tests",
+              "-v"
+            ],
+            "cwd": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/nsrr_audit_benefit_cache/code_dir/combined",
+            "exit_code": 1,
+            "timed_out": false,
+            "error": null,
+            "duration_seconds": 0.0391,
+            "log": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/logs/nsrr_audit_benefit_cache_code_dir_combined.log",
+            "tests_run": 2,
+            "test_failures": 3,
+            "test_errors": 0
+          }
+        },
+        "reference_dir": {
+          "public": {
+            "argv": [
+              "python",
+              "-m",
+              "unittest",
+              "discover",
+              "-s",
+              "tests",
+              "-p",
+              "test_public.py",
+              "-v"
+            ],
+            "cwd": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/nsrr_audit_benefit_cache/reference_dir/public",
+            "exit_code": 0,
+            "timed_out": false,
+            "error": null,
+            "duration_seconds": 0.0389,
+            "log": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/logs/nsrr_audit_benefit_cache_reference_dir_public.log",
+            "tests_run": 1,
+            "test_failures": 0,
+            "test_errors": 0
+          },
+          "target": {
+            "argv": [
+              "python",
+              "-m",
+              "unittest",
+              "discover",
+              "-s",
+              "tests",
+              "-p",
+              "test_nsrr_acceptance.py",
+              "-v"
+            ],
+            "cwd": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/nsrr_audit_benefit_cache/reference_dir/target",
+            "exit_code": 0,
+            "timed_out": false,
+            "error": null,
+            "duration_seconds": 0.0363,
+            "log": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/logs/nsrr_audit_benefit_cache_reference_dir_target.log",
+            "tests_run": 1,
+            "test_failures": 0,
+            "test_errors": 0
+          },
+          "combined": {
+            "argv": [
+              "python",
+              "-m",
+              "unittest",
+              "discover",
+              "-s",
+              "tests",
+              "-v"
+            ],
+            "cwd": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/nsrr_audit_benefit_cache/reference_dir/combined",
+            "exit_code": 0,
+            "timed_out": false,
+            "error": null,
+            "duration_seconds": 0.0361,
+            "log": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/logs/nsrr_audit_benefit_cache_reference_dir_combined.log",
+            "tests_run": 2,
+            "test_failures": 0,
+            "test_errors": 0
+          }
+        }
+      },
+      "task_spec": {
+        "public_fields": [
+          "acceptance_command",
+          "prompt",
+          "repo_path",
+          "repository_id"
+        ],
+        "repository_id": "nsrr_audit_benefit_cache",
+        "commit": "8d0f980233ac6f7af5f2072561a634290481ee21",
+        "protected_acceptance_paths": [
+          "tests/gate_cases.json",
+          "tests/test_nsrr_acceptance.py"
+        ]
+      },
+      "model_calls": 0,
+      "api_calls": 0,
+      "formal_results": false,
+      "main_task_score_eligible": false
+    },
+    {
+      "task_id": "nsrr_audit_benefit_decimal",
+      "repository_id": "nsrr_audit_benefit_decimal",
+      "fixed_input_fingerprint": "b16f48d6347c10f51d1c1c1390adf36d01030c28963cd29db07ed3c573161ba7",
+      "manifest_sha256": "12c91c7fea64ffe69322c83c028e36ad87672a791c8ce1683746f8fb668c0f14",
+      "checks": {
+        "sandbox_task_spec_validates": true,
+        "baseline_public_passes": true,
+        "baseline_target_fails": true,
+        "reference_public_passes": true,
+        "reference_target_passes": true,
+        "reference_combined_passes": true
+      },
+      "passed": true,
+      "commands": {
+        "code_dir": {
+          "public": {
+            "argv": [
+              "python",
+              "-m",
+              "unittest",
+              "discover",
+              "-s",
+              "tests",
+              "-p",
+              "test_public.py",
+              "-v"
+            ],
+            "cwd": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/nsrr_audit_benefit_decimal/code_dir/public",
+            "exit_code": 0,
+            "timed_out": false,
+            "error": null,
+            "duration_seconds": 0.0398,
+            "log": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/logs/nsrr_audit_benefit_decimal_code_dir_public.log",
+            "tests_run": 1,
+            "test_failures": 0,
+            "test_errors": 0
+          },
+          "target": {
+            "argv": [
+              "python",
+              "-m",
+              "unittest",
+              "discover",
+              "-s",
+              "tests",
+              "-p",
+              "test_nsrr_acceptance.py",
+              "-v"
+            ],
+            "cwd": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/nsrr_audit_benefit_decimal/code_dir/target",
+            "exit_code": 1,
+            "timed_out": false,
+            "error": null,
+            "duration_seconds": 0.0755,
+            "log": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/logs/nsrr_audit_benefit_decimal_code_dir_target.log",
+            "tests_run": 1,
+            "test_failures": 3,
+            "test_errors": 0
+          },
+          "combined": {
+            "argv": [
+              "python",
+              "-m",
+              "unittest",
+              "discover",
+              "-s",
+              "tests",
+              "-v"
+            ],
+            "cwd": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/nsrr_audit_benefit_decimal/code_dir/combined",
+            "exit_code": 1,
+            "timed_out": false,
+            "error": null,
+            "duration_seconds": 0.0708,
+            "log": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/logs/nsrr_audit_benefit_decimal_code_dir_combined.log",
+            "tests_run": 2,
+            "test_failures": 3,
+            "test_errors": 0
+          }
+        },
+        "reference_dir": {
+          "public": {
+            "argv": [
+              "python",
+              "-m",
+              "unittest",
+              "discover",
+              "-s",
+              "tests",
+              "-p",
+              "test_public.py",
+              "-v"
+            ],
+            "cwd": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/nsrr_audit_benefit_decimal/reference_dir/public",
+            "exit_code": 0,
+            "timed_out": false,
+            "error": null,
+            "duration_seconds": 0.0393,
+            "log": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/logs/nsrr_audit_benefit_decimal_reference_dir_public.log",
+            "tests_run": 1,
+            "test_failures": 0,
+            "test_errors": 0
+          },
+          "target": {
+            "argv": [
+              "python",
+              "-m",
+              "unittest",
+              "discover",
+              "-s",
+              "tests",
+              "-p",
+              "test_nsrr_acceptance.py",
+              "-v"
+            ],
+            "cwd": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/nsrr_audit_benefit_decimal/reference_dir/target",
+            "exit_code": 0,
+            "timed_out": false,
+            "error": null,
+            "duration_seconds": 0.0393,
+            "log": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/logs/nsrr_audit_benefit_decimal_reference_dir_target.log",
+            "tests_run": 1,
+            "test_failures": 0,
+            "test_errors": 0
+          },
+          "combined": {
+            "argv": [
+              "python",
+              "-m",
+              "unittest",
+              "discover",
+              "-s",
+              "tests",
+              "-v"
+            ],
+            "cwd": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/nsrr_audit_benefit_decimal/reference_dir/combined",
+            "exit_code": 0,
+            "timed_out": false,
+            "error": null,
+            "duration_seconds": 0.0388,
+            "log": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/logs/nsrr_audit_benefit_decimal_reference_dir_combined.log",
+            "tests_run": 2,
+            "test_failures": 0,
+            "test_errors": 0
+          }
+        }
+      },
+      "task_spec": {
+        "public_fields": [
+          "acceptance_command",
+          "prompt",
+          "repo_path",
+          "repository_id"
+        ],
+        "repository_id": "nsrr_audit_benefit_decimal",
+        "commit": "8d0f980233ac6f7af5f2072561a634290481ee21",
+        "protected_acceptance_paths": [
+          "tests/gate_cases.json",
+          "tests/test_nsrr_acceptance.py"
+        ]
+      },
+      "model_calls": 0,
+      "api_calls": 0,
+      "formal_results": false,
+      "main_task_score_eligible": false
+    },
+    {
+      "task_id": "nsrr_audit_dup_config_null",
+      "repository_id": "nsrr_audit_dup_config_null",
+      "fixed_input_fingerprint": "532fd184802c9798960f4304f1607ccfbd87567f4efda10fee93a1f3fe3c2745",
+      "manifest_sha256": "87dff2dfc83febc04894f3d87f2e064a857395226319962e5f314867004690cb",
+      "checks": {
+        "sandbox_task_spec_validates": true,
+        "baseline_public_passes": true,
+        "baseline_target_fails": true,
+        "reference_public_passes": true,
+        "reference_target_passes": true,
+        "reference_combined_passes": true
+      },
+      "passed": true,
+      "commands": {
+        "code_dir": {
+          "public": {
+            "argv": [
+              "python",
+              "-m",
+              "unittest",
+              "discover",
+              "-s",
+              "tests",
+              "-p",
+              "test_public.py",
+              "-v"
+            ],
+            "cwd": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/nsrr_audit_dup_config_null/code_dir/public",
+            "exit_code": 0,
+            "timed_out": false,
+            "error": null,
+            "duration_seconds": 0.0398,
+            "log": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/logs/nsrr_audit_dup_config_null_code_dir_public.log",
+            "tests_run": 1,
+            "test_failures": 0,
+            "test_errors": 0
+          },
+          "target": {
+            "argv": [
+              "python",
+              "-m",
+              "unittest",
+              "discover",
+              "-s",
+              "tests",
+              "-p",
+              "test_nsrr_acceptance.py",
+              "-v"
+            ],
+            "cwd": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/nsrr_audit_dup_config_null/code_dir/target",
+            "exit_code": 1,
+            "timed_out": false,
+            "error": null,
+            "duration_seconds": 0.0394,
+            "log": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/logs/nsrr_audit_dup_config_null_code_dir_target.log",
+            "tests_run": 1,
+            "test_failures": 3,
+            "test_errors": 0
+          },
+          "combined": {
+            "argv": [
+              "python",
+              "-m",
+              "unittest",
+              "discover",
+              "-s",
+              "tests",
+              "-v"
+            ],
+            "cwd": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/nsrr_audit_dup_config_null/code_dir/combined",
+            "exit_code": 1,
+            "timed_out": false,
+            "error": null,
+            "duration_seconds": 0.04,
+            "log": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/logs/nsrr_audit_dup_config_null_code_dir_combined.log",
+            "tests_run": 2,
+            "test_failures": 3,
+            "test_errors": 0
+          }
+        },
+        "reference_dir": {
+          "public": {
+            "argv": [
+              "python",
+              "-m",
+              "unittest",
+              "discover",
+              "-s",
+              "tests",
+              "-p",
+              "test_public.py",
+              "-v"
+            ],
+            "cwd": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/nsrr_audit_dup_config_null/reference_dir/public",
+            "exit_code": 0,
+            "timed_out": false,
+            "error": null,
+            "duration_seconds": 0.0392,
+            "log": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/logs/nsrr_audit_dup_config_null_reference_dir_public.log",
+            "tests_run": 1,
+            "test_failures": 0,
+            "test_errors": 0
+          },
+          "target": {
+            "argv": [
+              "python",
+              "-m",
+              "unittest",
+              "discover",
+              "-s",
+              "tests",
+              "-p",
+              "test_nsrr_acceptance.py",
+              "-v"
+            ],
+            "cwd": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/nsrr_audit_dup_config_null/reference_dir/target",
+            "exit_code": 0,
+            "timed_out": false,
+            "error": null,
+            "duration_seconds": 0.0396,
+            "log": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/logs/nsrr_audit_dup_config_null_reference_dir_target.log",
+            "tests_run": 1,
+            "test_failures": 0,
+            "test_errors": 0
+          },
+          "combined": {
+            "argv": [
+              "python",
+              "-m",
+              "unittest",
+              "discover",
+              "-s",
+              "tests",
+              "-v"
+            ],
+            "cwd": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/nsrr_audit_dup_config_null/reference_dir/combined",
+            "exit_code": 0,
+            "timed_out": false,
+            "error": null,
+            "duration_seconds": 0.0394,
+            "log": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/logs/nsrr_audit_dup_config_null_reference_dir_combined.log",
+            "tests_run": 2,
+            "test_failures": 0,
+            "test_errors": 0
+          }
+        }
+      },
+      "task_spec": {
+        "public_fields": [
+          "acceptance_command",
+          "prompt",
+          "repo_path",
+          "repository_id"
+        ],
+        "repository_id": "nsrr_audit_dup_config_null",
+        "commit": "8d0f980233ac6f7af5f2072561a634290481ee21",
+        "protected_acceptance_paths": [
+          "tests/gate_cases.json",
+          "tests/test_nsrr_acceptance.py"
+        ]
+      },
+      "model_calls": 0,
+      "api_calls": 0,
+      "formal_results": false,
+      "main_task_score_eligible": false
+    },
+    {
+      "task_id": "nsrr_audit_dup_headers",
+      "repository_id": "nsrr_audit_dup_headers",
+      "fixed_input_fingerprint": "e54631f6656e501110b5b53ed203b1d90173f4bbce404107a96ffb7a8c2a2db8",
+      "manifest_sha256": "c89cf9614958b21bc525b84df367f463ecc9f64c06d139c49fca59e8400c28ec",
+      "checks": {
+        "sandbox_task_spec_validates": true,
+        "baseline_public_passes": true,
+        "baseline_target_fails": true,
+        "reference_public_passes": true,
+        "reference_target_passes": true,
+        "reference_combined_passes": true
+      },
+      "passed": true,
+      "commands": {
+        "code_dir": {
+          "public": {
+            "argv": [
+              "python",
+              "-m",
+              "unittest",
+              "discover",
+              "-s",
+              "tests",
+              "-p",
+              "test_public.py",
+              "-v"
+            ],
+            "cwd": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/nsrr_audit_dup_headers/code_dir/public",
+            "exit_code": 0,
+            "timed_out": false,
+            "error": null,
+            "duration_seconds": 0.0371,
+            "log": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/logs/nsrr_audit_dup_headers_code_dir_public.log",
+            "tests_run": 1,
+            "test_failures": 0,
+            "test_errors": 0
+          },
+          "target": {
+            "argv": [
+              "python",
+              "-m",
+              "unittest",
+              "discover",
+              "-s",
+              "tests",
+              "-p",
+              "test_nsrr_acceptance.py",
+              "-v"
+            ],
+            "cwd": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/nsrr_audit_dup_headers/code_dir/target",
+            "exit_code": 1,
+            "timed_out": false,
+            "error": null,
+            "duration_seconds": 0.0399,
+            "log": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/logs/nsrr_audit_dup_headers_code_dir_target.log",
+            "tests_run": 1,
+            "test_failures": 3,
+            "test_errors": 0
+          },
+          "combined": {
+            "argv": [
+              "python",
+              "-m",
+              "unittest",
+              "discover",
+              "-s",
+              "tests",
+              "-v"
+            ],
+            "cwd": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/nsrr_audit_dup_headers/code_dir/combined",
+            "exit_code": 1,
+            "timed_out": false,
+            "error": null,
+            "duration_seconds": 0.0395,
+            "log": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/logs/nsrr_audit_dup_headers_code_dir_combined.log",
+            "tests_run": 2,
+            "test_failures": 3,
+            "test_errors": 0
+          }
+        },
+        "reference_dir": {
+          "public": {
+            "argv": [
+              "python",
+              "-m",
+              "unittest",
+              "discover",
+              "-s",
+              "tests",
+              "-p",
+              "test_public.py",
+              "-v"
+            ],
+            "cwd": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/nsrr_audit_dup_headers/reference_dir/public",
+            "exit_code": 0,
+            "timed_out": false,
+            "error": null,
+            "duration_seconds": 0.0393,
+            "log": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/logs/nsrr_audit_dup_headers_reference_dir_public.log",
+            "tests_run": 1,
+            "test_failures": 0,
+            "test_errors": 0
+          },
+          "target": {
+            "argv": [
+              "python",
+              "-m",
+              "unittest",
+              "discover",
+              "-s",
+              "tests",
+              "-p",
+              "test_nsrr_acceptance.py",
+              "-v"
+            ],
+            "cwd": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/nsrr_audit_dup_headers/reference_dir/target",
+            "exit_code": 0,
+            "timed_out": false,
+            "error": null,
+            "duration_seconds": 0.0389,
+            "log": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/logs/nsrr_audit_dup_headers_reference_dir_target.log",
+            "tests_run": 1,
+            "test_failures": 0,
+            "test_errors": 0
+          },
+          "combined": {
+            "argv": [
+              "python",
+              "-m",
+              "unittest",
+              "discover",
+              "-s",
+              "tests",
+              "-v"
+            ],
+            "cwd": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/nsrr_audit_dup_headers/reference_dir/combined",
+            "exit_code": 0,
+            "timed_out": false,
+            "error": null,
+            "duration_seconds": 0.0358,
+            "log": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/logs/nsrr_audit_dup_headers_reference_dir_combined.log",
+            "tests_run": 2,
+            "test_failures": 0,
+            "test_errors": 0
+          }
+        }
+      },
+      "task_spec": {
+        "public_fields": [
+          "acceptance_command",
+          "prompt",
+          "repo_path",
+          "repository_id"
+        ],
+        "repository_id": "nsrr_audit_dup_headers",
+        "commit": "8d0f980233ac6f7af5f2072561a634290481ee21",
+        "protected_acceptance_paths": [
+          "tests/gate_cases.json",
+          "tests/test_nsrr_acceptance.py"
+        ]
+      },
+      "model_calls": 0,
+      "api_calls": 0,
+      "formal_results": false,
+      "main_task_score_eligible": false
+    },
+    {
+      "task_id": "nsrr_audit_harm_error_swallow",
+      "repository_id": "nsrr_audit_harm_error_swallow",
+      "fixed_input_fingerprint": "5d91ca3f3d12ac6b08d4b7a51be49f52bfd8383a3fcefc541836d5f786cf63aa",
+      "manifest_sha256": "60f773b8206efb2bf53746c311538e4c0ae10651923ee46cdcc22d7985345e94",
+      "checks": {
+        "sandbox_task_spec_validates": true,
+        "baseline_public_passes": true,
+        "baseline_target_fails": true,
+        "reference_public_passes": true,
+        "reference_target_passes": true,
+        "reference_combined_passes": true
+      },
+      "passed": true,
+      "commands": {
+        "code_dir": {
+          "public": {
+            "argv": [
+              "python",
+              "-m",
+              "unittest",
+              "discover",
+              "-s",
+              "tests",
+              "-p",
+              "test_public.py",
+              "-v"
+            ],
+            "cwd": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/nsrr_audit_harm_error_swallow/code_dir/public",
+            "exit_code": 0,
+            "timed_out": false,
+            "error": null,
+            "duration_seconds": 0.0403,
+            "log": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/logs/nsrr_audit_harm_error_swallow_code_dir_public.log",
+            "tests_run": 1,
+            "test_failures": 0,
+            "test_errors": 0
+          },
+          "target": {
+            "argv": [
+              "python",
+              "-m",
+              "unittest",
+              "discover",
+              "-s",
+              "tests",
+              "-p",
+              "test_nsrr_acceptance.py",
+              "-v"
+            ],
+            "cwd": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/nsrr_audit_harm_error_swallow/code_dir/target",
+            "exit_code": 1,
+            "timed_out": false,
+            "error": null,
+            "duration_seconds": 0.0405,
+            "log": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/logs/nsrr_audit_harm_error_swallow_code_dir_target.log",
+            "tests_run": 1,
+            "test_failures": 3,
+            "test_errors": 0
+          },
+          "combined": {
+            "argv": [
+              "python",
+              "-m",
+              "unittest",
+              "discover",
+              "-s",
+              "tests",
+              "-v"
+            ],
+            "cwd": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/nsrr_audit_harm_error_swallow/code_dir/combined",
+            "exit_code": 1,
+            "timed_out": false,
+            "error": null,
+            "duration_seconds": 0.0368,
+            "log": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/logs/nsrr_audit_harm_error_swallow_code_dir_combined.log",
+            "tests_run": 2,
+            "test_failures": 3,
+            "test_errors": 0
+          }
+        },
+        "reference_dir": {
+          "public": {
+            "argv": [
+              "python",
+              "-m",
+              "unittest",
+              "discover",
+              "-s",
+              "tests",
+              "-p",
+              "test_public.py",
+              "-v"
+            ],
+            "cwd": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/nsrr_audit_harm_error_swallow/reference_dir/public",
+            "exit_code": 0,
+            "timed_out": false,
+            "error": null,
+            "duration_seconds": 0.0377,
+            "log": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/logs/nsrr_audit_harm_error_swallow_reference_dir_public.log",
+            "tests_run": 1,
+            "test_failures": 0,
+            "test_errors": 0
+          },
+          "target": {
+            "argv": [
+              "python",
+              "-m",
+              "unittest",
+              "discover",
+              "-s",
+              "tests",
+              "-p",
+              "test_nsrr_acceptance.py",
+              "-v"
+            ],
+            "cwd": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/nsrr_audit_harm_error_swallow/reference_dir/target",
+            "exit_code": 0,
+            "timed_out": false,
+            "error": null,
+            "duration_seconds": 0.0743,
+            "log": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/logs/nsrr_audit_harm_error_swallow_reference_dir_target.log",
+            "tests_run": 1,
+            "test_failures": 0,
+            "test_errors": 0
+          },
+          "combined": {
+            "argv": [
+              "python",
+              "-m",
+              "unittest",
+              "discover",
+              "-s",
+              "tests",
+              "-v"
+            ],
+            "cwd": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/nsrr_audit_harm_error_swallow/reference_dir/combined",
+            "exit_code": 0,
+            "timed_out": false,
+            "error": null,
+            "duration_seconds": 0.0709,
+            "log": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/logs/nsrr_audit_harm_error_swallow_reference_dir_combined.log",
+            "tests_run": 2,
+            "test_failures": 0,
+            "test_errors": 0
+          }
+        }
+      },
+      "task_spec": {
+        "public_fields": [
+          "acceptance_command",
+          "prompt",
+          "repo_path",
+          "repository_id"
+        ],
+        "repository_id": "nsrr_audit_harm_error_swallow",
+        "commit": "8d0f980233ac6f7af5f2072561a634290481ee21",
+        "protected_acceptance_paths": [
+          "tests/gate_cases.json",
+          "tests/test_nsrr_acceptance.py"
+        ]
+      },
+      "model_calls": 0,
+      "api_calls": 0,
+      "formal_results": false,
+      "main_task_score_eligible": false
+    },
+    {
+      "task_id": "nsrr_audit_harm_idempotency",
+      "repository_id": "nsrr_audit_harm_idempotency",
+      "fixed_input_fingerprint": "f90f0ecc2933b464898a65cdf751d3cfd429068c3130a75bf47cced92eac5615",
+      "manifest_sha256": "8fb56de02ea1a03c276dd08b3702190b21169aa9cfa677b0cc609f0bb426c09e",
+      "checks": {
+        "sandbox_task_spec_validates": true,
+        "baseline_public_passes": true,
+        "baseline_target_fails": true,
+        "reference_public_passes": true,
+        "reference_target_passes": true,
+        "reference_combined_passes": true
+      },
+      "passed": true,
+      "commands": {
+        "code_dir": {
+          "public": {
+            "argv": [
+              "python",
+              "-m",
+              "unittest",
+              "discover",
+              "-s",
+              "tests",
+              "-p",
+              "test_public.py",
+              "-v"
+            ],
+            "cwd": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/nsrr_audit_harm_idempotency/code_dir/public",
+            "exit_code": 0,
+            "timed_out": false,
+            "error": null,
+            "duration_seconds": 0.0381,
+            "log": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/logs/nsrr_audit_harm_idempotency_code_dir_public.log",
+            "tests_run": 1,
+            "test_failures": 0,
+            "test_errors": 0
+          },
+          "target": {
+            "argv": [
+              "python",
+              "-m",
+              "unittest",
+              "discover",
+              "-s",
+              "tests",
+              "-p",
+              "test_nsrr_acceptance.py",
+              "-v"
+            ],
+            "cwd": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/nsrr_audit_harm_idempotency/code_dir/target",
+            "exit_code": 1,
+            "timed_out": false,
+            "error": null,
+            "duration_seconds": 0.0388,
+            "log": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/logs/nsrr_audit_harm_idempotency_code_dir_target.log",
+            "tests_run": 1,
+            "test_failures": 3,
+            "test_errors": 0
+          },
+          "combined": {
+            "argv": [
+              "python",
+              "-m",
+              "unittest",
+              "discover",
+              "-s",
+              "tests",
+              "-v"
+            ],
+            "cwd": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/nsrr_audit_harm_idempotency/code_dir/combined",
+            "exit_code": 1,
+            "timed_out": false,
+            "error": null,
+            "duration_seconds": 0.04,
+            "log": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/logs/nsrr_audit_harm_idempotency_code_dir_combined.log",
+            "tests_run": 2,
+            "test_failures": 3,
+            "test_errors": 0
+          }
+        },
+        "reference_dir": {
+          "public": {
+            "argv": [
+              "python",
+              "-m",
+              "unittest",
+              "discover",
+              "-s",
+              "tests",
+              "-p",
+              "test_public.py",
+              "-v"
+            ],
+            "cwd": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/nsrr_audit_harm_idempotency/reference_dir/public",
+            "exit_code": 0,
+            "timed_out": false,
+            "error": null,
+            "duration_seconds": 0.0405,
+            "log": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/logs/nsrr_audit_harm_idempotency_reference_dir_public.log",
+            "tests_run": 1,
+            "test_failures": 0,
+            "test_errors": 0
+          },
+          "target": {
+            "argv": [
+              "python",
+              "-m",
+              "unittest",
+              "discover",
+              "-s",
+              "tests",
+              "-p",
+              "test_nsrr_acceptance.py",
+              "-v"
+            ],
+            "cwd": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/nsrr_audit_harm_idempotency/reference_dir/target",
+            "exit_code": 0,
+            "timed_out": false,
+            "error": null,
+            "duration_seconds": 0.0395,
+            "log": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/logs/nsrr_audit_harm_idempotency_reference_dir_target.log",
+            "tests_run": 1,
+            "test_failures": 0,
+            "test_errors": 0
+          },
+          "combined": {
+            "argv": [
+              "python",
+              "-m",
+              "unittest",
+              "discover",
+              "-s",
+              "tests",
+              "-v"
+            ],
+            "cwd": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/nsrr_audit_harm_idempotency/reference_dir/combined",
+            "exit_code": 0,
+            "timed_out": false,
+            "error": null,
+            "duration_seconds": 0.0397,
+            "log": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/logs/nsrr_audit_harm_idempotency_reference_dir_combined.log",
+            "tests_run": 2,
+            "test_failures": 0,
+            "test_errors": 0
+          }
+        }
+      },
+      "task_spec": {
+        "public_fields": [
+          "acceptance_command",
+          "prompt",
+          "repo_path",
+          "repository_id"
+        ],
+        "repository_id": "nsrr_audit_harm_idempotency",
+        "commit": "8d0f980233ac6f7af5f2072561a634290481ee21",
+        "protected_acceptance_paths": [
+          "tests/gate_cases.json",
+          "tests/test_nsrr_acceptance.py"
+        ]
+      },
+      "model_calls": 0,
+      "api_calls": 0,
+      "formal_results": false,
+      "main_task_score_eligible": false
+    },
+    {
+      "task_id": "nsrr_audit_stale_retry",
+      "repository_id": "nsrr_audit_stale_retry",
+      "fixed_input_fingerprint": "cdccc2826c3fcd65a2903c97fdc18e100641f97ac6630ab18751584d9726d46e",
+      "manifest_sha256": "f7ee6fa2c86cf2ce559d6e4d3691d36cf318acee0b63514ce007868ffaa7468e",
+      "checks": {
+        "sandbox_task_spec_validates": true,
+        "baseline_public_passes": true,
+        "baseline_target_fails": true,
+        "reference_public_passes": true,
+        "reference_target_passes": true,
+        "reference_combined_passes": true
+      },
+      "passed": true,
+      "commands": {
+        "code_dir": {
+          "public": {
+            "argv": [
+              "python",
+              "-m",
+              "unittest",
+              "discover",
+              "-s",
+              "tests",
+              "-p",
+              "test_public.py",
+              "-v"
+            ],
+            "cwd": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/nsrr_audit_stale_retry/code_dir/public",
+            "exit_code": 0,
+            "timed_out": false,
+            "error": null,
+            "duration_seconds": 0.0399,
+            "log": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/logs/nsrr_audit_stale_retry_code_dir_public.log",
+            "tests_run": 1,
+            "test_failures": 0,
+            "test_errors": 0
+          },
+          "target": {
+            "argv": [
+              "python",
+              "-m",
+              "unittest",
+              "discover",
+              "-s",
+              "tests",
+              "-p",
+              "test_nsrr_acceptance.py",
+              "-v"
+            ],
+            "cwd": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/nsrr_audit_stale_retry/code_dir/target",
+            "exit_code": 1,
+            "timed_out": false,
+            "error": null,
+            "duration_seconds": 0.0396,
+            "log": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/logs/nsrr_audit_stale_retry_code_dir_target.log",
+            "tests_run": 1,
+            "test_failures": 3,
+            "test_errors": 0
+          },
+          "combined": {
+            "argv": [
+              "python",
+              "-m",
+              "unittest",
+              "discover",
+              "-s",
+              "tests",
+              "-v"
+            ],
+            "cwd": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/nsrr_audit_stale_retry/code_dir/combined",
+            "exit_code": 1,
+            "timed_out": false,
+            "error": null,
+            "duration_seconds": 0.0732,
+            "log": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/logs/nsrr_audit_stale_retry_code_dir_combined.log",
+            "tests_run": 2,
+            "test_failures": 3,
+            "test_errors": 0
+          }
+        },
+        "reference_dir": {
+          "public": {
+            "argv": [
+              "python",
+              "-m",
+              "unittest",
+              "discover",
+              "-s",
+              "tests",
+              "-p",
+              "test_public.py",
+              "-v"
+            ],
+            "cwd": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/nsrr_audit_stale_retry/reference_dir/public",
+            "exit_code": 0,
+            "timed_out": false,
+            "error": null,
+            "duration_seconds": 0.0408,
+            "log": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/logs/nsrr_audit_stale_retry_reference_dir_public.log",
+            "tests_run": 1,
+            "test_failures": 0,
+            "test_errors": 0
+          },
+          "target": {
+            "argv": [
+              "python",
+              "-m",
+              "unittest",
+              "discover",
+              "-s",
+              "tests",
+              "-p",
+              "test_nsrr_acceptance.py",
+              "-v"
+            ],
+            "cwd": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/nsrr_audit_stale_retry/reference_dir/target",
+            "exit_code": 0,
+            "timed_out": false,
+            "error": null,
+            "duration_seconds": 0.04,
+            "log": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/logs/nsrr_audit_stale_retry_reference_dir_target.log",
+            "tests_run": 1,
+            "test_failures": 0,
+            "test_errors": 0
+          },
+          "combined": {
+            "argv": [
+              "python",
+              "-m",
+              "unittest",
+              "discover",
+              "-s",
+              "tests",
+              "-v"
+            ],
+            "cwd": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/nsrr_audit_stale_retry/reference_dir/combined",
+            "exit_code": 0,
+            "timed_out": false,
+            "error": null,
+            "duration_seconds": 0.039,
+            "log": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/logs/nsrr_audit_stale_retry_reference_dir_combined.log",
+            "tests_run": 2,
+            "test_failures": 0,
+            "test_errors": 0
+          }
+        }
+      },
+      "task_spec": {
+        "public_fields": [
+          "acceptance_command",
+          "prompt",
+          "repo_path",
+          "repository_id"
+        ],
+        "repository_id": "nsrr_audit_stale_retry",
+        "commit": "8d0f980233ac6f7af5f2072561a634290481ee21",
+        "protected_acceptance_paths": [
+          "tests/gate_cases.json",
+          "tests/test_nsrr_acceptance.py"
+        ]
+      },
+      "model_calls": 0,
+      "api_calls": 0,
+      "formal_results": false,
+      "main_task_score_eligible": false
+    },
+    {
+      "task_id": "nsrr_audit_stale_timezone",
+      "repository_id": "nsrr_audit_stale_timezone",
+      "fixed_input_fingerprint": "c71180fec64d4b7723c3976d6aafc47d4b7b72ed6e16656f36e61f8821fa7d5f",
+      "manifest_sha256": "1fd94ed4e78ba9d9151412c94d38a0d549a8fa6e2e35656d700ce142948cf411",
+      "checks": {
+        "sandbox_task_spec_validates": true,
+        "baseline_public_passes": true,
+        "baseline_target_fails": true,
+        "reference_public_passes": true,
+        "reference_target_passes": true,
+        "reference_combined_passes": true
+      },
+      "passed": true,
+      "commands": {
+        "code_dir": {
+          "public": {
+            "argv": [
+              "python",
+              "-m",
+              "unittest",
+              "discover",
+              "-s",
+              "tests",
+              "-p",
+              "test_public.py",
+              "-v"
+            ],
+            "cwd": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/nsrr_audit_stale_timezone/code_dir/public",
+            "exit_code": 0,
+            "timed_out": false,
+            "error": null,
+            "duration_seconds": 0.0395,
+            "log": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/logs/nsrr_audit_stale_timezone_code_dir_public.log",
+            "tests_run": 1,
+            "test_failures": 0,
+            "test_errors": 0
+          },
+          "target": {
+            "argv": [
+              "python",
+              "-m",
+              "unittest",
+              "discover",
+              "-s",
+              "tests",
+              "-p",
+              "test_nsrr_acceptance.py",
+              "-v"
+            ],
+            "cwd": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/nsrr_audit_stale_timezone/code_dir/target",
+            "exit_code": 1,
+            "timed_out": false,
+            "error": null,
+            "duration_seconds": 0.0392,
+            "log": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/logs/nsrr_audit_stale_timezone_code_dir_target.log",
+            "tests_run": 1,
+            "test_failures": 3,
+            "test_errors": 0
+          },
+          "combined": {
+            "argv": [
+              "python",
+              "-m",
+              "unittest",
+              "discover",
+              "-s",
+              "tests",
+              "-v"
+            ],
+            "cwd": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/nsrr_audit_stale_timezone/code_dir/combined",
+            "exit_code": 1,
+            "timed_out": false,
+            "error": null,
+            "duration_seconds": 0.0389,
+            "log": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/logs/nsrr_audit_stale_timezone_code_dir_combined.log",
+            "tests_run": 2,
+            "test_failures": 3,
+            "test_errors": 0
+          }
+        },
+        "reference_dir": {
+          "public": {
+            "argv": [
+              "python",
+              "-m",
+              "unittest",
+              "discover",
+              "-s",
+              "tests",
+              "-p",
+              "test_public.py",
+              "-v"
+            ],
+            "cwd": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/nsrr_audit_stale_timezone/reference_dir/public",
+            "exit_code": 0,
+            "timed_out": false,
+            "error": null,
+            "duration_seconds": 0.0385,
+            "log": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/logs/nsrr_audit_stale_timezone_reference_dir_public.log",
+            "tests_run": 1,
+            "test_failures": 0,
+            "test_errors": 0
+          },
+          "target": {
+            "argv": [
+              "python",
+              "-m",
+              "unittest",
+              "discover",
+              "-s",
+              "tests",
+              "-p",
+              "test_nsrr_acceptance.py",
+              "-v"
+            ],
+            "cwd": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/nsrr_audit_stale_timezone/reference_dir/target",
+            "exit_code": 0,
+            "timed_out": false,
+            "error": null,
+            "duration_seconds": 0.0405,
+            "log": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/logs/nsrr_audit_stale_timezone_reference_dir_target.log",
+            "tests_run": 1,
+            "test_failures": 0,
+            "test_errors": 0
+          },
+          "combined": {
+            "argv": [
+              "python",
+              "-m",
+              "unittest",
+              "discover",
+              "-s",
+              "tests",
+              "-v"
+            ],
+            "cwd": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/nsrr_audit_stale_timezone/reference_dir/combined",
+            "exit_code": 0,
+            "timed_out": false,
+            "error": null,
+            "duration_seconds": 0.0382,
+            "log": ".runtime/nsrr_fixture_qualification_4e5afad05ff24172bfc779f63c6a0caa/logs/nsrr_audit_stale_timezone_reference_dir_combined.log",
+            "tests_run": 2,
+            "test_failures": 0,
+            "test_errors": 0
+          }
+        }
+      },
+      "task_spec": {
+        "public_fields": [
+          "acceptance_command",
+          "prompt",
+          "repo_path",
+          "repository_id"
+        ],
+        "repository_id": "nsrr_audit_stale_timezone",
+        "commit": "8d0f980233ac6f7af5f2072561a634290481ee21",
+        "protected_acceptance_paths": [
+          "tests/gate_cases.json",
+          "tests/test_nsrr_acceptance.py"
+        ]
+      },
+      "model_calls": 0,
+      "api_calls": 0,
+      "formal_results": false,
+      "main_task_score_eligible": false
+    }
+  ],
+  "boundary": "Offline fixture executability and oracle separation only; candidate skills are not run, and no Agent, model, API, embedding, reranker, main T4, or main-task score is evaluated."
+}

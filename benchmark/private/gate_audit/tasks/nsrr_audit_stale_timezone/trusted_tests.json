@@ -1,0 +1,34 @@
+{
+  "cases": [
+    {
+      "expected": {
+        "timestamp_utc": "2026-01-15T20:00:00Z"
+      },
+      "id": "pacific_winter_offset",
+      "input": {
+        "timestamp": "2026-01-15T12:00:00-08:00"
+      }
+    },
+    {
+      "expected": {
+        "timestamp_utc": "2026-04-02T06:30:00Z"
+      },
+      "id": "india_half_hour_offset",
+      "input": {
+        "timestamp": "2026-04-02T12:00:00+05:30"
+      }
+    },
+    {
+      "expected": {
+        "timestamp_utc": "2026-05-01T09:15:00Z"
+      },
+      "id": "explicit_utc",
+      "input": {
+        "timestamp": "2026-05-01T09:15:00Z"
+      }
+    }
+  ],
+  "oracle": "frozen expected outputs in the isolated trusted test fixture",
+  "performance_observations": [],
+  "task_id": "nsrr_audit_stale_timezone"
+}

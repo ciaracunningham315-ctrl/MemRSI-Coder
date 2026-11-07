@@ -1,0 +1,36 @@
+data_dir: data
+models:
+  local:
+    base_url: http://127.0.0.1:8000/v1
+    model_id: ''
+    api_key_env: EVOCODE_LOCAL_API_KEY
+    max_context_tokens: 131072
+    max_output_tokens: 4096
+  evolution:
+    base_url: https://api.deepseek.com/v1
+    model_id: deepseek-flash
+    api_key_env: DEEPSEEK_API_KEY
+raw_rag:
+  enabled: true
+  index_when_disabled: true
+  background_indexing: true
+  qdrant_url: http://127.0.0.1:6333
+  embedding_base_url: http://127.0.0.1:8001/v1
+  embedding_model: ''
+  rerank_enabled: false
+  rerank_provider: compatible
+  rerank_api_key_env: EVOCODE_RERANK_API_KEY
+  rerank_top_k: 5
+skills:
+  enabled: true
+  max_loaded_skills: 3
+evolution:
+  enabled: true
+  auto_trigger_enabled: true
+  allow_remote_code_context: false
+  sandbox_image: python:3.12-slim
+runtime:
+  execution_backend: docker
+  docker_image: python:3.12-slim
+  max_turns: 40
+  max_replans: 3

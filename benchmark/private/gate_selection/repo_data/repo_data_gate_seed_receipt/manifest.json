@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "task_id": "repo_data_gate_seed_receipt",
+  "repository_id": "repo_data",
+  "stage": "seed",
+  "kind": "task",
+  "available_after_stage": "seed",
+  "latest_mechanism_stage": "seed",
+  "independent_of_main_tasks": true,
+  "future_main_inputs_used": [],
+  "code_dir": "private/gate_selection/repo_data/repo_data_gate_seed_receipt/code",
+  "task_file": "private/gate_selection/repo_data/repo_data_gate_seed_receipt/task.md",
+  "private_tests_dir": "private/gate_selection/repo_data/repo_data_gate_seed_receipt/acceptance",
+  "regression_tests_dir": "private/gate_selection/repo_data/repo_data_gate_seed_receipt/regression",
+  "reference_dir": "private/gate_selection/repo_data/repo_data_gate_seed_receipt/reference/code",
+  "acceptance_command": [
+    "python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "mechanisms": [
+    "decimal_half_up",
+    "input_type_validation"
+  ],
+  "fingerprints": {
+    "code_dir": {
+      "README.md": "3e5b13634d2ee9f218c93e31213c4f2bb707c303d2700c8c3e4fd46498be7cc5",
+      "docs/data-contract.md": "db2112912b9c8a4076be52ee3fd1f990fbe9afecca11a8e881b6ac1a6b776c8e",
+      "receipts.py": "9aaf220e3f4bb1fe7acad8409fe839c5ca59f053d7ee75833d28e8e6fa114a02",
+      "tests/test_public.py": "be4b78c27cee47e650cf40c2341c8816a21a1d1f5341995a555a219b6d962759"
+    },
+    "private_tests_dir": {
+      "test_private_gate.py": "e97c1c8537c467fa4299b803d86c8980192dd302f4890d2578b4bb4834e899ae"
+    },
+    "regression_tests_dir": {
+      "test_routes.py": "451fb95e843136750036f2c1a26cf5b82a9ff9b388714080f5090dee44032e08"
+    },
+    "reference_dir": {
+      "README.md": "3e5b13634d2ee9f218c93e31213c4f2bb707c303d2700c8c3e4fd46498be7cc5",
+      "docs/data-contract.md": "db2112912b9c8a4076be52ee3fd1f990fbe9afecca11a8e881b6ac1a6b776c8e",
+      "receipts.py": "bf7090c3d54c4a096a548df17a26fcf1b12f81637ff6f998a8f65c99f51827bb",
+      "tests/test_public.py": "be4b78c27cee47e650cf40c2341c8816a21a1d1f5341995a555a219b6d962759"
+    },
+    "task_file": "5a5267097bba15932d7aa5368f3a2b73f1b72b2b9625034299ee62339ba4a0e2"
+  }
+}

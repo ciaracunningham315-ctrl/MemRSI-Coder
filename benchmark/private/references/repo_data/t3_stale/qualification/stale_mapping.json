@@ -1,0 +1,63 @@
+{
+  "kind": "repo_data_t3_frozen_snapshot_transition_evidence",
+  "checks": {
+    "t1_reference_touch_is_unchanged_and_effective": true,
+    "t2_reference_touch_content_changed": true,
+    "old_prepare_manifest_ast_symbol_removed": true,
+    "runtime_compatibility_preserved": true,
+    "unchanged_helper_retained": true
+  },
+  "evidence": {
+    "t1_sales_path": {
+      "historical_reference_touch": {
+        "before_sha256": "af3b8002b8adb360938e9c7785857abd208bbe42b3681ee35805fa11958f5e50",
+        "after_sha256": "5ebb4ed6cbb33a2859d96f0e44c3d4cf26b411c28e7ae83e8e2facb1204fd766"
+      },
+      "t3_code_hash": "5ebb4ed6cbb33a2859d96f0e44c3d4cf26b411c28e7ae83e8e2facb1204fd766",
+      "t2_reference_hash": "5ebb4ed6cbb33a2859d96f0e44c3d4cf26b411c28e7ae83e8e2facb1204fd766",
+      "still_effective": true
+    },
+    "t2_shipment_path": {
+      "historical_reference_touch": {
+        "before_sha256": "68d4fb917a47bc6282fdf648ae9e3d93d22ceaef97b71ca7e0582ceb382eedf9",
+        "after_sha256": "a08243a070d816d5a340c29696440f431769593e4b5d88cd370d23b8058f5a8c"
+      },
+      "t2_reference_hash": "a08243a070d816d5a340c29696440f431769593e4b5d88cd370d23b8058f5a8c",
+      "t3_shim_hash": "9ccfe1b1be0f1f5ad31a4590140f6839c0efcede32c46c8f51ec4a5a068a2c70",
+      "content_changed_in_t3": true,
+      "t2_symbol_definitions": [
+        "_count",
+        "_weight",
+        "prepare_manifest"
+      ],
+      "t3_symbol_definitions": [],
+      "runtime_compatibility_probe": {
+        "argv": [
+          "python",
+          "-c",
+          "from ledgerflow.shipments import prepare_manifest; from ledgerflow.dispatch import format_manifest; assert prepare_manifest is format_manifest; print('compatibility alias OK')"
+        ],
+        "exit_code": 0,
+        "stdout": "compatibility alias OK",
+        "stderr": ""
+      },
+      "new_implementation_path": "ledgerflow/dispatch.py",
+      "new_implementation_symbols": [
+        "_count",
+        "_weight",
+        "format_manifest"
+      ]
+    },
+    "money_helper_control": {
+      "t2_hash": "65e53c10ae75d7dc68e498cf3b073d9d6c92efc85861869d1e12a6a510113042",
+      "t3_hash": "65e53c10ae75d7dc68e498cf3b073d9d6c92efc85861869d1e12a6a510113042",
+      "symbols": [
+        "parse_major"
+      ],
+      "same_content": true,
+      "effective_old_helper": "parse_major remains in place for major-unit legacy flows"
+    }
+  },
+  "passed": true,
+  "boundary": "Authored T1/T2 reference-patch and frozen-code comparison only. It does not claim an Agent trajectory, actual MemoryService extraction, or observed online stale-retrieval decision."
+}

@@ -1,0 +1,107 @@
+{
+  "kind": "repo_data_fixed_stage_package_verification",
+  "passed": true,
+  "model_calls": 0,
+  "formal_results": false,
+  "stages": [
+    {
+      "task_id": "repo_data_t1",
+      "stage_dir": "t1_seed",
+      "visible_head_sha": "f1c66974f16bab92f4e812d2bed72d49e19ccb0f",
+      "allowed_ancestor_shas": [],
+      "git_object_shas_count": 11,
+      "expected_ancestor_count": 0,
+      "package_sha256": "3060332deec3b920c63e81de290ca1ea50e0e2a10f61058ad97fa781da12d715",
+      "manifest_package_sha256": "3060332deec3b920c63e81de290ca1ea50e0e2a10f61058ad97fa781da12d715",
+      "source_code_snapshot_sha256": "0a800885fa410575776feaa4fc32bb3f1e474da6d1886d77d46f848e08b15818",
+      "manifest_code_snapshot_sha256": "0a800885fa410575776feaa4fc32bb3f1e474da6d1886d77d46f848e08b15818",
+      "verified_package": {
+        "valid": true,
+        "visible_head_sha": "f1c66974f16bab92f4e812d2bed72d49e19ccb0f",
+        "allowed_ancestor_shas": [],
+        "git_object_count": 11,
+        "code_snapshot_sha256": "0a800885fa410575776feaa4fc32bb3f1e474da6d1886d77d46f848e08b15818"
+      },
+      "passed": true
+    },
+    {
+      "task_id": "repo_data_t2",
+      "stage_dir": "t2_transfer",
+      "visible_head_sha": "3f9bf17fc521e90e13c3ea3961299279729fd6de",
+      "allowed_ancestor_shas": [
+        "f1c66974f16bab92f4e812d2bed72d49e19ccb0f"
+      ],
+      "git_object_shas_count": 20,
+      "expected_ancestor_count": 1,
+      "package_sha256": "6749144cc947b8812a594a888fc9988d364078df7201d515761e18ef8452992a",
+      "manifest_package_sha256": "6749144cc947b8812a594a888fc9988d364078df7201d515761e18ef8452992a",
+      "source_code_snapshot_sha256": "3551d92799044a373677115116aafcac8c5784dd162e4885127381c424eb4559",
+      "manifest_code_snapshot_sha256": "3551d92799044a373677115116aafcac8c5784dd162e4885127381c424eb4559",
+      "verified_package": {
+        "valid": true,
+        "visible_head_sha": "3f9bf17fc521e90e13c3ea3961299279729fd6de",
+        "allowed_ancestor_shas": [
+          "f1c66974f16bab92f4e812d2bed72d49e19ccb0f"
+        ],
+        "git_object_count": 20,
+        "code_snapshot_sha256": "3551d92799044a373677115116aafcac8c5784dd162e4885127381c424eb4559"
+      },
+      "passed": true
+    },
+    {
+      "task_id": "repo_data_t3",
+      "stage_dir": "t3_stale",
+      "visible_head_sha": "36278c090d8352b18627d34facd7c02820b0db08",
+      "allowed_ancestor_shas": [
+        "f1c66974f16bab92f4e812d2bed72d49e19ccb0f",
+        "3f9bf17fc521e90e13c3ea3961299279729fd6de"
+      ],
+      "git_object_shas_count": 30,
+      "expected_ancestor_count": 2,
+      "package_sha256": "938a88dda41a953218b10996c8abefd6efeaebe9f276c1491e74b0ee02f3b20e",
+      "manifest_package_sha256": "938a88dda41a953218b10996c8abefd6efeaebe9f276c1491e74b0ee02f3b20e",
+      "source_code_snapshot_sha256": "2f1b14e59e9a3d53aeb165e4d955f3a61b2998749dacad107e9e570142d33567",
+      "manifest_code_snapshot_sha256": "2f1b14e59e9a3d53aeb165e4d955f3a61b2998749dacad107e9e570142d33567",
+      "verified_package": {
+        "valid": true,
+        "visible_head_sha": "36278c090d8352b18627d34facd7c02820b0db08",
+        "allowed_ancestor_shas": [
+          "f1c66974f16bab92f4e812d2bed72d49e19ccb0f",
+          "3f9bf17fc521e90e13c3ea3961299279729fd6de"
+        ],
+        "git_object_count": 30,
+        "code_snapshot_sha256": "2f1b14e59e9a3d53aeb165e4d955f3a61b2998749dacad107e9e570142d33567"
+      },
+      "passed": true
+    },
+    {
+      "task_id": "repo_data_t4",
+      "stage_dir": "t4_heldout",
+      "visible_head_sha": "bb40b5bba7d2b41305421ec349eeb2dc78a6d36c",
+      "allowed_ancestor_shas": [
+        "f1c66974f16bab92f4e812d2bed72d49e19ccb0f",
+        "3f9bf17fc521e90e13c3ea3961299279729fd6de",
+        "36278c090d8352b18627d34facd7c02820b0db08"
+      ],
+      "git_object_shas_count": 40,
+      "expected_ancestor_count": 3,
+      "package_sha256": "b70b8153e01214edd49a419c7610f90ad8dd2585d68042199a52befb24b5e803",
+      "manifest_package_sha256": "b70b8153e01214edd49a419c7610f90ad8dd2585d68042199a52befb24b5e803",
+      "source_code_snapshot_sha256": "cd593fa7b14167bfed64ba831767dd0ae917b926898d576c7e7535d2ac6d5376",
+      "manifest_code_snapshot_sha256": "cd593fa7b14167bfed64ba831767dd0ae917b926898d576c7e7535d2ac6d5376",
+      "verified_package": {
+        "valid": true,
+        "visible_head_sha": "bb40b5bba7d2b41305421ec349eeb2dc78a6d36c",
+        "allowed_ancestor_shas": [
+          "f1c66974f16bab92f4e812d2bed72d49e19ccb0f",
+          "3f9bf17fc521e90e13c3ea3961299279729fd6de",
+          "36278c090d8352b18627d34facd7c02820b0db08"
+        ],
+        "git_object_count": 40,
+        "code_snapshot_sha256": "cd593fa7b14167bfed64ba831767dd0ae917b926898d576c7e7535d2ac6d5376"
+      },
+      "passed": true
+    }
+  ],
+  "boundary": "Verifies frozen source hashes and stage-local Git package ancestry/object reachability. It is not a model trajectory or Agent ability result."
+}

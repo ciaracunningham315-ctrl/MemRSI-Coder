@@ -1,0 +1,47 @@
+{
+  "fixture_version": "nsrr-audit-sandbox-fixture-v1",
+  "audit_task_id": "nsrr_audit_benefit_decimal",
+  "candidate_id": "nsrr_benefit_decimal",
+  "repository_id": "nsrr_audit_benefit_decimal",
+  "code_dir": "private/gate_audit/tasks/nsrr_audit_benefit_decimal/fixture/code",
+  "reference_dir": "private/gate_audit/tasks/nsrr_audit_benefit_decimal/fixture/reference",
+  "private_tests_dir": "private/gate_audit/tasks/nsrr_audit_benefit_decimal/fixture/private_tests",
+  "task_file": "private/gate_audit/tasks/nsrr_audit_benefit_decimal/fixture/task.md",
+  "trusted_tests_file": "private/gate_audit/tasks/nsrr_audit_benefit_decimal/trusted_tests.json",
+  "baseline_skill": "gate_cases/nsrr_benefit_decimal/baseline/SKILL.md",
+  "candidate_skill": "gate_cases/nsrr_benefit_decimal/candidate/SKILL.md",
+  "acceptance_command": [
+    "python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "protected_acceptance_paths": {
+    "tests/test_nsrr_acceptance.py": "private/gate_audit/tasks/nsrr_audit_benefit_decimal/fixture/private_tests/test_nsrr_acceptance.py",
+    "tests/gate_cases.json": "private/gate_audit/tasks/nsrr_audit_benefit_decimal/fixture/private_tests/gate_cases.json"
+  },
+  "audit_use_only": true,
+  "independent_of_main_tasks": true,
+  "main_task_score_eligible": false,
+  "sandbox_task_spec_fields": [
+    "acceptance_command",
+    "prompt",
+    "repo_path",
+    "repository_id"
+  ],
+  "sandbox_host_adapter_fields": [
+    "commit",
+    "protected_acceptance_paths"
+  ],
+  "repo_template": "private/gate_audit/tasks/nsrr_audit_benefit_decimal/fixture/code",
+  "prompt": "# Monetary total utility\n\nImplement task_module.run(payload: dict) -> dict for totaling decimal amount strings. Return the total as a string in the public amount field using the application's two-place money representation. Do not mutate the payload.\n",
+  "acceptance_files": [
+    "tests/test_nsrr_acceptance.py",
+    "tests/gate_cases.json"
+  ],
+  "commit": "8d0f980233ac6f7af5f2072561a634290481ee21",
+  "fixed_input_fingerprint": "b16f48d6347c10f51d1c1c1390adf36d01030c28963cd29db07ed3c573161ba7"
+}

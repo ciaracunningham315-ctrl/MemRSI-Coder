@@ -1,0 +1,16 @@
+{
+  "material_id": "learning-api-optional-scheme-compatibility",
+  "family": "api_compatibility",
+  "source_kind": "synthetic_learning_material",
+  "observation": "An endpoint formatter added support for explicit URL schemes, but making the new option mandatory broke callers that still pass only host and port.",
+  "lesson": "When extending a public function with a new option, preserve existing positional calls by giving the option a backward-compatible default.",
+  "live_task": {
+    "task_id": "api_material_learning_optional_scheme",
+    "prompt": "Fix api_material.py to support an optional scheme keyword in endpoint(host, port) while preserving the existing result. With scheme omitted, return the original host:port string. With scheme='https', return https://host:port. Keep host and port positional and make scheme keyword-only.",
+    "source": "def endpoint(host, port, *, scheme):\n    return f\"{scheme}://{host}:{port}\"\n",
+    "reference": "def endpoint(host, port, *, scheme=None):\n    authority = f\"{host}:{port}\"\n    if scheme is None:\n        return authority\n    return f\"{scheme}://{authority}\"\n",
+    "acceptance": "import sys\nsys.path.insert(0, \"/workspace\")\nfrom api_material import endpoint\nassert endpoint(\"api.example.test\", 8443) == \"api.example.test:8443\"\nassert endpoint(\"api.example.test\", 8443, scheme=\"https\") == \"https://api.example.test:8443\"\n",
+    "acceptance_file": "tests/private_acceptance_api_material_learning_optional_scheme.py",
+    "acceptance_command": ["python", "-I", "-B", "/workspace/tests/private_acceptance_api_material_learning_optional_scheme.py"]
+  }
+}

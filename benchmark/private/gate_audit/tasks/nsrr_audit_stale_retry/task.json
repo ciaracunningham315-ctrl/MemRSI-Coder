@@ -1,0 +1,12 @@
+{
+  "audit_task_id": "nsrr_audit_stale_retry",
+  "candidate_id": "nsrr_stale_retry",
+  "claimed_observation_dimension": "behavioral",
+  "description": "Independent retry fixtures include a safe read, an unkeyed write with an ambiguous commit, and a keyed write. The trusted oracle records request attempts and side effects.",
+  "independent_source": "deterministic synthetic audit-only workload with a separate trusted assertion oracle",
+  "minimum_cases": 3,
+  "minimum_performance_samples": 0,
+  "provenance_boundary": "not sourced from Gate selection, main-task T4, acceptance, regression, references, or learning scores",
+  "task_type": "retry_safety",
+  "title": "Outdated retry-all instruction"
+}

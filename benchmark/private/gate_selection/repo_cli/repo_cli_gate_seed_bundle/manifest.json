@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "task_id": "repo_cli_gate_seed_bundle",
+  "repository_id": "repo_cli",
+  "stage": "seed",
+  "kind": "task",
+  "available_after_stage": "seed",
+  "latest_mechanism_stage": "seed",
+  "independent_of_main_tasks": true,
+  "code_dir": "private/gate_selection/repo_cli/repo_cli_gate_seed_bundle/code",
+  "task_file": "private/gate_selection/repo_cli/repo_cli_gate_seed_bundle/task.md",
+  "private_tests_dir": "private/gate_selection/repo_cli/repo_cli_gate_seed_bundle/acceptance",
+  "regression_tests_dir": "private/gate_selection/repo_cli/repo_cli_gate_seed_bundle/regression",
+  "reference_dir": "private/gate_selection/repo_cli/repo_cli_gate_seed_bundle/reference/code",
+  "acceptance_command": [
+    "python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "mechanisms": [
+    "per_option_source_precedence",
+    "strict_bounded_integer",
+    "validate_before_mutation"
+  ],
+  "future_main_inputs_used": [],
+  "mechanism_trace": {
+    "topic": "configuration_source_precedence_and_parameter_bounds",
+    "stage_boundary": "seed",
+    "future_main_inputs_used": [],
+    "fixture_origin": "independently authored repo_cli gate data"
+  },
+  "fingerprints": {
+    "code_dir": {
+      "cli/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "cli/__main__.py": "5be35d80fa32d64992f2c2191f1e28239517ff6573f1d5b97f80f6195ee70278",
+      "cli/app.py": "569e6dc87904186d6d7e9313b5849cbd43b20945250e9b07b7c88cb36e67ebe2",
+      "cli/config.py": "06366429151bd6ac8cdd66366862212622cad19f6f512af50adfe8ef8f38969e",
+      "cli/state.py": "75b7eb1ad52a112b61e9dec857c2d343e91b377efa51cc4733b69e18fe400060",
+      "cli/validation.py": "aa97f2273f06a6134741ed01a32f17d89a72ca1e1fe3572eda899e82f0a763f9",
+      "docs/contract.md": "a37add1b1c191545a99b27bcef1fffa840938cfb0957a3c6c303a27ecc849f17",
+      "tests/test_public.py": "15978adf968c3f3d328f815a4250fcf4acbcadee8b46055d34bc9c455c48595b"
+    },
+    "private_tests_dir": {
+      "test_private_gate.py": "cb6802c82f26012dfdc672c6b4886992726bb3c0361be41c3dc8d953c84b2091"
+    },
+    "regression_tests_dir": {
+      "test_routes.py": "706b93e0905d6d43dabb0f2dabe3dadc1343d981f4e18a4a80e27a20a606a72b"
+    },
+    "reference_dir": {
+      "cli/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "cli/__main__.py": "5be35d80fa32d64992f2c2191f1e28239517ff6573f1d5b97f80f6195ee70278",
+      "cli/app.py": "569e6dc87904186d6d7e9313b5849cbd43b20945250e9b07b7c88cb36e67ebe2",
+      "cli/config.py": "22b3af9352a2cdd0a8bbe794fef1c99aa06445db88152f27382e74401d953510",
+      "cli/state.py": "75b7eb1ad52a112b61e9dec857c2d343e91b377efa51cc4733b69e18fe400060",
+      "cli/validation.py": "aa97f2273f06a6134741ed01a32f17d89a72ca1e1fe3572eda899e82f0a763f9",
+      "docs/contract.md": "a37add1b1c191545a99b27bcef1fffa840938cfb0957a3c6c303a27ecc849f17",
+      "tests/test_public.py": "15978adf968c3f3d328f815a4250fcf4acbcadee8b46055d34bc9c455c48595b"
+    },
+    "task_file": "95b0417e871eeb0fc85b9d30cddcc2e59711b483502e9a08a5c89af31b53936b"
+  }
+}

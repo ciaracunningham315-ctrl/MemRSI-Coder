@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "task_id": "repo_data_t1",
+  "repository_id": "repo_data",
+  "stage": "seed",
+  "code_dir": "scenarios/repo_data/t1_seed/code",
+  "task_file": "scenarios/repo_data/t1_seed/task.md",
+  "private_tests_dir": "private/acceptance/repo_data/t1_seed",
+  "regression_tests_dir": "private/regression/repo_data/t1_seed",
+  "reference_dir": "private/references/repo_data/t1_seed/code",
+  "acceptance_command": [
+    "python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests"
+  ],
+  "representative_bad_patches": [
+    {
+      "name": "skip_validation",
+      "category": "remove_validation",
+      "overlay_dir": "private/references/repo_data/t1_seed/bad_patches/skip_validation"
+    },
+    {
+      "name": "swallow_failure",
+      "category": "swallow_exception",
+      "overlay_dir": "private/references/repo_data/t1_seed/bad_patches/swallow_failure"
+    },
+    {
+      "name": "hardcode_example",
+      "category": "hardcode",
+      "overlay_dir": "private/references/repo_data/t1_seed/bad_patches/hardcode_example"
+    }
+  ],
+  "runtime": {
+    "python_minimum": "3.10",
+    "dependencies": []
+  },
+  "dataset_revision": "repo_data_contracts_v1_2026-11-06",
+  "snapshot_policy": "independently authored fixed snapshot; canonical prior-stage capabilities are incorporated without Agent patch inheritance",
+  "public_contract_file": "docs/data-contract.md",
+  "git_stage_package": "git_stage_packages/repo_data_t1_seed.tar.gz",
+  "git_stage_package_sha256": "3060332deec3b920c63e81de290ca1ea50e0e2a10f61058ad97fa781da12d715",
+  "visible_head_sha": "f1c66974f16bab92f4e812d2bed72d49e19ccb0f",
+  "allowed_ancestor_shas": [],
+  "git_object_shas": [
+    "096da0b06ce4a2a3b4caf4ba6305f4f2a011f184",
+    "29cedd6b51e799b925aa0d646a93f631cff4a951",
+    "5eb615a3490358bf3ef5ffbf93bd2a5d73e08621",
+    "7040e5d8225ffd7f26dfa3459f9df718c260379b",
+    "865c802bf47c028c997ba3db7b810225f5a0f73c",
+    "8b137891791fe96927ad78e64b0aad7bded08bdc",
+    "8c81de144247862174f6ff90632c657d379bc0a2",
+    "9213c12f174ed30e83561f693d6c30634956eba5",
+    "d36bbb5f2ba9ee42fa6379f1d0b7337556b0c148",
+    "ed0284da63f388199a7c7d94d49f00237b8c8a99",
+    "f1c66974f16bab92f4e812d2bed72d49e19ccb0f"
+  ],
+  "code_snapshot_sha256": "0a800885fa410575776feaa4fc32bb3f1e474da6d1886d77d46f848e08b15818"
+}

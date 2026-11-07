@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.runtime/
+*.log
+.DS_Store
+configs/chain_integration.local.yaml
+reports/*preflight*.json
+reports/repo_api_delivery.md
+results/*
+!results/README.md

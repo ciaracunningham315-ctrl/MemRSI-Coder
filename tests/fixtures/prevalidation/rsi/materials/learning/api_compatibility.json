@@ -1,0 +1,15 @@
+{
+  "material_id": "learning-api-compatibility",
+  "family": "api_compatibility",
+  "source_kind": "synthetic_learning_material",
+  "observation": "A library changed a keyword parameter name and a caller using the old keyword failed.",
+  "lesson": "When evolving a public API, retain a compatible alias or provide an explicit migration boundary.",
+  "live_task": {
+    "task_id": "api_material_learning",
+    "prompt": "Fix api_material.py to accept both key and legacy_key keyword arguments, preserving positional calls.",
+    "source": "def event(key):\n    return {\"key\": key}\n",
+    "acceptance": "import sys\nsys.path.insert(0, \"/workspace\")\nfrom api_material import event\nassert event(\"x\")[\"key\"] == \"x\"\nassert event(legacy_key=\"y\")[\"key\"] == \"y\"\n",
+    "acceptance_file": "tests/private_acceptance_api_material_learning.py",
+    "acceptance_command": ["python", "-I", "-B", "/workspace/tests/private_acceptance_api_material_learning.py"]
+  }
+}

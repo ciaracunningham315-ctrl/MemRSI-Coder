@@ -1,0 +1,15 @@
+{
+  "material_id": "learning-input-validation-regression",
+  "family": "input_validation_regression",
+  "source_kind": "synthetic_learning_material",
+  "observation": "A validator used isinstance(value, int), which also accepts booleans in Python.",
+  "lesson": "Validate exact input types and boundary cases before applying the operation.",
+  "live_task": {
+    "task_id": "validation_material_learning",
+    "prompt": "Fix validation_material.py so quantity rejects bool values and accepts exact integers from 1 through 20.",
+    "source": "def quantity(value):\n    if not isinstance(value, int):\n        raise TypeError(\"integer required\")\n    if not 1 <= value <= 20:\n        raise ValueError(\"out of range\")\n    return value\n",
+    "acceptance": "import sys\nsys.path.insert(0, \"/workspace\")\nfrom validation_material import quantity\nassert quantity(3) == 3\ntry:\n    quantity(True)\nexcept TypeError:\n    pass\nelse:\n    raise AssertionError(\"bool must be rejected\")\n",
+    "acceptance_file": "tests/private_acceptance_validation_material_learning.py",
+    "acceptance_command": ["python", "-I", "-B", "/workspace/tests/private_acceptance_validation_material_learning.py"]
+  }
+}

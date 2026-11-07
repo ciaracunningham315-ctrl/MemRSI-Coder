@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "task_id": "repo_api_t3",
+  "repository_id": "repo_api",
+  "stage": "stale",
+  "code_dir": "scenarios/repo_api/t3_stale/code",
+  "task_file": "scenarios/repo_api/t3_stale/task.md",
+  "private_tests_dir": "private/acceptance/repo_api/t3_stale",
+  "regression_tests_dir": "private/regression/repo_api/t3_stale",
+  "reference_dir": "private/references/repo_api/t3_stale/code",
+  "acceptance_command": [
+    "python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests"
+  ],
+  "representative_bad_patches": [
+    {
+      "name": "skip_validation",
+      "category": "remove_validation",
+      "overlay_dir": "private/references/repo_api/t3_stale/bad_patches/skip_validation"
+    },
+    {
+      "name": "swallow_failure",
+      "category": "swallow_exception",
+      "overlay_dir": "private/references/repo_api/t3_stale/bad_patches/swallow_failure"
+    },
+    {
+      "name": "hardcode_example",
+      "category": "hardcode",
+      "overlay_dir": "private/references/repo_api/t3_stale/bad_patches/hardcode_example"
+    }
+  ],
+  "runtime": {
+    "python_minimum": "3.10",
+    "dependencies": []
+  },
+  "applicability_expectations": {
+    "historical_paths": [
+      "api/errors.py",
+      "api/validation.py",
+      "api/http.py"
+    ],
+    "stale_path": "api/errors.py",
+    "stale_symbol": {
+      "file_path": "api/validation.py",
+      "symbol": "require_count"
+    },
+    "unchanged_control": {
+      "file_path": "api/http.py",
+      "symbols": [
+        "response",
+        "error_response"
+      ]
+    },
+    "note": "Expected evidence checks only; actual event extraction and MemoryService applicability must be measured from real history. Commit differences alone do not imply stale."
+  },
+  "git_stage_package": "git_stage_packages/repo_api_t3_stale.tar.gz",
+  "visible_head_sha": "abefbb4ac53b8aadd4933c4bfb539a1f05da4efb",
+  "allowed_ancestor_shas": [
+    "edfc6fd7007b585d7f34fe7d1f7ec6aa1635574b",
+    "42c8870ea4edc705d084d2cef1f9baeb2a3a9978"
+  ],
+  "git_object_shas": [
+    "08cbfdf92ed53d070e098bd40982c442c436f981",
+    "11d2e908e8a1199f1fd3c9ff1fb70c7e1591e43a",
+    "151e8daa1e7f36d057d768dd6d5d1fe9067c0f8f",
+    "177140d538ee48eb80dd435aff867a7fd4aec942",
+    "202a54f4ffe2153097318b10c8a97df0c2786714",
+    "23a8c1c17959682ab89072d2c8b98f3fd6a04e7f",
+    "241a79fe883d66810783e441299f1c454faac4a8",
+    "2e36951880d1163b6f2b59e36dc8e3a425d9d2bd",
+    "3743cb86ff302f956b3ea1c5b0540861b5580688",
+    "3c30ab70956ff0fc48f7a84303e98d56b111359a",
+    "40294a6b5e115b90deb3ca632424f3498fdab770",
+    "42c8870ea4edc705d084d2cef1f9baeb2a3a9978",
+    "558147a598accaf59d7763f2014ea3f60e2834d5",
+    "55dd42e36db8d8eb6af03ce57724a508adb57d4d",
+    "57f03060e3fe54bf404440de43229e3248edb5db",
+    "5d400cc6b35cc845491d5b4e790545251ba2a7f7",
+    "6091fcaa479aa7ceef218a0a13a2bc7fc5a53d1b",
+    "6c6f88d89168f410d0d9c466b96ab6ea4c8f4fcb",
+    "6e3d1c2e2c5b3c1c2734b54c3706a58e5b8bdde0",
+    "726794106069d59621c98d863ddcf849af40faaa",
+    "764b31c2709e910e08670f93a247ea014aaabdfc",
+    "83c455a80df3a9d761b7627f735afd49ca16d050",
+    "8c962c6cbb4bb7e93d6c136e7428a08676aa61d4",
+    "8d9c2d3ccb5419160450183f0929155ef477b7e3",
+    "8fae26067d52218a4ddc309df4c2e9c6d1910f7e",
+    "925783dbbeb363b37d26c66bc7a54fd5a78820a4",
+    "a606fda2d3b57f56daa7c456072b1af9164801ce",
+    "abefbb4ac53b8aadd4933c4bfb539a1f05da4efb",
+    "afd0a45f7870a6391f4cc9f8384d8c45cbe668cb",
+    "be6a29a70a84bb7aa3b931376837f422ab7e5a41",
+    "c09668b2ea2683d51c74684c5abd5aa2e1c2285e",
+    "d0b525c2e315da791327e5281fa84e8b1c10b0eb",
+    "d0f98219c719a1c87fb2e50e0423e90c5f92a376",
+    "d238e51903f0ae583398ed8adb7b341d8d4f995d",
+    "dafcfff7dbd7c08eaf78977f6560ecadf9709efa",
+    "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "eb6aa980d97af6075c500c191812030bdd930784",
+    "edfc6fd7007b585d7f34fe7d1f7ec6aa1635574b",
+    "ee513ef6c838f9cd641788ce683e8dca4d2c94fa",
+    "f93a1f348aef5e9b13fdc0bf84ecd00cafa05f5e",
+    "fd416fa4aa381e16c6f0fb25f48abed8542a97cd",
+    "ff2788ee8e4b1eab0baaf4da755bf572abf87485"
+  ],
+  "code_snapshot_sha256": "e32986e49a8018cc08e547935eb054526426de3a8b57cba30f8b33c7620c30ad",
+  "git_stage_package_sha256": "57bb0d09953e11288680909b8bdd456a0ac21b8709b976450f5f27bb692c9f6f",
+  "dataset_revision": "repo_api_contracts_v2_2026-11-06",
+  "public_contract_file": "docs/api-contract.md",
+  "cumulative_routes": [
+    "/health",
+    "/inventory",
+    "/reservations",
+    "/returns",
+    "/holds"
+  ],
+  "reference_ablation_note": "Reference-only file ablations demonstrate independent obligations in this implementation; scoring accepts any implementation satisfying observable contracts and never requires a file count."
+}

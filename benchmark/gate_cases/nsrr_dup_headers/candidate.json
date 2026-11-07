@@ -1,0 +1,11 @@
+{
+  "audit_task_id": "nsrr_audit_dup_headers",
+  "baseline_policy": "gate_cases/nsrr_dup_headers/baseline/policy.json",
+  "baseline_skill": "gate_cases/nsrr_dup_headers/baseline/SKILL.md",
+  "candidate_id": "nsrr_dup_headers",
+  "candidate_policy": "gate_cases/nsrr_dup_headers/candidate/policy.json",
+  "candidate_skill": "gate_cases/nsrr_dup_headers/candidate/SKILL.md",
+  "candidate_type": "duplicate",
+  "source_provenance": "independently authored synthetic Skill revision and workload; not derived from main-task scores or Gate-selection results",
+  "title": "Header key normalization copy"
+}

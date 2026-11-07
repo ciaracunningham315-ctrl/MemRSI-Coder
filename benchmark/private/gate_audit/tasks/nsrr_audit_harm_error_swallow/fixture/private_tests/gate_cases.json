@@ -1,0 +1,57 @@
+{
+  "cases": [
+    {
+      "expected": {
+        "body": {
+          "error": "invalid_input"
+        },
+        "status": 400
+      },
+      "id": "gate_rejected_empty_payload",
+      "input": {
+        "body": {
+          "field": ""
+        },
+        "valid": false
+      }
+    },
+    {
+      "expected": {
+        "body": {
+          "error": "invalid_input"
+        },
+        "status": 400
+      },
+      "id": "gate_rejected_negative_limit",
+      "input": {
+        "body": {
+          "limit": -5
+        },
+        "valid": false
+      }
+    },
+    {
+      "expected": {
+        "body": {
+          "items": [
+            "a",
+            "b"
+          ]
+        },
+        "status": 200
+      },
+      "id": "gate_accepted_batch",
+      "input": {
+        "body": {
+          "items": [
+            "a",
+            "b"
+          ]
+        },
+        "valid": true
+      }
+    }
+  ],
+  "oracle": "frozen Gate selection acceptance outputs disjoint from independent audit trusted_tests.json",
+  "task_id": "nsrr_audit_harm_error_swallow"
+}

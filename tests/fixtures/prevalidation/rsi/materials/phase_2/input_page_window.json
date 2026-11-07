@@ -1,0 +1,19 @@
+{
+  "material_id": "phase2-input-page-window",
+  "family": "input_validation_regression",
+  "source_kind": "synthetic_phase_2_material",
+  "live_task": {
+    "task_id": "validation_material_page_window_phase2",
+    "prompt": "Fix validation_material.py so page_window(page=1, page_size=20) returns ((page - 1) * page_size, page_size). Both arguments must be exact Python ints (bool is invalid); page must be at least 1 and page_size must be from 1 through 100 inclusive. Omitted arguments use the stated defaults. Raise TypeError for any non-int value and ValueError for out-of-range integers. Do not coerce values.",
+    "source": "def page_window(page=1, page_size=20):\n    return (0, page_size)\n",
+    "reference": "def page_window(page=1, page_size=20):\n    if type(page) is not int or type(page_size) is not int:\n        raise TypeError(\"page and page_size must be integers\")\n    if page < 1:\n        raise ValueError(\"page out of range\")\n    if not 1 <= page_size <= 100:\n        raise ValueError(\"page_size out of range\")\n    return ((page - 1) * page_size, page_size)\n",
+    "acceptance": "import sys\nsys.path.insert(0, \"/workspace\")\nfrom validation_material import page_window\nassert page_window() == (0, 20)\nassert page_window(1, 1) == (0, 1)\nassert page_window(4, 25) == (75, 25)\nassert page_window(2, 100) == (100, 100)\nfor args in ((True, 20), (1, False), (1.0, 20), (1, \"20\"), (None, 20)):\n    try:\n        page_window(*args)\n    except TypeError:\n        pass\n    else:\n        raise AssertionError(f\"invalid page window types accepted: {args!r}\")\nfor args in ((0, 20), (-1, 20), (1, 0), (1, 101)):\n    try:\n        page_window(*args)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(f\"out-of-range page window accepted: {args!r}\")\n",
+    "acceptance_file": "tests/private_acceptance_input_page_window_phase2.py",
+    "acceptance_command": [
+      "python",
+      "-I",
+      "-B",
+      "/workspace/tests/private_acceptance_input_page_window_phase2.py"
+    ]
+  }
+}

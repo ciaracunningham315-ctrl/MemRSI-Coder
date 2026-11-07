@@ -1,0 +1,199 @@
+{
+  "task_id": "repo_api_gate_stale_notify",
+  "manifest": "private/gate_selection/repo_api/repo_api_gate_stale_notify/manifest.json",
+  "kind": "task",
+  "stage": "stale",
+  "checks": {
+    "baseline_public_passes": true,
+    "baseline_target_fails": true,
+    "baseline_regression_passes": true,
+    "reference_all_passes": true
+  },
+  "passed": true,
+  "manifest_sha256": "0c784fa760bf3a593712c1d3730ed06764a480ee6052a274c4bb638b8b6ce560",
+  "fingerprints": {
+    "code_dir": {
+      "api/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "api/faults.py": "4abd26cdf98a326b70d6efe72a24583948bc4804ec0904641c126d69bdf6d488",
+      "api/service.py": "74dbd539a0edf65569f66948cdea8560321263e5609fda505092285df1a3d6ea",
+      "api/validation.py": "671f3cccb67a90289c675ca13b8333e72f15644254fe9feece003a2f9b63e9d5",
+      "docs/api-contract.md": "d89f4aa691afa27024113d030486b7552f6ad750aa4e270dbb4f1d0f7ac01509",
+      "tests/test_public.py": "45fcc72670c1fcac0ba0408ab199093ea1fb9b595f7db42bd7029d40fda56a43"
+    },
+    "private_tests_dir": {
+      "test_private_gate.py": "de1645b828da8246f08b22b67e61b233c5c8f3b139a4e4af4a899911e59dd270"
+    },
+    "regression_tests_dir": {
+      "test_routes.py": "171bccfe5af1bd2bbe694076f9bcd0b960d16f950173f69d1eec7c55ef8de670"
+    },
+    "reference_dir": {
+      "api/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "api/faults.py": "4abd26cdf98a326b70d6efe72a24583948bc4804ec0904641c126d69bdf6d488",
+      "api/service.py": "b01c9b3c333b3b97feb68d2264fd96771e28303c87b1f0d802bd6642e634d84e",
+      "api/validation.py": "671f3cccb67a90289c675ca13b8333e72f15644254fe9feece003a2f9b63e9d5",
+      "docs/api-contract.md": "d89f4aa691afa27024113d030486b7552f6ad750aa4e270dbb4f1d0f7ac01509",
+      "tests/test_public.py": "45fcc72670c1fcac0ba0408ab199093ea1fb9b595f7db42bd7029d40fda56a43"
+    },
+    "task_file": "ee70680f09024c07c742971a4be7be365ef8a3c682999a4fdcac4055c4f17e91"
+  },
+  "commands": {
+    "baseline": {
+      "public": {
+        "argv": [
+          "python",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-v"
+        ],
+        "cwd": ".runtime/gate_qualification_f3f212914a9a4d6885961baac1df3542/repo_api_gate_stale_notify/baseline/public",
+        "exit_code": 0,
+        "timed_out": false,
+        "error": null,
+        "duration_seconds": 0.0366,
+        "tests_run": 2,
+        "test_failures": 0,
+        "test_errors": 0
+      },
+      "target": {
+        "argv": [
+          "python",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-v"
+        ],
+        "cwd": ".runtime/gate_qualification_f3f212914a9a4d6885961baac1df3542/repo_api_gate_stale_notify/baseline/target",
+        "exit_code": 1,
+        "timed_out": false,
+        "error": null,
+        "duration_seconds": 0.0394,
+        "tests_run": 7,
+        "test_failures": 25,
+        "test_errors": 0
+      },
+      "regression": {
+        "argv": [
+          "python",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-v"
+        ],
+        "cwd": ".runtime/gate_qualification_f3f212914a9a4d6885961baac1df3542/repo_api_gate_stale_notify/baseline/regression",
+        "exit_code": 0,
+        "timed_out": false,
+        "error": null,
+        "duration_seconds": 0.0405,
+        "tests_run": 3,
+        "test_failures": 0,
+        "test_errors": 0
+      },
+      "combined": {
+        "argv": [
+          "python",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-v"
+        ],
+        "cwd": ".runtime/gate_qualification_f3f212914a9a4d6885961baac1df3542/repo_api_gate_stale_notify/baseline/combined",
+        "exit_code": 1,
+        "timed_out": false,
+        "error": null,
+        "duration_seconds": 0.0376,
+        "tests_run": 8,
+        "test_failures": 25,
+        "test_errors": 0
+      }
+    },
+    "reference": {
+      "public": {
+        "argv": [
+          "python",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-v"
+        ],
+        "cwd": ".runtime/gate_qualification_f3f212914a9a4d6885961baac1df3542/repo_api_gate_stale_notify/reference/public",
+        "exit_code": 0,
+        "timed_out": false,
+        "error": null,
+        "duration_seconds": 0.0392,
+        "tests_run": 2,
+        "test_failures": 0,
+        "test_errors": 0
+      },
+      "target": {
+        "argv": [
+          "python",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-v"
+        ],
+        "cwd": ".runtime/gate_qualification_f3f212914a9a4d6885961baac1df3542/repo_api_gate_stale_notify/reference/target",
+        "exit_code": 0,
+        "timed_out": false,
+        "error": null,
+        "duration_seconds": 0.0393,
+        "tests_run": 7,
+        "test_failures": 0,
+        "test_errors": 0
+      },
+      "regression": {
+        "argv": [
+          "python",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-v"
+        ],
+        "cwd": ".runtime/gate_qualification_f3f212914a9a4d6885961baac1df3542/repo_api_gate_stale_notify/reference/regression",
+        "exit_code": 0,
+        "timed_out": false,
+        "error": null,
+        "duration_seconds": 0.0393,
+        "tests_run": 3,
+        "test_failures": 0,
+        "test_errors": 0
+      },
+      "combined": {
+        "argv": [
+          "python",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-v"
+        ],
+        "cwd": ".runtime/gate_qualification_f3f212914a9a4d6885961baac1df3542/repo_api_gate_stale_notify/reference/combined",
+        "exit_code": 0,
+        "timed_out": false,
+        "error": null,
+        "duration_seconds": 0.0401,
+        "tests_run": 8,
+        "test_failures": 0,
+        "test_errors": 0
+      }
+    }
+  },
+  "model_calls": 0,
+  "formal_results": false
+}

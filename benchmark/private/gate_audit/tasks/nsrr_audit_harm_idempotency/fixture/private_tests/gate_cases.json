@@ -1,0 +1,63 @@
+{
+  "cases": [
+    {
+      "expected": {
+        "side_effects": 1
+      },
+      "id": "gate_triple_duplicate_key",
+      "input": {
+        "requests": [
+          {
+            "idempotency_key": "op-9"
+          },
+          {
+            "idempotency_key": "op-9"
+          },
+          {
+            "idempotency_key": "op-9"
+          }
+        ]
+      }
+    },
+    {
+      "expected": {
+        "side_effects": 2
+      },
+      "id": "gate_interleaved_keys",
+      "input": {
+        "requests": [
+          {
+            "idempotency_key": "op-1"
+          },
+          {
+            "idempotency_key": "op-2"
+          },
+          {
+            "idempotency_key": "op-1"
+          }
+        ]
+      }
+    },
+    {
+      "expected": {
+        "side_effects": 2
+      },
+      "id": "gate_unkeyed_and_keyed",
+      "input": {
+        "requests": [
+          {
+            "idempotency_key": null
+          },
+          {
+            "idempotency_key": "op-5"
+          },
+          {
+            "idempotency_key": "op-5"
+          }
+        ]
+      }
+    }
+  ],
+  "oracle": "frozen Gate selection acceptance outputs disjoint from independent audit trusted_tests.json",
+  "task_id": "nsrr_audit_harm_idempotency"
+}

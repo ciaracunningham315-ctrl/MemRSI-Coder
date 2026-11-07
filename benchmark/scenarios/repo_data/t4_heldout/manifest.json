@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "task_id": "repo_data_t4",
+  "repository_id": "repo_data",
+  "stage": "heldout",
+  "code_dir": "scenarios/repo_data/t4_heldout/code",
+  "task_file": "scenarios/repo_data/t4_heldout/task.md",
+  "private_tests_dir": "private/acceptance/repo_data/t4_heldout",
+  "regression_tests_dir": "private/regression/repo_data/t4_heldout",
+  "reference_dir": "private/references/repo_data/t4_heldout/code",
+  "acceptance_command": [
+    "python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests"
+  ],
+  "representative_bad_patches": [
+    {
+      "name": "skip_validation",
+      "category": "remove_validation",
+      "overlay_dir": "private/references/repo_data/t4_heldout/bad_patches/skip_validation"
+    },
+    {
+      "name": "swallow_failure",
+      "category": "swallow_exception",
+      "overlay_dir": "private/references/repo_data/t4_heldout/bad_patches/swallow_failure"
+    },
+    {
+      "name": "hardcode_example",
+      "category": "hardcode",
+      "overlay_dir": "private/references/repo_data/t4_heldout/bad_patches/hardcode_example"
+    }
+  ],
+  "runtime": {
+    "python_minimum": "3.10",
+    "dependencies": []
+  },
+  "dataset_revision": "repo_data_contracts_v1_2026-11-06",
+  "snapshot_policy": "independently authored fixed snapshot; canonical prior-stage capabilities are incorporated without Agent patch inheritance",
+  "public_contract_file": "docs/data-contract.md",
+  "git_stage_package": "git_stage_packages/repo_data_t4_heldout.tar.gz",
+  "git_stage_package_sha256": "b70b8153e01214edd49a419c7610f90ad8dd2585d68042199a52befb24b5e803",
+  "visible_head_sha": "bb40b5bba7d2b41305421ec349eeb2dc78a6d36c",
+  "allowed_ancestor_shas": [
+    "f1c66974f16bab92f4e812d2bed72d49e19ccb0f",
+    "3f9bf17fc521e90e13c3ea3961299279729fd6de",
+    "36278c090d8352b18627d34facd7c02820b0db08"
+  ],
+  "git_object_shas": [
+    "096da0b06ce4a2a3b4caf4ba6305f4f2a011f184",
+    "13555d2b097ec049be3e67880e7c6bd8eb2463ac",
+    "16f6481064550a47d15dc87ad8e113e3078f9f82",
+    "29cedd6b51e799b925aa0d646a93f631cff4a951",
+    "36278c090d8352b18627d34facd7c02820b0db08",
+    "3947a62fa2f639704c61698883a77f4536c320e4",
+    "3e26b5df0eb375708421783ec901f5ae57f868d1",
+    "3f9bf17fc521e90e13c3ea3961299279729fd6de",
+    "56073269d22bf3d22da57e892db60065de44bd30",
+    "5be9f2974ed53b6c31a239cbc97f147ac8e8c1d5",
+    "5d615d853732e65befc8a47cb3af4f17a3046a7d",
+    "5eb615a3490358bf3ef5ffbf93bd2a5d73e08621",
+    "61436593c170d57da474494ff1f42c728f8e4dbb",
+    "6a060c2e24b76ce6be8c6f3217adafd6ae6dcc7d",
+    "7040e5d8225ffd7f26dfa3459f9df718c260379b",
+    "7f11aac7b23f469e2926b1e0dba36cd7de4ffcac",
+    "865c802bf47c028c997ba3db7b810225f5a0f73c",
+    "8b137891791fe96927ad78e64b0aad7bded08bdc",
+    "8b2e9f1103517e854a9e4402e2b8efb3b5fefd35",
+    "8c81de144247862174f6ff90632c657d379bc0a2",
+    "9213c12f174ed30e83561f693d6c30634956eba5",
+    "944c95a6278c432f162b989b8db4be8f5f5c52b8",
+    "9c213f5acdd14489513fdd15207acb6fc8c4d817",
+    "bb40b5bba7d2b41305421ec349eeb2dc78a6d36c",
+    "bf5cd85db65afa83b44f9579f085cab7f250cb0b",
+    "c0160320ca6227185befcd5a7103f34b5abbad2a",
+    "c4c76f91dd1a0c47403e75269adad253c5a60ea3",
+    "c7f9c0175cf03c12eeb59efaa0fd76e01d5d64fd",
+    "d36bbb5f2ba9ee42fa6379f1d0b7337556b0c148",
+    "da0d8ad046e60131ef5b9c97aca7c91a66e3f111",
+    "e0b4d6a8562bd4105338a425d84fcbc2302874ea",
+    "e743b90d377ced41950e7247efa034415ce638bb",
+    "ea0b1ac5309ab5e84f7a2af582c994e6cd00b297",
+    "ea0f449413f30547080ff98f0c74600a05de99aa",
+    "ebbfcf135339ecdf283b5676bb655c1579298434",
+    "ed0284da63f388199a7c7d94d49f00237b8c8a99",
+    "ef5167174c0e783f74d3c9159fce67a733df6078",
+    "f1c66974f16bab92f4e812d2bed72d49e19ccb0f",
+    "f7e5b4014eec13ceb8a7f25f3ceada52f97d1b7c",
+    "ffb23e33d881e704cf8c68306fc19a2b70dd4c68"
+  ],
+  "code_snapshot_sha256": "cd593fa7b14167bfed64ba831767dd0ae917b926898d576c7e7535d2ac6d5376"
+}

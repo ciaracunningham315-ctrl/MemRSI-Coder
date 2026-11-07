@@ -1,0 +1,11 @@
+{
+  "task_id": "input_validation_regression_01",
+  "family": "input_validation_regression",
+  "title": "Validate integer quantities and step multiples under strict project scalar rules",
+  "prompt": "Fix quantity.py under the repository's strict input validation rules so quantity(value, *, step=1) validates both value and keyword-only step as exact int values in inclusive ranges (value in [1, 20], step in [1, 5], and value must be a multiple of step) with standard TypeError and ValueError separation and no coercion. Return value unchanged when valid. Do not edit the protected acceptance file.",
+  "source": "def quantity(value):\n    if not isinstance(value, int):\n        raise TypeError(\"quantity must be an integer\")\n    if value < 1 or value > 20:\n        raise ValueError(\"quantity out of range\")\n    return value\n",
+  "reference": "def quantity(value, *, step=1):\n    if type(value) is not int or type(step) is not int:\n        raise TypeError(\"value and step must be exact integers\")\n    if not 1 <= step <= 5:\n        raise ValueError(\"step out of range\")\n    if not 1 <= value <= 20 or value % step != 0:\n        raise ValueError(\"quantity out of range or not aligned to step\")\n    return value\n",
+  "acceptance": "import sys\nsys.path.insert(0, \"/workspace\")\nfrom quantity import quantity\nassert quantity(3) == 3\nassert quantity(20, step=5) == 20\nfor bad in (True, False, 1.5, \"2\", None):\n    try:\n        quantity(bad)\n    except TypeError:\n        pass\n    else:\n        raise AssertionError(f\"accepted invalid quantity type: {bad!r}\")\nfor bad_step in (True, False, 1.0, \"1\", None):\n    try:\n        quantity(4, step=bad_step)\n    except TypeError:\n        pass\n    else:\n        raise AssertionError(f\"accepted invalid step type: {bad_step!r}\")\nfor bad_args in ((0, 1), (21, 1), (4, 0), (4, 6), (7, 2)):\n    try:\n        quantity(bad_args[0], step=bad_args[1])\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(f\"accepted out-of-range or misaligned quantity: {bad_args!r}\")\n",
+  "acceptance_file": "tests/private_acceptance_input_validation_regression_01.py",
+  "acceptance_command": ["python", "-I", "-B", "/workspace/tests/private_acceptance_input_validation_regression_01.py"]
+}

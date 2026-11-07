@@ -1,0 +1,43 @@
+{
+  "cases": [
+    {
+      "expected": {
+        "value": "v3"
+      },
+      "id": "first_static_lookup",
+      "input": {
+        "key": "schema_version",
+        "metadata": {
+          "schema_version": "v3"
+        }
+      }
+    },
+    {
+      "expected": {
+        "value": "v3"
+      },
+      "id": "repeated_static_lookup",
+      "input": {
+        "key": "schema_version",
+        "metadata": {
+          "schema_version": "v3"
+        }
+      }
+    },
+    {
+      "expected": {
+        "value": "en-US"
+      },
+      "id": "second_static_lookup",
+      "input": {
+        "key": "locale",
+        "metadata": {
+          "locale": "en-US"
+        }
+      }
+    }
+  ],
+  "oracle": "frozen expected outputs in the isolated trusted test fixture",
+  "performance_observations": [],
+  "task_id": "nsrr_audit_benefit_cache"
+}

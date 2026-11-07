@@ -1,0 +1,58 @@
+{
+  "cases": [
+    {
+      "expected": {
+        "side_effects": 1
+      },
+      "id": "repeated_same_key",
+      "input": {
+        "requests": [
+          {
+            "idempotency_key": "k-1"
+          },
+          {
+            "idempotency_key": "k-1"
+          }
+        ]
+      }
+    },
+    {
+      "expected": {
+        "side_effects": 2
+      },
+      "id": "two_distinct_keys",
+      "input": {
+        "requests": [
+          {
+            "idempotency_key": "k-1"
+          },
+          {
+            "idempotency_key": "k-2"
+          }
+        ]
+      }
+    },
+    {
+      "expected": {
+        "side_effects": 2
+      },
+      "id": "duplicate_then_new",
+      "input": {
+        "requests": [
+          {
+            "idempotency_key": "k-1"
+          },
+          {
+            "idempotency_key": "k-1"
+          },
+          {
+            "idempotency_key": "k-2"
+          }
+        ]
+      }
+    }
+  ],
+  "oracle": "frozen expected outputs in the isolated trusted test fixture",
+  "performance_observations": [],
+  "task_id": "nsrr_audit_harm_idempotency"
+}

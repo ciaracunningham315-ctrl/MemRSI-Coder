@@ -1,0 +1,12 @@
+{
+  "audit_task_id": "nsrr_audit_dup_headers",
+  "candidate_id": "nsrr_dup_headers",
+  "claimed_observation_dimension": "behavioral",
+  "description": "Synthetic independent request fixtures cover mixed-case header names and values. The revision is an exact content duplicate of the baseline.",
+  "independent_source": "deterministic synthetic audit-only workload with a separate trusted assertion oracle",
+  "minimum_cases": 3,
+  "minimum_performance_samples": 0,
+  "provenance_boundary": "not sourced from Gate selection, main-task T4, acceptance, regression, references, or learning scores",
+  "task_type": "header_normalization",
+  "title": "Header key normalization copy"
+}

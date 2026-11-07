@@ -1,0 +1,44 @@
+{
+  "cases": [
+    {
+      "expected": {
+        "amount": "0.40"
+      },
+      "id": "gate_classic_float_sum",
+      "input": {
+        "addends": [
+          "0.15",
+          "0.15",
+          "0.10"
+        ]
+      }
+    },
+    {
+      "expected": {
+        "amount": "3.01"
+      },
+      "id": "gate_half_up_rounding",
+      "input": {
+        "addends": [
+          "1.005",
+          "2.00"
+        ]
+      }
+    },
+    {
+      "expected": {
+        "amount": "15.50"
+      },
+      "id": "gate_credit_offset",
+      "input": {
+        "addends": [
+          "19.99",
+          "-4.50",
+          "0.01"
+        ]
+      }
+    }
+  ],
+  "oracle": "frozen Gate selection acceptance outputs disjoint from independent audit trusted_tests.json",
+  "task_id": "nsrr_audit_benefit_decimal"
+}

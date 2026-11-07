@@ -1,0 +1,19 @@
+{
+  "material_id": "phase2-api-request-headers",
+  "family": "api_compatibility",
+  "source_kind": "synthetic_phase_2_material",
+  "live_task": {
+    "task_id": "api_material_request_headers_phase2",
+    "prompt": "Fix api_material.py so request(method, path) keeps its existing positional call form and existing result fields: method is uppercased and path is returned unchanged. Add an optional keyword-only headers argument. When headers is omitted, return exactly the existing two-key result. When headers is supplied, it must be a Mapping; return a shallow independent dict of its entries under the headers key, preserving header names and values. Raise TypeError for a supplied non-Mapping value. Do not mutate the supplied mapping.",
+    "source": "def request(method, path):\n    return {\"method\": method.upper(), \"path\": path}\n",
+    "reference": "from collections.abc import Mapping\n\ndef request(method, path, *, headers=None):\n    result = {\"method\": method.upper(), \"path\": path}\n    if headers is not None:\n        if not isinstance(headers, Mapping):\n            raise TypeError(\"headers must be a mapping\")\n        result[\"headers\"] = dict(headers)\n    return result\n",
+    "acceptance": "import sys\nsys.path.insert(0, \"/workspace\")\nfrom api_material import request\nassert request(\"get\", \"/items\") == {\"method\": \"GET\", \"path\": \"/items\"}\nheaders = {\"X-Trace\": \"abc\", \"Accept\": \"application/json\"}\nresult = request(\"post\", \"/items\", headers=headers)\nassert result == {\"method\": \"POST\", \"path\": \"/items\", \"headers\": headers}\nassert result[\"headers\"] is not headers\nassert headers == {\"X-Trace\": \"abc\", \"Accept\": \"application/json\"}\nfor bad in ([], \"X-Trace: abc\", 7):\n    try:\n        request(\"get\", \"/items\", headers=bad)\n    except TypeError:\n        pass\n    else:\n        raise AssertionError(f\"non-mapping headers accepted: {bad!r}\")\n",
+    "acceptance_file": "tests/private_acceptance_api_request_headers_phase2.py",
+    "acceptance_command": [
+      "python",
+      "-I",
+      "-B",
+      "/workspace/tests/private_acceptance_api_request_headers_phase2.py"
+    ]
+  }
+}

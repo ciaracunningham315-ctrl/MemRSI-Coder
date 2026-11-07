@@ -1,0 +1,11 @@
+{
+  "audit_task_id": "nsrr_audit_benefit_decimal",
+  "baseline_policy": "gate_cases/nsrr_benefit_decimal/baseline/policy.json",
+  "baseline_skill": "gate_cases/nsrr_benefit_decimal/baseline/SKILL.md",
+  "candidate_id": "nsrr_benefit_decimal",
+  "candidate_policy": "gate_cases/nsrr_benefit_decimal/candidate/policy.json",
+  "candidate_skill": "gate_cases/nsrr_benefit_decimal/candidate/SKILL.md",
+  "candidate_type": "potentially_beneficial",
+  "source_provenance": "independently authored synthetic Skill revision and workload; not derived from main-task scores or Gate-selection results",
+  "title": "Exact decimal arithmetic for totals"
+}

@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "task_id": "repo_api_gate_seed_print",
+  "repository_id": "repo_api",
+  "stage": "seed",
+  "kind": "task",
+  "available_after_stage": "seed",
+  "latest_mechanism_stage": "seed",
+  "independent_of_main_tasks": true,
+  "code_dir": "private/gate_selection/repo_api/repo_api_gate_seed_print/code",
+  "task_file": "private/gate_selection/repo_api/repo_api_gate_seed_print/task.md",
+  "private_tests_dir": "private/gate_selection/repo_api/repo_api_gate_seed_print/acceptance",
+  "regression_tests_dir": "private/gate_selection/repo_api/repo_api_gate_seed_print/regression",
+  "reference_dir": "private/gate_selection/repo_api/repo_api_gate_seed_print/reference/code",
+  "acceptance_command": [
+    "python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "mechanisms": [
+    "strict_bounded_integer",
+    "error_field_path",
+    "validate_before_mutation"
+  ],
+  "future_main_inputs_used": [],
+  "fingerprints": {
+    "code_dir": {
+      "api/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "api/errors.py": "4abd26cdf98a326b70d6efe72a24583948bc4804ec0904641c126d69bdf6d488",
+      "api/service.py": "b5ed63d5c372f5abf5758bc3e7a5768e00c7d26b0514a13a35c82f07f5a63eae",
+      "api/validation.py": "e9ee598446da6c46f15906d9bc40d98c843304c07fdfd20e92367888c2489874",
+      "docs/api-contract.md": "629dd845cfce6317a418736a984cd24efe4741ec37d2497cfffde6d615018099",
+      "tests/test_public.py": "8bf112b8eab3c99c6b4e977981b2423efaf11c27ef483752d065442d235d83e7"
+    },
+    "private_tests_dir": {
+      "test_private_gate.py": "43ba1ac0b7fe64fe59e0be4d9d6d4d21e4c1a8606a7561749a33d079c289b926"
+    },
+    "regression_tests_dir": {
+      "test_routes.py": "23f7016d9997d98ab021d788218e930ac35af90e1fc4932302dde2f42fbb12b9"
+    },
+    "reference_dir": {
+      "api/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "api/errors.py": "4abd26cdf98a326b70d6efe72a24583948bc4804ec0904641c126d69bdf6d488",
+      "api/service.py": "f9fadf685ab675b13c592c2d757503e0d5b5dba37ee6050339d73820cde6fdf6",
+      "api/validation.py": "e9ee598446da6c46f15906d9bc40d98c843304c07fdfd20e92367888c2489874",
+      "docs/api-contract.md": "629dd845cfce6317a418736a984cd24efe4741ec37d2497cfffde6d615018099",
+      "tests/test_public.py": "8bf112b8eab3c99c6b4e977981b2423efaf11c27ef483752d065442d235d83e7"
+    },
+    "task_file": "dc8b81fc028cff78956e797e2787b2175d08fadb0a8f46c755294cfb869dfe23"
+  }
+}

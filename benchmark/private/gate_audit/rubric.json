@@ -1,0 +1,29 @@
+{
+  "independence": {
+    "gate_selection_is_label_source": false,
+    "label_source": "observed baseline/candidate outputs against this directory's trusted synthetic assertions",
+    "main_task_scores_are_label_source": false
+  },
+  "labels": [
+    "harmful",
+    "neutral",
+    "beneficial",
+    "unknown"
+  ],
+  "order": [
+    "unknown when either side has too few valid paired observations",
+    "harmful when the candidate fails an assertion the baseline passes, or its pass count is lower",
+    "beneficial when the candidate gains assertions and has no paired regression",
+    "unknown when paired assertion results disagree without strict net gain",
+    "unknown when a required claimed dimension such as performance lacks its frozen minimum measurements",
+    "neutral when all required observations exist and paired assertion outcomes are unchanged"
+  ],
+  "performance_minimum_rule": {
+    "candidate_type_is_label_evidence": false,
+    "claim_text_is_label_evidence": false,
+    "observations": "trusted_tests.performance_observations",
+    "source": "task.minimum_performance_samples"
+  },
+  "rubric_id": "nsrr-observation-rules-v1",
+  "version": 1
+}

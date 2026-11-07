@@ -1,0 +1,2 @@
+# Sensor batch contract
+Legacy readings remain engineering-unit decimals through normalize_one. Batch input is a mapping with readings. Each entry has a unique sensor_id and reading_milli: non-negative integer thousandths, accepted as an integer or ASCII base-10 integer string. Null offset_milli is zero; supplied offset follows the same integer form and cannot exceed the reading. Results use integer milli-units. Booleans and fractions raise ValueError.

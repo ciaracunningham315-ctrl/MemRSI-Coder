@@ -1,0 +1,2009 @@
+{
+  "kind": "offline_dataset_admission",
+  "dataset_revision": "repo_api_contracts_v2_2026-11-06",
+  "model_calls": 0,
+  "formal_results": false,
+  "ability_metrics": null,
+  "stages": [
+    {
+      "task_id": "repo_api_t1",
+      "stage": "seed",
+      "checks": {
+        "public_baseline_passes": true,
+        "baseline_target_fails": true,
+        "baseline_regression_passes": true,
+        "reference_all_pass": true,
+        "bad_patches_rejected": true,
+        "bad_patch_categories_covered": true
+      },
+      "passed": true,
+      "fingerprints": {
+        "code_dir": {
+          "README.md": "ef99eab2e30a7e14f9a008745d9ad30c135fa0ee63ad18a6093309a03f42296d",
+          "api/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "api/app.py": "6df83a559ae985310315d11cade4c56384201b1e86256b82df5e958de4badb9b",
+          "api/catalog.py": "ce78d18ce305af7753f1cbaea30025e06e276a553c214b5115e82dba1a000dc7",
+          "api/errors.py": "ce9f395abef62bc241dac92d244c4154344b73da108928d76f513212fb82d90f",
+          "api/http.py": "a796f9cf16322b42f5080b50bab30e533c2ad04fc88b1ec14b0952c8a7b8dad5",
+          "api/reservations.py": "85cf2f1f1c53e074f25956f0d3fdcf1d90f51138be5a6b10bc5bea05dca83d98",
+          "api/stock.py": "69336fa2407b020be3b352bcc8d533775dd08ede2e11f9124f793144d1a3a384",
+          "api/validation.py": "9c7ac6529a05c9c23e6da77c647f70fbe84803a7344c0a9dbe373256ec532478",
+          "docs/api-contract.md": "7c6ae0510b080ad55cf74c672558563ade9b015599c737199a57cdce4cdfec60",
+          "tests/test_public_api.py": "e17ed460a7fe974d403216c2b758b00e0e85351fd60dd7e3ef5937ab6a63a306"
+        },
+        "private_tests_dir": {
+          "test_acceptance_api.py": "4b056dfc8eeca4770246a2f66bbcd21e10b7239590f5e51f95a8befea90dee75"
+        },
+        "regression_tests_dir": {
+          "test_regression_api.py": "58e06f013a750ad80cd961d80e1637294cc2dcd74927c5e738b539722e7aea79"
+        },
+        "reference_dir": {
+          "README.md": "ef99eab2e30a7e14f9a008745d9ad30c135fa0ee63ad18a6093309a03f42296d",
+          "api/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "api/app.py": "6df83a559ae985310315d11cade4c56384201b1e86256b82df5e958de4badb9b",
+          "api/catalog.py": "ce78d18ce305af7753f1cbaea30025e06e276a553c214b5115e82dba1a000dc7",
+          "api/errors.py": "ba5389a4945da7cb618fc56d992a2b40bc7f36032336e574ace5018d37ef30d7",
+          "api/http.py": "a796f9cf16322b42f5080b50bab30e533c2ad04fc88b1ec14b0952c8a7b8dad5",
+          "api/reservations.py": "918d24de516bfb3ec70713221f20f7e2914dfdc882bc82cce79713c0e2eb3e1d",
+          "api/stock.py": "69336fa2407b020be3b352bcc8d533775dd08ede2e11f9124f793144d1a3a384",
+          "api/validation.py": "115b3a8b02d368500ccb87568fdbbb16e22ffc6a15e8d078a479479097126268",
+          "docs/api-contract.md": "7c6ae0510b080ad55cf74c672558563ade9b015599c737199a57cdce4cdfec60",
+          "tests/test_public_api.py": "e17ed460a7fe974d403216c2b758b00e0e85351fd60dd7e3ef5937ab6a63a306"
+        },
+        "task_file": {
+          "scenarios/repo_api/t1_seed/task.md": "e04a843654bf24e83afa48965c77ddd807a32b0b6d53eac362956f208bd0893d"
+        },
+        "manifest": {
+          "sha256": "901ffde15a0005ac829404fe8dda846923f9b4613092602ea69ec03ece5cc9de"
+        }
+      },
+      "baseline": {
+        "public": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests"
+          ],
+          "cwd": ".runtime/repo_api_rework_1793933998505274000/t1_seed/baseline/public",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.1307,
+          "tests_run": 3,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "acceptance": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "_grader_acceptance",
+            "-v"
+          ],
+          "cwd": ".runtime/repo_api_rework_1793933998505274000/t1_seed/baseline/acceptance",
+          "exit_code": 1,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.1327,
+          "tests_run": 4,
+          "test_failures": 18,
+          "test_errors": 0
+        },
+        "regression": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "_grader_regression",
+            "-v"
+          ],
+          "cwd": ".runtime/repo_api_rework_1793933998505274000/t1_seed/baseline/regression",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.1322,
+          "tests_run": 2,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "combined": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests"
+          ],
+          "cwd": ".runtime/repo_api_rework_1793933998505274000/t1_seed/baseline/combined",
+          "exit_code": 1,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.1292,
+          "tests_run": 9,
+          "test_failures": 18,
+          "test_errors": 0
+        }
+      },
+      "reference": {
+        "public": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests"
+          ],
+          "cwd": ".runtime/repo_api_rework_1793933998505274000/t1_seed/reference/public",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.1316,
+          "tests_run": 3,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "acceptance": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "_grader_acceptance",
+            "-v"
+          ],
+          "cwd": ".runtime/repo_api_rework_1793933998505274000/t1_seed/reference/acceptance",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.1318,
+          "tests_run": 4,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "regression": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "_grader_regression",
+            "-v"
+          ],
+          "cwd": ".runtime/repo_api_rework_1793933998505274000/t1_seed/reference/regression",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.1307,
+          "tests_run": 2,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "combined": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests"
+          ],
+          "cwd": ".runtime/repo_api_rework_1793933998505274000/t1_seed/reference/combined",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.1324,
+          "tests_run": 9,
+          "test_failures": 0,
+          "test_errors": 0
+        }
+      },
+      "bad_patches": [
+        {
+          "name": "skip_validation",
+          "category": "remove_validation",
+          "overlay_dir": "private/references/repo_api/t1_seed/bad_patches/skip_validation",
+          "fingerprints": {
+            "README.md": "ef99eab2e30a7e14f9a008745d9ad30c135fa0ee63ad18a6093309a03f42296d",
+            "api/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "api/app.py": "6df83a559ae985310315d11cade4c56384201b1e86256b82df5e958de4badb9b",
+            "api/catalog.py": "ce78d18ce305af7753f1cbaea30025e06e276a553c214b5115e82dba1a000dc7",
+            "api/errors.py": "ba5389a4945da7cb618fc56d992a2b40bc7f36032336e574ace5018d37ef30d7",
+            "api/http.py": "a796f9cf16322b42f5080b50bab30e533c2ad04fc88b1ec14b0952c8a7b8dad5",
+            "api/reservations.py": "918d24de516bfb3ec70713221f20f7e2914dfdc882bc82cce79713c0e2eb3e1d",
+            "api/stock.py": "69336fa2407b020be3b352bcc8d533775dd08ede2e11f9124f793144d1a3a384",
+            "api/validation.py": "ba918f631ba42c05321adbedc1dddf68252b7f805bf1b9418adaee2a2ea83a00",
+            "docs/api-contract.md": "7c6ae0510b080ad55cf74c672558563ade9b015599c737199a57cdce4cdfec60",
+            "tests/test_public_api.py": "e17ed460a7fe974d403216c2b758b00e0e85351fd60dd7e3ef5937ab6a63a306"
+          },
+          "commands": {
+            "public": {
+              "argv": [
+                "/Library/Developer/CommandLineTools/usr/bin/python3",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/repo_api_rework_1793933998505274000/t1_seed/bad_skip_validation/public",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.1317,
+              "tests_run": 3,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "acceptance": {
+              "argv": [
+                "/Library/Developer/CommandLineTools/usr/bin/python3",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_acceptance",
+                "-v"
+              ],
+              "cwd": ".runtime/repo_api_rework_1793933998505274000/t1_seed/bad_skip_validation/acceptance",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.1313,
+              "tests_run": 4,
+              "test_failures": 17,
+              "test_errors": 0
+            },
+            "regression": {
+              "argv": [
+                "/Library/Developer/CommandLineTools/usr/bin/python3",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_regression",
+                "-v"
+              ],
+              "cwd": ".runtime/repo_api_rework_1793933998505274000/t1_seed/bad_skip_validation/regression",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.1319,
+              "tests_run": 2,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "combined": {
+              "argv": [
+                "/Library/Developer/CommandLineTools/usr/bin/python3",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/repo_api_rework_1793933998505274000/t1_seed/bad_skip_validation/combined",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.1327,
+              "tests_run": 9,
+              "test_failures": 17,
+              "test_errors": 0
+            }
+          },
+          "rejected": true
+        },
+        {
+          "name": "swallow_failure",
+          "category": "swallow_exception",
+          "overlay_dir": "private/references/repo_api/t1_seed/bad_patches/swallow_failure",
+          "fingerprints": {
+            "README.md": "ef99eab2e30a7e14f9a008745d9ad30c135fa0ee63ad18a6093309a03f42296d",
+            "api/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "api/app.py": "cb39783b921d01f091bac9f39ebbf9b0b1b6369edd7a7110dd84b0f94ed25f0c",
+            "api/catalog.py": "ce78d18ce305af7753f1cbaea30025e06e276a553c214b5115e82dba1a000dc7",
+            "api/errors.py": "ba5389a4945da7cb618fc56d992a2b40bc7f36032336e574ace5018d37ef30d7",
+            "api/http.py": "a796f9cf16322b42f5080b50bab30e533c2ad04fc88b1ec14b0952c8a7b8dad5",
+            "api/reservations.py": "918d24de516bfb3ec70713221f20f7e2914dfdc882bc82cce79713c0e2eb3e1d",
+            "api/stock.py": "69336fa2407b020be3b352bcc8d533775dd08ede2e11f9124f793144d1a3a384",
+            "api/validation.py": "115b3a8b02d368500ccb87568fdbbb16e22ffc6a15e8d078a479479097126268",
+            "docs/api-contract.md": "7c6ae0510b080ad55cf74c672558563ade9b015599c737199a57cdce4cdfec60",
+            "tests/test_public_api.py": "e17ed460a7fe974d403216c2b758b00e0e85351fd60dd7e3ef5937ab6a63a306"
+          },
+          "commands": {
+            "public": {
+              "argv": [
+                "/Library/Developer/CommandLineTools/usr/bin/python3",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/repo_api_rework_1793933998505274000/t1_seed/bad_swallow_failure/public",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.1312,
+              "tests_run": 3,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "acceptance": {
+              "argv": [
+                "/Library/Developer/CommandLineTools/usr/bin/python3",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_acceptance",
+                "-v"
+              ],
+              "cwd": ".runtime/repo_api_rework_1793933998505274000/t1_seed/bad_swallow_failure/acceptance",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.1313,
+              "tests_run": 4,
+              "test_failures": 18,
+              "test_errors": 0
+            },
+            "regression": {
+              "argv": [
+                "/Library/Developer/CommandLineTools/usr/bin/python3",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_regression",
+                "-v"
+              ],
+              "cwd": ".runtime/repo_api_rework_1793933998505274000/t1_seed/bad_swallow_failure/regression",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.1326,
+              "tests_run": 2,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "combined": {
+              "argv": [
+                "/Library/Developer/CommandLineTools/usr/bin/python3",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/repo_api_rework_1793933998505274000/t1_seed/bad_swallow_failure/combined",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.1327,
+              "tests_run": 9,
+              "test_failures": 18,
+              "test_errors": 0
+            }
+          },
+          "rejected": true
+        },
+        {
+          "name": "hardcode_example",
+          "category": "hardcode",
+          "overlay_dir": "private/references/repo_api/t1_seed/bad_patches/hardcode_example",
+          "fingerprints": {
+            "README.md": "ef99eab2e30a7e14f9a008745d9ad30c135fa0ee63ad18a6093309a03f42296d",
+            "api/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "api/app.py": "6df83a559ae985310315d11cade4c56384201b1e86256b82df5e958de4badb9b",
+            "api/catalog.py": "ce78d18ce305af7753f1cbaea30025e06e276a553c214b5115e82dba1a000dc7",
+            "api/errors.py": "ba5389a4945da7cb618fc56d992a2b40bc7f36032336e574ace5018d37ef30d7",
+            "api/http.py": "a796f9cf16322b42f5080b50bab30e533c2ad04fc88b1ec14b0952c8a7b8dad5",
+            "api/reservations.py": "c8ef1ba883266415d39083300fa5b4df71a95d89f05c6ba13c4c12e2ee52b9db",
+            "api/stock.py": "69336fa2407b020be3b352bcc8d533775dd08ede2e11f9124f793144d1a3a384",
+            "api/validation.py": "115b3a8b02d368500ccb87568fdbbb16e22ffc6a15e8d078a479479097126268",
+            "docs/api-contract.md": "7c6ae0510b080ad55cf74c672558563ade9b015599c737199a57cdce4cdfec60",
+            "tests/test_public_api.py": "e17ed460a7fe974d403216c2b758b00e0e85351fd60dd7e3ef5937ab6a63a306"
+          },
+          "commands": {
+            "public": {
+              "argv": [
+                "/Library/Developer/CommandLineTools/usr/bin/python3",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/repo_api_rework_1793933998505274000/t1_seed/bad_hardcode_example/public",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.1295,
+              "tests_run": 3,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "acceptance": {
+              "argv": [
+                "/Library/Developer/CommandLineTools/usr/bin/python3",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_acceptance",
+                "-v"
+              ],
+              "cwd": ".runtime/repo_api_rework_1793933998505274000/t1_seed/bad_hardcode_example/acceptance",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.1327,
+              "tests_run": 4,
+              "test_failures": 33,
+              "test_errors": 0
+            },
+            "regression": {
+              "argv": [
+                "/Library/Developer/CommandLineTools/usr/bin/python3",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_regression",
+                "-v"
+              ],
+              "cwd": ".runtime/repo_api_rework_1793933998505274000/t1_seed/bad_hardcode_example/regression",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.131,
+              "tests_run": 2,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "combined": {
+              "argv": [
+                "/Library/Developer/CommandLineTools/usr/bin/python3",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/repo_api_rework_1793933998505274000/t1_seed/bad_hardcode_example/combined",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.1297,
+              "tests_run": 9,
+              "test_failures": 33,
+              "test_errors": 0
+            }
+          },
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "task_id": "repo_api_t2",
+      "stage": "transfer",
+      "checks": {
+        "public_baseline_passes": true,
+        "baseline_target_fails": true,
+        "baseline_regression_passes": true,
+        "reference_all_pass": true,
+        "bad_patches_rejected": true,
+        "bad_patch_categories_covered": true
+      },
+      "passed": true,
+      "fingerprints": {
+        "code_dir": {
+          "README.md": "ef99eab2e30a7e14f9a008745d9ad30c135fa0ee63ad18a6093309a03f42296d",
+          "api/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "api/app.py": "a89edd15d6d54a9783ca2c74651777a90152cf4089ef31e6788540800a087944",
+          "api/catalog.py": "ce78d18ce305af7753f1cbaea30025e06e276a553c214b5115e82dba1a000dc7",
+          "api/errors.py": "1ff99afc03eb6a56094f91992c0d9a0ae5671c167f73b894a06c873368e537d5",
+          "api/http.py": "a796f9cf16322b42f5080b50bab30e533c2ad04fc88b1ec14b0952c8a7b8dad5",
+          "api/reservations.py": "918d24de516bfb3ec70713221f20f7e2914dfdc882bc82cce79713c0e2eb3e1d",
+          "api/returns.py": "34d299c157adba90625ee6cf99b4f81bb1a83a24f5927b6a3f97a0fa743b40eb",
+          "api/stock.py": "69336fa2407b020be3b352bcc8d533775dd08ede2e11f9124f793144d1a3a384",
+          "api/validation.py": "115b3a8b02d368500ccb87568fdbbb16e22ffc6a15e8d078a479479097126268",
+          "docs/api-contract.md": "3e83ffb6f7c19ca8c6340264657788012c610db4313d2516cde51773d01f3ad6",
+          "tests/test_public_api.py": "598f27de60ac591dda96182b5673a48ccb09b8cd6e0afd08ad583533d0aa1a57"
+        },
+        "private_tests_dir": {
+          "test_acceptance_api.py": "72f27731082b1c844594ed55474ca2ca07919c1c40a2b11ffe61b57fefdba14f"
+        },
+        "regression_tests_dir": {
+          "test_regression_api.py": "9b6c5f2fc81cdd6ce9b63667f1cef5697654d33852bbc404b1cd0af61c34cfc4"
+        },
+        "reference_dir": {
+          "README.md": "ef99eab2e30a7e14f9a008745d9ad30c135fa0ee63ad18a6093309a03f42296d",
+          "api/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "api/app.py": "a89edd15d6d54a9783ca2c74651777a90152cf4089ef31e6788540800a087944",
+          "api/catalog.py": "ce78d18ce305af7753f1cbaea30025e06e276a553c214b5115e82dba1a000dc7",
+          "api/errors.py": "ff24e0cff730340f3fbafdd40e0fb17c395fa08a673a0bb30307ad918296663b",
+          "api/http.py": "a796f9cf16322b42f5080b50bab30e533c2ad04fc88b1ec14b0952c8a7b8dad5",
+          "api/reservations.py": "918d24de516bfb3ec70713221f20f7e2914dfdc882bc82cce79713c0e2eb3e1d",
+          "api/returns.py": "b9f36b56733b449ac25e7343be2ff2e33fcf5132d318a6a7dd638054368dc15f",
+          "api/stock.py": "69336fa2407b020be3b352bcc8d533775dd08ede2e11f9124f793144d1a3a384",
+          "api/validation.py": "03973cab96c00d49833c6a21069341ff274379839c7abd3b228d03b391bbde3b",
+          "docs/api-contract.md": "3e83ffb6f7c19ca8c6340264657788012c610db4313d2516cde51773d01f3ad6",
+          "tests/test_public_api.py": "598f27de60ac591dda96182b5673a48ccb09b8cd6e0afd08ad583533d0aa1a57"
+        },
+        "task_file": {
+          "scenarios/repo_api/t2_transfer/task.md": "86e88f7cff8acfad3a1c755c0434e19cdb749ca373fac811e7fc455b77bd587d"
+        },
+        "manifest": {
+          "sha256": "f4f0136ab928879faabf27f1ff238d09abe3458491747c235b63b2fcd96393aa"
+        }
+      },
+      "baseline": {
+        "public": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests"
+          ],
+          "cwd": ".runtime/repo_api_rework_1793933998505274000/t2_transfer/baseline/public",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.1291,
+          "tests_run": 3,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "acceptance": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "_grader_acceptance",
+            "-v"
+          ],
+          "cwd": ".runtime/repo_api_rework_1793933998505274000/t2_transfer/baseline/acceptance",
+          "exit_code": 1,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.1305,
+          "tests_run": 4,
+          "test_failures": 13,
+          "test_errors": 0
+        },
+        "regression": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "_grader_regression",
+            "-v"
+          ],
+          "cwd": ".runtime/repo_api_rework_1793933998505274000/t2_transfer/baseline/regression",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.129,
+          "tests_run": 6,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "combined": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests"
+          ],
+          "cwd": ".runtime/repo_api_rework_1793933998505274000/t2_transfer/baseline/combined",
+          "exit_code": 1,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.1278,
+          "tests_run": 13,
+          "test_failures": 13,
+          "test_errors": 0
+        }
+      },
+      "reference": {
+        "public": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests"
+          ],
+          "cwd": ".runtime/repo_api_rework_1793933998505274000/t2_transfer/reference/public",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.1323,
+          "tests_run": 3,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "acceptance": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "_grader_acceptance",
+            "-v"
+          ],
+          "cwd": ".runtime/repo_api_rework_1793933998505274000/t2_transfer/reference/acceptance",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.1314,
+          "tests_run": 4,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "regression": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "_grader_regression",
+            "-v"
+          ],
+          "cwd": ".runtime/repo_api_rework_1793933998505274000/t2_transfer/reference/regression",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.1325,
+          "tests_run": 6,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "combined": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests"
+          ],
+          "cwd": ".runtime/repo_api_rework_1793933998505274000/t2_transfer/reference/combined",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.1286,
+          "tests_run": 13,
+          "test_failures": 0,
+          "test_errors": 0
+        }
+      },
+      "bad_patches": [
+        {
+          "name": "skip_validation",
+          "category": "remove_validation",
+          "overlay_dir": "private/references/repo_api/t2_transfer/bad_patches/skip_validation",
+          "fingerprints": {
+            "README.md": "ef99eab2e30a7e14f9a008745d9ad30c135fa0ee63ad18a6093309a03f42296d",
+            "api/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "api/app.py": "a89edd15d6d54a9783ca2c74651777a90152cf4089ef31e6788540800a087944",
+            "api/catalog.py": "ce78d18ce305af7753f1cbaea30025e06e276a553c214b5115e82dba1a000dc7",
+            "api/errors.py": "ff24e0cff730340f3fbafdd40e0fb17c395fa08a673a0bb30307ad918296663b",
+            "api/http.py": "a796f9cf16322b42f5080b50bab30e533c2ad04fc88b1ec14b0952c8a7b8dad5",
+            "api/reservations.py": "918d24de516bfb3ec70713221f20f7e2914dfdc882bc82cce79713c0e2eb3e1d",
+            "api/returns.py": "b9f36b56733b449ac25e7343be2ff2e33fcf5132d318a6a7dd638054368dc15f",
+            "api/stock.py": "69336fa2407b020be3b352bcc8d533775dd08ede2e11f9124f793144d1a3a384",
+            "api/validation.py": "1b0507b56c301354ae0c94b8db067d4f66c15d06e1337e9df412dffb95b24e57",
+            "docs/api-contract.md": "3e83ffb6f7c19ca8c6340264657788012c610db4313d2516cde51773d01f3ad6",
+            "tests/test_public_api.py": "598f27de60ac591dda96182b5673a48ccb09b8cd6e0afd08ad583533d0aa1a57"
+          },
+          "commands": {
+            "public": {
+              "argv": [
+                "/Library/Developer/CommandLineTools/usr/bin/python3",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/repo_api_rework_1793933998505274000/t2_transfer/bad_skip_validation/public",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.1304,
+              "tests_run": 3,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "acceptance": {
+              "argv": [
+                "/Library/Developer/CommandLineTools/usr/bin/python3",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_acceptance",
+                "-v"
+              ],
+              "cwd": ".runtime/repo_api_rework_1793933998505274000/t2_transfer/bad_skip_validation/acceptance",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.1327,
+              "tests_run": 4,
+              "test_failures": 3,
+              "test_errors": 0
+            },
+            "regression": {
+              "argv": [
+                "/Library/Developer/CommandLineTools/usr/bin/python3",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_regression",
+                "-v"
+              ],
+              "cwd": ".runtime/repo_api_rework_1793933998505274000/t2_transfer/bad_skip_validation/regression",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.1327,
+              "tests_run": 6,
+              "test_failures": 17,
+              "test_errors": 0
+            },
+            "combined": {
+              "argv": [
+                "/Library/Developer/CommandLineTools/usr/bin/python3",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/repo_api_rework_1793933998505274000/t2_transfer/bad_skip_validation/combined",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.1325,
+              "tests_run": 13,
+              "test_failures": 20,
+              "test_errors": 0
+            }
+          },
+          "rejected": true
+        },
+        {
+          "name": "swallow_failure",
+          "category": "swallow_exception",
+          "overlay_dir": "private/references/repo_api/t2_transfer/bad_patches/swallow_failure",
+          "fingerprints": {
+            "README.md": "ef99eab2e30a7e14f9a008745d9ad30c135fa0ee63ad18a6093309a03f42296d",
+            "api/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "api/app.py": "2c694e85303f7148562ae9083ba6bd132a4f38d2962dac248e54286b7cfd8263",
+            "api/catalog.py": "ce78d18ce305af7753f1cbaea30025e06e276a553c214b5115e82dba1a000dc7",
+            "api/errors.py": "ff24e0cff730340f3fbafdd40e0fb17c395fa08a673a0bb30307ad918296663b",
+            "api/http.py": "a796f9cf16322b42f5080b50bab30e533c2ad04fc88b1ec14b0952c8a7b8dad5",
+            "api/reservations.py": "918d24de516bfb3ec70713221f20f7e2914dfdc882bc82cce79713c0e2eb3e1d",
+            "api/returns.py": "b9f36b56733b449ac25e7343be2ff2e33fcf5132d318a6a7dd638054368dc15f",
+            "api/stock.py": "69336fa2407b020be3b352bcc8d533775dd08ede2e11f9124f793144d1a3a384",
+            "api/validation.py": "03973cab96c00d49833c6a21069341ff274379839c7abd3b228d03b391bbde3b",
+            "docs/api-contract.md": "3e83ffb6f7c19ca8c6340264657788012c610db4313d2516cde51773d01f3ad6",
+            "tests/test_public_api.py": "598f27de60ac591dda96182b5673a48ccb09b8cd6e0afd08ad583533d0aa1a57"
+          },
+          "commands": {
+            "public": {
+              "argv": [
+                "/Library/Developer/CommandLineTools/usr/bin/python3",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/repo_api_rework_1793933998505274000/t2_transfer/bad_swallow_failure/public",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.1325,
+              "tests_run": 3,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "acceptance": {
+              "argv": [
+                "/Library/Developer/CommandLineTools/usr/bin/python3",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_acceptance",
+                "-v"
+              ],
+              "cwd": ".runtime/repo_api_rework_1793933998505274000/t2_transfer/bad_swallow_failure/acceptance",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.1308,
+              "tests_run": 4,
+              "test_failures": 3,
+              "test_errors": 0
+            },
+            "regression": {
+              "argv": [
+                "/Library/Developer/CommandLineTools/usr/bin/python3",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_regression",
+                "-v"
+              ],
+              "cwd": ".runtime/repo_api_rework_1793933998505274000/t2_transfer/bad_swallow_failure/regression",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.1313,
+              "tests_run": 6,
+              "test_failures": 18,
+              "test_errors": 0
+            },
+            "combined": {
+              "argv": [
+                "/Library/Developer/CommandLineTools/usr/bin/python3",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/repo_api_rework_1793933998505274000/t2_transfer/bad_swallow_failure/combined",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.1326,
+              "tests_run": 13,
+              "test_failures": 21,
+              "test_errors": 0
+            }
+          },
+          "rejected": true
+        },
+        {
+          "name": "hardcode_example",
+          "category": "hardcode",
+          "overlay_dir": "private/references/repo_api/t2_transfer/bad_patches/hardcode_example",
+          "fingerprints": {
+            "README.md": "ef99eab2e30a7e14f9a008745d9ad30c135fa0ee63ad18a6093309a03f42296d",
+            "api/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "api/app.py": "a89edd15d6d54a9783ca2c74651777a90152cf4089ef31e6788540800a087944",
+            "api/catalog.py": "ce78d18ce305af7753f1cbaea30025e06e276a553c214b5115e82dba1a000dc7",
+            "api/errors.py": "ff24e0cff730340f3fbafdd40e0fb17c395fa08a673a0bb30307ad918296663b",
+            "api/http.py": "a796f9cf16322b42f5080b50bab30e533c2ad04fc88b1ec14b0952c8a7b8dad5",
+            "api/reservations.py": "918d24de516bfb3ec70713221f20f7e2914dfdc882bc82cce79713c0e2eb3e1d",
+            "api/returns.py": "897624123ce4dc906ecde747e987c43cd79b620589fe9171964a782151ce3b11",
+            "api/stock.py": "69336fa2407b020be3b352bcc8d533775dd08ede2e11f9124f793144d1a3a384",
+            "api/validation.py": "03973cab96c00d49833c6a21069341ff274379839c7abd3b228d03b391bbde3b",
+            "docs/api-contract.md": "3e83ffb6f7c19ca8c6340264657788012c610db4313d2516cde51773d01f3ad6",
+            "tests/test_public_api.py": "598f27de60ac591dda96182b5673a48ccb09b8cd6e0afd08ad583533d0aa1a57"
+          },
+          "commands": {
+            "public": {
+              "argv": [
+                "/Library/Developer/CommandLineTools/usr/bin/python3",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/repo_api_rework_1793933998505274000/t2_transfer/bad_hardcode_example/public",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.1314,
+              "tests_run": 3,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "acceptance": {
+              "argv": [
+                "/Library/Developer/CommandLineTools/usr/bin/python3",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_acceptance",
+                "-v"
+              ],
+              "cwd": ".runtime/repo_api_rework_1793933998505274000/t2_transfer/bad_hardcode_example/acceptance",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.1312,
+              "tests_run": 4,
+              "test_failures": 14,
+              "test_errors": 0
+            },
+            "regression": {
+              "argv": [
+                "/Library/Developer/CommandLineTools/usr/bin/python3",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_regression",
+                "-v"
+              ],
+              "cwd": ".runtime/repo_api_rework_1793933998505274000/t2_transfer/bad_hardcode_example/regression",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.1326,
+              "tests_run": 6,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "combined": {
+              "argv": [
+                "/Library/Developer/CommandLineTools/usr/bin/python3",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/repo_api_rework_1793933998505274000/t2_transfer/bad_hardcode_example/combined",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.1316,
+              "tests_run": 13,
+              "test_failures": 14,
+              "test_errors": 0
+            }
+          },
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "task_id": "repo_api_t3",
+      "stage": "stale",
+      "checks": {
+        "public_baseline_passes": true,
+        "baseline_target_fails": true,
+        "baseline_regression_passes": true,
+        "reference_all_pass": true,
+        "bad_patches_rejected": true,
+        "bad_patch_categories_covered": true
+      },
+      "passed": true,
+      "fingerprints": {
+        "code_dir": {
+          "README.md": "ef99eab2e30a7e14f9a008745d9ad30c135fa0ee63ad18a6093309a03f42296d",
+          "api/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "api/app.py": "f39ada269c814ef137c7dfbb4102bf868f4dd4147f96d50a74ecd90cb4ac2dce",
+          "api/catalog.py": "31cdbaf87921f21c1ae5069dd33905ee2f878a028c1445054547b5f3a0790bbe",
+          "api/faults.py": "770e14337c39fbb63952617363282ffeef3e9a702b85cf3799fd2aa4669ab28c",
+          "api/holds.py": "6349402cfc75494d59f1752ffe009f128cdd09c25f9f50ac7d9d796bf3e3893d",
+          "api/http.py": "a796f9cf16322b42f5080b50bab30e533c2ad04fc88b1ec14b0952c8a7b8dad5",
+          "api/reservations.py": "299e9881ea07770ec00575faacefa832158156ab223e99af4969529fe5159eea",
+          "api/returns.py": "0b371e0fc780cfe66fb9a45fa8025fdf2333f4975f64cbaa5e319c9bca7134f1",
+          "api/stock.py": "69336fa2407b020be3b352bcc8d533775dd08ede2e11f9124f793144d1a3a384",
+          "api/validation.py": "4caa0d57ad696be718695a64b9179b1ba2ee982bee654c621d6bdcf643f407e0",
+          "docs/api-contract.md": "075d6d59d33bbbd6887faf2085fef2654a72952dd28e84a95877d3033fe091c6",
+          "tests/test_public_api.py": "aa0425a8d51c184ab27e70aa9f7367aa88fc00546ac38a1351b08fc76c599434"
+        },
+        "private_tests_dir": {
+          "test_acceptance_api.py": "cc43ab53c813cfd8aa247bcaa15df9bdbff7c9812843e93767e4a5462ef3b02b"
+        },
+        "regression_tests_dir": {
+          "test_regression_api.py": "4d1d896a5f5f200b1c40bff296adbf8c521de9fad0b295ccea58bd808b1c9a1b"
+        },
+        "reference_dir": {
+          "README.md": "ef99eab2e30a7e14f9a008745d9ad30c135fa0ee63ad18a6093309a03f42296d",
+          "api/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "api/app.py": "f39ada269c814ef137c7dfbb4102bf868f4dd4147f96d50a74ecd90cb4ac2dce",
+          "api/catalog.py": "31cdbaf87921f21c1ae5069dd33905ee2f878a028c1445054547b5f3a0790bbe",
+          "api/faults.py": "770e14337c39fbb63952617363282ffeef3e9a702b85cf3799fd2aa4669ab28c",
+          "api/holds.py": "b6ee37b186b6ad0c1847cad9c84bc9ce663e5e06d72144588e525791100f9484",
+          "api/http.py": "a796f9cf16322b42f5080b50bab30e533c2ad04fc88b1ec14b0952c8a7b8dad5",
+          "api/reservations.py": "299e9881ea07770ec00575faacefa832158156ab223e99af4969529fe5159eea",
+          "api/returns.py": "0b371e0fc780cfe66fb9a45fa8025fdf2333f4975f64cbaa5e319c9bca7134f1",
+          "api/stock.py": "69336fa2407b020be3b352bcc8d533775dd08ede2e11f9124f793144d1a3a384",
+          "api/validation.py": "740e4e7f6efb1234cd6dc2136991aecdd8ec99da9f3a7c745c63fd8903468a8c",
+          "docs/api-contract.md": "075d6d59d33bbbd6887faf2085fef2654a72952dd28e84a95877d3033fe091c6",
+          "tests/test_public_api.py": "aa0425a8d51c184ab27e70aa9f7367aa88fc00546ac38a1351b08fc76c599434"
+        },
+        "task_file": {
+          "scenarios/repo_api/t3_stale/task.md": "7d87013c089eb5ed405d2b977a4263f849e9ea2ed83f58e50b2a6038ad63ae89"
+        },
+        "manifest": {
+          "sha256": "f27d829997dc16f077e63a2e79144d6359cbc682ea5fcf8c1a4b4c05010edb60"
+        }
+      },
+      "baseline": {
+        "public": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests"
+          ],
+          "cwd": ".runtime/repo_api_rework_1793933998505274000/t3_stale/baseline/public",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.1327,
+          "tests_run": 3,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "acceptance": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "_grader_acceptance",
+            "-v"
+          ],
+          "cwd": ".runtime/repo_api_rework_1793933998505274000/t3_stale/baseline/acceptance",
+          "exit_code": 1,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.1313,
+          "tests_run": 4,
+          "test_failures": 3,
+          "test_errors": 0
+        },
+        "regression": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "_grader_regression",
+            "-v"
+          ],
+          "cwd": ".runtime/repo_api_rework_1793933998505274000/t3_stale/baseline/regression",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.1327,
+          "tests_run": 10,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "combined": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests"
+          ],
+          "cwd": ".runtime/repo_api_rework_1793933998505274000/t3_stale/baseline/combined",
+          "exit_code": 1,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.1297,
+          "tests_run": 17,
+          "test_failures": 3,
+          "test_errors": 0
+        }
+      },
+      "reference": {
+        "public": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests"
+          ],
+          "cwd": ".runtime/repo_api_rework_1793933998505274000/t3_stale/reference/public",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.1323,
+          "tests_run": 3,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "acceptance": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "_grader_acceptance",
+            "-v"
+          ],
+          "cwd": ".runtime/repo_api_rework_1793933998505274000/t3_stale/reference/acceptance",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.1304,
+          "tests_run": 4,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "regression": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "_grader_regression",
+            "-v"
+          ],
+          "cwd": ".runtime/repo_api_rework_1793933998505274000/t3_stale/reference/regression",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.1325,
+          "tests_run": 10,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "combined": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests"
+          ],
+          "cwd": ".runtime/repo_api_rework_1793933998505274000/t3_stale/reference/combined",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.1299,
+          "tests_run": 17,
+          "test_failures": 0,
+          "test_errors": 0
+        }
+      },
+      "bad_patches": [
+        {
+          "name": "skip_validation",
+          "category": "remove_validation",
+          "overlay_dir": "private/references/repo_api/t3_stale/bad_patches/skip_validation",
+          "fingerprints": {
+            "README.md": "ef99eab2e30a7e14f9a008745d9ad30c135fa0ee63ad18a6093309a03f42296d",
+            "api/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "api/app.py": "f39ada269c814ef137c7dfbb4102bf868f4dd4147f96d50a74ecd90cb4ac2dce",
+            "api/catalog.py": "31cdbaf87921f21c1ae5069dd33905ee2f878a028c1445054547b5f3a0790bbe",
+            "api/faults.py": "770e14337c39fbb63952617363282ffeef3e9a702b85cf3799fd2aa4669ab28c",
+            "api/holds.py": "b6ee37b186b6ad0c1847cad9c84bc9ce663e5e06d72144588e525791100f9484",
+            "api/http.py": "a796f9cf16322b42f5080b50bab30e533c2ad04fc88b1ec14b0952c8a7b8dad5",
+            "api/reservations.py": "299e9881ea07770ec00575faacefa832158156ab223e99af4969529fe5159eea",
+            "api/returns.py": "0b371e0fc780cfe66fb9a45fa8025fdf2333f4975f64cbaa5e319c9bca7134f1",
+            "api/stock.py": "69336fa2407b020be3b352bcc8d533775dd08ede2e11f9124f793144d1a3a384",
+            "api/validation.py": "6027975e3536edf56a3f48b0464e90529850385f7cb76b71ac18a6f042453d83",
+            "docs/api-contract.md": "075d6d59d33bbbd6887faf2085fef2654a72952dd28e84a95877d3033fe091c6",
+            "tests/test_public_api.py": "aa0425a8d51c184ab27e70aa9f7367aa88fc00546ac38a1351b08fc76c599434"
+          },
+          "commands": {
+            "public": {
+              "argv": [
+                "/Library/Developer/CommandLineTools/usr/bin/python3",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/repo_api_rework_1793933998505274000/t3_stale/bad_skip_validation/public",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.1324,
+              "tests_run": 3,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "acceptance": {
+              "argv": [
+                "/Library/Developer/CommandLineTools/usr/bin/python3",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_acceptance",
+                "-v"
+              ],
+              "cwd": ".runtime/repo_api_rework_1793933998505274000/t3_stale/bad_skip_validation/acceptance",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.1296,
+              "tests_run": 4,
+              "test_failures": 2,
+              "test_errors": 0
+            },
+            "regression": {
+              "argv": [
+                "/Library/Developer/CommandLineTools/usr/bin/python3",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_regression",
+                "-v"
+              ],
+              "cwd": ".runtime/repo_api_rework_1793933998505274000/t3_stale/bad_skip_validation/regression",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.1311,
+              "tests_run": 10,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "combined": {
+              "argv": [
+                "/Library/Developer/CommandLineTools/usr/bin/python3",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/repo_api_rework_1793933998505274000/t3_stale/bad_skip_validation/combined",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.1317,
+              "tests_run": 17,
+              "test_failures": 2,
+              "test_errors": 0
+            }
+          },
+          "rejected": true
+        },
+        {
+          "name": "swallow_failure",
+          "category": "swallow_exception",
+          "overlay_dir": "private/references/repo_api/t3_stale/bad_patches/swallow_failure",
+          "fingerprints": {
+            "README.md": "ef99eab2e30a7e14f9a008745d9ad30c135fa0ee63ad18a6093309a03f42296d",
+            "api/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "api/app.py": "60d69743c8eb8712ad26cfabfc360cae6162e194362e87586c577c9bccbd7524",
+            "api/catalog.py": "31cdbaf87921f21c1ae5069dd33905ee2f878a028c1445054547b5f3a0790bbe",
+            "api/faults.py": "770e14337c39fbb63952617363282ffeef3e9a702b85cf3799fd2aa4669ab28c",
+            "api/holds.py": "b6ee37b186b6ad0c1847cad9c84bc9ce663e5e06d72144588e525791100f9484",
+            "api/http.py": "a796f9cf16322b42f5080b50bab30e533c2ad04fc88b1ec14b0952c8a7b8dad5",
+            "api/reservations.py": "299e9881ea07770ec00575faacefa832158156ab223e99af4969529fe5159eea",
+            "api/returns.py": "0b371e0fc780cfe66fb9a45fa8025fdf2333f4975f64cbaa5e319c9bca7134f1",
+            "api/stock.py": "69336fa2407b020be3b352bcc8d533775dd08ede2e11f9124f793144d1a3a384",
+            "api/validation.py": "740e4e7f6efb1234cd6dc2136991aecdd8ec99da9f3a7c745c63fd8903468a8c",
+            "docs/api-contract.md": "075d6d59d33bbbd6887faf2085fef2654a72952dd28e84a95877d3033fe091c6",
+            "tests/test_public_api.py": "aa0425a8d51c184ab27e70aa9f7367aa88fc00546ac38a1351b08fc76c599434"
+          },
+          "commands": {
+            "public": {
+              "argv": [
+                "/Library/Developer/CommandLineTools/usr/bin/python3",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/repo_api_rework_1793933998505274000/t3_stale/bad_swallow_failure/public",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.129,
+              "tests_run": 3,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "acceptance": {
+              "argv": [
+                "/Library/Developer/CommandLineTools/usr/bin/python3",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_acceptance",
+                "-v"
+              ],
+              "cwd": ".runtime/repo_api_rework_1793933998505274000/t3_stale/bad_swallow_failure/acceptance",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.1313,
+              "tests_run": 4,
+              "test_failures": 4,
+              "test_errors": 0
+            },
+            "regression": {
+              "argv": [
+                "/Library/Developer/CommandLineTools/usr/bin/python3",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_regression",
+                "-v"
+              ],
+              "cwd": ".runtime/repo_api_rework_1793933998505274000/t3_stale/bad_swallow_failure/regression",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.1327,
+              "tests_run": 10,
+              "test_failures": 21,
+              "test_errors": 0
+            },
+            "combined": {
+              "argv": [
+                "/Library/Developer/CommandLineTools/usr/bin/python3",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/repo_api_rework_1793933998505274000/t3_stale/bad_swallow_failure/combined",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.1324,
+              "tests_run": 17,
+              "test_failures": 25,
+              "test_errors": 0
+            }
+          },
+          "rejected": true
+        },
+        {
+          "name": "hardcode_example",
+          "category": "hardcode",
+          "overlay_dir": "private/references/repo_api/t3_stale/bad_patches/hardcode_example",
+          "fingerprints": {
+            "README.md": "ef99eab2e30a7e14f9a008745d9ad30c135fa0ee63ad18a6093309a03f42296d",
+            "api/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "api/app.py": "f39ada269c814ef137c7dfbb4102bf868f4dd4147f96d50a74ecd90cb4ac2dce",
+            "api/catalog.py": "31cdbaf87921f21c1ae5069dd33905ee2f878a028c1445054547b5f3a0790bbe",
+            "api/faults.py": "770e14337c39fbb63952617363282ffeef3e9a702b85cf3799fd2aa4669ab28c",
+            "api/holds.py": "6048e64f21f75b5d5bdd2cf3cb1f3909999c35460038397a39330fbb1daed377",
+            "api/http.py": "a796f9cf16322b42f5080b50bab30e533c2ad04fc88b1ec14b0952c8a7b8dad5",
+            "api/reservations.py": "299e9881ea07770ec00575faacefa832158156ab223e99af4969529fe5159eea",
+            "api/returns.py": "0b371e0fc780cfe66fb9a45fa8025fdf2333f4975f64cbaa5e319c9bca7134f1",
+            "api/stock.py": "69336fa2407b020be3b352bcc8d533775dd08ede2e11f9124f793144d1a3a384",
+            "api/validation.py": "740e4e7f6efb1234cd6dc2136991aecdd8ec99da9f3a7c745c63fd8903468a8c",
+            "docs/api-contract.md": "075d6d59d33bbbd6887faf2085fef2654a72952dd28e84a95877d3033fe091c6",
+            "tests/test_public_api.py": "aa0425a8d51c184ab27e70aa9f7367aa88fc00546ac38a1351b08fc76c599434"
+          },
+          "commands": {
+            "public": {
+              "argv": [
+                "/Library/Developer/CommandLineTools/usr/bin/python3",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/repo_api_rework_1793933998505274000/t3_stale/bad_hardcode_example/public",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.1298,
+              "tests_run": 3,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "acceptance": {
+              "argv": [
+                "/Library/Developer/CommandLineTools/usr/bin/python3",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_acceptance",
+                "-v"
+              ],
+              "cwd": ".runtime/repo_api_rework_1793933998505274000/t3_stale/bad_hardcode_example/acceptance",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.1326,
+              "tests_run": 4,
+              "test_failures": 3,
+              "test_errors": 0
+            },
+            "regression": {
+              "argv": [
+                "/Library/Developer/CommandLineTools/usr/bin/python3",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_regression",
+                "-v"
+              ],
+              "cwd": ".runtime/repo_api_rework_1793933998505274000/t3_stale/bad_hardcode_example/regression",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.1325,
+              "tests_run": 10,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "combined": {
+              "argv": [
+                "/Library/Developer/CommandLineTools/usr/bin/python3",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/repo_api_rework_1793933998505274000/t3_stale/bad_hardcode_example/combined",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.1328,
+              "tests_run": 17,
+              "test_failures": 3,
+              "test_errors": 0
+            }
+          },
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "task_id": "repo_api_t4",
+      "stage": "heldout",
+      "checks": {
+        "public_baseline_passes": true,
+        "baseline_target_fails": true,
+        "baseline_regression_passes": true,
+        "reference_all_pass": true,
+        "bad_patches_rejected": true,
+        "bad_patch_categories_covered": true
+      },
+      "passed": true,
+      "fingerprints": {
+        "code_dir": {
+          "README.md": "ef99eab2e30a7e14f9a008745d9ad30c135fa0ee63ad18a6093309a03f42296d",
+          "api/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "api/app.py": "d101b6429905c79617d0e5bbba84a3b047735ba880b04d0f3560a6923d683bde",
+          "api/batch.py": "ca87bb9887392bf268ef7234e1b992ad7bf8aa1b65eaf0474f83f91e523eec0d",
+          "api/catalog.py": "31cdbaf87921f21c1ae5069dd33905ee2f878a028c1445054547b5f3a0790bbe",
+          "api/faults.py": "770e14337c39fbb63952617363282ffeef3e9a702b85cf3799fd2aa4669ab28c",
+          "api/holds.py": "b6ee37b186b6ad0c1847cad9c84bc9ce663e5e06d72144588e525791100f9484",
+          "api/http.py": "a796f9cf16322b42f5080b50bab30e533c2ad04fc88b1ec14b0952c8a7b8dad5",
+          "api/reservations.py": "299e9881ea07770ec00575faacefa832158156ab223e99af4969529fe5159eea",
+          "api/returns.py": "0b371e0fc780cfe66fb9a45fa8025fdf2333f4975f64cbaa5e319c9bca7134f1",
+          "api/stock.py": "1386bafee95e3ddf617171a554303a41b394f5de174f2b5521e7da983b07ad95",
+          "api/validation.py": "805887de858e3d4e7bbd6bca381b8b41b6e3528563d732a7928ef6e7bcec2538",
+          "docs/api-contract.md": "ac8044e49c4ede8f96059f7b05f62087e333c75810b3045d88f4d7b12245e8fb",
+          "tests/test_public_api.py": "f41b54ed92cf62d234609f51d1b83438832f95697840944aff4468a3548768bf"
+        },
+        "private_tests_dir": {
+          "test_acceptance_api.py": "e1a49fe174d6c3fc2b6e9ef07348a95e9bbadd79541feccbc93eaed0ec537c4c"
+        },
+        "regression_tests_dir": {
+          "test_regression_api.py": "683f3613e146bef6794877092c6d9070a53a2a610744104724cfa7c74e2b2169"
+        },
+        "reference_dir": {
+          "README.md": "ef99eab2e30a7e14f9a008745d9ad30c135fa0ee63ad18a6093309a03f42296d",
+          "api/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "api/app.py": "d101b6429905c79617d0e5bbba84a3b047735ba880b04d0f3560a6923d683bde",
+          "api/batch.py": "3c927eba3c0e5084888eae52f02b4d3ba37e1bfb65d98f4cef7ed1f2e431a762",
+          "api/catalog.py": "31cdbaf87921f21c1ae5069dd33905ee2f878a028c1445054547b5f3a0790bbe",
+          "api/faults.py": "770e14337c39fbb63952617363282ffeef3e9a702b85cf3799fd2aa4669ab28c",
+          "api/holds.py": "b6ee37b186b6ad0c1847cad9c84bc9ce663e5e06d72144588e525791100f9484",
+          "api/http.py": "a796f9cf16322b42f5080b50bab30e533c2ad04fc88b1ec14b0952c8a7b8dad5",
+          "api/reservations.py": "299e9881ea07770ec00575faacefa832158156ab223e99af4969529fe5159eea",
+          "api/returns.py": "0b371e0fc780cfe66fb9a45fa8025fdf2333f4975f64cbaa5e319c9bca7134f1",
+          "api/stock.py": "69336fa2407b020be3b352bcc8d533775dd08ede2e11f9124f793144d1a3a384",
+          "api/validation.py": "2bf7b5c3e536c940b8614744881c41d7277f85f14e424a8f3d0811bc9778067c",
+          "docs/api-contract.md": "ac8044e49c4ede8f96059f7b05f62087e333c75810b3045d88f4d7b12245e8fb",
+          "tests/test_public_api.py": "f41b54ed92cf62d234609f51d1b83438832f95697840944aff4468a3548768bf"
+        },
+        "task_file": {
+          "scenarios/repo_api/t4_heldout/task.md": "85eb46b33a5de7a10d6abcec1e1614704927c007f84839a4d7ba7f5c24307243"
+        },
+        "manifest": {
+          "sha256": "8debf28f62c3571ae2fd9d7e4fffda30ff89a43b87934b885e673b5cd581999b"
+        }
+      },
+      "baseline": {
+        "public": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests"
+          ],
+          "cwd": ".runtime/repo_api_rework_1793933998505274000/t4_heldout/baseline/public",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.1315,
+          "tests_run": 3,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "acceptance": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "_grader_acceptance",
+            "-v"
+          ],
+          "cwd": ".runtime/repo_api_rework_1793933998505274000/t4_heldout/baseline/acceptance",
+          "exit_code": 1,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.1279,
+          "tests_run": 5,
+          "test_failures": 3,
+          "test_errors": 0
+        },
+        "regression": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "_grader_regression",
+            "-v"
+          ],
+          "cwd": ".runtime/repo_api_rework_1793933998505274000/t4_heldout/baseline/regression",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.1324,
+          "tests_run": 14,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "combined": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests"
+          ],
+          "cwd": ".runtime/repo_api_rework_1793933998505274000/t4_heldout/baseline/combined",
+          "exit_code": 1,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.1327,
+          "tests_run": 22,
+          "test_failures": 3,
+          "test_errors": 0
+        }
+      },
+      "reference": {
+        "public": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests"
+          ],
+          "cwd": ".runtime/repo_api_rework_1793933998505274000/t4_heldout/reference/public",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.1323,
+          "tests_run": 3,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "acceptance": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "_grader_acceptance",
+            "-v"
+          ],
+          "cwd": ".runtime/repo_api_rework_1793933998505274000/t4_heldout/reference/acceptance",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.1323,
+          "tests_run": 5,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "regression": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "_grader_regression",
+            "-v"
+          ],
+          "cwd": ".runtime/repo_api_rework_1793933998505274000/t4_heldout/reference/regression",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.1324,
+          "tests_run": 14,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "combined": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests"
+          ],
+          "cwd": ".runtime/repo_api_rework_1793933998505274000/t4_heldout/reference/combined",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.132,
+          "tests_run": 22,
+          "test_failures": 0,
+          "test_errors": 0
+        }
+      },
+      "bad_patches": [
+        {
+          "name": "skip_validation",
+          "category": "remove_validation",
+          "overlay_dir": "private/references/repo_api/t4_heldout/bad_patches/skip_validation",
+          "fingerprints": {
+            "README.md": "ef99eab2e30a7e14f9a008745d9ad30c135fa0ee63ad18a6093309a03f42296d",
+            "api/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "api/app.py": "d101b6429905c79617d0e5bbba84a3b047735ba880b04d0f3560a6923d683bde",
+            "api/batch.py": "3c927eba3c0e5084888eae52f02b4d3ba37e1bfb65d98f4cef7ed1f2e431a762",
+            "api/catalog.py": "31cdbaf87921f21c1ae5069dd33905ee2f878a028c1445054547b5f3a0790bbe",
+            "api/faults.py": "770e14337c39fbb63952617363282ffeef3e9a702b85cf3799fd2aa4669ab28c",
+            "api/holds.py": "b6ee37b186b6ad0c1847cad9c84bc9ce663e5e06d72144588e525791100f9484",
+            "api/http.py": "a796f9cf16322b42f5080b50bab30e533c2ad04fc88b1ec14b0952c8a7b8dad5",
+            "api/reservations.py": "299e9881ea07770ec00575faacefa832158156ab223e99af4969529fe5159eea",
+            "api/returns.py": "0b371e0fc780cfe66fb9a45fa8025fdf2333f4975f64cbaa5e319c9bca7134f1",
+            "api/stock.py": "69336fa2407b020be3b352bcc8d533775dd08ede2e11f9124f793144d1a3a384",
+            "api/validation.py": "c81d057debed47754b58ecc0e9b9bdd558bc855c455e533ddff44e07710f79bf",
+            "docs/api-contract.md": "ac8044e49c4ede8f96059f7b05f62087e333c75810b3045d88f4d7b12245e8fb",
+            "tests/test_public_api.py": "f41b54ed92cf62d234609f51d1b83438832f95697840944aff4468a3548768bf"
+          },
+          "commands": {
+            "public": {
+              "argv": [
+                "/Library/Developer/CommandLineTools/usr/bin/python3",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/repo_api_rework_1793933998505274000/t4_heldout/bad_skip_validation/public",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.1323,
+              "tests_run": 3,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "acceptance": {
+              "argv": [
+                "/Library/Developer/CommandLineTools/usr/bin/python3",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_acceptance",
+                "-v"
+              ],
+              "cwd": ".runtime/repo_api_rework_1793933998505274000/t4_heldout/bad_skip_validation/acceptance",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.1326,
+              "tests_run": 5,
+              "test_failures": 1,
+              "test_errors": 0
+            },
+            "regression": {
+              "argv": [
+                "/Library/Developer/CommandLineTools/usr/bin/python3",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_regression",
+                "-v"
+              ],
+              "cwd": ".runtime/repo_api_rework_1793933998505274000/t4_heldout/bad_skip_validation/regression",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.1295,
+              "tests_run": 14,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "combined": {
+              "argv": [
+                "/Library/Developer/CommandLineTools/usr/bin/python3",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/repo_api_rework_1793933998505274000/t4_heldout/bad_skip_validation/combined",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.1325,
+              "tests_run": 22,
+              "test_failures": 1,
+              "test_errors": 0
+            }
+          },
+          "rejected": true
+        },
+        {
+          "name": "swallow_failure",
+          "category": "swallow_exception",
+          "overlay_dir": "private/references/repo_api/t4_heldout/bad_patches/swallow_failure",
+          "fingerprints": {
+            "README.md": "ef99eab2e30a7e14f9a008745d9ad30c135fa0ee63ad18a6093309a03f42296d",
+            "api/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "api/app.py": "7f690c66f3fe7084a66c346f786eecc4463b15ccdee931b472473976e363f71e",
+            "api/batch.py": "3c927eba3c0e5084888eae52f02b4d3ba37e1bfb65d98f4cef7ed1f2e431a762",
+            "api/catalog.py": "31cdbaf87921f21c1ae5069dd33905ee2f878a028c1445054547b5f3a0790bbe",
+            "api/faults.py": "770e14337c39fbb63952617363282ffeef3e9a702b85cf3799fd2aa4669ab28c",
+            "api/holds.py": "b6ee37b186b6ad0c1847cad9c84bc9ce663e5e06d72144588e525791100f9484",
+            "api/http.py": "a796f9cf16322b42f5080b50bab30e533c2ad04fc88b1ec14b0952c8a7b8dad5",
+            "api/reservations.py": "299e9881ea07770ec00575faacefa832158156ab223e99af4969529fe5159eea",
+            "api/returns.py": "0b371e0fc780cfe66fb9a45fa8025fdf2333f4975f64cbaa5e319c9bca7134f1",
+            "api/stock.py": "69336fa2407b020be3b352bcc8d533775dd08ede2e11f9124f793144d1a3a384",
+            "api/validation.py": "2bf7b5c3e536c940b8614744881c41d7277f85f14e424a8f3d0811bc9778067c",
+            "docs/api-contract.md": "ac8044e49c4ede8f96059f7b05f62087e333c75810b3045d88f4d7b12245e8fb",
+            "tests/test_public_api.py": "f41b54ed92cf62d234609f51d1b83438832f95697840944aff4468a3548768bf"
+          },
+          "commands": {
+            "public": {
+              "argv": [
+                "/Library/Developer/CommandLineTools/usr/bin/python3",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/repo_api_rework_1793933998505274000/t4_heldout/bad_swallow_failure/public",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.1324,
+              "tests_run": 3,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "acceptance": {
+              "argv": [
+                "/Library/Developer/CommandLineTools/usr/bin/python3",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_acceptance",
+                "-v"
+              ],
+              "cwd": ".runtime/repo_api_rework_1793933998505274000/t4_heldout/bad_swallow_failure/acceptance",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.1294,
+              "tests_run": 5,
+              "test_failures": 2,
+              "test_errors": 0
+            },
+            "regression": {
+              "argv": [
+                "/Library/Developer/CommandLineTools/usr/bin/python3",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_regression",
+                "-v"
+              ],
+              "cwd": ".runtime/repo_api_rework_1793933998505274000/t4_heldout/bad_swallow_failure/regression",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.1326,
+              "tests_run": 14,
+              "test_failures": 25,
+              "test_errors": 0
+            },
+            "combined": {
+              "argv": [
+                "/Library/Developer/CommandLineTools/usr/bin/python3",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/repo_api_rework_1793933998505274000/t4_heldout/bad_swallow_failure/combined",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.1323,
+              "tests_run": 22,
+              "test_failures": 27,
+              "test_errors": 0
+            }
+          },
+          "rejected": true
+        },
+        {
+          "name": "hardcode_example",
+          "category": "hardcode",
+          "overlay_dir": "private/references/repo_api/t4_heldout/bad_patches/hardcode_example",
+          "fingerprints": {
+            "README.md": "ef99eab2e30a7e14f9a008745d9ad30c135fa0ee63ad18a6093309a03f42296d",
+            "api/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "api/app.py": "d101b6429905c79617d0e5bbba84a3b047735ba880b04d0f3560a6923d683bde",
+            "api/batch.py": "b1cd60b28039bdf92ff2390e8bb1d1f81e5bdf1f3d8f7201bb8c5ecccc97c6de",
+            "api/catalog.py": "31cdbaf87921f21c1ae5069dd33905ee2f878a028c1445054547b5f3a0790bbe",
+            "api/faults.py": "770e14337c39fbb63952617363282ffeef3e9a702b85cf3799fd2aa4669ab28c",
+            "api/holds.py": "b6ee37b186b6ad0c1847cad9c84bc9ce663e5e06d72144588e525791100f9484",
+            "api/http.py": "a796f9cf16322b42f5080b50bab30e533c2ad04fc88b1ec14b0952c8a7b8dad5",
+            "api/reservations.py": "299e9881ea07770ec00575faacefa832158156ab223e99af4969529fe5159eea",
+            "api/returns.py": "0b371e0fc780cfe66fb9a45fa8025fdf2333f4975f64cbaa5e319c9bca7134f1",
+            "api/stock.py": "69336fa2407b020be3b352bcc8d533775dd08ede2e11f9124f793144d1a3a384",
+            "api/validation.py": "2bf7b5c3e536c940b8614744881c41d7277f85f14e424a8f3d0811bc9778067c",
+            "docs/api-contract.md": "ac8044e49c4ede8f96059f7b05f62087e333c75810b3045d88f4d7b12245e8fb",
+            "tests/test_public_api.py": "f41b54ed92cf62d234609f51d1b83438832f95697840944aff4468a3548768bf"
+          },
+          "commands": {
+            "public": {
+              "argv": [
+                "/Library/Developer/CommandLineTools/usr/bin/python3",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/repo_api_rework_1793933998505274000/t4_heldout/bad_hardcode_example/public",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.1315,
+              "tests_run": 3,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "acceptance": {
+              "argv": [
+                "/Library/Developer/CommandLineTools/usr/bin/python3",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_acceptance",
+                "-v"
+              ],
+              "cwd": ".runtime/repo_api_rework_1793933998505274000/t4_heldout/bad_hardcode_example/acceptance",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.1308,
+              "tests_run": 5,
+              "test_failures": 4,
+              "test_errors": 1
+            },
+            "regression": {
+              "argv": [
+                "/Library/Developer/CommandLineTools/usr/bin/python3",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_regression",
+                "-v"
+              ],
+              "cwd": ".runtime/repo_api_rework_1793933998505274000/t4_heldout/bad_hardcode_example/regression",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.1298,
+              "tests_run": 14,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "combined": {
+              "argv": [
+                "/Library/Developer/CommandLineTools/usr/bin/python3",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/repo_api_rework_1793933998505274000/t4_heldout/bad_hardcode_example/combined",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.1324,
+              "tests_run": 22,
+              "test_failures": 4,
+              "test_errors": 1
+            }
+          },
+          "rejected": true
+        }
+      ]
+    }
+  ],
+  "passed": true,
+  "boundary": "Real offline commands only; no Agent solve trajectory or ability results. Stage packages require rebuilding after this revision."
+}

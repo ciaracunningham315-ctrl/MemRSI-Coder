@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "task_id": "repo_cli_gate_meta_transfer_manifest",
+  "repository_id": "repo_cli",
+  "stage": "transfer",
+  "kind": "meta",
+  "available_after_stage": "transfer",
+  "latest_mechanism_stage": "transfer",
+  "independent_of_main_tasks": true,
+  "code_dir": "private/gate_selection/repo_cli/repo_cli_gate_meta_transfer_manifest/code",
+  "task_file": "private/gate_selection/repo_cli/repo_cli_gate_meta_transfer_manifest/task.md",
+  "private_tests_dir": "private/gate_selection/repo_cli/repo_cli_gate_meta_transfer_manifest/acceptance",
+  "regression_tests_dir": "private/gate_selection/repo_cli/repo_cli_gate_meta_transfer_manifest/regression",
+  "reference_dir": "private/gate_selection/repo_cli/repo_cli_gate_meta_transfer_manifest/reference/code",
+  "acceptance_command": [
+    "python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "mechanisms": [
+    "per_option_source_precedence",
+    "strict_bounded_integer",
+    "validate_before_mutation"
+  ],
+  "future_main_inputs_used": [],
+  "downstream_injection_check": {
+    "required": true,
+    "expected_skill_injection": "candidate-specific-derived-skill",
+    "comparison": "old_meta_vs_new_meta",
+    "required_evidence": [
+      "old_meta_version",
+      "candidate_meta_version",
+      "derived_skill_sha256",
+      "downstream_request_id",
+      "injected_skill_version_and_hash"
+    ],
+    "offline_fixture_cannot_prove_injection": true
+  },
+  "mechanism_trace": {
+    "topic": "configuration_source_precedence_and_parameter_bounds",
+    "stage_boundary": "transfer",
+    "future_main_inputs_used": [],
+    "fixture_origin": "independently authored repo_cli gate data"
+  },
+  "fingerprints": {
+    "code_dir": {
+      "cli/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "cli/__main__.py": "5be35d80fa32d64992f2c2191f1e28239517ff6573f1d5b97f80f6195ee70278",
+      "cli/app.py": "53d69c07c02a39480fee52c481410077ab10c38b9f908b7084de1c66e1128533",
+      "cli/config.py": "0677d15fb720a1b7a04b31cd176bb22c2affe377195a0af80f9c68e7951ec8ea",
+      "cli/state.py": "75b7eb1ad52a112b61e9dec857c2d343e91b377efa51cc4733b69e18fe400060",
+      "cli/validation.py": "aa97f2273f06a6134741ed01a32f17d89a72ca1e1fe3572eda899e82f0a763f9",
+      "docs/contract.md": "0fdfec7e40a743cae55d3ab6652e9c33ea9251f45196c4a145f69518ba5a2cd5",
+      "tests/test_public.py": "33e352dbb215d2ba37bf99bc2cf42c4987717fd04419cbdab89b5a4dd3832335"
+    },
+    "private_tests_dir": {
+      "test_private_gate.py": "ec6a6f2c7d48584b205e4977e050a76aed41471d09b4aa937fc0865f1652fc11"
+    },
+    "regression_tests_dir": {
+      "test_routes.py": "bfe87de0989dc9fe893af9a3611eece8628a4038ed8fd585d53e5c4dfa0e3f75"
+    },
+    "reference_dir": {
+      "cli/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "cli/__main__.py": "5be35d80fa32d64992f2c2191f1e28239517ff6573f1d5b97f80f6195ee70278",
+      "cli/app.py": "53d69c07c02a39480fee52c481410077ab10c38b9f908b7084de1c66e1128533",
+      "cli/config.py": "c8315d4375ff38d28914d6a24414f2f2f63ba621cf6de034ca34f508e7fc71ce",
+      "cli/state.py": "75b7eb1ad52a112b61e9dec857c2d343e91b377efa51cc4733b69e18fe400060",
+      "cli/validation.py": "aa97f2273f06a6134741ed01a32f17d89a72ca1e1fe3572eda899e82f0a763f9",
+      "docs/contract.md": "0fdfec7e40a743cae55d3ab6652e9c33ea9251f45196c4a145f69518ba5a2cd5",
+      "tests/test_public.py": "33e352dbb215d2ba37bf99bc2cf42c4987717fd04419cbdab89b5a4dd3832335"
+    },
+    "task_file": "92fa9372f69e56466cd30ac54b7a40739c913c615f2ab4feaec1017654a4090a"
+  }
+}

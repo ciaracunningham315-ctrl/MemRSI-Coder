@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "task_id": "repo_api_gate_stale_notify",
+  "repository_id": "repo_api",
+  "stage": "stale",
+  "kind": "task",
+  "available_after_stage": "stale",
+  "latest_mechanism_stage": "stale",
+  "independent_of_main_tasks": true,
+  "code_dir": "private/gate_selection/repo_api/repo_api_gate_stale_notify/code",
+  "task_file": "private/gate_selection/repo_api/repo_api_gate_stale_notify/task.md",
+  "private_tests_dir": "private/gate_selection/repo_api/repo_api_gate_stale_notify/acceptance",
+  "regression_tests_dir": "private/gate_selection/repo_api/repo_api_gate_stale_notify/regression",
+  "reference_dir": "private/gate_selection/repo_api/repo_api_gate_stale_notify/reference/code",
+  "acceptance_command": [
+    "python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "mechanisms": [
+    "strict_bounded_integer",
+    "error_field_path",
+    "validate_before_mutation",
+    "optional_parameter_types",
+    "renamed_validation_helper",
+    "nested_request"
+  ],
+  "future_main_inputs_used": [],
+  "fingerprints": {
+    "code_dir": {
+      "api/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "api/faults.py": "4abd26cdf98a326b70d6efe72a24583948bc4804ec0904641c126d69bdf6d488",
+      "api/service.py": "74dbd539a0edf65569f66948cdea8560321263e5609fda505092285df1a3d6ea",
+      "api/validation.py": "671f3cccb67a90289c675ca13b8333e72f15644254fe9feece003a2f9b63e9d5",
+      "docs/api-contract.md": "d89f4aa691afa27024113d030486b7552f6ad750aa4e270dbb4f1d0f7ac01509",
+      "tests/test_public.py": "45fcc72670c1fcac0ba0408ab199093ea1fb9b595f7db42bd7029d40fda56a43"
+    },
+    "private_tests_dir": {
+      "test_private_gate.py": "de1645b828da8246f08b22b67e61b233c5c8f3b139a4e4af4a899911e59dd270"
+    },
+    "regression_tests_dir": {
+      "test_routes.py": "171bccfe5af1bd2bbe694076f9bcd0b960d16f950173f69d1eec7c55ef8de670"
+    },
+    "reference_dir": {
+      "api/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "api/faults.py": "4abd26cdf98a326b70d6efe72a24583948bc4804ec0904641c126d69bdf6d488",
+      "api/service.py": "b01c9b3c333b3b97feb68d2264fd96771e28303c87b1f0d802bd6642e634d84e",
+      "api/validation.py": "671f3cccb67a90289c675ca13b8333e72f15644254fe9feece003a2f9b63e9d5",
+      "docs/api-contract.md": "d89f4aa691afa27024113d030486b7552f6ad750aa4e270dbb4f1d0f7ac01509",
+      "tests/test_public.py": "45fcc72670c1fcac0ba0408ab199093ea1fb9b595f7db42bd7029d40fda56a43"
+    },
+    "task_file": "ee70680f09024c07c742971a4be7be365ef8a3c682999a4fdcac4055c4f17e91"
+  }
+}

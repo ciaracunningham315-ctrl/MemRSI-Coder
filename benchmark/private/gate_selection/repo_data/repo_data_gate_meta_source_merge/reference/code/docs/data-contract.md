@@ -1,0 +1,2 @@
+# Rate catalog contract
+Rows have unique string rate_id. amount_minor, when present and non-null, is already in minor units and wins even when zero. Otherwise amount_major is converted to minor units with decimal half-up rounding. Missing, null, empty, or whitespace-only adjustment_minor means zero; other adjustments are non-negative integers and cannot exceed amount. Result preserves order and returns normalized rows and exact total. Booleans and malformed records raise ValueError.

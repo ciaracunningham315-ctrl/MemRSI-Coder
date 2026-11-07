@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "task_id": "repo_data_replay_timecard_rounding",
+  "repository_id": "repo_data",
+  "stage": "seed",
+  "kind": "regression",
+  "available_after_stage": "seed",
+  "latest_mechanism_stage": "seed",
+  "independent_of_main_tasks": true,
+  "future_main_inputs_used": [],
+  "code_dir": "private/regression_replay/repo_data/repo_data_replay_timecard_rounding/code",
+  "task_file": "private/regression_replay/repo_data/repo_data_replay_timecard_rounding/task.md",
+  "private_tests_dir": "private/regression_replay/repo_data/repo_data_replay_timecard_rounding/acceptance",
+  "regression_tests_dir": "private/regression_replay/repo_data/repo_data_replay_timecard_rounding/regression",
+  "reference_dir": "private/regression_replay/repo_data/repo_data_replay_timecard_rounding/reference/code",
+  "acceptance_command": [
+    "python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "mechanisms": [
+    "decimal_half_up",
+    "exact_aggregation"
+  ],
+  "fingerprints": {
+    "code_dir": {
+      "README.md": "3e5b13634d2ee9f218c93e31213c4f2bb707c303d2700c8c3e4fd46498be7cc5",
+      "docs/data-contract.md": "677557759be426c9a9ce09a7c830cbfb9d986a40d9eea2894472c829c58930ce",
+      "tests/test_public.py": "609c51ada9875b16c0bddbd2acee2ef9fc4c3ed7ab6dfb19552c7381d549ef56",
+      "timecards.py": "1166780ce74447519c4c8db18c4e961ba74171c9610a7cedcf4ba6b9f0ded828"
+    },
+    "private_tests_dir": {
+      "test_private_gate.py": "60fe7a0dfbc1a7ec0bd9ef5aaba3f5e17e3feabed85264d4e4f4de941b2d52c2"
+    },
+    "regression_tests_dir": {
+      "test_routes.py": "fe89a22ea1ce49b23f03401474f1d26931c7fffed9613c8e15fbe96437a96ea4"
+    },
+    "reference_dir": {
+      "README.md": "3e5b13634d2ee9f218c93e31213c4f2bb707c303d2700c8c3e4fd46498be7cc5",
+      "docs/data-contract.md": "677557759be426c9a9ce09a7c830cbfb9d986a40d9eea2894472c829c58930ce",
+      "tests/test_public.py": "609c51ada9875b16c0bddbd2acee2ef9fc4c3ed7ab6dfb19552c7381d549ef56",
+      "timecards.py": "c2c5059390f2bf18e577b14dd0cc79b4bd000d475a73cc79f190f623aeeea311"
+    },
+    "task_file": "71bbffbd9695d80c94a005de7ee42492b3cf06ebc3b5a3f34cdb3a1d9ada2b15"
+  }
+}

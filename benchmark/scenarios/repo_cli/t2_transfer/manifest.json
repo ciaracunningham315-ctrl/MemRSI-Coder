@@ -1,0 +1,154 @@
+{
+  "schema_version": 1,
+  "task_id": "repo_cli_t2",
+  "repository_id": "repo_cli",
+  "stage": "transfer",
+  "code_dir": "scenarios/repo_cli/t2_transfer/code",
+  "task_file": "scenarios/repo_cli/t2_transfer/task.md",
+  "private_tests_dir": "private/acceptance/repo_cli/t2_transfer",
+  "regression_tests_dir": "private/regression/repo_cli/t2_transfer",
+  "reference_dir": "private/references/repo_cli/t2_transfer/code",
+  "acceptance_command": [
+    "python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests"
+  ],
+  "representative_bad_patches": [
+    {
+      "name": "skip_validation",
+      "category": "remove_validation",
+      "overlay_dir": "private/references/repo_cli/t2_transfer/bad_patches/skip_validation/code",
+      "fingerprints": {
+        "README.md": "62a609fcc4b103c6dcdcd7481773ea91409f6f3f5f5a2126f2eba8dacc0ce2f4",
+        "cli/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "cli/__main__.py": "d9f84d973e46d988d0dfda176dd03650f11ea05520d71016f571dcc9486bf723",
+        "cli/config.py": "288db9819e8915ae809d50e3338ccea737111ea42bb5244451e077d20707ce7d",
+        "cli/main.py": "3da49c69fa37a52039cf136c8fa0efedba6d2768b937a643fde26a8c93e92150",
+        "cli/mirror_config.py": "642b98b7e1e39cd8e93b2385398ab83b3df33b6ce41abfe74d0a936c0a8c3596",
+        "cli/state.py": "75b7eb1ad52a112b61e9dec857c2d343e91b377efa51cc4733b69e18fe400060",
+        "cli/validation.py": "4a61c5e8b2d391015f1a66932bd8c10d12d47b80c63c259fc9615c21b2412500",
+        "docs/configuration.md": "91ff381f7b9dafe00e04b7c7ed6328af9d94c29488bde6ac960417423bc40af5",
+        "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "tests/test_public.py": "1f430ca0176e3ecd5bf70a2e03efd0a4d1a758f34d617b934b10d097bdd5154a"
+      }
+    },
+    {
+      "name": "swallow_failure",
+      "category": "swallow_exception",
+      "overlay_dir": "private/references/repo_cli/t2_transfer/bad_patches/swallow_failure/code",
+      "fingerprints": {
+        "README.md": "62a609fcc4b103c6dcdcd7481773ea91409f6f3f5f5a2126f2eba8dacc0ce2f4",
+        "cli/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "cli/__main__.py": "d9f84d973e46d988d0dfda176dd03650f11ea05520d71016f571dcc9486bf723",
+        "cli/config.py": "288db9819e8915ae809d50e3338ccea737111ea42bb5244451e077d20707ce7d",
+        "cli/main.py": "3da49c69fa37a52039cf136c8fa0efedba6d2768b937a643fde26a8c93e92150",
+        "cli/mirror_config.py": "642b98b7e1e39cd8e93b2385398ab83b3df33b6ce41abfe74d0a936c0a8c3596",
+        "cli/state.py": "75b7eb1ad52a112b61e9dec857c2d343e91b377efa51cc4733b69e18fe400060",
+        "cli/validation.py": "fa4b4446e9ebf6e24a304523c1d28b0736da5a5852700bb8b3584a85d05b7454",
+        "docs/configuration.md": "91ff381f7b9dafe00e04b7c7ed6328af9d94c29488bde6ac960417423bc40af5",
+        "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "tests/test_public.py": "1f430ca0176e3ecd5bf70a2e03efd0a4d1a758f34d617b934b10d097bdd5154a"
+      }
+    },
+    {
+      "name": "hardcode_example",
+      "category": "hardcode",
+      "overlay_dir": "private/references/repo_cli/t2_transfer/bad_patches/hardcode_example/code",
+      "fingerprints": {
+        "README.md": "62a609fcc4b103c6dcdcd7481773ea91409f6f3f5f5a2126f2eba8dacc0ce2f4",
+        "cli/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "cli/__main__.py": "d9f84d973e46d988d0dfda176dd03650f11ea05520d71016f571dcc9486bf723",
+        "cli/config.py": "288db9819e8915ae809d50e3338ccea737111ea42bb5244451e077d20707ce7d",
+        "cli/main.py": "3da49c69fa37a52039cf136c8fa0efedba6d2768b937a643fde26a8c93e92150",
+        "cli/mirror_config.py": "642b98b7e1e39cd8e93b2385398ab83b3df33b6ce41abfe74d0a936c0a8c3596",
+        "cli/state.py": "75b7eb1ad52a112b61e9dec857c2d343e91b377efa51cc4733b69e18fe400060",
+        "cli/validation.py": "bf62bf75f57f8f78aec43e9781d316e4a6fd6eb69d324d393d023f6189bad309",
+        "docs/configuration.md": "91ff381f7b9dafe00e04b7c7ed6328af9d94c29488bde6ac960417423bc40af5",
+        "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "tests/test_public.py": "1f430ca0176e3ecd5bf70a2e03efd0a4d1a758f34d617b934b10d097bdd5154a"
+      }
+    }
+  ],
+  "runtime": {
+    "python_minimum": "3.10",
+    "dependencies": []
+  },
+  "dataset_revision": "repo_cli_config_precedence_v1_2026-11-06",
+  "public_contract_file": "docs/configuration.md",
+  "target_contract": {
+    "topic": "configuration_source_precedence_and_parameter_bounds",
+    "independent_solution": true
+  },
+  "task_fingerprints": {
+    "code_dir": {
+      "README.md": "62a609fcc4b103c6dcdcd7481773ea91409f6f3f5f5a2126f2eba8dacc0ce2f4",
+      "cli/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "cli/__main__.py": "d9f84d973e46d988d0dfda176dd03650f11ea05520d71016f571dcc9486bf723",
+      "cli/config.py": "288db9819e8915ae809d50e3338ccea737111ea42bb5244451e077d20707ce7d",
+      "cli/main.py": "3da49c69fa37a52039cf136c8fa0efedba6d2768b937a643fde26a8c93e92150",
+      "cli/mirror_config.py": "105e36701e605ec04af348335a983353a719cb9da6b636a4c37c6d3a40ec8506",
+      "cli/state.py": "75b7eb1ad52a112b61e9dec857c2d343e91b377efa51cc4733b69e18fe400060",
+      "cli/validation.py": "aa97f2273f06a6134741ed01a32f17d89a72ca1e1fe3572eda899e82f0a763f9",
+      "docs/configuration.md": "91ff381f7b9dafe00e04b7c7ed6328af9d94c29488bde6ac960417423bc40af5",
+      "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tests/test_public.py": "1f430ca0176e3ecd5bf70a2e03efd0a4d1a758f34d617b934b10d097bdd5154a"
+    },
+    "private_tests_dir": {
+      "test_acceptance.py": "9a6db6c32ae80d80fd67b4c004b026932be250fb95b274364b1b860539965e23"
+    },
+    "regression_tests_dir": {
+      "test_regression.py": "f31e0e314a0f41f2e33bcd47b014429e41f53807402da504cf7d8cae636f4dcd"
+    },
+    "reference_dir": {
+      "README.md": "62a609fcc4b103c6dcdcd7481773ea91409f6f3f5f5a2126f2eba8dacc0ce2f4",
+      "cli/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "cli/__main__.py": "d9f84d973e46d988d0dfda176dd03650f11ea05520d71016f571dcc9486bf723",
+      "cli/config.py": "288db9819e8915ae809d50e3338ccea737111ea42bb5244451e077d20707ce7d",
+      "cli/main.py": "3da49c69fa37a52039cf136c8fa0efedba6d2768b937a643fde26a8c93e92150",
+      "cli/mirror_config.py": "642b98b7e1e39cd8e93b2385398ab83b3df33b6ce41abfe74d0a936c0a8c3596",
+      "cli/state.py": "75b7eb1ad52a112b61e9dec857c2d343e91b377efa51cc4733b69e18fe400060",
+      "cli/validation.py": "aa97f2273f06a6134741ed01a32f17d89a72ca1e1fe3572eda899e82f0a763f9",
+      "docs/configuration.md": "91ff381f7b9dafe00e04b7c7ed6328af9d94c29488bde6ac960417423bc40af5",
+      "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tests/test_public.py": "1f430ca0176e3ecd5bf70a2e03efd0a4d1a758f34d617b934b10d097bdd5154a"
+    },
+    "task_file": "e2c0df8ae0f97a010d669bf52f252d564dd63510f9660a90f1c66195f091ca56"
+  },
+  "code_snapshot_sha256": "15040dc7edad582bf5d3fbd256dde29642c712df917ad136d3b7a820410bc12b",
+  "git_stage_package": "git_stage_packages/repo_cli_t2_transfer.tar.gz",
+  "visible_head_sha": "88e44b3f76dfb2940893a27ac050762482298879",
+  "allowed_ancestor_shas": [
+    "e0280010cd499c8ebaa502c7a71139ac2746bc68"
+  ],
+  "git_object_shas": [
+    "04945f6b7883261916248a4fa849c18dbcbd7df1",
+    "06838e3f3a54207d90db6b4e5a0cf2480934d40b",
+    "28a5d53e14afeb8a7633cd1b967720e4a9fd9a76",
+    "32a71a1b87b68ace19c83ae871264767ce4bed17",
+    "542e5295e6d0ad05a42864449ad3abb7e512d5bf",
+    "5b5830ed400e94156db1fbffae34d335c2071a1e",
+    "88e44b3f76dfb2940893a27ac050762482298879",
+    "90882310a495a823db040f0c77e082a45557da33",
+    "94407efe81b2e72941320dfcb153aa127b97e57f",
+    "99f9f05a47c78e4ac177613579bfc1a7982c1782",
+    "b297fad1db97ac0f7c92afc111a74bd33c148f73",
+    "b716af692d05e40c3cbd83eec60096813fcd9879",
+    "bc517d06471f2979257c3b87c8eaec71a54c12c3",
+    "c059ce8171f39bd107b7e70d0ddef7253373a3de",
+    "c10d0b1199bde46f33a3db771a095800c9bfa1b4",
+    "cc76fc16c3627716b18b122a56569040053e54cf",
+    "d12a8464cfea3ad3a2efcbd3dee9088b1ab4aad3",
+    "dcd45779fffe8029094474f9ef84056310ad9d26",
+    "dd7cadcfb39ed583fbc14bb7cb58cac6f0e47af4",
+    "df5a4a8f4669dc06886ef31d0c5b0cfbe9cba21e",
+    "e0280010cd499c8ebaa502c7a71139ac2746bc68",
+    "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "ec462049c36acb42c6f5ac083575d11c4615b4d6",
+    "fb11f6d3468d748e3a7a5d6bea669a9a72e2e6ed",
+    "fb77506c9954fe1f2822247b12773a532ad4a98f"
+  ],
+  "git_stage_package_sha256": "2667245d117c5116c2d76dc28f8083e247d9567c1c305915eea0ffc06bc1d653"
+}

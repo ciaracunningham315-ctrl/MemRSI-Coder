@@ -1,0 +1,50 @@
+{
+  "cases": [
+    {
+      "expected": {
+        "headers": {
+          "accept": "application/json",
+          "x-trace-id": "t-17"
+        }
+      },
+      "id": "mixed_trace_header",
+      "input": {
+        "headers": {
+          "Accept": "application/json",
+          "X-Trace-ID": "t-17"
+        }
+      }
+    },
+    {
+      "expected": {
+        "headers": {
+          "content-type": "text/plain"
+        }
+      },
+      "id": "single_lowercase_header",
+      "input": {
+        "headers": {
+          "content-type": "text/plain"
+        }
+      }
+    },
+    {
+      "expected": {
+        "headers": {
+          "authorization": "Bearer sample",
+          "x-client": "c1"
+        }
+      },
+      "id": "mixed_authorization_header",
+      "input": {
+        "headers": {
+          "AUTHORIZATION": "Bearer sample",
+          "X-CLIENT": "c1"
+        }
+      }
+    }
+  ],
+  "oracle": "frozen expected outputs in the isolated trusted test fixture",
+  "performance_observations": [],
+  "task_id": "nsrr_audit_dup_headers"
+}

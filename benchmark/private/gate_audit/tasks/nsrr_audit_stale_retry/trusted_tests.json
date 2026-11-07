@@ -1,0 +1,55 @@
+{
+  "cases": [
+    {
+      "expected": {
+        "attempts": 2,
+        "side_effects": 0
+      },
+      "id": "safe_read_timeout",
+      "input": {
+        "available_attempts": 2,
+        "committed_attempts": [
+          0,
+          0
+        ],
+        "idempotency_key": null,
+        "method": "GET"
+      }
+    },
+    {
+      "expected": {
+        "attempts": 1,
+        "side_effects": 1
+      },
+      "id": "unkeyed_write_ambiguous_commit",
+      "input": {
+        "available_attempts": 2,
+        "committed_attempts": [
+          1,
+          1
+        ],
+        "idempotency_key": null,
+        "method": "POST"
+      }
+    },
+    {
+      "expected": {
+        "attempts": 2,
+        "side_effects": 1
+      },
+      "id": "keyed_write_ambiguous_commit",
+      "input": {
+        "available_attempts": 2,
+        "committed_attempts": [
+          1,
+          1
+        ],
+        "idempotency_key": "idem-7",
+        "method": "POST"
+      }
+    }
+  ],
+  "oracle": "frozen expected outputs in the isolated trusted test fixture",
+  "performance_observations": [],
+  "task_id": "nsrr_audit_stale_retry"
+}

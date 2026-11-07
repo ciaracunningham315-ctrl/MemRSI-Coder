@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "tasks": {
+    "repo_api_gate_seed_print": "private/gate_selection/repo_api/repo_api_gate_seed_print/manifest.json",
+    "repo_api_gate_transfer_export": "private/gate_selection/repo_api/repo_api_gate_transfer_export/manifest.json",
+    "repo_api_gate_stale_notify": "private/gate_selection/repo_api/repo_api_gate_stale_notify/manifest.json",
+    "repo_api_gate_meta_reminder": "private/gate_selection/repo_api/repo_api_gate_meta_reminder/manifest.json",
+    "repo_api_replay_status": "private/regression_replay/repo_api/repo_api_replay_status/manifest.json",
+    "repo_cli_gate_meta_transfer_manifest": "private/gate_selection/repo_cli/repo_cli_gate_meta_transfer_manifest/manifest.json",
+    "repo_cli_gate_seed_bundle": "private/gate_selection/repo_cli/repo_cli_gate_seed_bundle/manifest.json",
+    "repo_cli_gate_stale_release": "private/gate_selection/repo_cli/repo_cli_gate_stale_release/manifest.json",
+    "repo_cli_gate_transfer_cache": "private/gate_selection/repo_cli/repo_cli_gate_transfer_cache/manifest.json",
+    "repo_cli_replay_profile_summary": "private/regression_replay/repo_cli/repo_cli_replay_profile_summary/manifest.json",
+    "repo_data_gate_meta_source_merge": "private/gate_selection/repo_data/repo_data_gate_meta_source_merge/manifest.json",
+    "repo_data_gate_seed_receipt": "private/gate_selection/repo_data/repo_data_gate_seed_receipt/manifest.json",
+    "repo_data_gate_stale_telemetry": "private/gate_selection/repo_data/repo_data_gate_stale_telemetry/manifest.json",
+    "repo_data_gate_transfer_reading": "private/gate_selection/repo_data/repo_data_gate_transfer_reading/manifest.json",
+    "repo_data_replay_timecard_rounding": "private/regression_replay/repo_data/repo_data_replay_timecard_rounding/manifest.json"
+  },
+  "selection": {
+    "seed": {
+      "task": [
+        "repo_api_gate_seed_print",
+        "repo_cli_gate_seed_bundle",
+        "repo_data_gate_seed_receipt"
+      ],
+      "meta": [],
+      "regression": [
+        "repo_api_replay_status",
+        "repo_cli_replay_profile_summary",
+        "repo_data_replay_timecard_rounding"
+      ]
+    },
+    "transfer": {
+      "task": [
+        "repo_api_gate_transfer_export",
+        "repo_cli_gate_transfer_cache",
+        "repo_data_gate_transfer_reading"
+      ],
+      "meta": [
+        "repo_api_gate_meta_reminder",
+        "repo_cli_gate_meta_transfer_manifest",
+        "repo_data_gate_meta_source_merge"
+      ],
+      "regression": [
+        "repo_api_replay_status",
+        "repo_cli_replay_profile_summary",
+        "repo_data_replay_timecard_rounding"
+      ]
+    },
+    "stale": {
+      "task": [
+        "repo_api_gate_stale_notify",
+        "repo_cli_gate_stale_release",
+        "repo_data_gate_stale_telemetry"
+      ],
+      "meta": [],
+      "regression": [
+        "repo_api_replay_status",
+        "repo_cli_replay_profile_summary",
+        "repo_data_replay_timecard_rounding"
+      ]
+    }
+  },
+  "availability": {
+    "repo_api_gate_seed_print": {
+      "stage": "seed",
+      "kind": "task"
+    },
+    "repo_api_gate_transfer_export": {
+      "stage": "transfer",
+      "kind": "task"
+    },
+    "repo_api_gate_stale_notify": {
+      "stage": "stale",
+      "kind": "task"
+    },
+    "repo_api_gate_meta_reminder": {
+      "stage": "transfer",
+      "kind": "meta"
+    },
+    "repo_api_replay_status": {
+      "stage": "seed",
+      "kind": "regression"
+    },
+    "repo_cli_gate_meta_transfer_manifest": {
+      "stage": "transfer",
+      "kind": "meta"
+    },
+    "repo_cli_gate_seed_bundle": {
+      "stage": "seed",
+      "kind": "task"
+    },
+    "repo_cli_gate_stale_release": {
+      "stage": "stale",
+      "kind": "task"
+    },
+    "repo_cli_gate_transfer_cache": {
+      "stage": "transfer",
+      "kind": "task"
+    },
+    "repo_cli_replay_profile_summary": {
+      "stage": "seed",
+      "kind": "regression"
+    },
+    "repo_data_gate_meta_source_merge": {
+      "stage": "transfer",
+      "kind": "meta"
+    },
+    "repo_data_gate_seed_receipt": {
+      "stage": "seed",
+      "kind": "task"
+    },
+    "repo_data_gate_stale_telemetry": {
+      "stage": "stale",
+      "kind": "task"
+    },
+    "repo_data_gate_transfer_reading": {
+      "stage": "transfer",
+      "kind": "task"
+    },
+    "repo_data_replay_timecard_rounding": {
+      "stage": "seed",
+      "kind": "regression"
+    }
+  },
+  "repository_ids": {
+    "repo_cli_gate_meta_transfer_manifest": "repo_cli",
+    "repo_cli_gate_seed_bundle": "repo_cli",
+    "repo_cli_gate_stale_release": "repo_cli",
+    "repo_cli_gate_transfer_cache": "repo_cli",
+    "repo_cli_replay_profile_summary": "repo_cli",
+    "repo_data_gate_meta_source_merge": "repo_data",
+    "repo_data_gate_seed_receipt": "repo_data",
+    "repo_data_gate_stale_telemetry": "repo_data",
+    "repo_data_gate_transfer_reading": "repo_data",
+    "repo_data_replay_timecard_rounding": "repo_data",
+    "repo_api_gate_seed_print": "repo_api",
+    "repo_api_gate_transfer_export": "repo_api",
+    "repo_api_gate_stale_notify": "repo_api",
+    "repo_api_gate_meta_reminder": "repo_api",
+    "repo_api_replay_status": "repo_api"
+  }
+}

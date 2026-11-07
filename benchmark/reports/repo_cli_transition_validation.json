@@ -1,0 +1,44 @@
+{
+  "kind": "repo_cli_t3_offline_transition_evidence",
+  "passed": true,
+  "model_calls": 0,
+  "real_agent_history_collected": false,
+  "formal_results": false,
+  "path_checks": {
+    "old_config_helper_exists_in_t2_reference": true,
+    "old_command_helper_exists_in_t2_reference": true,
+    "old_config_helper_absent_in_t3": true,
+    "old_command_helper_absent_in_t3": true,
+    "new_settings_helper_exists_in_t3": true,
+    "legacy_ini_format_documented_in_t2": true,
+    "json_snapshot_format_documented_in_t3": true,
+    "old_resolver_symbols_present_in_t2": {
+      "ConfigResolver": true,
+      "resolve": true,
+      "mirror_workers": true
+    },
+    "old_resolver_symbols_absent_in_t3": {
+      "ConfigResolver": true,
+      "resolve": true,
+      "mirror_workers": true
+    },
+    "replacement_symbol_load_options_present": true,
+    "validation_helper_path_retained": true,
+    "bounded_decimal_retained": true,
+    "retained_helper_content_unchanged": true
+  },
+  "t2_reference_validation_sha256": "aa97f2273f06a6134741ed01a32f17d89a72ca1e1fe3572eda899e82f0a763f9",
+  "t3_baseline_validation_sha256": "aa97f2273f06a6134741ed01a32f17d89a72ca1e1fe3572eda899e82f0a763f9",
+  "declared_transition_matches_observed_files": true,
+  "transition": {
+    "removed_paths": [
+      "cli/config.py",
+      "cli/mirror_config.py"
+    ],
+    "replacement_path": "cli/settings.py",
+    "replaced_config_representation": "repo-cli.ini per-command adapter",
+    "current_representation": "per-command JSON snapshot via load_options",
+    "still_valid_helper": "cli.validation.bounded_decimal"
+  },
+  "boundary": "This is a static file/symbol/hash check plus offline dataset admission, not a real Agent history or applicability run."
+}

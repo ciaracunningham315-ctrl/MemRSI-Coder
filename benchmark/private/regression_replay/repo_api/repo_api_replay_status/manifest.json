@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "task_id": "repo_api_replay_status",
+  "repository_id": "repo_api",
+  "stage": "seed",
+  "kind": "regression",
+  "available_after_stage": "seed",
+  "latest_mechanism_stage": "seed",
+  "independent_of_main_tasks": true,
+  "code_dir": "private/regression_replay/repo_api/repo_api_replay_status/code",
+  "task_file": "private/regression_replay/repo_api/repo_api_replay_status/task.md",
+  "private_tests_dir": "private/regression_replay/repo_api/repo_api_replay_status/acceptance",
+  "regression_tests_dir": "private/regression_replay/repo_api/repo_api_replay_status/regression",
+  "reference_dir": "private/regression_replay/repo_api/repo_api_replay_status/reference/code",
+  "acceptance_command": [
+    "python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "mechanisms": [
+    "response_ownership",
+    "route_compatibility"
+  ],
+  "future_main_inputs_used": [],
+  "fingerprints": {
+    "code_dir": {
+      "api/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "api/status.py": "385e1f2fbaca9142540d2312552c3a46505ac1cf332a1ebf5417626872bcc956",
+      "docs/api-contract.md": "243a5e6e7f1daf90ad45bf9532d5885cca42cce9915f19281e34d33a68c50962",
+      "tests/test_public.py": "a8132577892f5eff58dd53c7064b6af68d889e2d2bbb2cc1dd237bb4d46f48de"
+    },
+    "private_tests_dir": {
+      "test_private_gate.py": "40cc41553d1882f7b0aa4199ce2bbe300c855579827b875d52fea85a8c319a69"
+    },
+    "regression_tests_dir": {
+      "test_routes.py": "e44383ed1fb3b5efa548f16d86bcff5c59c588ab5634518220322622567e54a6"
+    },
+    "reference_dir": {
+      "api/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "api/status.py": "cd35d454d57b6fca5add2fc71b5822feaa37f7e8ed9dcde70da2a96b46952336",
+      "docs/api-contract.md": "243a5e6e7f1daf90ad45bf9532d5885cca42cce9915f19281e34d33a68c50962",
+      "tests/test_public.py": "a8132577892f5eff58dd53c7064b6af68d889e2d2bbb2cc1dd237bb4d46f48de"
+    },
+    "task_file": "fd5f4d72cfa3ed727e72eee7be3ba83252ebb95fffc190e024456dbb0df20d22"
+  }
+}

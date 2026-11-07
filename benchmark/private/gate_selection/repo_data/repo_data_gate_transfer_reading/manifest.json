@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "task_id": "repo_data_gate_transfer_reading",
+  "repository_id": "repo_data",
+  "stage": "transfer",
+  "kind": "task",
+  "available_after_stage": "transfer",
+  "latest_mechanism_stage": "transfer",
+  "independent_of_main_tasks": true,
+  "future_main_inputs_used": [],
+  "code_dir": "private/gate_selection/repo_data/repo_data_gate_transfer_reading/code",
+  "task_file": "private/gate_selection/repo_data/repo_data_gate_transfer_reading/task.md",
+  "private_tests_dir": "private/gate_selection/repo_data/repo_data_gate_transfer_reading/acceptance",
+  "regression_tests_dir": "private/gate_selection/repo_data/repo_data_gate_transfer_reading/regression",
+  "reference_dir": "private/gate_selection/repo_data/repo_data_gate_transfer_reading/reference/code",
+  "acceptance_command": [
+    "python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "mechanisms": [
+    "null_semantics",
+    "strict_numeric_conversion",
+    "distinguish_missing_from_zero"
+  ],
+  "fingerprints": {
+    "code_dir": {
+      "README.md": "3e5b13634d2ee9f218c93e31213c4f2bb707c303d2700c8c3e4fd46498be7cc5",
+      "docs/data-contract.md": "1c3005eff95af45194c114770bd450a3c931ecf67d5c530b162f40bd8389bc05",
+      "telemetry.py": "e4d3f69306163870138754b9c7a2a1f3b999c3905588d15b796b403400c743c7",
+      "tests/test_public.py": "6f91227fb66c6d7f066e20d2fd7d1af34a6e163b0cf43b235c81da2a34e43db2"
+    },
+    "private_tests_dir": {
+      "test_private_gate.py": "52046543d38efead6935647ab359f52c29493dd9bd07f7d8d30a05c13bde1520"
+    },
+    "regression_tests_dir": {
+      "test_routes.py": "fcd7a99360fc7a608f9bbbe8d322ecbeb247035fe79e6bc562477bb9fbbe76cb"
+    },
+    "reference_dir": {
+      "README.md": "3e5b13634d2ee9f218c93e31213c4f2bb707c303d2700c8c3e4fd46498be7cc5",
+      "docs/data-contract.md": "1c3005eff95af45194c114770bd450a3c931ecf67d5c530b162f40bd8389bc05",
+      "telemetry.py": "9dac3593e792d02d9c8ecee9a9e5b88b9aebabb3686d25f904d0763fec080684",
+      "tests/test_public.py": "6f91227fb66c6d7f066e20d2fd7d1af34a6e163b0cf43b235c81da2a34e43db2"
+    },
+    "task_file": "c5ef9f4b9253fa3a412a671a566b5926105a2f1c83b099b8fe0675e7f2338389"
+  }
+}

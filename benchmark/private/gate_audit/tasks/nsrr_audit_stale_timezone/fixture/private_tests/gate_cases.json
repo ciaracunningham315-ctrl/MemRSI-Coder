@@ -1,0 +1,33 @@
+{
+  "cases": [
+    {
+      "expected": {
+        "timestamp_utc": "2026-07-20T12:30:00Z"
+      },
+      "id": "gate_tokyo_offset",
+      "input": {
+        "timestamp": "2026-07-20T21:30:00+09:00"
+      }
+    },
+    {
+      "expected": {
+        "timestamp_utc": "2026-11-04T00:45:00Z"
+      },
+      "id": "gate_eastern_offset",
+      "input": {
+        "timestamp": "2026-11-03T19:45:00-05:00"
+      }
+    },
+    {
+      "expected": {
+        "timestamp_utc": "2026-08-10T04:05:06Z"
+      },
+      "id": "gate_already_zulu",
+      "input": {
+        "timestamp": "2026-08-10T04:05:06Z"
+      }
+    }
+  ],
+  "oracle": "frozen Gate selection acceptance outputs disjoint from independent audit trusted_tests.json",
+  "task_id": "nsrr_audit_stale_timezone"
+}

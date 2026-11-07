@@ -1,0 +1,50 @@
+{
+  "cases": [
+    {
+      "expected": {
+        "body": {
+          "error": "invalid_input"
+        },
+        "status": 400
+      },
+      "id": "missing_required_field",
+      "input": {
+        "body": {},
+        "valid": false
+      }
+    },
+    {
+      "expected": {
+        "body": {
+          "error": "invalid_input"
+        },
+        "status": 400
+      },
+      "id": "wrong_field_type",
+      "input": {
+        "body": {
+          "count": "many"
+        },
+        "valid": false
+      }
+    },
+    {
+      "expected": {
+        "body": {
+          "count": 3
+        },
+        "status": 200
+      },
+      "id": "valid_payload",
+      "input": {
+        "body": {
+          "count": 3
+        },
+        "valid": true
+      }
+    }
+  ],
+  "oracle": "frozen expected outputs in the isolated trusted test fixture",
+  "performance_observations": [],
+  "task_id": "nsrr_audit_harm_error_swallow"
+}

@@ -1,0 +1,53 @@
+{
+  "cases": [
+    {
+      "expected": {
+        "config": {
+          "endpoint": null,
+          "workers": 4
+        }
+      },
+      "id": "gate_nullable_endpoint",
+      "input": {
+        "config": {
+          "endpoint": null,
+          "workers": 4
+        }
+      }
+    },
+    {
+      "expected": {
+        "config": {
+          "debug": false,
+          "port": 8080
+        }
+      },
+      "id": "gate_non_null_flags",
+      "input": {
+        "config": {
+          "debug": false,
+          "port": 8080
+        }
+      }
+    },
+    {
+      "expected": {
+        "config": {
+          "fallback": null,
+          "proxy": null,
+          "tls": true
+        }
+      },
+      "id": "gate_multiple_nulls",
+      "input": {
+        "config": {
+          "fallback": null,
+          "proxy": null,
+          "tls": true
+        }
+      }
+    }
+  ],
+  "oracle": "frozen Gate selection acceptance outputs disjoint from independent audit trusted_tests.json",
+  "task_id": "nsrr_audit_dup_config_null"
+}

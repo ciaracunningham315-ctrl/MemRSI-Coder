@@ -1,0 +1,12 @@
+{
+  "audit_task_id": "nsrr_audit_stale_timezone",
+  "candidate_id": "nsrr_stale_timezone",
+  "claimed_observation_dimension": "behavioral",
+  "description": "Independent synthetic cases contain explicit offsets and a UTC timestamp. Their expected UTC instants are fixed by the audit oracle.",
+  "independent_source": "deterministic synthetic audit-only workload with a separate trusted assertion oracle",
+  "minimum_cases": 3,
+  "minimum_performance_samples": 0,
+  "provenance_boundary": "not sourced from Gate selection, main-task T4, acceptance, regression, references, or learning scores",
+  "task_type": "timestamp_normalization",
+  "title": "Outdated UTC assumption for offset timestamps"
+}

@@ -1,0 +1,14 @@
+{
+  "material_id": "selection-input-validation-regression",
+  "family": "input_validation_regression",
+  "source_kind": "synthetic_selection_material",
+  "selection_rule": "Prefer explicit type, empty-value, and range checks that fail closed and preserve valid prior behavior.",
+  "live_task": {
+    "task_id": "validation_material_selection",
+    "prompt": "Fix validation_material.py so page_size defaults only when omitted and otherwise requires an exact integer from 1 through 100.",
+    "source": "def page_size(value=None):\n    value = value or 10\n    if not isinstance(value, int):\n        raise TypeError(\"integer required\")\n    return value\n",
+    "acceptance": "import sys\nsys.path.insert(0, \"/workspace\")\nfrom validation_material import page_size\nassert page_size() == 10\nassert page_size(3) == 3\nfor bad in (0, 101, False):\n    try:\n        page_size(bad)\n    except (TypeError, ValueError):\n        pass\n    else:\n        raise AssertionError(f\"invalid size accepted: {bad!r}\")\n",
+    "acceptance_file": "tests/private_acceptance_validation_material_selection.py",
+    "acceptance_command": ["python", "-I", "-B", "/workspace/tests/private_acceptance_validation_material_selection.py"]
+  }
+}

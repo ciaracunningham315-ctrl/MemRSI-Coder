@@ -1,0 +1,46 @@
+{
+  "cases": [
+    {
+      "expected": {
+        "config": {
+          "region": "west",
+          "timeout": null
+        }
+      },
+      "id": "explicit_null",
+      "input": {
+        "config": {
+          "region": "west",
+          "timeout": null
+        }
+      }
+    },
+    {
+      "expected": {
+        "config": {
+          "enabled": true,
+          "retries": 2
+        }
+      },
+      "id": "all_values_present",
+      "input": {
+        "config": {
+          "enabled": true,
+          "retries": 2
+        }
+      }
+    },
+    {
+      "expected": {
+        "config": {}
+      },
+      "id": "empty_configuration",
+      "input": {
+        "config": {}
+      }
+    }
+  ],
+  "oracle": "frozen expected outputs in the isolated trusted test fixture",
+  "performance_observations": [],
+  "task_id": "nsrr_audit_dup_config_null"
+}

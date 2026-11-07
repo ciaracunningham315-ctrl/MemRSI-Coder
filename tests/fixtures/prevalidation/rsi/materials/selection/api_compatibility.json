@@ -1,0 +1,14 @@
+{
+  "material_id": "selection-api-compatibility",
+  "family": "api_compatibility",
+  "source_kind": "synthetic_selection_material",
+  "selection_rule": "Prefer changes that preserve existing public fields and call forms while supporting the new contract.",
+  "live_task": {
+    "task_id": "api_material_selection",
+    "prompt": "Fix api_material.py to preserve the id response field while adding resource_id.",
+    "source": "def event(resource_id):\n    return {\"resource_id\": resource_id}\n",
+    "acceptance": "import sys\nsys.path.insert(0, \"/workspace\")\nfrom api_material import event\nassert event(9)[\"resource_id\"] == 9\nassert event(9)[\"id\"] == 9\n",
+    "acceptance_file": "tests/private_acceptance_api_material_selection.py",
+    "acceptance_command": ["python", "-I", "-B", "/workspace/tests/private_acceptance_api_material_selection.py"]
+  }
+}

@@ -1,0 +1,210 @@
+# EvoCode Benchmark Runner 配置契约；实现与运行状态见 ../README.md。
+# 本文件不是 EvoCode 现有 AppConfig，不含连接凭据或实验成绩。
+protocol_id: evocode-benchmark-2026-11-06-r2
+revision: 2
+previous_protocol_id: evocode-benchmark-2026-11-06
+frozen_at: '2026-11-06'
+amended_at: '2026-11-06'
+timezone: Asia/Shanghai
+benchmark_name: EvoCode Benchmark
+specification: ../docs/frozen_protocol.md
+benchmark_root: '..'  # 相对于本配置文件目录解析
+
+dataset:
+  repositories: [repo_api, repo_cli, repo_data]
+  stage_order: [seed, transfer, stale, heldout]
+  stage_directories:
+    seed: t1_seed
+    transfer: t2_transfer
+    stale: t3_stale
+    heldout: t4_heldout
+  main_task_count: 12
+  code_inheritance: fixed_stage_snapshot
+  git_history: stage_objects_only
+  public_scenarios: scenarios
+  private_acceptance: private/acceptance
+  private_regression: private/regression
+  private_references: private/references
+
+execution:
+  backend: docker
+  dispatch_policy: phase_barrier
+  sqlite_concurrency:
+    journal_mode: WAL
+    connection_timeout_seconds: 30
+    busy_timeout_milliseconds: 30000
+    write_serialization: eventstore_lock_begin_immediate
+  max_total_tokens: 100000000  # ModelClient 可记账的生成模型 Token 默认上限；Embedding/Rerank 另计；运行仍须显式传 CLI 参数
+  timeout_seconds: 600
+  max_tool_calls: 80
+  max_context_tokens: 131072
+  history_cutoff: stage_start
+  background_indexing: false
+  auto_trigger_enabled: false
+  stage_indexing: explicit_incremental
+  within_stage_repository_order: [repo_api, repo_cli, repo_data]
+  cross_condition_order: seeded_schedule_recorded_before_run
+  require_actual_model_ids: true
+  require_explicit_total_token_budget: true
+  seed_unsupported_behavior: record_unsupported
+  automatic_model_fallback: false
+  require_batch_manifest:
+    - agent_code_fingerprint
+    - dataset_fingerprint
+    - prompt_fingerprints
+    - actual_model_ids
+    - generation_parameters
+    - max_output_tokens
+    - max_agent_turns
+    - container_image_digest
+    - dependency_lock_fingerprint
+    - retrieval_provider_ids
+    - index_content_fingerprints
+    - max_total_tokens
+    - execution_schedule
+
+profiles:
+  formal_benchmark:
+    formal_results: true
+    repositories: [repo_api, repo_cli, repo_data]
+    repeats: 1
+    seeds: [42]
+    main_runs_per_repeat: 54
+    total_main_runs: 54
+    meta_review_repositories: [repo_api, repo_cli, repo_data]
+    gate_task_ids:
+      seed:
+        project: {repo_api: [repo_api_gate_seed_print], repo_cli: [repo_cli_gate_seed_bundle], repo_data: [repo_data_gate_seed_receipt]}
+        general: []
+        meta: []
+      transfer:
+        project: {repo_api: [repo_api_gate_transfer_export], repo_cli: [repo_cli_gate_transfer_cache], repo_data: [repo_data_gate_transfer_reading]}
+        general: []
+        meta: [repo_api_gate_meta_reminder, repo_cli_gate_meta_transfer_manifest, repo_data_gate_meta_source_merge]
+      stale:
+        project: {repo_api: [repo_api_gate_stale_notify], repo_cli: [repo_cli_gate_stale_release], repo_data: [repo_data_gate_stale_telemetry]}
+        general: []
+        meta: []
+    regression_task_ids:
+      repo_api: [repo_api_replay_status]
+      repo_cli: [repo_cli_replay_profile_summary]
+      repo_data: [repo_data_replay_timecard_rounding]
+    task_catalog: configs/gate_task_catalog.json
+    nsrr:
+      enabled: true
+      audit_task_ids:
+        - nsrr_audit_benefit_cache
+        - nsrr_audit_benefit_decimal
+        - nsrr_audit_dup_config_null
+        - nsrr_audit_dup_headers
+        - nsrr_audit_harm_error_swallow
+        - nsrr_audit_harm_idempotency
+        - nsrr_audit_stale_retry
+        - nsrr_audit_stale_timezone
+      candidate_count: 8
+    parallelism:
+      policy: phase_barrier
+      b_tasks_per_stage: 3
+      a_pairs_per_stage: 3
+      a_arms_per_pair: 2
+      task_learning_proposals_per_stage: 3
+      task_gate_evaluations_per_stage: 3
+      t4_tasks_per_condition: 3
+      nsrr_candidates: 1
+      result_merge_order: repository_order
+      meta_task_trace_order: task_created_at_then_repository_order_then_task_id
+      agent_grading: after_all_wave_tasks_terminal
+      task_state_mode: shared_application_unique_workspaces
+      sqlite_databases_per_experiment_group: 1
+      sqlite_isolation_across_conditions: independent_cloned_state
+      repository_scope_within_group: repository_id
+      skill_publication: after_all_stage_task_gates_terminal_in_repository_order
+  chain_integration:
+    formal_results: false
+    repositories: [repo_api]
+    repeats: 1
+    seeds: [42]
+    main_runs_per_repeat: 18
+    total_main_runs: 18
+    meta_review_repositories: [repo_api]
+    gate_task_ids:
+      seed:
+        project: {repo_api: [repo_api_gate_seed_print]}
+        general: []
+        meta: []
+      transfer:
+        project: {repo_api: [repo_api_gate_transfer_export]}
+        general: []
+        meta: [repo_api_gate_meta_reminder]
+      stale:
+        project: {repo_api: [repo_api_gate_stale_notify]}
+        general: []
+        meta: []
+    regression_task_ids: {repo_api: [repo_api_replay_status]}
+    task_catalog: configs/gate_task_catalog.json
+    nsrr: {enabled: false, audit_task_ids: null, candidate_count: 0}
+    parallelism:
+      policy: serial_chain_integration
+      main_tasks_per_stage: 1
+
+experiment_a:
+  scored_stages: [transfer, stale, heldout]
+  common_history: single_real_agent_collection
+  collector_flags: {raw_rag: true, skills: false, evolution: false}
+  collector_stage_order: [seed, transfer, stale]
+  seed_includes_private_grades: false
+  paired_history: identical_frozen_snapshot
+  index_ready_before_run: true
+  main_task_events_retrievable: false
+  conditions:
+    A1: {raw_rag: false, skills: false, evolution: false}
+    A2: {raw_rag: true, skills: false, evolution: false}
+
+experiment_b:
+  scored_stages: [seed, transfer, stale, heldout]
+  initial_state: identical_across_conditions
+  state_shared_across_conditions: false
+  state_shared_across_repeats: false
+  extra_external_evolution_warmup: false
+  task_learning_after_stages: [seed, transfer, stale]
+  task_learning_trigger: stage_end
+  meta_review_after_stage: transfer
+  meta_review_count_per_repeat: 1
+  meta_review_scope: after_all_profile_repositories
+  force_meta_promotion: false
+  temporary_meta_gate_skills_enter_main_registry: false
+  heldout_clone: independent_per_task_from_frozen_group_state
+  heldout_learning: false
+  private_main_grades_enter_learning: false
+  conditions:
+    B2: {raw_rag: true, skills: true, evolution: false, skill_mode: static, meta_mode: fixed_v1}
+    B3: {raw_rag: true, skills: true, evolution: true, skill_mode: evolving, meta_mode: fixed_v1}
+    B4: {raw_rag: true, skills: true, evolution: true, skill_mode: evolving, meta_mode: evolving}
+
+evaluation:
+  artifact: complete_patch_and_file_inventory
+  grader_workspace: clean_stage_snapshot
+  solved_requires: [private_fix_tests_passed, regression_tests_passed]
+  agent_timeout: failed
+  agent_budget_exhausted: failed
+  infrastructure_failure: unverified
+  report_planned_denominator_and_coverage: true
+  unknown_usage: null
+  retry_agent_failures_for_best_result: false
+  gate_selection: private/gate_selection
+  gate_independent_audit: private/gate_audit
+  gate_check_candidate_count: 8
+  gate_candidate_roles:
+    duplicate: 2
+    stale: 2
+    potentially_harmful: 2
+    potentially_beneficial: 2
+  gate_labels: independent_audit_observed_results
+  zero_denominator: N/A
+
+outputs:
+  results: results
+  reports: reports
+  temporary_state: .runtime
+  path_base: benchmark_root
+  generated_only_from_actual_runs: true

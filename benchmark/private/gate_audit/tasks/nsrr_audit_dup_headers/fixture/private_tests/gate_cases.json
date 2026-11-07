@@ -1,0 +1,49 @@
+{
+  "cases": [
+    {
+      "expected": {
+        "headers": {
+          "content-length": "128",
+          "x-request-id": "req-42"
+        }
+      },
+      "id": "gate_mixed_request_id",
+      "input": {
+        "headers": {
+          "Content-Length": "128",
+          "X-Request-ID": "req-42"
+        }
+      }
+    },
+    {
+      "expected": {
+        "headers": {
+          "cache-control": "no-store"
+        }
+      },
+      "id": "gate_already_lowercase",
+      "input": {
+        "headers": {
+          "cache-control": "no-store"
+        }
+      }
+    },
+    {
+      "expected": {
+        "headers": {
+          "user-agent": "EvoBot/1.0",
+          "x-env": "staging"
+        }
+      },
+      "id": "gate_uppercase_custom",
+      "input": {
+        "headers": {
+          "USER-AGENT": "EvoBot/1.0",
+          "X-ENV": "staging"
+        }
+      }
+    }
+  ],
+  "oracle": "frozen Gate selection acceptance outputs disjoint from independent audit trusted_tests.json",
+  "task_id": "nsrr_audit_dup_headers"
+}

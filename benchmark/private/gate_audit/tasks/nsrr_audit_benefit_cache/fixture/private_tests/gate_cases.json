@@ -1,0 +1,45 @@
+{
+  "cases": [
+    {
+      "expected": {
+        "value": "ap-east-1"
+      },
+      "id": "gate_region_lookup",
+      "input": {
+        "key": "region",
+        "metadata": {
+          "region": "ap-east-1",
+          "tier": "standard"
+        }
+      }
+    },
+    {
+      "expected": {
+        "value": "eu-central-1"
+      },
+      "id": "gate_datacenter_lookup",
+      "input": {
+        "key": "region",
+        "metadata": {
+          "region": "eu-central-1",
+          "tier": "enterprise"
+        }
+      }
+    },
+    {
+      "expected": {
+        "value": "utf-8"
+      },
+      "id": "gate_encoding_lookup",
+      "input": {
+        "key": "encoding",
+        "metadata": {
+          "encoding": "utf-8",
+          "region": "ap-east-1"
+        }
+      }
+    }
+  ],
+  "oracle": "frozen Gate selection acceptance outputs disjoint from independent audit trusted_tests.json",
+  "task_id": "nsrr_audit_benefit_cache"
+}

@@ -1,0 +1,16 @@
+{
+  "material_id": "learning-namespace-input-validation",
+  "family": "input_validation_regression",
+  "source_kind": "synthetic_learning_material",
+  "observation": "A cache namespace was assembled directly from caller-provided text, allowing empty values and delimiter characters to produce ambiguous keys.",
+  "lesson": "Validate untrusted identifiers against their documented shape before using them to construct keys or paths.",
+  "live_task": {
+    "task_id": "validation_material_learning_namespace",
+    "prompt": "Fix validation_material.py so cache_namespace(name) accepts only a non-empty exact str of 1 to 32 lowercase ASCII letters, digits, or hyphens, with a letter or digit at each end. Return 'tenant:' followed by the unchanged name. Raise TypeError for non-str values and ValueError for strings outside the format.",
+    "source": "def cache_namespace(name):\n    return f\"tenant:{name}\"\n",
+    "reference": "import re\n\ndef cache_namespace(name):\n    if type(name) is not str:\n        raise TypeError(\"name must be a string\")\n    if not re.fullmatch(r\"[a-z0-9](?:[a-z0-9-]{0,30}[a-z0-9])?\", name):\n        raise ValueError(\"invalid namespace\")\n    return f\"tenant:{name}\"\n",
+    "acceptance": "import sys\nsys.path.insert(0, \"/workspace\")\nfrom validation_material import cache_namespace\nfor name in (\"a\", \"team-7\", \"x\" * 32):\n    assert cache_namespace(name) == f\"tenant:{name}\"\nfor value in (None, 7, True):\n    try:\n        cache_namespace(value)\n    except TypeError:\n        pass\n    else:\n        raise AssertionError(f\"non-string accepted: {value!r}\")\nfor name in (\"\", \"-team\", \"team-\", \"team:7\", \"UPPER\", \"x\" * 33):\n    try:\n        cache_namespace(name)\n    except ValueError:\n        pass\n    else:\n        raise AssertionError(f\"invalid namespace accepted: {name!r}\")\n",
+    "acceptance_file": "tests/private_acceptance_validation_material_learning_namespace.py",
+    "acceptance_command": ["python", "-I", "-B", "/workspace/tests/private_acceptance_validation_material_learning_namespace.py"]
+  }
+}

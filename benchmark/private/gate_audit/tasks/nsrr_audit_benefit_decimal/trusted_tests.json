@@ -1,0 +1,43 @@
+{
+  "cases": [
+    {
+      "expected": {
+        "amount": "0.30"
+      },
+      "id": "tenths_sum",
+      "input": {
+        "addends": [
+          "0.10",
+          "0.20"
+        ]
+      }
+    },
+    {
+      "expected": {
+        "amount": "10.30"
+      },
+      "id": "mixed_decimal_sum",
+      "input": {
+        "addends": [
+          "10.10",
+          "0.20"
+        ]
+      }
+    },
+    {
+      "expected": {
+        "amount": "2.10"
+      },
+      "id": "negative_adjustment",
+      "input": {
+        "addends": [
+          "2.50",
+          "-0.40"
+        ]
+      }
+    }
+  ],
+  "oracle": "frozen expected outputs in the isolated trusted test fixture",
+  "performance_observations": [],
+  "task_id": "nsrr_audit_benefit_decimal"
+}

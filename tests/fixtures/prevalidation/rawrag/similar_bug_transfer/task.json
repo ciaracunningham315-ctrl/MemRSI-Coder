@@ -1,0 +1,22 @@
+{
+  "task_id": "similar_bug_transfer",
+  "prompt": "Make retry delay work for responses returned by the legacy adapter, while keeping retry decisions with the caller.",
+  "acceptance_command": [
+    "python",
+    "-I",
+    "-B",
+    "tests/prevalidation_acceptance.py"
+  ],
+  "acceptance_file": "acceptance.py",
+  "workspace": "workspace",
+  "reference_workspace": "reference",
+  "expected_memory_use": "Transfer a previously observed header-normalization fix to a similar case.",
+  "training_prompt": "Update get_header(headers, name) to read request IDs correctly from the legacy adapter.",
+  "training_workspace": "training_workspace",
+  "training_acceptance_command": [
+    "python",
+    "-I",
+    "-B",
+    "tests/training_checks.py"
+  ]
+}

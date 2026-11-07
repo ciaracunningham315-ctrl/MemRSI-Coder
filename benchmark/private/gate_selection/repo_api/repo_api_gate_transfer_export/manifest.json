@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "task_id": "repo_api_gate_transfer_export",
+  "repository_id": "repo_api",
+  "stage": "transfer",
+  "kind": "task",
+  "available_after_stage": "transfer",
+  "latest_mechanism_stage": "transfer",
+  "independent_of_main_tasks": true,
+  "code_dir": "private/gate_selection/repo_api/repo_api_gate_transfer_export/code",
+  "task_file": "private/gate_selection/repo_api/repo_api_gate_transfer_export/task.md",
+  "private_tests_dir": "private/gate_selection/repo_api/repo_api_gate_transfer_export/acceptance",
+  "regression_tests_dir": "private/gate_selection/repo_api/repo_api_gate_transfer_export/regression",
+  "reference_dir": "private/gate_selection/repo_api/repo_api_gate_transfer_export/reference/code",
+  "acceptance_command": [
+    "python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "mechanisms": [
+    "strict_bounded_integer",
+    "error_field_path",
+    "validate_before_mutation",
+    "optional_parameter_types"
+  ],
+  "future_main_inputs_used": [],
+  "fingerprints": {
+    "code_dir": {
+      "api/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "api/errors.py": "4abd26cdf98a326b70d6efe72a24583948bc4804ec0904641c126d69bdf6d488",
+      "api/service.py": "4c19c4a9cfedf12358eaae5ed32f5cbf5da24797f4516a3f23cdc28ee8ad3205",
+      "api/validation.py": "e9ee598446da6c46f15906d9bc40d98c843304c07fdfd20e92367888c2489874",
+      "docs/api-contract.md": "433fb552d458cfb052173cff96790204952da9eed5265778ecefbc528b04d701",
+      "tests/test_public.py": "6c5efc8a9c5006853b14dc1dca07398fd618511ceed85b7b7852dbb1efc75771"
+    },
+    "private_tests_dir": {
+      "test_private_gate.py": "a6ddbfef50a8f255b0ddc14c709c7961f09e6a2e9b7330a79bfc0622fdfa7244"
+    },
+    "regression_tests_dir": {
+      "test_routes.py": "fb1412e87be392d25adee3208dc07cbaf174b9d7d675e5858b05c4111e150d6e"
+    },
+    "reference_dir": {
+      "api/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "api/errors.py": "4abd26cdf98a326b70d6efe72a24583948bc4804ec0904641c126d69bdf6d488",
+      "api/service.py": "8f2615efee4a04754b2319801ba2f0e2777eabb5a47eacf0a15e9bbcee5c2de0",
+      "api/validation.py": "e9ee598446da6c46f15906d9bc40d98c843304c07fdfd20e92367888c2489874",
+      "docs/api-contract.md": "433fb552d458cfb052173cff96790204952da9eed5265778ecefbc528b04d701",
+      "tests/test_public.py": "6c5efc8a9c5006853b14dc1dca07398fd618511ceed85b7b7852dbb1efc75771"
+    },
+    "task_file": "4d412c5bc36d518a695bca0409bd7227e0438b187ddb1b199b1eef12324e0beb"
+  }
+}

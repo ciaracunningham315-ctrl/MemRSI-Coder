@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "task_id": "repo_cli_t1",
+  "repository_id": "repo_cli",
+  "stage": "seed",
+  "code_dir": "scenarios/repo_cli/t1_seed/code",
+  "task_file": "scenarios/repo_cli/t1_seed/task.md",
+  "private_tests_dir": "private/acceptance/repo_cli/t1_seed",
+  "regression_tests_dir": "private/regression/repo_cli/t1_seed",
+  "reference_dir": "private/references/repo_cli/t1_seed/code",
+  "acceptance_command": [
+    "python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests"
+  ],
+  "representative_bad_patches": [
+    {
+      "name": "skip_validation",
+      "category": "remove_validation",
+      "overlay_dir": "private/references/repo_cli/t1_seed/bad_patches/skip_validation/code",
+      "fingerprints": {
+        "README.md": "62a609fcc4b103c6dcdcd7481773ea91409f6f3f5f5a2126f2eba8dacc0ce2f4",
+        "cli/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "cli/__main__.py": "d9f84d973e46d988d0dfda176dd03650f11ea05520d71016f571dcc9486bf723",
+        "cli/config.py": "288db9819e8915ae809d50e3338ccea737111ea42bb5244451e077d20707ce7d",
+        "cli/main.py": "9b5bf3ee2a19d7d1395fa635b285fe3520bb8144bd88fe32b6f3ba99cb390d0d",
+        "cli/state.py": "75b7eb1ad52a112b61e9dec857c2d343e91b377efa51cc4733b69e18fe400060",
+        "cli/validation.py": "4a61c5e8b2d391015f1a66932bd8c10d12d47b80c63c259fc9615c21b2412500",
+        "docs/configuration.md": "dd8a3038acc301d1098298176f0fd6f6184f56a08ca6fede83f3f1ec3a5d97bf",
+        "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "tests/test_public.py": "a80a629416a1ffb7d6c357c21fb6028b16a1640f5396b8456a3b659cd09770e8"
+      }
+    },
+    {
+      "name": "swallow_failure",
+      "category": "swallow_exception",
+      "overlay_dir": "private/references/repo_cli/t1_seed/bad_patches/swallow_failure/code",
+      "fingerprints": {
+        "README.md": "62a609fcc4b103c6dcdcd7481773ea91409f6f3f5f5a2126f2eba8dacc0ce2f4",
+        "cli/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "cli/__main__.py": "d9f84d973e46d988d0dfda176dd03650f11ea05520d71016f571dcc9486bf723",
+        "cli/config.py": "288db9819e8915ae809d50e3338ccea737111ea42bb5244451e077d20707ce7d",
+        "cli/main.py": "9b5bf3ee2a19d7d1395fa635b285fe3520bb8144bd88fe32b6f3ba99cb390d0d",
+        "cli/state.py": "75b7eb1ad52a112b61e9dec857c2d343e91b377efa51cc4733b69e18fe400060",
+        "cli/validation.py": "fa4b4446e9ebf6e24a304523c1d28b0736da5a5852700bb8b3584a85d05b7454",
+        "docs/configuration.md": "dd8a3038acc301d1098298176f0fd6f6184f56a08ca6fede83f3f1ec3a5d97bf",
+        "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "tests/test_public.py": "a80a629416a1ffb7d6c357c21fb6028b16a1640f5396b8456a3b659cd09770e8"
+      }
+    },
+    {
+      "name": "hardcode_example",
+      "category": "hardcode",
+      "overlay_dir": "private/references/repo_cli/t1_seed/bad_patches/hardcode_example/code",
+      "fingerprints": {
+        "README.md": "62a609fcc4b103c6dcdcd7481773ea91409f6f3f5f5a2126f2eba8dacc0ce2f4",
+        "cli/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "cli/__main__.py": "d9f84d973e46d988d0dfda176dd03650f11ea05520d71016f571dcc9486bf723",
+        "cli/config.py": "288db9819e8915ae809d50e3338ccea737111ea42bb5244451e077d20707ce7d",
+        "cli/main.py": "9b5bf3ee2a19d7d1395fa635b285fe3520bb8144bd88fe32b6f3ba99cb390d0d",
+        "cli/state.py": "75b7eb1ad52a112b61e9dec857c2d343e91b377efa51cc4733b69e18fe400060",
+        "cli/validation.py": "bf62bf75f57f8f78aec43e9781d316e4a6fd6eb69d324d393d023f6189bad309",
+        "docs/configuration.md": "dd8a3038acc301d1098298176f0fd6f6184f56a08ca6fede83f3f1ec3a5d97bf",
+        "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "tests/test_public.py": "a80a629416a1ffb7d6c357c21fb6028b16a1640f5396b8456a3b659cd09770e8"
+      }
+    }
+  ],
+  "runtime": {
+    "python_minimum": "3.10",
+    "dependencies": []
+  },
+  "dataset_revision": "repo_cli_config_precedence_v1_2026-11-06",
+  "public_contract_file": "docs/configuration.md",
+  "target_contract": {
+    "topic": "configuration_source_precedence_and_parameter_bounds",
+    "independent_solution": true
+  },
+  "task_fingerprints": {
+    "code_dir": {
+      "README.md": "62a609fcc4b103c6dcdcd7481773ea91409f6f3f5f5a2126f2eba8dacc0ce2f4",
+      "cli/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "cli/__main__.py": "d9f84d973e46d988d0dfda176dd03650f11ea05520d71016f571dcc9486bf723",
+      "cli/config.py": "6d76ed7c6d74129238d2b38de10d61adbfd47b88ae56ed4f87b14717f3ebc4f1",
+      "cli/main.py": "0da1529f354a1bf46c85f9f11f566f27de01adebf40c79cd2b0dd5548d06cbca",
+      "cli/state.py": "75b7eb1ad52a112b61e9dec857c2d343e91b377efa51cc4733b69e18fe400060",
+      "cli/validation.py": "f775140b2d6ccdc4957ea7657cf397c3e4879a46e6bdb632ea4d64a6be3f2734",
+      "docs/configuration.md": "dd8a3038acc301d1098298176f0fd6f6184f56a08ca6fede83f3f1ec3a5d97bf",
+      "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tests/test_public.py": "a80a629416a1ffb7d6c357c21fb6028b16a1640f5396b8456a3b659cd09770e8"
+    },
+    "private_tests_dir": {
+      "test_acceptance.py": "4a15f0337b747d7390719a6f6e312221b7eaed79271579056b2a481812e81571"
+    },
+    "regression_tests_dir": {
+      "test_regression.py": "f37fda7faaa7cfdf0485cc6c7d0fcdd989987344370bec79e3cacaeba5339bc8"
+    },
+    "reference_dir": {
+      "README.md": "62a609fcc4b103c6dcdcd7481773ea91409f6f3f5f5a2126f2eba8dacc0ce2f4",
+      "cli/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "cli/__main__.py": "d9f84d973e46d988d0dfda176dd03650f11ea05520d71016f571dcc9486bf723",
+      "cli/config.py": "288db9819e8915ae809d50e3338ccea737111ea42bb5244451e077d20707ce7d",
+      "cli/main.py": "9b5bf3ee2a19d7d1395fa635b285fe3520bb8144bd88fe32b6f3ba99cb390d0d",
+      "cli/state.py": "75b7eb1ad52a112b61e9dec857c2d343e91b377efa51cc4733b69e18fe400060",
+      "cli/validation.py": "aa97f2273f06a6134741ed01a32f17d89a72ca1e1fe3572eda899e82f0a763f9",
+      "docs/configuration.md": "dd8a3038acc301d1098298176f0fd6f6184f56a08ca6fede83f3f1ec3a5d97bf",
+      "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tests/test_public.py": "a80a629416a1ffb7d6c357c21fb6028b16a1640f5396b8456a3b659cd09770e8"
+    },
+    "task_file": "3204fabbd3e8bfe3c965cd0597aca99ece8d32b45d6d088afb8c07d95ed90b1c"
+  },
+  "code_snapshot_sha256": "2af39383f28ef2310158ba9dbc07804b3430aa8c828ebdffe1f44d9cbe1c5855",
+  "git_stage_package": "git_stage_packages/repo_cli_t1_seed.tar.gz",
+  "visible_head_sha": "e0280010cd499c8ebaa502c7a71139ac2746bc68",
+  "allowed_ancestor_shas": [],
+  "git_object_shas": [
+    "04945f6b7883261916248a4fa849c18dbcbd7df1",
+    "06838e3f3a54207d90db6b4e5a0cf2480934d40b",
+    "28a5d53e14afeb8a7633cd1b967720e4a9fd9a76",
+    "32a71a1b87b68ace19c83ae871264767ce4bed17",
+    "542e5295e6d0ad05a42864449ad3abb7e512d5bf",
+    "90882310a495a823db040f0c77e082a45557da33",
+    "99f9f05a47c78e4ac177613579bfc1a7982c1782",
+    "bc517d06471f2979257c3b87c8eaec71a54c12c3",
+    "c059ce8171f39bd107b7e70d0ddef7253373a3de",
+    "d12a8464cfea3ad3a2efcbd3dee9088b1ab4aad3",
+    "e0280010cd499c8ebaa502c7a71139ac2746bc68",
+    "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "ec462049c36acb42c6f5ac083575d11c4615b4d6",
+    "fb11f6d3468d748e3a7a5d6bea669a9a72e2e6ed"
+  ],
+  "git_stage_package_sha256": "f436a55f35c2059081d36cf544a66b6c4ed6dc15fc441a4647960b1ad9bccdc0"
+}

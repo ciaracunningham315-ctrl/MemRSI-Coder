@@ -1,0 +1,195 @@
+{
+  "task_id": "repo_data_gate_meta_source_merge",
+  "manifest": "private/gate_selection/repo_data/repo_data_gate_meta_source_merge/manifest.json",
+  "kind": "meta",
+  "stage": "transfer",
+  "checks": {
+    "baseline_public_passes": true,
+    "baseline_target_fails": true,
+    "baseline_regression_passes": true,
+    "reference_all_passes": true
+  },
+  "passed": true,
+  "manifest_sha256": "c7bccfcd0e1dd524f27f8e6e343e8a77460aed581551528bb029eacc23aa33aa",
+  "fingerprints": {
+    "code_dir": {
+      "README.md": "3e5b13634d2ee9f218c93e31213c4f2bb707c303d2700c8c3e4fd46498be7cc5",
+      "catalog.py": "ad570494060c02bce5950b1abc114b41b8ba657f3893226a9a587dd634ea8b93",
+      "docs/data-contract.md": "a1193624f268003805209f52d8de2462528f4ebd5eb747b1717e23f17c2fd5e3",
+      "tests/test_public.py": "ee8ac146cc0bb1db1ea3ebad0646813d5b8f69ca7804b642f48416c944bb147d"
+    },
+    "private_tests_dir": {
+      "test_private_gate.py": "a318f1ebe8bf8337307cafead112f35538aaff6bf928a7e68cb25bbe0f4e3f76"
+    },
+    "regression_tests_dir": {
+      "test_routes.py": "76703a0fc31fa522dd77bcc27d7d15593ab19a3ab676cb815bd794f57c985a6c"
+    },
+    "reference_dir": {
+      "README.md": "3e5b13634d2ee9f218c93e31213c4f2bb707c303d2700c8c3e4fd46498be7cc5",
+      "catalog.py": "96be7a5a694058bc98bd74593fb6cf3199825cfdf33bd5d7754d5e982f5555de",
+      "docs/data-contract.md": "a1193624f268003805209f52d8de2462528f4ebd5eb747b1717e23f17c2fd5e3",
+      "tests/test_public.py": "ee8ac146cc0bb1db1ea3ebad0646813d5b8f69ca7804b642f48416c944bb147d"
+    },
+    "task_file": "62447275bb5fc8ef2eca3ab009f803d56ee9cbda5e2d0fe70129f54b39d4a75d"
+  },
+  "commands": {
+    "baseline": {
+      "public": {
+        "argv": [
+          "python",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-v"
+        ],
+        "cwd": ".runtime/gate_qualification_f3f212914a9a4d6885961baac1df3542/repo_data_gate_meta_source_merge/baseline/public",
+        "exit_code": 0,
+        "timed_out": false,
+        "error": null,
+        "duration_seconds": 0.0392,
+        "tests_run": 1,
+        "test_failures": 0,
+        "test_errors": 0
+      },
+      "target": {
+        "argv": [
+          "python",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-v"
+        ],
+        "cwd": ".runtime/gate_qualification_f3f212914a9a4d6885961baac1df3542/repo_data_gate_meta_source_merge/baseline/target",
+        "exit_code": 1,
+        "timed_out": false,
+        "error": null,
+        "duration_seconds": 0.0408,
+        "tests_run": 3,
+        "test_failures": 2,
+        "test_errors": 0
+      },
+      "regression": {
+        "argv": [
+          "python",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-v"
+        ],
+        "cwd": ".runtime/gate_qualification_f3f212914a9a4d6885961baac1df3542/repo_data_gate_meta_source_merge/baseline/regression",
+        "exit_code": 0,
+        "timed_out": false,
+        "error": null,
+        "duration_seconds": 0.0396,
+        "tests_run": 2,
+        "test_failures": 0,
+        "test_errors": 0
+      },
+      "combined": {
+        "argv": [
+          "python",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-v"
+        ],
+        "cwd": ".runtime/gate_qualification_f3f212914a9a4d6885961baac1df3542/repo_data_gate_meta_source_merge/baseline/combined",
+        "exit_code": 1,
+        "timed_out": false,
+        "error": null,
+        "duration_seconds": 0.0409,
+        "tests_run": 4,
+        "test_failures": 2,
+        "test_errors": 0
+      }
+    },
+    "reference": {
+      "public": {
+        "argv": [
+          "python",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-v"
+        ],
+        "cwd": ".runtime/gate_qualification_f3f212914a9a4d6885961baac1df3542/repo_data_gate_meta_source_merge/reference/public",
+        "exit_code": 0,
+        "timed_out": false,
+        "error": null,
+        "duration_seconds": 0.0365,
+        "tests_run": 1,
+        "test_failures": 0,
+        "test_errors": 0
+      },
+      "target": {
+        "argv": [
+          "python",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-v"
+        ],
+        "cwd": ".runtime/gate_qualification_f3f212914a9a4d6885961baac1df3542/repo_data_gate_meta_source_merge/reference/target",
+        "exit_code": 0,
+        "timed_out": false,
+        "error": null,
+        "duration_seconds": 0.0406,
+        "tests_run": 3,
+        "test_failures": 0,
+        "test_errors": 0
+      },
+      "regression": {
+        "argv": [
+          "python",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-v"
+        ],
+        "cwd": ".runtime/gate_qualification_f3f212914a9a4d6885961baac1df3542/repo_data_gate_meta_source_merge/reference/regression",
+        "exit_code": 0,
+        "timed_out": false,
+        "error": null,
+        "duration_seconds": 0.0409,
+        "tests_run": 2,
+        "test_failures": 0,
+        "test_errors": 0
+      },
+      "combined": {
+        "argv": [
+          "python",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-v"
+        ],
+        "cwd": ".runtime/gate_qualification_f3f212914a9a4d6885961baac1df3542/repo_data_gate_meta_source_merge/reference/combined",
+        "exit_code": 0,
+        "timed_out": false,
+        "error": null,
+        "duration_seconds": 0.0394,
+        "tests_run": 4,
+        "test_failures": 0,
+        "test_errors": 0
+      }
+    }
+  },
+  "model_calls": 0,
+  "formal_results": false
+}

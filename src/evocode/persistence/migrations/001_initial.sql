@@ -1,0 +1,16 @@
+PRAGMA foreign_keys=ON;
+CREATE TABLE IF NOT EXISTS repositories(repository_id TEXT PRIMARY KEY, root_path TEXT NOT NULL, metadata_json TEXT NOT NULL DEFAULT '{}');
+CREATE TABLE IF NOT EXISTS sessions(session_id TEXT PRIMARY KEY, repository_id TEXT NOT NULL, created_at TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS tasks(task_id TEXT PRIMARY KEY, session_id TEXT NOT NULL REFERENCES sessions(session_id), repository_id TEXT NOT NULL, repo_path TEXT NOT NULL, prompt TEXT NOT NULL, status TEXT NOT NULL, state_json TEXT NOT NULL DEFAULT '{}', config_json TEXT NOT NULL DEFAULT '{}', created_at TEXT NOT NULL, updated_at TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS events(event_id TEXT PRIMARY KEY, session_id TEXT NOT NULL, seq INTEGER NOT NULL, task_id TEXT, repository_id TEXT, event_type TEXT NOT NULL, payload_json TEXT NOT NULL, created_at TEXT NOT NULL, UNIQUE(session_id,seq));
+CREATE INDEX IF NOT EXISTS events_task ON events(task_id,seq);
+CREATE TABLE IF NOT EXISTS checkpoints(checkpoint_id TEXT PRIMARY KEY, task_id TEXT NOT NULL, last_event_seq INTEGER NOT NULL, state_json TEXT NOT NULL, created_at TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS artifacts(artifact_id TEXT PRIMARY KEY, storage_path TEXT NOT NULL, sha256 TEXT NOT NULL, size_bytes INTEGER NOT NULL, kind TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS index_jobs(job_id TEXT PRIMARY KEY, event_id TEXT NOT NULL UNIQUE, status TEXT NOT NULL DEFAULT 'pending', retries INTEGER NOT NULL DEFAULT 0, last_error TEXT);
+CREATE TABLE IF NOT EXISTS memory_chunks(chunk_id TEXT PRIMARY KEY, task_id TEXT, session_id TEXT, repository_id TEXT, text TEXT NOT NULL, metadata_json TEXT NOT NULL DEFAULT '{}');
+CREATE VIRTUAL TABLE IF NOT EXISTS memory_fts USING fts5(chunk_id UNINDEXED, text);
+CREATE TABLE IF NOT EXISTS skills(skill_id TEXT PRIMARY KEY, name TEXT NOT NULL, level TEXT NOT NULL, scope_id TEXT, active_version_id TEXT, status TEXT NOT NULL DEFAULT 'draft');
+CREATE TABLE IF NOT EXISTS skill_versions(version_id TEXT PRIMARY KEY, skill_id TEXT NOT NULL REFERENCES skills(skill_id), parent_version_id TEXT, content TEXT NOT NULL, content_sha256 TEXT NOT NULL, file_path TEXT NOT NULL, status TEXT NOT NULL, metadata_json TEXT NOT NULL DEFAULT '{}', created_at TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS skill_usage_events(id TEXT PRIMARY KEY, task_id TEXT NOT NULL, skill_version_id TEXT NOT NULL, outcome TEXT, created_at TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS evolution_runs(run_id TEXT PRIMARY KEY, kind TEXT NOT NULL, status TEXT NOT NULL, task_id TEXT, meta_skill_version_id TEXT, payload_json TEXT NOT NULL DEFAULT '{}', created_at TEXT NOT NULL, updated_at TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS evaluations(evaluation_id TEXT PRIMARY KEY, run_id TEXT, payload_json TEXT NOT NULL, created_at TEXT NOT NULL);

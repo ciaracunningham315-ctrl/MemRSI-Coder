@@ -1,0 +1,187 @@
+{
+  "schema_version": 1,
+  "task_id": "repo_cli_t3",
+  "repository_id": "repo_cli",
+  "stage": "stale",
+  "code_dir": "scenarios/repo_cli/t3_stale/code",
+  "task_file": "scenarios/repo_cli/t3_stale/task.md",
+  "private_tests_dir": "private/acceptance/repo_cli/t3_stale",
+  "regression_tests_dir": "private/regression/repo_cli/t3_stale",
+  "reference_dir": "private/references/repo_cli/t3_stale/code",
+  "acceptance_command": [
+    "python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests"
+  ],
+  "representative_bad_patches": [
+    {
+      "name": "skip_validation",
+      "category": "remove_validation",
+      "overlay_dir": "private/references/repo_cli/t3_stale/bad_patches/skip_validation/code",
+      "fingerprints": {
+        "README.md": "8c0d9e720aae131acc9d4db78cdf89058b07103a49ba2097130e19919db6fc3c",
+        "cli/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "cli/__main__.py": "d9f84d973e46d988d0dfda176dd03650f11ea05520d71016f571dcc9486bf723",
+        "cli/main.py": "2e17c0292af10e691a712162b9d5eb0175f2ccc0170473a6e9bb67aaa364ae5e",
+        "cli/settings.py": "ddbc26b96591b0f0088400714ca591033cec5effe8fa43e6b85d0b4d77ad453d",
+        "cli/state.py": "75b7eb1ad52a112b61e9dec857c2d343e91b377efa51cc4733b69e18fe400060",
+        "cli/validation.py": "4a61c5e8b2d391015f1a66932bd8c10d12d47b80c63c259fc9615c21b2412500",
+        "docs/configuration.md": "b4de5eaaf68dc730a459ea29c9a08b6f91ef97f201f2c34d186746ccf3621a6a",
+        "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "tests/test_public.py": "1155a22ae486bdb32f8fa0cc98f40a9cf432cb41e50c94841a3596b13ef9a000"
+      }
+    },
+    {
+      "name": "swallow_failure",
+      "category": "swallow_exception",
+      "overlay_dir": "private/references/repo_cli/t3_stale/bad_patches/swallow_failure/code",
+      "fingerprints": {
+        "README.md": "8c0d9e720aae131acc9d4db78cdf89058b07103a49ba2097130e19919db6fc3c",
+        "cli/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "cli/__main__.py": "d9f84d973e46d988d0dfda176dd03650f11ea05520d71016f571dcc9486bf723",
+        "cli/main.py": "2e17c0292af10e691a712162b9d5eb0175f2ccc0170473a6e9bb67aaa364ae5e",
+        "cli/settings.py": "ddbc26b96591b0f0088400714ca591033cec5effe8fa43e6b85d0b4d77ad453d",
+        "cli/state.py": "75b7eb1ad52a112b61e9dec857c2d343e91b377efa51cc4733b69e18fe400060",
+        "cli/validation.py": "fa4b4446e9ebf6e24a304523c1d28b0736da5a5852700bb8b3584a85d05b7454",
+        "docs/configuration.md": "b4de5eaaf68dc730a459ea29c9a08b6f91ef97f201f2c34d186746ccf3621a6a",
+        "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "tests/test_public.py": "1155a22ae486bdb32f8fa0cc98f40a9cf432cb41e50c94841a3596b13ef9a000"
+      }
+    },
+    {
+      "name": "hardcode_example",
+      "category": "hardcode",
+      "overlay_dir": "private/references/repo_cli/t3_stale/bad_patches/hardcode_example/code",
+      "fingerprints": {
+        "README.md": "8c0d9e720aae131acc9d4db78cdf89058b07103a49ba2097130e19919db6fc3c",
+        "cli/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "cli/__main__.py": "d9f84d973e46d988d0dfda176dd03650f11ea05520d71016f571dcc9486bf723",
+        "cli/main.py": "2e17c0292af10e691a712162b9d5eb0175f2ccc0170473a6e9bb67aaa364ae5e",
+        "cli/settings.py": "ddbc26b96591b0f0088400714ca591033cec5effe8fa43e6b85d0b4d77ad453d",
+        "cli/state.py": "75b7eb1ad52a112b61e9dec857c2d343e91b377efa51cc4733b69e18fe400060",
+        "cli/validation.py": "7d718ee4386d3171a8399627ca27cf051a8aca5abfd21d53483b67dddaf8a90f",
+        "docs/configuration.md": "b4de5eaaf68dc730a459ea29c9a08b6f91ef97f201f2c34d186746ccf3621a6a",
+        "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "tests/test_public.py": "1155a22ae486bdb32f8fa0cc98f40a9cf432cb41e50c94841a3596b13ef9a000"
+      }
+    }
+  ],
+  "runtime": {
+    "python_minimum": "3.10",
+    "dependencies": []
+  },
+  "dataset_revision": "repo_cli_config_precedence_v1_2026-11-06",
+  "public_contract_file": "docs/configuration.md",
+  "target_contract": {
+    "topic": "configuration_source_precedence_and_parameter_bounds",
+    "independent_solution": true
+  },
+  "stale_transition": {
+    "removed_paths": [
+      "cli/config.py",
+      "cli/mirror_config.py",
+      "repo-cli.ini"
+    ],
+    "added_paths": [
+      "cli/settings.py"
+    ],
+    "retained_paths": [
+      "cli/validation.py"
+    ],
+    "removed_symbols": [
+      "ConfigResolver",
+      "resolve",
+      "mirror_workers"
+    ],
+    "retained_symbols": [
+      "bounded_decimal"
+    ],
+    "replacement_symbol": "load_options",
+    "still_valid_prior_principles": [
+      "command_line_has_highest_precedence",
+      "validate_selected_value_before_side_effects"
+    ],
+    "historical_agent_evidence": "not_collected"
+  },
+  "task_fingerprints": {
+    "code_dir": {
+      "README.md": "8c0d9e720aae131acc9d4db78cdf89058b07103a49ba2097130e19919db6fc3c",
+      "cli/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "cli/__main__.py": "d9f84d973e46d988d0dfda176dd03650f11ea05520d71016f571dcc9486bf723",
+      "cli/main.py": "2e17c0292af10e691a712162b9d5eb0175f2ccc0170473a6e9bb67aaa364ae5e",
+      "cli/settings.py": "63a9349bde2eba1380bad58ca205b1fb6dd275cb93e69de12e693241774a83ac",
+      "cli/state.py": "75b7eb1ad52a112b61e9dec857c2d343e91b377efa51cc4733b69e18fe400060",
+      "cli/validation.py": "aa97f2273f06a6134741ed01a32f17d89a72ca1e1fe3572eda899e82f0a763f9",
+      "docs/configuration.md": "b4de5eaaf68dc730a459ea29c9a08b6f91ef97f201f2c34d186746ccf3621a6a",
+      "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tests/test_public.py": "1155a22ae486bdb32f8fa0cc98f40a9cf432cb41e50c94841a3596b13ef9a000"
+    },
+    "private_tests_dir": {
+      "test_acceptance.py": "38c6eaef0f7c669f425c91a799fd26e5cd3acd5d81ceff9658f5016dff818cc6"
+    },
+    "regression_tests_dir": {
+      "test_regression.py": "a4bd3befc5dba9c835a9cb647238585fcea67be1239846adc5bfb60d243fdaed"
+    },
+    "reference_dir": {
+      "README.md": "8c0d9e720aae131acc9d4db78cdf89058b07103a49ba2097130e19919db6fc3c",
+      "cli/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "cli/__main__.py": "d9f84d973e46d988d0dfda176dd03650f11ea05520d71016f571dcc9486bf723",
+      "cli/main.py": "2e17c0292af10e691a712162b9d5eb0175f2ccc0170473a6e9bb67aaa364ae5e",
+      "cli/settings.py": "ddbc26b96591b0f0088400714ca591033cec5effe8fa43e6b85d0b4d77ad453d",
+      "cli/state.py": "75b7eb1ad52a112b61e9dec857c2d343e91b377efa51cc4733b69e18fe400060",
+      "cli/validation.py": "aa97f2273f06a6134741ed01a32f17d89a72ca1e1fe3572eda899e82f0a763f9",
+      "docs/configuration.md": "b4de5eaaf68dc730a459ea29c9a08b6f91ef97f201f2c34d186746ccf3621a6a",
+      "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tests/test_public.py": "1155a22ae486bdb32f8fa0cc98f40a9cf432cb41e50c94841a3596b13ef9a000"
+    },
+    "task_file": "a8df277a0a13d8dc6e7b664ada8623123d1956fea50755dd6079f27190d02bfa"
+  },
+  "code_snapshot_sha256": "33181c990afcf635014b292a44d8007b4a9a5eaa698388a2771a41dcbb8362b6",
+  "git_stage_package": "git_stage_packages/repo_cli_t3_stale.tar.gz",
+  "visible_head_sha": "e3f5bae38a906998a4f840dd5e139fdeb367547a",
+  "allowed_ancestor_shas": [
+    "e0280010cd499c8ebaa502c7a71139ac2746bc68",
+    "88e44b3f76dfb2940893a27ac050762482298879"
+  ],
+  "git_object_shas": [
+    "04945f6b7883261916248a4fa849c18dbcbd7df1",
+    "06838e3f3a54207d90db6b4e5a0cf2480934d40b",
+    "28a5d53e14afeb8a7633cd1b967720e4a9fd9a76",
+    "32a71a1b87b68ace19c83ae871264767ce4bed17",
+    "401705875eadc0623d63f3b9de74adfc6ea058f8",
+    "4de7dda262bf64b26be7746d2107b4c4feb45a8c",
+    "542e5295e6d0ad05a42864449ad3abb7e512d5bf",
+    "5b5830ed400e94156db1fbffae34d335c2071a1e",
+    "65054f85d98615299205718eb8e3a7a7b0cc913b",
+    "88e44b3f76dfb2940893a27ac050762482298879",
+    "90882310a495a823db040f0c77e082a45557da33",
+    "94407efe81b2e72941320dfcb153aa127b97e57f",
+    "99f9f05a47c78e4ac177613579bfc1a7982c1782",
+    "b297fad1db97ac0f7c92afc111a74bd33c148f73",
+    "b716af692d05e40c3cbd83eec60096813fcd9879",
+    "bc517d06471f2979257c3b87c8eaec71a54c12c3",
+    "c059ce8171f39bd107b7e70d0ddef7253373a3de",
+    "c10d0b1199bde46f33a3db771a095800c9bfa1b4",
+    "c19bd2141fd6ced09bfab1a37e074e44bd3ffac6",
+    "c76703cd4c3e0a206b0817db564d2ece28c7dcad",
+    "cc76fc16c3627716b18b122a56569040053e54cf",
+    "d12a8464cfea3ad3a2efcbd3dee9088b1ab4aad3",
+    "d905c5e5d6d92d81ffa65f13e991d82e9116bd8f",
+    "dcd45779fffe8029094474f9ef84056310ad9d26",
+    "dd7cadcfb39ed583fbc14bb7cb58cac6f0e47af4",
+    "df5a4a8f4669dc06886ef31d0c5b0cfbe9cba21e",
+    "e0280010cd499c8ebaa502c7a71139ac2746bc68",
+    "e3357ca71891649913911c67d0f618956c40d4cd",
+    "e3f5bae38a906998a4f840dd5e139fdeb367547a",
+    "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "e7fc133ca16fe80b5db47d668b5a7f45c286c6d2",
+    "ec462049c36acb42c6f5ac083575d11c4615b4d6",
+    "f66f8121bc4740b73b817f10aa8a53d567df445a",
+    "fb11f6d3468d748e3a7a5d6bea669a9a72e2e6ed",
+    "fb77506c9954fe1f2822247b12773a532ad4a98f"
+  ],
+  "git_stage_package_sha256": "ff74f8dee5f1174d4c654a5bbdd5416cb3674aacb0fd9fe09e8da71fb92c1648"
+}

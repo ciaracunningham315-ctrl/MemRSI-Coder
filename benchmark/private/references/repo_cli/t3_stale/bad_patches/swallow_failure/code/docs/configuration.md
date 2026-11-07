@@ -1,0 +1,3 @@
+# Configuration contract
+
+Current configuration is a per-command JSON object. For each option, precedence is command line, matching `REPOCLI_<COMMAND>_<OPTION>` environment variable, `.repo-cli.json` project entry, `$HOME/.config/repo-cli/config.json` user entry, then the documented default. The chosen value is validated after selection and before a record is written. `archive --threads N` accepts ASCII decimal integers 1 through 16 inclusive; its default is 3. Invalid selected values fail without changing records or IDs. The current settings API returns a resolved option mapping for a command profile; do not rely on older per-key resolver interfaces.

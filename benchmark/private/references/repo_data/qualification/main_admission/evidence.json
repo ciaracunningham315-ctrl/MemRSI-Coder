@@ -1,0 +1,1922 @@
+{
+  "kind": "offline_dataset_admission",
+  "formal_results": false,
+  "model_calls": 0,
+  "ability_metrics": null,
+  "work_dir": "private/references/repo_data/qualification/main_admission",
+  "stages": [
+    {
+      "task_id": "repo_data_t1",
+      "repository_id": "repo_data",
+      "stage": "seed",
+      "checks": {
+        "public_baseline_passes": true,
+        "baseline_target_fails": true,
+        "baseline_regression_passes": true,
+        "reference_all_pass": true,
+        "bad_patches_rejected": true,
+        "bad_patch_categories_covered": true
+      },
+      "passed": true,
+      "fingerprints": {
+        "code_dir": {
+          "README.md": "016a526665ad6118c309aed9e7bf6f2c9c44b1b0d6355d074cddb201ce1e7e9b",
+          "docs/data-contract.md": "898d979c13474d263e2ae5a33d7c18fb368ed18247e907a4350d5ab3be621b60",
+          "ledgerflow/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "ledgerflow/money.py": "65e53c10ae75d7dc68e498cf3b073d9d6c92efc85861869d1e12a6a510113042",
+          "ledgerflow/sales.py": "af3b8002b8adb360938e9c7785857abd208bbe42b3681ee35805fa11958f5e50",
+          "tests/test_public.py": "16d3cea9052bf838b15607c131936bceab396f84452cd48c3413d5f0fd11e574"
+        },
+        "private_tests_dir": {
+          "test_acceptance.py": "0c4d2acc4b083608033662409d191359fcfe69f43983d26c562106aa9c60f672"
+        },
+        "regression_tests_dir": {
+          "test_regression.py": "e8d0a4304f82b40a4fe6f23fe14924338b2eddf102ce40749e154328a743da97"
+        },
+        "reference_dir": {
+          "README.md": "016a526665ad6118c309aed9e7bf6f2c9c44b1b0d6355d074cddb201ce1e7e9b",
+          "docs/data-contract.md": "898d979c13474d263e2ae5a33d7c18fb368ed18247e907a4350d5ab3be621b60",
+          "ledgerflow/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "ledgerflow/money.py": "65e53c10ae75d7dc68e498cf3b073d9d6c92efc85861869d1e12a6a510113042",
+          "ledgerflow/sales.py": "5ebb4ed6cbb33a2859d96f0e44c3d4cf26b411c28e7ae83e8e2facb1204fd766",
+          "tests/test_public.py": "16d3cea9052bf838b15607c131936bceab396f84452cd48c3413d5f0fd11e574"
+        },
+        "task_file": {
+          "scenarios/repo_data/t1_seed/task.md": "2a763759b8f780f478abb87b889726b853c6e688b356df20431cb83ab9ae2e55"
+        },
+        "manifest": {
+          "sha256": "68b64a0e66f2062425252f54958a28f5591a07cf65bed71f810f820e0a59f303"
+        }
+      },
+      "baseline": {
+        "public": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests"
+          ],
+          "cwd": "isolated temporary copy (removed after archiving)",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.0392,
+          "tests_run": 1,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "acceptance": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "_grader_acceptance",
+            "-v"
+          ],
+          "cwd": "isolated temporary copy (removed after archiving)",
+          "exit_code": 1,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.0386,
+          "tests_run": 2,
+          "test_failures": 3,
+          "test_errors": 0
+        },
+        "regression": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "_grader_regression",
+            "-v"
+          ],
+          "cwd": "isolated temporary copy (removed after archiving)",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.0739,
+          "tests_run": 1,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "combined": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests"
+          ],
+          "cwd": "isolated temporary copy (removed after archiving)",
+          "exit_code": 1,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.04,
+          "tests_run": 4,
+          "test_failures": 3,
+          "test_errors": 0
+        }
+      },
+      "reference": {
+        "public": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests"
+          ],
+          "cwd": "isolated temporary copy (removed after archiving)",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.0376,
+          "tests_run": 1,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "acceptance": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "_grader_acceptance",
+            "-v"
+          ],
+          "cwd": "isolated temporary copy (removed after archiving)",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.0401,
+          "tests_run": 2,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "regression": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "_grader_regression",
+            "-v"
+          ],
+          "cwd": "isolated temporary copy (removed after archiving)",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.039,
+          "tests_run": 1,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "combined": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests"
+          ],
+          "cwd": "isolated temporary copy (removed after archiving)",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.0376,
+          "tests_run": 4,
+          "test_failures": 0,
+          "test_errors": 0
+        }
+      },
+      "bad_patches": [
+        {
+          "name": "skip_validation",
+          "category": "remove_validation",
+          "overlay_dir": "private/references/repo_data/t1_seed/bad_patches/skip_validation",
+          "fingerprints": {
+            "README.md": "016a526665ad6118c309aed9e7bf6f2c9c44b1b0d6355d074cddb201ce1e7e9b",
+            "docs/data-contract.md": "898d979c13474d263e2ae5a33d7c18fb368ed18247e907a4350d5ab3be621b60",
+            "ledgerflow/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+            "ledgerflow/money.py": "65e53c10ae75d7dc68e498cf3b073d9d6c92efc85861869d1e12a6a510113042",
+            "ledgerflow/sales.py": "b20ae52fdfa14515b045ec5e0eb403146d1f2542b89f97d8aec082f19c74f93e",
+            "tests/test_public.py": "16d3cea9052bf838b15607c131936bceab396f84452cd48c3413d5f0fd11e574"
+          },
+          "commands": {
+            "public": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": "isolated temporary copy (removed after archiving)",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0359,
+              "tests_run": 1,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "acceptance": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_acceptance",
+                "-v"
+              ],
+              "cwd": "isolated temporary copy (removed after archiving)",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0735,
+              "tests_run": 2,
+              "test_failures": 7,
+              "test_errors": 0
+            },
+            "regression": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_regression",
+                "-v"
+              ],
+              "cwd": "isolated temporary copy (removed after archiving)",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0725,
+              "tests_run": 1,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "combined": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": "isolated temporary copy (removed after archiving)",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0744,
+              "tests_run": 4,
+              "test_failures": 7,
+              "test_errors": 0
+            }
+          },
+          "rejected": true
+        },
+        {
+          "name": "swallow_failure",
+          "category": "swallow_exception",
+          "overlay_dir": "private/references/repo_data/t1_seed/bad_patches/swallow_failure",
+          "fingerprints": {
+            "README.md": "016a526665ad6118c309aed9e7bf6f2c9c44b1b0d6355d074cddb201ce1e7e9b",
+            "docs/data-contract.md": "898d979c13474d263e2ae5a33d7c18fb368ed18247e907a4350d5ab3be621b60",
+            "ledgerflow/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+            "ledgerflow/money.py": "65e53c10ae75d7dc68e498cf3b073d9d6c92efc85861869d1e12a6a510113042",
+            "ledgerflow/sales.py": "a82b89ecb52aba8ce24bd1e5fbd8177f5071fef36ff5bd218b9973c2557e50e1",
+            "tests/test_public.py": "16d3cea9052bf838b15607c131936bceab396f84452cd48c3413d5f0fd11e574"
+          },
+          "commands": {
+            "public": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": "isolated temporary copy (removed after archiving)",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0755,
+              "tests_run": 1,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "acceptance": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_acceptance",
+                "-v"
+              ],
+              "cwd": "isolated temporary copy (removed after archiving)",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.076,
+              "tests_run": 2,
+              "test_failures": 8,
+              "test_errors": 0
+            },
+            "regression": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_regression",
+                "-v"
+              ],
+              "cwd": "isolated temporary copy (removed after archiving)",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0754,
+              "tests_run": 1,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "combined": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": "isolated temporary copy (removed after archiving)",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0723,
+              "tests_run": 4,
+              "test_failures": 8,
+              "test_errors": 0
+            }
+          },
+          "rejected": true
+        },
+        {
+          "name": "hardcode_example",
+          "category": "hardcode",
+          "overlay_dir": "private/references/repo_data/t1_seed/bad_patches/hardcode_example",
+          "fingerprints": {
+            "README.md": "016a526665ad6118c309aed9e7bf6f2c9c44b1b0d6355d074cddb201ce1e7e9b",
+            "docs/data-contract.md": "898d979c13474d263e2ae5a33d7c18fb368ed18247e907a4350d5ab3be621b60",
+            "ledgerflow/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+            "ledgerflow/money.py": "65e53c10ae75d7dc68e498cf3b073d9d6c92efc85861869d1e12a6a510113042",
+            "ledgerflow/sales.py": "5080bc1e600a45771f98023204349ec935e7fde923ca0bfa7ee7584ae77d5a5f",
+            "tests/test_public.py": "16d3cea9052bf838b15607c131936bceab396f84452cd48c3413d5f0fd11e574"
+          },
+          "commands": {
+            "public": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": "isolated temporary copy (removed after archiving)",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0731,
+              "tests_run": 1,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "acceptance": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_acceptance",
+                "-v"
+              ],
+              "cwd": "isolated temporary copy (removed after archiving)",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0405,
+              "tests_run": 2,
+              "test_failures": 4,
+              "test_errors": 0
+            },
+            "regression": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_regression",
+                "-v"
+              ],
+              "cwd": "isolated temporary copy (removed after archiving)",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0386,
+              "tests_run": 1,
+              "test_failures": 1,
+              "test_errors": 0
+            },
+            "combined": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": "isolated temporary copy (removed after archiving)",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0406,
+              "tests_run": 4,
+              "test_failures": 5,
+              "test_errors": 0
+            }
+          },
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "task_id": "repo_data_t2",
+      "repository_id": "repo_data",
+      "stage": "transfer",
+      "checks": {
+        "public_baseline_passes": true,
+        "baseline_target_fails": true,
+        "baseline_regression_passes": true,
+        "reference_all_pass": true,
+        "bad_patches_rejected": true,
+        "bad_patch_categories_covered": true
+      },
+      "passed": true,
+      "fingerprints": {
+        "code_dir": {
+          "README.md": "016a526665ad6118c309aed9e7bf6f2c9c44b1b0d6355d074cddb201ce1e7e9b",
+          "docs/data-contract.md": "53e2e812214bf9b47248d7e8c36d661dbd04189f16aba52b23e6440a81b59a72",
+          "ledgerflow/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "ledgerflow/money.py": "65e53c10ae75d7dc68e498cf3b073d9d6c92efc85861869d1e12a6a510113042",
+          "ledgerflow/sales.py": "5ebb4ed6cbb33a2859d96f0e44c3d4cf26b411c28e7ae83e8e2facb1204fd766",
+          "ledgerflow/shipments.py": "68d4fb917a47bc6282fdf648ae9e3d93d22ceaef97b71ca7e0582ceb382eedf9",
+          "tests/test_public.py": "d9a9d7f6e1d3f6df50104f036d210f8600f158e633794f980462095a03debad3"
+        },
+        "private_tests_dir": {
+          "test_acceptance.py": "8383085871d08febb9f77e756799017c5525867ae31021dd80fea1a0b5755f78"
+        },
+        "regression_tests_dir": {
+          "test_regression.py": "01fe23c061d8ab34da69eae5093f31166baa33544c3c2c9794de3c94ddd2609a"
+        },
+        "reference_dir": {
+          "README.md": "016a526665ad6118c309aed9e7bf6f2c9c44b1b0d6355d074cddb201ce1e7e9b",
+          "docs/data-contract.md": "53e2e812214bf9b47248d7e8c36d661dbd04189f16aba52b23e6440a81b59a72",
+          "ledgerflow/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "ledgerflow/money.py": "65e53c10ae75d7dc68e498cf3b073d9d6c92efc85861869d1e12a6a510113042",
+          "ledgerflow/sales.py": "5ebb4ed6cbb33a2859d96f0e44c3d4cf26b411c28e7ae83e8e2facb1204fd766",
+          "ledgerflow/shipments.py": "a08243a070d816d5a340c29696440f431769593e4b5d88cd370d23b8058f5a8c",
+          "tests/test_public.py": "d9a9d7f6e1d3f6df50104f036d210f8600f158e633794f980462095a03debad3"
+        },
+        "task_file": {
+          "scenarios/repo_data/t2_transfer/task.md": "336f07447c2711f29000851c85fd56958c03aa1f1ab180de14728633c820974f"
+        },
+        "manifest": {
+          "sha256": "ca8c5f23adea08352033a51e30c727953eccf77056ed2b2bf51ec1da84cd60eb"
+        }
+      },
+      "baseline": {
+        "public": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests"
+          ],
+          "cwd": "isolated temporary copy (removed after archiving)",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.0392,
+          "tests_run": 2,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "acceptance": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "_grader_acceptance",
+            "-v"
+          ],
+          "cwd": "isolated temporary copy (removed after archiving)",
+          "exit_code": 1,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.04,
+          "tests_run": 2,
+          "test_failures": 1,
+          "test_errors": 0
+        },
+        "regression": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "_grader_regression",
+            "-v"
+          ],
+          "cwd": "isolated temporary copy (removed after archiving)",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.0399,
+          "tests_run": 1,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "combined": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests"
+          ],
+          "cwd": "isolated temporary copy (removed after archiving)",
+          "exit_code": 1,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.0404,
+          "tests_run": 5,
+          "test_failures": 1,
+          "test_errors": 0
+        }
+      },
+      "reference": {
+        "public": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests"
+          ],
+          "cwd": "isolated temporary copy (removed after archiving)",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.0379,
+          "tests_run": 2,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "acceptance": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "_grader_acceptance",
+            "-v"
+          ],
+          "cwd": "isolated temporary copy (removed after archiving)",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.0404,
+          "tests_run": 2,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "regression": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "_grader_regression",
+            "-v"
+          ],
+          "cwd": "isolated temporary copy (removed after archiving)",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.0365,
+          "tests_run": 1,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "combined": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests"
+          ],
+          "cwd": "isolated temporary copy (removed after archiving)",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.039,
+          "tests_run": 5,
+          "test_failures": 0,
+          "test_errors": 0
+        }
+      },
+      "bad_patches": [
+        {
+          "name": "skip_validation",
+          "category": "remove_validation",
+          "overlay_dir": "private/references/repo_data/t2_transfer/bad_patches/skip_validation",
+          "fingerprints": {
+            "README.md": "016a526665ad6118c309aed9e7bf6f2c9c44b1b0d6355d074cddb201ce1e7e9b",
+            "docs/data-contract.md": "53e2e812214bf9b47248d7e8c36d661dbd04189f16aba52b23e6440a81b59a72",
+            "ledgerflow/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+            "ledgerflow/money.py": "65e53c10ae75d7dc68e498cf3b073d9d6c92efc85861869d1e12a6a510113042",
+            "ledgerflow/sales.py": "5ebb4ed6cbb33a2859d96f0e44c3d4cf26b411c28e7ae83e8e2facb1204fd766",
+            "ledgerflow/shipments.py": "788204b77cf55a869c8ea7b481d71b8ca76d9f96b5779909cb113b4153113664",
+            "tests/test_public.py": "d9a9d7f6e1d3f6df50104f036d210f8600f158e633794f980462095a03debad3"
+          },
+          "commands": {
+            "public": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": "isolated temporary copy (removed after archiving)",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0398,
+              "tests_run": 2,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "acceptance": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_acceptance",
+                "-v"
+              ],
+              "cwd": "isolated temporary copy (removed after archiving)",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0751,
+              "tests_run": 2,
+              "test_failures": 6,
+              "test_errors": 4
+            },
+            "regression": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_regression",
+                "-v"
+              ],
+              "cwd": "isolated temporary copy (removed after archiving)",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0385,
+              "tests_run": 1,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "combined": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": "isolated temporary copy (removed after archiving)",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0735,
+              "tests_run": 5,
+              "test_failures": 6,
+              "test_errors": 4
+            }
+          },
+          "rejected": true
+        },
+        {
+          "name": "swallow_failure",
+          "category": "swallow_exception",
+          "overlay_dir": "private/references/repo_data/t2_transfer/bad_patches/swallow_failure",
+          "fingerprints": {
+            "README.md": "016a526665ad6118c309aed9e7bf6f2c9c44b1b0d6355d074cddb201ce1e7e9b",
+            "docs/data-contract.md": "53e2e812214bf9b47248d7e8c36d661dbd04189f16aba52b23e6440a81b59a72",
+            "ledgerflow/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+            "ledgerflow/money.py": "65e53c10ae75d7dc68e498cf3b073d9d6c92efc85861869d1e12a6a510113042",
+            "ledgerflow/sales.py": "5ebb4ed6cbb33a2859d96f0e44c3d4cf26b411c28e7ae83e8e2facb1204fd766",
+            "ledgerflow/shipments.py": "d4b0375b3d7b8a395c520056f2e03fce15afd558d9c580fc124aeac1e15377ea",
+            "tests/test_public.py": "d9a9d7f6e1d3f6df50104f036d210f8600f158e633794f980462095a03debad3"
+          },
+          "commands": {
+            "public": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": "isolated temporary copy (removed after archiving)",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0355,
+              "tests_run": 2,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "acceptance": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_acceptance",
+                "-v"
+              ],
+              "cwd": "isolated temporary copy (removed after archiving)",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0369,
+              "tests_run": 2,
+              "test_failures": 10,
+              "test_errors": 0
+            },
+            "regression": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_regression",
+                "-v"
+              ],
+              "cwd": "isolated temporary copy (removed after archiving)",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0381,
+              "tests_run": 1,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "combined": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": "isolated temporary copy (removed after archiving)",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0354,
+              "tests_run": 5,
+              "test_failures": 10,
+              "test_errors": 0
+            }
+          },
+          "rejected": true
+        },
+        {
+          "name": "hardcode_example",
+          "category": "hardcode",
+          "overlay_dir": "private/references/repo_data/t2_transfer/bad_patches/hardcode_example",
+          "fingerprints": {
+            "README.md": "016a526665ad6118c309aed9e7bf6f2c9c44b1b0d6355d074cddb201ce1e7e9b",
+            "docs/data-contract.md": "53e2e812214bf9b47248d7e8c36d661dbd04189f16aba52b23e6440a81b59a72",
+            "ledgerflow/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+            "ledgerflow/money.py": "65e53c10ae75d7dc68e498cf3b073d9d6c92efc85861869d1e12a6a510113042",
+            "ledgerflow/sales.py": "5ebb4ed6cbb33a2859d96f0e44c3d4cf26b411c28e7ae83e8e2facb1204fd766",
+            "ledgerflow/shipments.py": "94f8888a0055a3d0f0821d33f619e0f840b8b0e20c37f52e2939fb20f24689ec",
+            "tests/test_public.py": "d9a9d7f6e1d3f6df50104f036d210f8600f158e633794f980462095a03debad3"
+          },
+          "commands": {
+            "public": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": "isolated temporary copy (removed after archiving)",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0388,
+              "tests_run": 2,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "acceptance": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_acceptance",
+                "-v"
+              ],
+              "cwd": "isolated temporary copy (removed after archiving)",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.039,
+              "tests_run": 2,
+              "test_failures": 11,
+              "test_errors": 0
+            },
+            "regression": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_regression",
+                "-v"
+              ],
+              "cwd": "isolated temporary copy (removed after archiving)",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0393,
+              "tests_run": 1,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "combined": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": "isolated temporary copy (removed after archiving)",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0391,
+              "tests_run": 5,
+              "test_failures": 11,
+              "test_errors": 0
+            }
+          },
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "task_id": "repo_data_t3",
+      "repository_id": "repo_data",
+      "stage": "stale",
+      "checks": {
+        "public_baseline_passes": true,
+        "baseline_target_fails": true,
+        "baseline_regression_passes": true,
+        "reference_all_pass": true,
+        "bad_patches_rejected": true,
+        "bad_patch_categories_covered": true
+      },
+      "passed": true,
+      "fingerprints": {
+        "code_dir": {
+          "README.md": "016a526665ad6118c309aed9e7bf6f2c9c44b1b0d6355d074cddb201ce1e7e9b",
+          "docs/data-contract.md": "764dc79d321ce891d374ae78a3ab096f8f92a70537161b4d0181437583196eb1",
+          "ledgerflow/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "ledgerflow/dispatch.py": "3c8b258b148cf38eaf220db693806439624e36d7002ede6057d44680b81bcaed",
+          "ledgerflow/money.py": "65e53c10ae75d7dc68e498cf3b073d9d6c92efc85861869d1e12a6a510113042",
+          "ledgerflow/reconcile.py": "a1b480820c78c77ca77d82740e003511239312f273a9f4f484d42dc373ff5339",
+          "ledgerflow/sales.py": "5ebb4ed6cbb33a2859d96f0e44c3d4cf26b411c28e7ae83e8e2facb1204fd766",
+          "ledgerflow/shipments.py": "9ccfe1b1be0f1f5ad31a4590140f6839c0efcede32c46c8f51ec4a5a068a2c70",
+          "tests/test_public.py": "895e2a0fb73c440f61b7ab7882a8ec7f213c0a5bf15b8d1ea935896ece215295"
+        },
+        "private_tests_dir": {
+          "test_acceptance.py": "ca7016a2277de9c44e6697d237878d80d71f33e4cad727fbe94a2d084820642d"
+        },
+        "regression_tests_dir": {
+          "test_regression.py": "41fcba33b8b4ef7a70e6195eab95c8b5660b9c2ac1f459c56b285111221e4c85"
+        },
+        "reference_dir": {
+          "README.md": "016a526665ad6118c309aed9e7bf6f2c9c44b1b0d6355d074cddb201ce1e7e9b",
+          "docs/data-contract.md": "764dc79d321ce891d374ae78a3ab096f8f92a70537161b4d0181437583196eb1",
+          "ledgerflow/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "ledgerflow/dispatch.py": "3c8b258b148cf38eaf220db693806439624e36d7002ede6057d44680b81bcaed",
+          "ledgerflow/money.py": "65e53c10ae75d7dc68e498cf3b073d9d6c92efc85861869d1e12a6a510113042",
+          "ledgerflow/reconcile.py": "33a3970d3b4abcdddaa9d6b1d0868cbfe2138ebd3c6f6729d8d76a0f3529323b",
+          "ledgerflow/sales.py": "5ebb4ed6cbb33a2859d96f0e44c3d4cf26b411c28e7ae83e8e2facb1204fd766",
+          "ledgerflow/shipments.py": "9ccfe1b1be0f1f5ad31a4590140f6839c0efcede32c46c8f51ec4a5a068a2c70",
+          "tests/test_public.py": "895e2a0fb73c440f61b7ab7882a8ec7f213c0a5bf15b8d1ea935896ece215295"
+        },
+        "task_file": {
+          "scenarios/repo_data/t3_stale/task.md": "0693e2af1f56842c22cb192146cb88ef07327f06ff6f2a67508ee98b403ee9bc"
+        },
+        "manifest": {
+          "sha256": "7a6a0a8b32d4171877497e88f311457803e10876e6e5898a67e757ff4d2d1ef3"
+        }
+      },
+      "baseline": {
+        "public": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests"
+          ],
+          "cwd": "isolated temporary copy (removed after archiving)",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.0405,
+          "tests_run": 2,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "acceptance": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "_grader_acceptance",
+            "-v"
+          ],
+          "cwd": "isolated temporary copy (removed after archiving)",
+          "exit_code": 1,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.0391,
+          "tests_run": 2,
+          "test_failures": 2,
+          "test_errors": 0
+        },
+        "regression": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "_grader_regression",
+            "-v"
+          ],
+          "cwd": "isolated temporary copy (removed after archiving)",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.0367,
+          "tests_run": 2,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "combined": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests"
+          ],
+          "cwd": "isolated temporary copy (removed after archiving)",
+          "exit_code": 1,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.0775,
+          "tests_run": 6,
+          "test_failures": 2,
+          "test_errors": 0
+        }
+      },
+      "reference": {
+        "public": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests"
+          ],
+          "cwd": "isolated temporary copy (removed after archiving)",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.0365,
+          "tests_run": 2,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "acceptance": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "_grader_acceptance",
+            "-v"
+          ],
+          "cwd": "isolated temporary copy (removed after archiving)",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.0392,
+          "tests_run": 2,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "regression": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "_grader_regression",
+            "-v"
+          ],
+          "cwd": "isolated temporary copy (removed after archiving)",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.037,
+          "tests_run": 2,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "combined": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests"
+          ],
+          "cwd": "isolated temporary copy (removed after archiving)",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.04,
+          "tests_run": 6,
+          "test_failures": 0,
+          "test_errors": 0
+        }
+      },
+      "bad_patches": [
+        {
+          "name": "skip_validation",
+          "category": "remove_validation",
+          "overlay_dir": "private/references/repo_data/t3_stale/bad_patches/skip_validation",
+          "fingerprints": {
+            "README.md": "016a526665ad6118c309aed9e7bf6f2c9c44b1b0d6355d074cddb201ce1e7e9b",
+            "docs/data-contract.md": "764dc79d321ce891d374ae78a3ab096f8f92a70537161b4d0181437583196eb1",
+            "ledgerflow/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+            "ledgerflow/money.py": "65e53c10ae75d7dc68e498cf3b073d9d6c92efc85861869d1e12a6a510113042",
+            "ledgerflow/reconcile.py": "7814710c18494a0e48fe542543b1d458cbd92e21ea2b2856571611e25637378f",
+            "ledgerflow/sales.py": "5ebb4ed6cbb33a2859d96f0e44c3d4cf26b411c28e7ae83e8e2facb1204fd766",
+            "ledgerflow/shipments.py": "a08243a070d816d5a340c29696440f431769593e4b5d88cd370d23b8058f5a8c",
+            "tests/test_public.py": "895e2a0fb73c440f61b7ab7882a8ec7f213c0a5bf15b8d1ea935896ece215295"
+          },
+          "commands": {
+            "public": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": "isolated temporary copy (removed after archiving)",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0389,
+              "tests_run": 2,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "acceptance": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_acceptance",
+                "-v"
+              ],
+              "cwd": "isolated temporary copy (removed after archiving)",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0405,
+              "tests_run": 2,
+              "test_failures": 4,
+              "test_errors": 0
+            },
+            "regression": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_regression",
+                "-v"
+              ],
+              "cwd": "isolated temporary copy (removed after archiving)",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0383,
+              "tests_run": 2,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "combined": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": "isolated temporary copy (removed after archiving)",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0377,
+              "tests_run": 6,
+              "test_failures": 4,
+              "test_errors": 0
+            }
+          },
+          "rejected": true
+        },
+        {
+          "name": "swallow_failure",
+          "category": "swallow_exception",
+          "overlay_dir": "private/references/repo_data/t3_stale/bad_patches/swallow_failure",
+          "fingerprints": {
+            "README.md": "016a526665ad6118c309aed9e7bf6f2c9c44b1b0d6355d074cddb201ce1e7e9b",
+            "docs/data-contract.md": "764dc79d321ce891d374ae78a3ab096f8f92a70537161b4d0181437583196eb1",
+            "ledgerflow/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+            "ledgerflow/money.py": "65e53c10ae75d7dc68e498cf3b073d9d6c92efc85861869d1e12a6a510113042",
+            "ledgerflow/reconcile.py": "e068af3b13962c9ab411f3f22294bf97ed951ecda30949a44ed51762f0eabd37",
+            "ledgerflow/sales.py": "5ebb4ed6cbb33a2859d96f0e44c3d4cf26b411c28e7ae83e8e2facb1204fd766",
+            "ledgerflow/shipments.py": "a08243a070d816d5a340c29696440f431769593e4b5d88cd370d23b8058f5a8c",
+            "tests/test_public.py": "895e2a0fb73c440f61b7ab7882a8ec7f213c0a5bf15b8d1ea935896ece215295"
+          },
+          "commands": {
+            "public": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": "isolated temporary copy (removed after archiving)",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0377,
+              "tests_run": 2,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "acceptance": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_acceptance",
+                "-v"
+              ],
+              "cwd": "isolated temporary copy (removed after archiving)",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0396,
+              "tests_run": 2,
+              "test_failures": 5,
+              "test_errors": 0
+            },
+            "regression": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_regression",
+                "-v"
+              ],
+              "cwd": "isolated temporary copy (removed after archiving)",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0403,
+              "tests_run": 2,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "combined": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": "isolated temporary copy (removed after archiving)",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0393,
+              "tests_run": 6,
+              "test_failures": 5,
+              "test_errors": 0
+            }
+          },
+          "rejected": true
+        },
+        {
+          "name": "hardcode_example",
+          "category": "hardcode",
+          "overlay_dir": "private/references/repo_data/t3_stale/bad_patches/hardcode_example",
+          "fingerprints": {
+            "README.md": "016a526665ad6118c309aed9e7bf6f2c9c44b1b0d6355d074cddb201ce1e7e9b",
+            "docs/data-contract.md": "764dc79d321ce891d374ae78a3ab096f8f92a70537161b4d0181437583196eb1",
+            "ledgerflow/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+            "ledgerflow/money.py": "65e53c10ae75d7dc68e498cf3b073d9d6c92efc85861869d1e12a6a510113042",
+            "ledgerflow/reconcile.py": "5cf686799565ce171d230410b48845c1fd2e7ff7803f088707308c25f125fc08",
+            "ledgerflow/sales.py": "5ebb4ed6cbb33a2859d96f0e44c3d4cf26b411c28e7ae83e8e2facb1204fd766",
+            "ledgerflow/shipments.py": "a08243a070d816d5a340c29696440f431769593e4b5d88cd370d23b8058f5a8c",
+            "tests/test_public.py": "895e2a0fb73c440f61b7ab7882a8ec7f213c0a5bf15b8d1ea935896ece215295"
+          },
+          "commands": {
+            "public": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": "isolated temporary copy (removed after archiving)",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0403,
+              "tests_run": 2,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "acceptance": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_acceptance",
+                "-v"
+              ],
+              "cwd": "isolated temporary copy (removed after archiving)",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0391,
+              "tests_run": 2,
+              "test_failures": 2,
+              "test_errors": 0
+            },
+            "regression": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_regression",
+                "-v"
+              ],
+              "cwd": "isolated temporary copy (removed after archiving)",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0404,
+              "tests_run": 2,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "combined": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": "isolated temporary copy (removed after archiving)",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0399,
+              "tests_run": 6,
+              "test_failures": 2,
+              "test_errors": 0
+            }
+          },
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "task_id": "repo_data_t4",
+      "repository_id": "repo_data",
+      "stage": "heldout",
+      "checks": {
+        "public_baseline_passes": true,
+        "baseline_target_fails": true,
+        "baseline_regression_passes": true,
+        "reference_all_pass": true,
+        "bad_patches_rejected": true,
+        "bad_patch_categories_covered": true
+      },
+      "passed": true,
+      "fingerprints": {
+        "code_dir": {
+          "README.md": "016a526665ad6118c309aed9e7bf6f2c9c44b1b0d6355d074cddb201ce1e7e9b",
+          "docs/data-contract.md": "5471df6a2548a5df35cdfa00be2fab0b836d860b326de2f4bd56e3417342705f",
+          "ledgerflow/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "ledgerflow/closeout.py": "3ae047ee92e34eb7f2822acf3db64ad054bddab49896953445acb618a3f8db01",
+          "ledgerflow/money.py": "65e53c10ae75d7dc68e498cf3b073d9d6c92efc85861869d1e12a6a510113042",
+          "ledgerflow/reconcile.py": "33a3970d3b4abcdddaa9d6b1d0868cbfe2138ebd3c6f6729d8d76a0f3529323b",
+          "ledgerflow/sales.py": "5ebb4ed6cbb33a2859d96f0e44c3d4cf26b411c28e7ae83e8e2facb1204fd766",
+          "ledgerflow/shipments.py": "a08243a070d816d5a340c29696440f431769593e4b5d88cd370d23b8058f5a8c",
+          "tests/test_public.py": "aa7098699fca960212167a77308c849bae43a30c987072651cd889815f30bbe3"
+        },
+        "private_tests_dir": {
+          "test_acceptance.py": "f0b6c806ff9ee900c63e1fd747fc57998b195a78430d94c973153a27f57a8c1a"
+        },
+        "regression_tests_dir": {
+          "test_regression.py": "d1058ad7879019aa7550dc50f4c43ba72c73128e464f3a23768d320401a46b07"
+        },
+        "reference_dir": {
+          "README.md": "016a526665ad6118c309aed9e7bf6f2c9c44b1b0d6355d074cddb201ce1e7e9b",
+          "docs/data-contract.md": "5471df6a2548a5df35cdfa00be2fab0b836d860b326de2f4bd56e3417342705f",
+          "ledgerflow/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "ledgerflow/closeout.py": "73274b3ff44cd29d5a90aed767fa2d34e9ff380ab518df12ac8f805dd900acd8",
+          "ledgerflow/money.py": "65e53c10ae75d7dc68e498cf3b073d9d6c92efc85861869d1e12a6a510113042",
+          "ledgerflow/reconcile.py": "33a3970d3b4abcdddaa9d6b1d0868cbfe2138ebd3c6f6729d8d76a0f3529323b",
+          "ledgerflow/sales.py": "5ebb4ed6cbb33a2859d96f0e44c3d4cf26b411c28e7ae83e8e2facb1204fd766",
+          "ledgerflow/shipments.py": "a08243a070d816d5a340c29696440f431769593e4b5d88cd370d23b8058f5a8c",
+          "tests/test_public.py": "aa7098699fca960212167a77308c849bae43a30c987072651cd889815f30bbe3"
+        },
+        "task_file": {
+          "scenarios/repo_data/t4_heldout/task.md": "0ce5c219d6d30566a4cecc47ad2818846e86fc3d6a15ea2ded535510fb62fadd"
+        },
+        "manifest": {
+          "sha256": "bab107c1af07c9caa84b2050a92a781d803e09da41685d130f7c064842ae2c45"
+        }
+      },
+      "baseline": {
+        "public": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests"
+          ],
+          "cwd": "isolated temporary copy (removed after archiving)",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.04,
+          "tests_run": 2,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "acceptance": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "_grader_acceptance",
+            "-v"
+          ],
+          "cwd": "isolated temporary copy (removed after archiving)",
+          "exit_code": 1,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.0383,
+          "tests_run": 2,
+          "test_failures": 1,
+          "test_errors": 0
+        },
+        "regression": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "_grader_regression",
+            "-v"
+          ],
+          "cwd": "isolated temporary copy (removed after archiving)",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.0397,
+          "tests_run": 3,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "combined": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests"
+          ],
+          "cwd": "isolated temporary copy (removed after archiving)",
+          "exit_code": 1,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.0393,
+          "tests_run": 7,
+          "test_failures": 1,
+          "test_errors": 0
+        }
+      },
+      "reference": {
+        "public": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests"
+          ],
+          "cwd": "isolated temporary copy (removed after archiving)",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.0397,
+          "tests_run": 2,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "acceptance": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "_grader_acceptance",
+            "-v"
+          ],
+          "cwd": "isolated temporary copy (removed after archiving)",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.0401,
+          "tests_run": 2,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "regression": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "_grader_regression",
+            "-v"
+          ],
+          "cwd": "isolated temporary copy (removed after archiving)",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.0408,
+          "tests_run": 3,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "combined": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests"
+          ],
+          "cwd": "isolated temporary copy (removed after archiving)",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.0395,
+          "tests_run": 7,
+          "test_failures": 0,
+          "test_errors": 0
+        }
+      },
+      "bad_patches": [
+        {
+          "name": "skip_validation",
+          "category": "remove_validation",
+          "overlay_dir": "private/references/repo_data/t4_heldout/bad_patches/skip_validation",
+          "fingerprints": {
+            "README.md": "016a526665ad6118c309aed9e7bf6f2c9c44b1b0d6355d074cddb201ce1e7e9b",
+            "docs/data-contract.md": "5471df6a2548a5df35cdfa00be2fab0b836d860b326de2f4bd56e3417342705f",
+            "ledgerflow/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+            "ledgerflow/closeout.py": "f73c866897c0454277233a967f77e1511a1cc12dc90e706a4134bfb1c0cbc22f",
+            "ledgerflow/money.py": "65e53c10ae75d7dc68e498cf3b073d9d6c92efc85861869d1e12a6a510113042",
+            "ledgerflow/reconcile.py": "33a3970d3b4abcdddaa9d6b1d0868cbfe2138ebd3c6f6729d8d76a0f3529323b",
+            "ledgerflow/sales.py": "5ebb4ed6cbb33a2859d96f0e44c3d4cf26b411c28e7ae83e8e2facb1204fd766",
+            "ledgerflow/shipments.py": "a08243a070d816d5a340c29696440f431769593e4b5d88cd370d23b8058f5a8c",
+            "tests/test_public.py": "aa7098699fca960212167a77308c849bae43a30c987072651cd889815f30bbe3"
+          },
+          "commands": {
+            "public": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": "isolated temporary copy (removed after archiving)",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0385,
+              "tests_run": 2,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "acceptance": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_acceptance",
+                "-v"
+              ],
+              "cwd": "isolated temporary copy (removed after archiving)",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0376,
+              "tests_run": 2,
+              "test_failures": 3,
+              "test_errors": 1
+            },
+            "regression": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_regression",
+                "-v"
+              ],
+              "cwd": "isolated temporary copy (removed after archiving)",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0401,
+              "tests_run": 3,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "combined": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": "isolated temporary copy (removed after archiving)",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0403,
+              "tests_run": 7,
+              "test_failures": 3,
+              "test_errors": 1
+            }
+          },
+          "rejected": true
+        },
+        {
+          "name": "swallow_failure",
+          "category": "swallow_exception",
+          "overlay_dir": "private/references/repo_data/t4_heldout/bad_patches/swallow_failure",
+          "fingerprints": {
+            "README.md": "016a526665ad6118c309aed9e7bf6f2c9c44b1b0d6355d074cddb201ce1e7e9b",
+            "docs/data-contract.md": "5471df6a2548a5df35cdfa00be2fab0b836d860b326de2f4bd56e3417342705f",
+            "ledgerflow/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+            "ledgerflow/closeout.py": "9afee47af227dc7f359348ab171eb43f8f59d1cd1263b831cb89a05d136a4ee2",
+            "ledgerflow/money.py": "65e53c10ae75d7dc68e498cf3b073d9d6c92efc85861869d1e12a6a510113042",
+            "ledgerflow/reconcile.py": "33a3970d3b4abcdddaa9d6b1d0868cbfe2138ebd3c6f6729d8d76a0f3529323b",
+            "ledgerflow/sales.py": "5ebb4ed6cbb33a2859d96f0e44c3d4cf26b411c28e7ae83e8e2facb1204fd766",
+            "ledgerflow/shipments.py": "a08243a070d816d5a340c29696440f431769593e4b5d88cd370d23b8058f5a8c",
+            "tests/test_public.py": "aa7098699fca960212167a77308c849bae43a30c987072651cd889815f30bbe3"
+          },
+          "commands": {
+            "public": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": "isolated temporary copy (removed after archiving)",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0395,
+              "tests_run": 2,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "acceptance": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_acceptance",
+                "-v"
+              ],
+              "cwd": "isolated temporary copy (removed after archiving)",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0383,
+              "tests_run": 2,
+              "test_failures": 5,
+              "test_errors": 0
+            },
+            "regression": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_regression",
+                "-v"
+              ],
+              "cwd": "isolated temporary copy (removed after archiving)",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.037,
+              "tests_run": 3,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "combined": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": "isolated temporary copy (removed after archiving)",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0401,
+              "tests_run": 7,
+              "test_failures": 5,
+              "test_errors": 0
+            }
+          },
+          "rejected": true
+        },
+        {
+          "name": "hardcode_example",
+          "category": "hardcode",
+          "overlay_dir": "private/references/repo_data/t4_heldout/bad_patches/hardcode_example",
+          "fingerprints": {
+            "README.md": "016a526665ad6118c309aed9e7bf6f2c9c44b1b0d6355d074cddb201ce1e7e9b",
+            "docs/data-contract.md": "5471df6a2548a5df35cdfa00be2fab0b836d860b326de2f4bd56e3417342705f",
+            "ledgerflow/__init__.py": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+            "ledgerflow/closeout.py": "e1a80d9b25792b6a76ea284520ec482d0a1bffff14ff1eda95f5c74673ad8513",
+            "ledgerflow/money.py": "65e53c10ae75d7dc68e498cf3b073d9d6c92efc85861869d1e12a6a510113042",
+            "ledgerflow/reconcile.py": "33a3970d3b4abcdddaa9d6b1d0868cbfe2138ebd3c6f6729d8d76a0f3529323b",
+            "ledgerflow/sales.py": "5ebb4ed6cbb33a2859d96f0e44c3d4cf26b411c28e7ae83e8e2facb1204fd766",
+            "ledgerflow/shipments.py": "a08243a070d816d5a340c29696440f431769593e4b5d88cd370d23b8058f5a8c",
+            "tests/test_public.py": "aa7098699fca960212167a77308c849bae43a30c987072651cd889815f30bbe3"
+          },
+          "commands": {
+            "public": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": "isolated temporary copy (removed after archiving)",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0376,
+              "tests_run": 2,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "acceptance": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_acceptance",
+                "-v"
+              ],
+              "cwd": "isolated temporary copy (removed after archiving)",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0389,
+              "tests_run": 2,
+              "test_failures": 5,
+              "test_errors": 0
+            },
+            "regression": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_regression",
+                "-v"
+              ],
+              "cwd": "isolated temporary copy (removed after archiving)",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0402,
+              "tests_run": 3,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "combined": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": "isolated temporary copy (removed after archiving)",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0362,
+              "tests_run": 7,
+              "test_failures": 5,
+              "test_errors": 0
+            }
+          },
+          "rejected": true
+        }
+      ]
+    }
+  ],
+  "boundary": "Offline engineering checks only; no Agent trajectory, solve rate, model effect or formal experiment is measured.",
+  "applicability": {
+    "passed": true,
+    "status": "not_applicable",
+    "reason": "the repository has no repo_api-specific applicability probe"
+  },
+  "passed": true,
+  "repository_id": "repo_data",
+  "path_base": "benchmark_root"
+}

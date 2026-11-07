@@ -1,0 +1,12 @@
+{
+  "audit_task_id": "nsrr_audit_dup_config_null",
+  "candidate_id": "nsrr_dup_config_null",
+  "claimed_observation_dimension": "behavioral",
+  "description": "Synthetic independent configuration fixtures distinguish an explicit null from an absent key. The candidate wording differs but its declared action is unchanged.",
+  "independent_source": "deterministic synthetic audit-only workload with a separate trusted assertion oracle",
+  "minimum_cases": 3,
+  "minimum_performance_samples": 0,
+  "provenance_boundary": "not sourced from Gate selection, main-task T4, acceptance, regression, references, or learning scores",
+  "task_type": "config_nulls",
+  "title": "Null configuration preservation paraphrase"
+}

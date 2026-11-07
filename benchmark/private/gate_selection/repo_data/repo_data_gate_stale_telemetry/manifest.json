@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "task_id": "repo_data_gate_stale_telemetry",
+  "repository_id": "repo_data",
+  "stage": "stale",
+  "kind": "task",
+  "available_after_stage": "stale",
+  "latest_mechanism_stage": "stale",
+  "independent_of_main_tasks": true,
+  "future_main_inputs_used": [],
+  "code_dir": "private/gate_selection/repo_data/repo_data_gate_stale_telemetry/code",
+  "task_file": "private/gate_selection/repo_data/repo_data_gate_stale_telemetry/task.md",
+  "private_tests_dir": "private/gate_selection/repo_data/repo_data_gate_stale_telemetry/acceptance",
+  "regression_tests_dir": "private/gate_selection/repo_data/repo_data_gate_stale_telemetry/regression",
+  "reference_dir": "private/gate_selection/repo_data/repo_data_gate_stale_telemetry/reference/code",
+  "acceptance_command": [
+    "python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "mechanisms": [
+    "representation_migration",
+    "minor_unit_integer_strings",
+    "preserve_unchanged_decimal_helper"
+  ],
+  "fingerprints": {
+    "code_dir": {
+      "README.md": "3e5b13634d2ee9f218c93e31213c4f2bb707c303d2700c8c3e4fd46498be7cc5",
+      "docs/data-contract.md": "87e2807100387aea8cba3e4ee47d4c1db76b49c0e9bf0217e2acdc9f099bf9c9",
+      "telemetry.py": "91647f406f001221c4bd70e7a75d8d761f4e75bd5dc5e0396bdc8e820dd8f2bf",
+      "tests/test_public.py": "91411119b69573b32f1cadf8eea2c55f3c454159fb72e47dfaa74a3c9b8bcf8e"
+    },
+    "private_tests_dir": {
+      "test_private_gate.py": "ff5fc95332255be9f49db1c602cf39b1cb528506e562c9e6267d45c2a0cf097c"
+    },
+    "regression_tests_dir": {
+      "test_routes.py": "9f641947d732074c09d9bd18200c1f1be2ebf1806ab55fc640fa43dcb324f4a8"
+    },
+    "reference_dir": {
+      "README.md": "3e5b13634d2ee9f218c93e31213c4f2bb707c303d2700c8c3e4fd46498be7cc5",
+      "docs/data-contract.md": "87e2807100387aea8cba3e4ee47d4c1db76b49c0e9bf0217e2acdc9f099bf9c9",
+      "telemetry.py": "63d9bafebdcd7388445158307360df9f3cfa0885fb69b469ab2d7a49af22d77d",
+      "tests/test_public.py": "91411119b69573b32f1cadf8eea2c55f3c454159fb72e47dfaa74a3c9b8bcf8e"
+    },
+    "task_file": "7fdeb0d3a88c72876f1bf68f96d8742e3ebd17c50a28e807d9a3691833bfb831"
+  }
+}

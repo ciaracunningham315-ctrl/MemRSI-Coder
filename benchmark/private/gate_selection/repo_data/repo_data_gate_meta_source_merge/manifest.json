@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "task_id": "repo_data_gate_meta_source_merge",
+  "repository_id": "repo_data",
+  "stage": "transfer",
+  "kind": "meta",
+  "available_after_stage": "transfer",
+  "latest_mechanism_stage": "transfer",
+  "independent_of_main_tasks": true,
+  "future_main_inputs_used": [],
+  "code_dir": "private/gate_selection/repo_data/repo_data_gate_meta_source_merge/code",
+  "task_file": "private/gate_selection/repo_data/repo_data_gate_meta_source_merge/task.md",
+  "private_tests_dir": "private/gate_selection/repo_data/repo_data_gate_meta_source_merge/acceptance",
+  "regression_tests_dir": "private/gate_selection/repo_data/repo_data_gate_meta_source_merge/regression",
+  "reference_dir": "private/gate_selection/repo_data/repo_data_gate_meta_source_merge/reference/code",
+  "acceptance_command": [
+    "python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "mechanisms": [
+    "null_and_type_handling",
+    "versioned_field_precedence",
+    "exact_decimal_conversion"
+  ],
+  "fingerprints": {
+    "code_dir": {
+      "README.md": "3e5b13634d2ee9f218c93e31213c4f2bb707c303d2700c8c3e4fd46498be7cc5",
+      "catalog.py": "ad570494060c02bce5950b1abc114b41b8ba657f3893226a9a587dd634ea8b93",
+      "docs/data-contract.md": "a1193624f268003805209f52d8de2462528f4ebd5eb747b1717e23f17c2fd5e3",
+      "tests/test_public.py": "ee8ac146cc0bb1db1ea3ebad0646813d5b8f69ca7804b642f48416c944bb147d"
+    },
+    "private_tests_dir": {
+      "test_private_gate.py": "a318f1ebe8bf8337307cafead112f35538aaff6bf928a7e68cb25bbe0f4e3f76"
+    },
+    "regression_tests_dir": {
+      "test_routes.py": "76703a0fc31fa522dd77bcc27d7d15593ab19a3ab676cb815bd794f57c985a6c"
+    },
+    "reference_dir": {
+      "README.md": "3e5b13634d2ee9f218c93e31213c4f2bb707c303d2700c8c3e4fd46498be7cc5",
+      "catalog.py": "96be7a5a694058bc98bd74593fb6cf3199825cfdf33bd5d7754d5e982f5555de",
+      "docs/data-contract.md": "a1193624f268003805209f52d8de2462528f4ebd5eb747b1717e23f17c2fd5e3",
+      "tests/test_public.py": "ee8ac146cc0bb1db1ea3ebad0646813d5b8f69ca7804b642f48416c944bb147d"
+    },
+    "task_file": "62447275bb5fc8ef2eca3ab009f803d56ee9cbda5e2d0fe70129f54b39d4a75d"
+  }
+}

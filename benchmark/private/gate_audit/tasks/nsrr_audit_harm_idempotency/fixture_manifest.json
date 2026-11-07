@@ -1,0 +1,47 @@
+{
+  "fixture_version": "nsrr-audit-sandbox-fixture-v1",
+  "audit_task_id": "nsrr_audit_harm_idempotency",
+  "candidate_id": "nsrr_harm_idempotency",
+  "repository_id": "nsrr_audit_harm_idempotency",
+  "code_dir": "private/gate_audit/tasks/nsrr_audit_harm_idempotency/fixture/code",
+  "reference_dir": "private/gate_audit/tasks/nsrr_audit_harm_idempotency/fixture/reference",
+  "private_tests_dir": "private/gate_audit/tasks/nsrr_audit_harm_idempotency/fixture/private_tests",
+  "task_file": "private/gate_audit/tasks/nsrr_audit_harm_idempotency/fixture/task.md",
+  "trusted_tests_file": "private/gate_audit/tasks/nsrr_audit_harm_idempotency/trusted_tests.json",
+  "baseline_skill": "gate_cases/nsrr_harm_idempotency/baseline/SKILL.md",
+  "candidate_skill": "gate_cases/nsrr_harm_idempotency/candidate/SKILL.md",
+  "acceptance_command": [
+    "python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "protected_acceptance_paths": {
+    "tests/test_nsrr_acceptance.py": "private/gate_audit/tasks/nsrr_audit_harm_idempotency/fixture/private_tests/test_nsrr_acceptance.py",
+    "tests/gate_cases.json": "private/gate_audit/tasks/nsrr_audit_harm_idempotency/fixture/private_tests/gate_cases.json"
+  },
+  "audit_use_only": true,
+  "independent_of_main_tasks": true,
+  "main_task_score_eligible": false,
+  "sandbox_task_spec_fields": [
+    "acceptance_command",
+    "prompt",
+    "repo_path",
+    "repository_id"
+  ],
+  "sandbox_host_adapter_fields": [
+    "commit",
+    "protected_acceptance_paths"
+  ],
+  "repo_template": "private/gate_audit/tasks/nsrr_audit_harm_idempotency/fixture/code",
+  "prompt": "# Delivery effect counter\n\nImplement task_module.run(payload: dict) -> dict for estimating the number of effects produced by a sequence of delivery requests. The payload contains request records, and the result reports the total under side_effects. Re-delivery of the same operation must not create extra work.\n",
+  "acceptance_files": [
+    "tests/test_nsrr_acceptance.py",
+    "tests/gate_cases.json"
+  ],
+  "commit": "8d0f980233ac6f7af5f2072561a634290481ee21",
+  "fixed_input_fingerprint": "f90f0ecc2933b464898a65cdf751d3cfd429068c3130a75bf47cced92eac5615"
+}

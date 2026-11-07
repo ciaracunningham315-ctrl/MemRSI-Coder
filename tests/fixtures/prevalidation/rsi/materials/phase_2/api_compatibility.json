@@ -1,0 +1,14 @@
+{
+  "material_id": "phase2-api-compatibility",
+  "family": "api_compatibility",
+  "source_kind": "synthetic_phase_2_material",
+  "live_task": {
+    "task_id": "api_material_phase2",
+    "prompt": "Fix api_material.py so event keeps the created_at response field and adds timestamp as an alias with the same value.",
+    "source": "def event(created_at):\n    return {\"created_at\": created_at}\n",
+    "reference": "def event(created_at):\n    return {\"created_at\": created_at, \"timestamp\": created_at}\n",
+    "acceptance": "import sys\nsys.path.insert(0, \"/workspace\")\nfrom api_material import event\nresult = event(\"2026-11-05T00:00:00Z\")\nassert result[\"created_at\"] == \"2026-11-05T00:00:00Z\"\nassert result[\"timestamp\"] == result[\"created_at\"]\n",
+    "acceptance_file": "tests/private_acceptance_api_material_phase2.py",
+    "acceptance_command": ["python", "-I", "-B", "/workspace/tests/private_acceptance_api_material_phase2.py"]
+  }
+}

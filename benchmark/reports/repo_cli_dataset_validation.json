@@ -1,0 +1,1980 @@
+{
+  "kind": "offline_dataset_admission",
+  "formal_results": false,
+  "model_calls": 0,
+  "ability_metrics": null,
+  "work_dir": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6",
+  "stages": [
+    {
+      "task_id": "repo_cli_t1",
+      "repository_id": "repo_cli",
+      "stage": "seed",
+      "checks": {
+        "public_baseline_passes": true,
+        "baseline_target_fails": true,
+        "baseline_regression_passes": true,
+        "reference_all_pass": true,
+        "bad_patches_rejected": true,
+        "bad_patch_categories_covered": true
+      },
+      "passed": true,
+      "fingerprints": {
+        "code_dir": {
+          "README.md": "62a609fcc4b103c6dcdcd7481773ea91409f6f3f5f5a2126f2eba8dacc0ce2f4",
+          "cli/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "cli/__main__.py": "d9f84d973e46d988d0dfda176dd03650f11ea05520d71016f571dcc9486bf723",
+          "cli/config.py": "6d76ed7c6d74129238d2b38de10d61adbfd47b88ae56ed4f87b14717f3ebc4f1",
+          "cli/main.py": "0da1529f354a1bf46c85f9f11f566f27de01adebf40c79cd2b0dd5548d06cbca",
+          "cli/state.py": "75b7eb1ad52a112b61e9dec857c2d343e91b377efa51cc4733b69e18fe400060",
+          "cli/validation.py": "f775140b2d6ccdc4957ea7657cf397c3e4879a46e6bdb632ea4d64a6be3f2734",
+          "docs/configuration.md": "dd8a3038acc301d1098298176f0fd6f6184f56a08ca6fede83f3f1ec3a5d97bf",
+          "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "tests/test_public.py": "a80a629416a1ffb7d6c357c21fb6028b16a1640f5396b8456a3b659cd09770e8"
+        },
+        "private_tests_dir": {
+          "test_acceptance.py": "4a15f0337b747d7390719a6f6e312221b7eaed79271579056b2a481812e81571"
+        },
+        "regression_tests_dir": {
+          "test_regression.py": "f37fda7faaa7cfdf0485cc6c7d0fcdd989987344370bec79e3cacaeba5339bc8"
+        },
+        "reference_dir": {
+          "README.md": "62a609fcc4b103c6dcdcd7481773ea91409f6f3f5f5a2126f2eba8dacc0ce2f4",
+          "cli/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "cli/__main__.py": "d9f84d973e46d988d0dfda176dd03650f11ea05520d71016f571dcc9486bf723",
+          "cli/config.py": "288db9819e8915ae809d50e3338ccea737111ea42bb5244451e077d20707ce7d",
+          "cli/main.py": "9b5bf3ee2a19d7d1395fa635b285fe3520bb8144bd88fe32b6f3ba99cb390d0d",
+          "cli/state.py": "75b7eb1ad52a112b61e9dec857c2d343e91b377efa51cc4733b69e18fe400060",
+          "cli/validation.py": "aa97f2273f06a6134741ed01a32f17d89a72ca1e1fe3572eda899e82f0a763f9",
+          "docs/configuration.md": "dd8a3038acc301d1098298176f0fd6f6184f56a08ca6fede83f3f1ec3a5d97bf",
+          "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "tests/test_public.py": "a80a629416a1ffb7d6c357c21fb6028b16a1640f5396b8456a3b659cd09770e8"
+        },
+        "task_file": {
+          "scenarios/repo_cli/t1_seed/task.md": "3204fabbd3e8bfe3c965cd0597aca99ece8d32b45d6d088afb8c07d95ed90b1c"
+        },
+        "manifest": {
+          "sha256": "c97260ec173d2ca8906a5109faf3946b4bab9200ed6ef862fb6dead35aa7bb06"
+        }
+      },
+      "baseline": {
+        "public": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests"
+          ],
+          "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t1_seed/baseline/public",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.0738,
+          "tests_run": 2,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "acceptance": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "_grader_acceptance",
+            "-v"
+          ],
+          "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t1_seed/baseline/acceptance",
+          "exit_code": 1,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.0763,
+          "tests_run": 2,
+          "test_failures": 2,
+          "test_errors": 0
+        },
+        "regression": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "_grader_regression",
+            "-v"
+          ],
+          "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t1_seed/baseline/regression",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.0374,
+          "tests_run": 1,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "combined": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests"
+          ],
+          "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t1_seed/baseline/combined",
+          "exit_code": 1,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.0396,
+          "tests_run": 5,
+          "test_failures": 2,
+          "test_errors": 0
+        }
+      },
+      "reference": {
+        "public": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests"
+          ],
+          "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t1_seed/reference/public",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.039,
+          "tests_run": 2,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "acceptance": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "_grader_acceptance",
+            "-v"
+          ],
+          "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t1_seed/reference/acceptance",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.0385,
+          "tests_run": 2,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "regression": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "_grader_regression",
+            "-v"
+          ],
+          "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t1_seed/reference/regression",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.0738,
+          "tests_run": 1,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "combined": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests"
+          ],
+          "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t1_seed/reference/combined",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.0716,
+          "tests_run": 5,
+          "test_failures": 0,
+          "test_errors": 0
+        }
+      },
+      "bad_patches": [
+        {
+          "name": "skip_validation",
+          "category": "remove_validation",
+          "overlay_dir": "private/references/repo_cli/t1_seed/bad_patches/skip_validation/code",
+          "fingerprints": {
+            "README.md": "62a609fcc4b103c6dcdcd7481773ea91409f6f3f5f5a2126f2eba8dacc0ce2f4",
+            "cli/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "cli/__main__.py": "d9f84d973e46d988d0dfda176dd03650f11ea05520d71016f571dcc9486bf723",
+            "cli/config.py": "288db9819e8915ae809d50e3338ccea737111ea42bb5244451e077d20707ce7d",
+            "cli/main.py": "9b5bf3ee2a19d7d1395fa635b285fe3520bb8144bd88fe32b6f3ba99cb390d0d",
+            "cli/state.py": "75b7eb1ad52a112b61e9dec857c2d343e91b377efa51cc4733b69e18fe400060",
+            "cli/validation.py": "4a61c5e8b2d391015f1a66932bd8c10d12d47b80c63c259fc9615c21b2412500",
+            "docs/configuration.md": "dd8a3038acc301d1098298176f0fd6f6184f56a08ca6fede83f3f1ec3a5d97bf",
+            "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "tests/test_public.py": "a80a629416a1ffb7d6c357c21fb6028b16a1640f5396b8456a3b659cd09770e8"
+          },
+          "commands": {
+            "public": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t1_seed/bad_skip_validation/public",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0718,
+              "tests_run": 2,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "acceptance": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_acceptance",
+                "-v"
+              ],
+              "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t1_seed/bad_skip_validation/acceptance",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0716,
+              "tests_run": 2,
+              "test_failures": 1,
+              "test_errors": 0
+            },
+            "regression": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_regression",
+                "-v"
+              ],
+              "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t1_seed/bad_skip_validation/regression",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0753,
+              "tests_run": 1,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "combined": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t1_seed/bad_skip_validation/combined",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0765,
+              "tests_run": 5,
+              "test_failures": 1,
+              "test_errors": 0
+            }
+          },
+          "rejected": true
+        },
+        {
+          "name": "swallow_failure",
+          "category": "swallow_exception",
+          "overlay_dir": "private/references/repo_cli/t1_seed/bad_patches/swallow_failure/code",
+          "fingerprints": {
+            "README.md": "62a609fcc4b103c6dcdcd7481773ea91409f6f3f5f5a2126f2eba8dacc0ce2f4",
+            "cli/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "cli/__main__.py": "d9f84d973e46d988d0dfda176dd03650f11ea05520d71016f571dcc9486bf723",
+            "cli/config.py": "288db9819e8915ae809d50e3338ccea737111ea42bb5244451e077d20707ce7d",
+            "cli/main.py": "9b5bf3ee2a19d7d1395fa635b285fe3520bb8144bd88fe32b6f3ba99cb390d0d",
+            "cli/state.py": "75b7eb1ad52a112b61e9dec857c2d343e91b377efa51cc4733b69e18fe400060",
+            "cli/validation.py": "fa4b4446e9ebf6e24a304523c1d28b0736da5a5852700bb8b3584a85d05b7454",
+            "docs/configuration.md": "dd8a3038acc301d1098298176f0fd6f6184f56a08ca6fede83f3f1ec3a5d97bf",
+            "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "tests/test_public.py": "a80a629416a1ffb7d6c357c21fb6028b16a1640f5396b8456a3b659cd09770e8"
+          },
+          "commands": {
+            "public": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t1_seed/bad_swallow_failure/public",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0758,
+              "tests_run": 2,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "acceptance": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_acceptance",
+                "-v"
+              ],
+              "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t1_seed/bad_swallow_failure/acceptance",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.076,
+              "tests_run": 2,
+              "test_failures": 1,
+              "test_errors": 0
+            },
+            "regression": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_regression",
+                "-v"
+              ],
+              "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t1_seed/bad_swallow_failure/regression",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0758,
+              "tests_run": 1,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "combined": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t1_seed/bad_swallow_failure/combined",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0743,
+              "tests_run": 5,
+              "test_failures": 1,
+              "test_errors": 0
+            }
+          },
+          "rejected": true
+        },
+        {
+          "name": "hardcode_example",
+          "category": "hardcode",
+          "overlay_dir": "private/references/repo_cli/t1_seed/bad_patches/hardcode_example/code",
+          "fingerprints": {
+            "README.md": "62a609fcc4b103c6dcdcd7481773ea91409f6f3f5f5a2126f2eba8dacc0ce2f4",
+            "cli/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "cli/__main__.py": "d9f84d973e46d988d0dfda176dd03650f11ea05520d71016f571dcc9486bf723",
+            "cli/config.py": "288db9819e8915ae809d50e3338ccea737111ea42bb5244451e077d20707ce7d",
+            "cli/main.py": "9b5bf3ee2a19d7d1395fa635b285fe3520bb8144bd88fe32b6f3ba99cb390d0d",
+            "cli/state.py": "75b7eb1ad52a112b61e9dec857c2d343e91b377efa51cc4733b69e18fe400060",
+            "cli/validation.py": "bf62bf75f57f8f78aec43e9781d316e4a6fd6eb69d324d393d023f6189bad309",
+            "docs/configuration.md": "dd8a3038acc301d1098298176f0fd6f6184f56a08ca6fede83f3f1ec3a5d97bf",
+            "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "tests/test_public.py": "a80a629416a1ffb7d6c357c21fb6028b16a1640f5396b8456a3b659cd09770e8"
+          },
+          "commands": {
+            "public": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t1_seed/bad_hardcode_example/public",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0719,
+              "tests_run": 2,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "acceptance": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_acceptance",
+                "-v"
+              ],
+              "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t1_seed/bad_hardcode_example/acceptance",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0726,
+              "tests_run": 2,
+              "test_failures": 1,
+              "test_errors": 0
+            },
+            "regression": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_regression",
+                "-v"
+              ],
+              "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t1_seed/bad_hardcode_example/regression",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0403,
+              "tests_run": 1,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "combined": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t1_seed/bad_hardcode_example/combined",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0374,
+              "tests_run": 5,
+              "test_failures": 1,
+              "test_errors": 0
+            }
+          },
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "task_id": "repo_cli_t2",
+      "repository_id": "repo_cli",
+      "stage": "transfer",
+      "checks": {
+        "public_baseline_passes": true,
+        "baseline_target_fails": true,
+        "baseline_regression_passes": true,
+        "reference_all_pass": true,
+        "bad_patches_rejected": true,
+        "bad_patch_categories_covered": true
+      },
+      "passed": true,
+      "fingerprints": {
+        "code_dir": {
+          "README.md": "62a609fcc4b103c6dcdcd7481773ea91409f6f3f5f5a2126f2eba8dacc0ce2f4",
+          "cli/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "cli/__main__.py": "d9f84d973e46d988d0dfda176dd03650f11ea05520d71016f571dcc9486bf723",
+          "cli/config.py": "288db9819e8915ae809d50e3338ccea737111ea42bb5244451e077d20707ce7d",
+          "cli/main.py": "3da49c69fa37a52039cf136c8fa0efedba6d2768b937a643fde26a8c93e92150",
+          "cli/mirror_config.py": "105e36701e605ec04af348335a983353a719cb9da6b636a4c37c6d3a40ec8506",
+          "cli/state.py": "75b7eb1ad52a112b61e9dec857c2d343e91b377efa51cc4733b69e18fe400060",
+          "cli/validation.py": "aa97f2273f06a6134741ed01a32f17d89a72ca1e1fe3572eda899e82f0a763f9",
+          "docs/configuration.md": "91ff381f7b9dafe00e04b7c7ed6328af9d94c29488bde6ac960417423bc40af5",
+          "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "tests/test_public.py": "1f430ca0176e3ecd5bf70a2e03efd0a4d1a758f34d617b934b10d097bdd5154a"
+        },
+        "private_tests_dir": {
+          "test_acceptance.py": "9a6db6c32ae80d80fd67b4c004b026932be250fb95b274364b1b860539965e23"
+        },
+        "regression_tests_dir": {
+          "test_regression.py": "f31e0e314a0f41f2e33bcd47b014429e41f53807402da504cf7d8cae636f4dcd"
+        },
+        "reference_dir": {
+          "README.md": "62a609fcc4b103c6dcdcd7481773ea91409f6f3f5f5a2126f2eba8dacc0ce2f4",
+          "cli/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "cli/__main__.py": "d9f84d973e46d988d0dfda176dd03650f11ea05520d71016f571dcc9486bf723",
+          "cli/config.py": "288db9819e8915ae809d50e3338ccea737111ea42bb5244451e077d20707ce7d",
+          "cli/main.py": "3da49c69fa37a52039cf136c8fa0efedba6d2768b937a643fde26a8c93e92150",
+          "cli/mirror_config.py": "642b98b7e1e39cd8e93b2385398ab83b3df33b6ce41abfe74d0a936c0a8c3596",
+          "cli/state.py": "75b7eb1ad52a112b61e9dec857c2d343e91b377efa51cc4733b69e18fe400060",
+          "cli/validation.py": "aa97f2273f06a6134741ed01a32f17d89a72ca1e1fe3572eda899e82f0a763f9",
+          "docs/configuration.md": "91ff381f7b9dafe00e04b7c7ed6328af9d94c29488bde6ac960417423bc40af5",
+          "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "tests/test_public.py": "1f430ca0176e3ecd5bf70a2e03efd0a4d1a758f34d617b934b10d097bdd5154a"
+        },
+        "task_file": {
+          "scenarios/repo_cli/t2_transfer/task.md": "e2c0df8ae0f97a010d669bf52f252d564dd63510f9660a90f1c66195f091ca56"
+        },
+        "manifest": {
+          "sha256": "fe4941598f78a800787d9f02580bd145e2c74426aaae0b2834c1ee82fb02df67"
+        }
+      },
+      "baseline": {
+        "public": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests"
+          ],
+          "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t2_transfer/baseline/public",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.037,
+          "tests_run": 2,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "acceptance": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "_grader_acceptance",
+            "-v"
+          ],
+          "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t2_transfer/baseline/acceptance",
+          "exit_code": 1,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.0754,
+          "tests_run": 2,
+          "test_failures": 2,
+          "test_errors": 0
+        },
+        "regression": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "_grader_regression",
+            "-v"
+          ],
+          "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t2_transfer/baseline/regression",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.0737,
+          "tests_run": 2,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "combined": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests"
+          ],
+          "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t2_transfer/baseline/combined",
+          "exit_code": 1,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.0757,
+          "tests_run": 6,
+          "test_failures": 2,
+          "test_errors": 0
+        }
+      },
+      "reference": {
+        "public": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests"
+          ],
+          "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t2_transfer/reference/public",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.0768,
+          "tests_run": 2,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "acceptance": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "_grader_acceptance",
+            "-v"
+          ],
+          "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t2_transfer/reference/acceptance",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.04,
+          "tests_run": 2,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "regression": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "_grader_regression",
+            "-v"
+          ],
+          "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t2_transfer/reference/regression",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.0375,
+          "tests_run": 2,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "combined": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests"
+          ],
+          "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t2_transfer/reference/combined",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.0761,
+          "tests_run": 6,
+          "test_failures": 0,
+          "test_errors": 0
+        }
+      },
+      "bad_patches": [
+        {
+          "name": "skip_validation",
+          "category": "remove_validation",
+          "overlay_dir": "private/references/repo_cli/t2_transfer/bad_patches/skip_validation/code",
+          "fingerprints": {
+            "README.md": "62a609fcc4b103c6dcdcd7481773ea91409f6f3f5f5a2126f2eba8dacc0ce2f4",
+            "cli/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "cli/__main__.py": "d9f84d973e46d988d0dfda176dd03650f11ea05520d71016f571dcc9486bf723",
+            "cli/config.py": "288db9819e8915ae809d50e3338ccea737111ea42bb5244451e077d20707ce7d",
+            "cli/main.py": "3da49c69fa37a52039cf136c8fa0efedba6d2768b937a643fde26a8c93e92150",
+            "cli/mirror_config.py": "642b98b7e1e39cd8e93b2385398ab83b3df33b6ce41abfe74d0a936c0a8c3596",
+            "cli/state.py": "75b7eb1ad52a112b61e9dec857c2d343e91b377efa51cc4733b69e18fe400060",
+            "cli/validation.py": "4a61c5e8b2d391015f1a66932bd8c10d12d47b80c63c259fc9615c21b2412500",
+            "docs/configuration.md": "91ff381f7b9dafe00e04b7c7ed6328af9d94c29488bde6ac960417423bc40af5",
+            "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "tests/test_public.py": "1f430ca0176e3ecd5bf70a2e03efd0a4d1a758f34d617b934b10d097bdd5154a"
+          },
+          "commands": {
+            "public": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t2_transfer/bad_skip_validation/public",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0405,
+              "tests_run": 2,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "acceptance": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_acceptance",
+                "-v"
+              ],
+              "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t2_transfer/bad_skip_validation/acceptance",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0754,
+              "tests_run": 2,
+              "test_failures": 1,
+              "test_errors": 0
+            },
+            "regression": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_regression",
+                "-v"
+              ],
+              "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t2_transfer/bad_skip_validation/regression",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0403,
+              "tests_run": 2,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "combined": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t2_transfer/bad_skip_validation/combined",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0742,
+              "tests_run": 6,
+              "test_failures": 1,
+              "test_errors": 0
+            }
+          },
+          "rejected": true
+        },
+        {
+          "name": "swallow_failure",
+          "category": "swallow_exception",
+          "overlay_dir": "private/references/repo_cli/t2_transfer/bad_patches/swallow_failure/code",
+          "fingerprints": {
+            "README.md": "62a609fcc4b103c6dcdcd7481773ea91409f6f3f5f5a2126f2eba8dacc0ce2f4",
+            "cli/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "cli/__main__.py": "d9f84d973e46d988d0dfda176dd03650f11ea05520d71016f571dcc9486bf723",
+            "cli/config.py": "288db9819e8915ae809d50e3338ccea737111ea42bb5244451e077d20707ce7d",
+            "cli/main.py": "3da49c69fa37a52039cf136c8fa0efedba6d2768b937a643fde26a8c93e92150",
+            "cli/mirror_config.py": "642b98b7e1e39cd8e93b2385398ab83b3df33b6ce41abfe74d0a936c0a8c3596",
+            "cli/state.py": "75b7eb1ad52a112b61e9dec857c2d343e91b377efa51cc4733b69e18fe400060",
+            "cli/validation.py": "fa4b4446e9ebf6e24a304523c1d28b0736da5a5852700bb8b3584a85d05b7454",
+            "docs/configuration.md": "91ff381f7b9dafe00e04b7c7ed6328af9d94c29488bde6ac960417423bc40af5",
+            "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "tests/test_public.py": "1f430ca0176e3ecd5bf70a2e03efd0a4d1a758f34d617b934b10d097bdd5154a"
+          },
+          "commands": {
+            "public": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t2_transfer/bad_swallow_failure/public",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0393,
+              "tests_run": 2,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "acceptance": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_acceptance",
+                "-v"
+              ],
+              "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t2_transfer/bad_swallow_failure/acceptance",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.1403,
+              "tests_run": 2,
+              "test_failures": 1,
+              "test_errors": 0
+            },
+            "regression": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_regression",
+                "-v"
+              ],
+              "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t2_transfer/bad_swallow_failure/regression",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.077,
+              "tests_run": 2,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "combined": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t2_transfer/bad_swallow_failure/combined",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.075,
+              "tests_run": 6,
+              "test_failures": 1,
+              "test_errors": 0
+            }
+          },
+          "rejected": true
+        },
+        {
+          "name": "hardcode_example",
+          "category": "hardcode",
+          "overlay_dir": "private/references/repo_cli/t2_transfer/bad_patches/hardcode_example/code",
+          "fingerprints": {
+            "README.md": "62a609fcc4b103c6dcdcd7481773ea91409f6f3f5f5a2126f2eba8dacc0ce2f4",
+            "cli/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "cli/__main__.py": "d9f84d973e46d988d0dfda176dd03650f11ea05520d71016f571dcc9486bf723",
+            "cli/config.py": "288db9819e8915ae809d50e3338ccea737111ea42bb5244451e077d20707ce7d",
+            "cli/main.py": "3da49c69fa37a52039cf136c8fa0efedba6d2768b937a643fde26a8c93e92150",
+            "cli/mirror_config.py": "642b98b7e1e39cd8e93b2385398ab83b3df33b6ce41abfe74d0a936c0a8c3596",
+            "cli/state.py": "75b7eb1ad52a112b61e9dec857c2d343e91b377efa51cc4733b69e18fe400060",
+            "cli/validation.py": "bf62bf75f57f8f78aec43e9781d316e4a6fd6eb69d324d393d023f6189bad309",
+            "docs/configuration.md": "91ff381f7b9dafe00e04b7c7ed6328af9d94c29488bde6ac960417423bc40af5",
+            "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "tests/test_public.py": "1f430ca0176e3ecd5bf70a2e03efd0a4d1a758f34d617b934b10d097bdd5154a"
+          },
+          "commands": {
+            "public": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t2_transfer/bad_hardcode_example/public",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0387,
+              "tests_run": 2,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "acceptance": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_acceptance",
+                "-v"
+              ],
+              "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t2_transfer/bad_hardcode_example/acceptance",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.039,
+              "tests_run": 2,
+              "test_failures": 1,
+              "test_errors": 0
+            },
+            "regression": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_regression",
+                "-v"
+              ],
+              "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t2_transfer/bad_hardcode_example/regression",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0367,
+              "tests_run": 2,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "combined": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t2_transfer/bad_hardcode_example/combined",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0403,
+              "tests_run": 6,
+              "test_failures": 1,
+              "test_errors": 0
+            }
+          },
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "task_id": "repo_cli_t3",
+      "repository_id": "repo_cli",
+      "stage": "stale",
+      "checks": {
+        "public_baseline_passes": true,
+        "baseline_target_fails": true,
+        "baseline_regression_passes": true,
+        "reference_all_pass": true,
+        "bad_patches_rejected": true,
+        "bad_patch_categories_covered": true
+      },
+      "passed": true,
+      "fingerprints": {
+        "code_dir": {
+          "README.md": "8c0d9e720aae131acc9d4db78cdf89058b07103a49ba2097130e19919db6fc3c",
+          "cli/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "cli/__main__.py": "d9f84d973e46d988d0dfda176dd03650f11ea05520d71016f571dcc9486bf723",
+          "cli/main.py": "2e17c0292af10e691a712162b9d5eb0175f2ccc0170473a6e9bb67aaa364ae5e",
+          "cli/settings.py": "63a9349bde2eba1380bad58ca205b1fb6dd275cb93e69de12e693241774a83ac",
+          "cli/state.py": "75b7eb1ad52a112b61e9dec857c2d343e91b377efa51cc4733b69e18fe400060",
+          "cli/validation.py": "aa97f2273f06a6134741ed01a32f17d89a72ca1e1fe3572eda899e82f0a763f9",
+          "docs/configuration.md": "b4de5eaaf68dc730a459ea29c9a08b6f91ef97f201f2c34d186746ccf3621a6a",
+          "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "tests/test_public.py": "1155a22ae486bdb32f8fa0cc98f40a9cf432cb41e50c94841a3596b13ef9a000"
+        },
+        "private_tests_dir": {
+          "test_acceptance.py": "38c6eaef0f7c669f425c91a799fd26e5cd3acd5d81ceff9658f5016dff818cc6"
+        },
+        "regression_tests_dir": {
+          "test_regression.py": "a4bd3befc5dba9c835a9cb647238585fcea67be1239846adc5bfb60d243fdaed"
+        },
+        "reference_dir": {
+          "README.md": "8c0d9e720aae131acc9d4db78cdf89058b07103a49ba2097130e19919db6fc3c",
+          "cli/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "cli/__main__.py": "d9f84d973e46d988d0dfda176dd03650f11ea05520d71016f571dcc9486bf723",
+          "cli/main.py": "2e17c0292af10e691a712162b9d5eb0175f2ccc0170473a6e9bb67aaa364ae5e",
+          "cli/settings.py": "ddbc26b96591b0f0088400714ca591033cec5effe8fa43e6b85d0b4d77ad453d",
+          "cli/state.py": "75b7eb1ad52a112b61e9dec857c2d343e91b377efa51cc4733b69e18fe400060",
+          "cli/validation.py": "aa97f2273f06a6134741ed01a32f17d89a72ca1e1fe3572eda899e82f0a763f9",
+          "docs/configuration.md": "b4de5eaaf68dc730a459ea29c9a08b6f91ef97f201f2c34d186746ccf3621a6a",
+          "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "tests/test_public.py": "1155a22ae486bdb32f8fa0cc98f40a9cf432cb41e50c94841a3596b13ef9a000"
+        },
+        "task_file": {
+          "scenarios/repo_cli/t3_stale/task.md": "a8df277a0a13d8dc6e7b664ada8623123d1956fea50755dd6079f27190d02bfa"
+        },
+        "manifest": {
+          "sha256": "167cc0677e9fea4fd051c328c20f18cbba688342dabf8fd8a8499c42035ef533"
+        }
+      },
+      "baseline": {
+        "public": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests"
+          ],
+          "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t3_stale/baseline/public",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.0401,
+          "tests_run": 2,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "acceptance": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "_grader_acceptance",
+            "-v"
+          ],
+          "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t3_stale/baseline/acceptance",
+          "exit_code": 1,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.0385,
+          "tests_run": 2,
+          "test_failures": 1,
+          "test_errors": 0
+        },
+        "regression": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "_grader_regression",
+            "-v"
+          ],
+          "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t3_stale/baseline/regression",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.0402,
+          "tests_run": 1,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "combined": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests"
+          ],
+          "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t3_stale/baseline/combined",
+          "exit_code": 1,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.0386,
+          "tests_run": 5,
+          "test_failures": 1,
+          "test_errors": 0
+        }
+      },
+      "reference": {
+        "public": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests"
+          ],
+          "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t3_stale/reference/public",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.04,
+          "tests_run": 2,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "acceptance": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "_grader_acceptance",
+            "-v"
+          ],
+          "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t3_stale/reference/acceptance",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.0404,
+          "tests_run": 2,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "regression": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "_grader_regression",
+            "-v"
+          ],
+          "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t3_stale/reference/regression",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.0379,
+          "tests_run": 1,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "combined": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests"
+          ],
+          "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t3_stale/reference/combined",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.0402,
+          "tests_run": 5,
+          "test_failures": 0,
+          "test_errors": 0
+        }
+      },
+      "bad_patches": [
+        {
+          "name": "skip_validation",
+          "category": "remove_validation",
+          "overlay_dir": "private/references/repo_cli/t3_stale/bad_patches/skip_validation/code",
+          "fingerprints": {
+            "README.md": "8c0d9e720aae131acc9d4db78cdf89058b07103a49ba2097130e19919db6fc3c",
+            "cli/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "cli/__main__.py": "d9f84d973e46d988d0dfda176dd03650f11ea05520d71016f571dcc9486bf723",
+            "cli/main.py": "2e17c0292af10e691a712162b9d5eb0175f2ccc0170473a6e9bb67aaa364ae5e",
+            "cli/settings.py": "ddbc26b96591b0f0088400714ca591033cec5effe8fa43e6b85d0b4d77ad453d",
+            "cli/state.py": "75b7eb1ad52a112b61e9dec857c2d343e91b377efa51cc4733b69e18fe400060",
+            "cli/validation.py": "4a61c5e8b2d391015f1a66932bd8c10d12d47b80c63c259fc9615c21b2412500",
+            "docs/configuration.md": "b4de5eaaf68dc730a459ea29c9a08b6f91ef97f201f2c34d186746ccf3621a6a",
+            "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "tests/test_public.py": "1155a22ae486bdb32f8fa0cc98f40a9cf432cb41e50c94841a3596b13ef9a000"
+          },
+          "commands": {
+            "public": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t3_stale/bad_skip_validation/public",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0368,
+              "tests_run": 2,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "acceptance": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_acceptance",
+                "-v"
+              ],
+              "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t3_stale/bad_skip_validation/acceptance",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0365,
+              "tests_run": 2,
+              "test_failures": 1,
+              "test_errors": 0
+            },
+            "regression": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_regression",
+                "-v"
+              ],
+              "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t3_stale/bad_skip_validation/regression",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0385,
+              "tests_run": 1,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "combined": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t3_stale/bad_skip_validation/combined",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0395,
+              "tests_run": 5,
+              "test_failures": 1,
+              "test_errors": 0
+            }
+          },
+          "rejected": true
+        },
+        {
+          "name": "swallow_failure",
+          "category": "swallow_exception",
+          "overlay_dir": "private/references/repo_cli/t3_stale/bad_patches/swallow_failure/code",
+          "fingerprints": {
+            "README.md": "8c0d9e720aae131acc9d4db78cdf89058b07103a49ba2097130e19919db6fc3c",
+            "cli/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "cli/__main__.py": "d9f84d973e46d988d0dfda176dd03650f11ea05520d71016f571dcc9486bf723",
+            "cli/main.py": "2e17c0292af10e691a712162b9d5eb0175f2ccc0170473a6e9bb67aaa364ae5e",
+            "cli/settings.py": "ddbc26b96591b0f0088400714ca591033cec5effe8fa43e6b85d0b4d77ad453d",
+            "cli/state.py": "75b7eb1ad52a112b61e9dec857c2d343e91b377efa51cc4733b69e18fe400060",
+            "cli/validation.py": "fa4b4446e9ebf6e24a304523c1d28b0736da5a5852700bb8b3584a85d05b7454",
+            "docs/configuration.md": "b4de5eaaf68dc730a459ea29c9a08b6f91ef97f201f2c34d186746ccf3621a6a",
+            "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "tests/test_public.py": "1155a22ae486bdb32f8fa0cc98f40a9cf432cb41e50c94841a3596b13ef9a000"
+          },
+          "commands": {
+            "public": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t3_stale/bad_swallow_failure/public",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0365,
+              "tests_run": 2,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "acceptance": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_acceptance",
+                "-v"
+              ],
+              "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t3_stale/bad_swallow_failure/acceptance",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0403,
+              "tests_run": 2,
+              "test_failures": 1,
+              "test_errors": 0
+            },
+            "regression": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_regression",
+                "-v"
+              ],
+              "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t3_stale/bad_swallow_failure/regression",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0748,
+              "tests_run": 1,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "combined": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t3_stale/bad_swallow_failure/combined",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0764,
+              "tests_run": 5,
+              "test_failures": 1,
+              "test_errors": 0
+            }
+          },
+          "rejected": true
+        },
+        {
+          "name": "hardcode_example",
+          "category": "hardcode",
+          "overlay_dir": "private/references/repo_cli/t3_stale/bad_patches/hardcode_example/code",
+          "fingerprints": {
+            "README.md": "8c0d9e720aae131acc9d4db78cdf89058b07103a49ba2097130e19919db6fc3c",
+            "cli/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "cli/__main__.py": "d9f84d973e46d988d0dfda176dd03650f11ea05520d71016f571dcc9486bf723",
+            "cli/main.py": "2e17c0292af10e691a712162b9d5eb0175f2ccc0170473a6e9bb67aaa364ae5e",
+            "cli/settings.py": "ddbc26b96591b0f0088400714ca591033cec5effe8fa43e6b85d0b4d77ad453d",
+            "cli/state.py": "75b7eb1ad52a112b61e9dec857c2d343e91b377efa51cc4733b69e18fe400060",
+            "cli/validation.py": "7d718ee4386d3171a8399627ca27cf051a8aca5abfd21d53483b67dddaf8a90f",
+            "docs/configuration.md": "b4de5eaaf68dc730a459ea29c9a08b6f91ef97f201f2c34d186746ccf3621a6a",
+            "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "tests/test_public.py": "1155a22ae486bdb32f8fa0cc98f40a9cf432cb41e50c94841a3596b13ef9a000"
+          },
+          "commands": {
+            "public": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t3_stale/bad_hardcode_example/public",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0395,
+              "tests_run": 2,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "acceptance": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_acceptance",
+                "-v"
+              ],
+              "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t3_stale/bad_hardcode_example/acceptance",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0409,
+              "tests_run": 2,
+              "test_failures": 1,
+              "test_errors": 0
+            },
+            "regression": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_regression",
+                "-v"
+              ],
+              "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t3_stale/bad_hardcode_example/regression",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0364,
+              "tests_run": 1,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "combined": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t3_stale/bad_hardcode_example/combined",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0393,
+              "tests_run": 5,
+              "test_failures": 1,
+              "test_errors": 0
+            }
+          },
+          "rejected": true
+        }
+      ]
+    },
+    {
+      "task_id": "repo_cli_t4",
+      "repository_id": "repo_cli",
+      "stage": "heldout",
+      "checks": {
+        "public_baseline_passes": true,
+        "baseline_target_fails": true,
+        "baseline_regression_passes": true,
+        "reference_all_pass": true,
+        "bad_patches_rejected": true,
+        "bad_patch_categories_covered": true
+      },
+      "passed": true,
+      "fingerprints": {
+        "code_dir": {
+          "README.md": "e6ebd0c908b7140508a0f18f697a389dfd142c3b76d50ab9bf708382dcc45858",
+          "cli/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "cli/__main__.py": "d9f84d973e46d988d0dfda176dd03650f11ea05520d71016f571dcc9486bf723",
+          "cli/deploy.py": "8a7e18b6005ccf0d5ecd3ccc94e7b773fe9c266954126d890aae970c8545aa1a",
+          "cli/main.py": "1a8854b384d68f0de8907bd9935b918293098a3c575b9c69ab0d9a9fa095c54d",
+          "cli/settings.py": "ddbc26b96591b0f0088400714ca591033cec5effe8fa43e6b85d0b4d77ad453d",
+          "cli/state.py": "75b7eb1ad52a112b61e9dec857c2d343e91b377efa51cc4733b69e18fe400060",
+          "cli/validation.py": "aa97f2273f06a6134741ed01a32f17d89a72ca1e1fe3572eda899e82f0a763f9",
+          "docs/configuration.md": "3349ada6a2d7a74b5ce521fb160c5b322d243d15079bbfb3295c5aa50707d86b",
+          "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "tests/test_public.py": "337ab51d7617edf9b6c4760a45fbef14117e612413a15138ead7dabefddb3441"
+        },
+        "private_tests_dir": {
+          "test_acceptance.py": "90598694306b4ac4c9463c85f320f3a16720a9695fc7cbe2c3dc8a057627f317"
+        },
+        "regression_tests_dir": {
+          "test_regression.py": "9d46768492fca0e99ecb4615e9071171187c877b514e40425c448fd03cc7d22c"
+        },
+        "reference_dir": {
+          "README.md": "e6ebd0c908b7140508a0f18f697a389dfd142c3b76d50ab9bf708382dcc45858",
+          "cli/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "cli/__main__.py": "d9f84d973e46d988d0dfda176dd03650f11ea05520d71016f571dcc9486bf723",
+          "cli/deploy.py": "9cba369945714a01d8d78ac18852eff234b4647e2928586a11b0505545e88e78",
+          "cli/main.py": "1a8854b384d68f0de8907bd9935b918293098a3c575b9c69ab0d9a9fa095c54d",
+          "cli/settings.py": "ddbc26b96591b0f0088400714ca591033cec5effe8fa43e6b85d0b4d77ad453d",
+          "cli/state.py": "75b7eb1ad52a112b61e9dec857c2d343e91b377efa51cc4733b69e18fe400060",
+          "cli/validation.py": "aa97f2273f06a6134741ed01a32f17d89a72ca1e1fe3572eda899e82f0a763f9",
+          "docs/configuration.md": "3349ada6a2d7a74b5ce521fb160c5b322d243d15079bbfb3295c5aa50707d86b",
+          "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "tests/test_public.py": "337ab51d7617edf9b6c4760a45fbef14117e612413a15138ead7dabefddb3441"
+        },
+        "task_file": {
+          "scenarios/repo_cli/t4_heldout/task.md": "9399823f95b18023729d369a6926eb726baa342b1ad7403d27f42ed479ead0b4"
+        },
+        "manifest": {
+          "sha256": "d8c1d6fbeaec08d5cfca058331a14601135b1298cafaa37a64c26beea3af8e6b"
+        }
+      },
+      "baseline": {
+        "public": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests"
+          ],
+          "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t4_heldout/baseline/public",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.0377,
+          "tests_run": 2,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "acceptance": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "_grader_acceptance",
+            "-v"
+          ],
+          "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t4_heldout/baseline/acceptance",
+          "exit_code": 1,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.0393,
+          "tests_run": 2,
+          "test_failures": 1,
+          "test_errors": 0
+        },
+        "regression": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "_grader_regression",
+            "-v"
+          ],
+          "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t4_heldout/baseline/regression",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.0395,
+          "tests_run": 2,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "combined": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests"
+          ],
+          "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t4_heldout/baseline/combined",
+          "exit_code": 1,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.0402,
+          "tests_run": 6,
+          "test_failures": 1,
+          "test_errors": 0
+        }
+      },
+      "reference": {
+        "public": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests"
+          ],
+          "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t4_heldout/reference/public",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.0402,
+          "tests_run": 2,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "acceptance": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "_grader_acceptance",
+            "-v"
+          ],
+          "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t4_heldout/reference/acceptance",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.0399,
+          "tests_run": 2,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "regression": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "_grader_regression",
+            "-v"
+          ],
+          "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t4_heldout/reference/regression",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.0751,
+          "tests_run": 2,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "combined": {
+          "argv": [
+            "python",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests"
+          ],
+          "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t4_heldout/reference/combined",
+          "exit_code": 0,
+          "timed_out": false,
+          "error": null,
+          "duration_seconds": 0.0761,
+          "tests_run": 6,
+          "test_failures": 0,
+          "test_errors": 0
+        }
+      },
+      "bad_patches": [
+        {
+          "name": "skip_validation",
+          "category": "remove_validation",
+          "overlay_dir": "private/references/repo_cli/t4_heldout/bad_patches/skip_validation/code",
+          "fingerprints": {
+            "README.md": "e6ebd0c908b7140508a0f18f697a389dfd142c3b76d50ab9bf708382dcc45858",
+            "cli/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "cli/__main__.py": "d9f84d973e46d988d0dfda176dd03650f11ea05520d71016f571dcc9486bf723",
+            "cli/deploy.py": "9cba369945714a01d8d78ac18852eff234b4647e2928586a11b0505545e88e78",
+            "cli/main.py": "1a8854b384d68f0de8907bd9935b918293098a3c575b9c69ab0d9a9fa095c54d",
+            "cli/settings.py": "ddbc26b96591b0f0088400714ca591033cec5effe8fa43e6b85d0b4d77ad453d",
+            "cli/state.py": "75b7eb1ad52a112b61e9dec857c2d343e91b377efa51cc4733b69e18fe400060",
+            "cli/validation.py": "4a61c5e8b2d391015f1a66932bd8c10d12d47b80c63c259fc9615c21b2412500",
+            "docs/configuration.md": "3349ada6a2d7a74b5ce521fb160c5b322d243d15079bbfb3295c5aa50707d86b",
+            "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "tests/test_public.py": "337ab51d7617edf9b6c4760a45fbef14117e612413a15138ead7dabefddb3441"
+          },
+          "commands": {
+            "public": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t4_heldout/bad_skip_validation/public",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0396,
+              "tests_run": 2,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "acceptance": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_acceptance",
+                "-v"
+              ],
+              "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t4_heldout/bad_skip_validation/acceptance",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0401,
+              "tests_run": 2,
+              "test_failures": 1,
+              "test_errors": 0
+            },
+            "regression": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_regression",
+                "-v"
+              ],
+              "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t4_heldout/bad_skip_validation/regression",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0402,
+              "tests_run": 2,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "combined": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t4_heldout/bad_skip_validation/combined",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0377,
+              "tests_run": 6,
+              "test_failures": 1,
+              "test_errors": 0
+            }
+          },
+          "rejected": true
+        },
+        {
+          "name": "swallow_failure",
+          "category": "swallow_exception",
+          "overlay_dir": "private/references/repo_cli/t4_heldout/bad_patches/swallow_failure/code",
+          "fingerprints": {
+            "README.md": "e6ebd0c908b7140508a0f18f697a389dfd142c3b76d50ab9bf708382dcc45858",
+            "cli/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "cli/__main__.py": "d9f84d973e46d988d0dfda176dd03650f11ea05520d71016f571dcc9486bf723",
+            "cli/deploy.py": "9cba369945714a01d8d78ac18852eff234b4647e2928586a11b0505545e88e78",
+            "cli/main.py": "1a8854b384d68f0de8907bd9935b918293098a3c575b9c69ab0d9a9fa095c54d",
+            "cli/settings.py": "ddbc26b96591b0f0088400714ca591033cec5effe8fa43e6b85d0b4d77ad453d",
+            "cli/state.py": "75b7eb1ad52a112b61e9dec857c2d343e91b377efa51cc4733b69e18fe400060",
+            "cli/validation.py": "fa4b4446e9ebf6e24a304523c1d28b0736da5a5852700bb8b3584a85d05b7454",
+            "docs/configuration.md": "3349ada6a2d7a74b5ce521fb160c5b322d243d15079bbfb3295c5aa50707d86b",
+            "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "tests/test_public.py": "337ab51d7617edf9b6c4760a45fbef14117e612413a15138ead7dabefddb3441"
+          },
+          "commands": {
+            "public": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t4_heldout/bad_swallow_failure/public",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.04,
+              "tests_run": 2,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "acceptance": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_acceptance",
+                "-v"
+              ],
+              "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t4_heldout/bad_swallow_failure/acceptance",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0397,
+              "tests_run": 2,
+              "test_failures": 1,
+              "test_errors": 0
+            },
+            "regression": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_regression",
+                "-v"
+              ],
+              "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t4_heldout/bad_swallow_failure/regression",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0394,
+              "tests_run": 2,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "combined": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t4_heldout/bad_swallow_failure/combined",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0404,
+              "tests_run": 6,
+              "test_failures": 1,
+              "test_errors": 0
+            }
+          },
+          "rejected": true
+        },
+        {
+          "name": "hardcode_example",
+          "category": "hardcode",
+          "overlay_dir": "private/references/repo_cli/t4_heldout/bad_patches/hardcode_example/code",
+          "fingerprints": {
+            "README.md": "e6ebd0c908b7140508a0f18f697a389dfd142c3b76d50ab9bf708382dcc45858",
+            "cli/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "cli/__main__.py": "d9f84d973e46d988d0dfda176dd03650f11ea05520d71016f571dcc9486bf723",
+            "cli/deploy.py": "9cba369945714a01d8d78ac18852eff234b4647e2928586a11b0505545e88e78",
+            "cli/main.py": "1a8854b384d68f0de8907bd9935b918293098a3c575b9c69ab0d9a9fa095c54d",
+            "cli/settings.py": "ddbc26b96591b0f0088400714ca591033cec5effe8fa43e6b85d0b4d77ad453d",
+            "cli/state.py": "75b7eb1ad52a112b61e9dec857c2d343e91b377efa51cc4733b69e18fe400060",
+            "cli/validation.py": "bf62bf75f57f8f78aec43e9781d316e4a6fd6eb69d324d393d023f6189bad309",
+            "docs/configuration.md": "3349ada6a2d7a74b5ce521fb160c5b322d243d15079bbfb3295c5aa50707d86b",
+            "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "tests/test_public.py": "337ab51d7617edf9b6c4760a45fbef14117e612413a15138ead7dabefddb3441"
+          },
+          "commands": {
+            "public": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t4_heldout/bad_hardcode_example/public",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0395,
+              "tests_run": 2,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "acceptance": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_acceptance",
+                "-v"
+              ],
+              "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t4_heldout/bad_hardcode_example/acceptance",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0703,
+              "tests_run": 2,
+              "test_failures": 1,
+              "test_errors": 0
+            },
+            "regression": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_regression",
+                "-v"
+              ],
+              "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t4_heldout/bad_hardcode_example/regression",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0404,
+              "tests_run": 2,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "combined": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/dataset_validation_f860cfd69aef4c8fb28f75bf2cc255c6/t4_heldout/bad_hardcode_example/combined",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0705,
+              "tests_run": 6,
+              "test_failures": 1,
+              "test_errors": 0
+            }
+          },
+          "rejected": true
+        }
+      ]
+    }
+  ],
+  "boundary": "Offline engineering checks only; no Agent trajectory, solve rate, model effect or formal experiment is measured.",
+  "applicability": {
+    "passed": true,
+    "status": "not_applicable",
+    "reason": "the repository has no repo_api-specific applicability probe"
+  },
+  "passed": true,
+  "repository_id": "repo_cli",
+  "path_base": "benchmark_root"
+}

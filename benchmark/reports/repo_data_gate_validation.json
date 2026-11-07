@@ -1,0 +1,829 @@
+{
+  "kind": "repo_data_independent_gate_and_replay_qualification",
+  "passed": true,
+  "model_calls": 0,
+  "formal_results": false,
+  "tasks": [
+    {
+      "task_id": "repo_data_gate_seed_receipt",
+      "repository_id": "repo_data",
+      "stage": "seed",
+      "kind": "task",
+      "checks": {
+        "baseline_public_passes": true,
+        "baseline_target_fails_without_test_errors": true,
+        "baseline_regression_passes": true,
+        "reference_all_pass": true
+      },
+      "passed": true,
+      "future_main_inputs_used": [],
+      "independent_of_main_tasks": true,
+      "manifest_sha256": "fb01cf4bb67edb4e64396c5dfc9ba9d99ceb218530bf17246d9085fb59727e5e",
+      "fingerprints": {
+        "code_dir": {
+          "README.md": "3e5b13634d2ee9f218c93e31213c4f2bb707c303d2700c8c3e4fd46498be7cc5",
+          "docs/data-contract.md": "db2112912b9c8a4076be52ee3fd1f990fbe9afecca11a8e881b6ac1a6b776c8e",
+          "receipts.py": "9aaf220e3f4bb1fe7acad8409fe839c5ca59f053d7ee75833d28e8e6fa114a02",
+          "tests/test_public.py": "be4b78c27cee47e650cf40c2341c8816a21a1d1f5341995a555a219b6d962759"
+        },
+        "private_tests_dir": {
+          "test_private_gate.py": "e97c1c8537c467fa4299b803d86c8980192dd302f4890d2578b4bb4834e899ae"
+        },
+        "regression_tests_dir": {
+          "test_routes.py": "451fb95e843136750036f2c1a26cf5b82a9ff9b388714080f5090dee44032e08"
+        },
+        "reference_dir": {
+          "README.md": "3e5b13634d2ee9f218c93e31213c4f2bb707c303d2700c8c3e4fd46498be7cc5",
+          "docs/data-contract.md": "db2112912b9c8a4076be52ee3fd1f990fbe9afecca11a8e881b6ac1a6b776c8e",
+          "receipts.py": "bf7090c3d54c4a096a548df17a26fcf1b12f81637ff6f998a8f65c99f51827bb",
+          "tests/test_public.py": "be4b78c27cee47e650cf40c2341c8816a21a1d1f5341995a555a219b6d962759"
+        },
+        "task_file": "5a5267097bba15932d7aa5368f3a2b73f1b72b2b9625034299ee62339ba4a0e2"
+      },
+      "baseline": {
+        "public": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-v"
+          ],
+          "exit_code": 0,
+          "tests_run": 1,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "target": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-v"
+          ],
+          "exit_code": 1,
+          "tests_run": 2,
+          "test_failures": 1,
+          "test_errors": 0
+        },
+        "regression": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-v"
+          ],
+          "exit_code": 0,
+          "tests_run": 2,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "combined": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-v"
+          ],
+          "exit_code": 1,
+          "tests_run": 3,
+          "test_failures": 1,
+          "test_errors": 0
+        }
+      },
+      "reference": {
+        "public": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-v"
+          ],
+          "exit_code": 0,
+          "tests_run": 1,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "target": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-v"
+          ],
+          "exit_code": 0,
+          "tests_run": 2,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "regression": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-v"
+          ],
+          "exit_code": 0,
+          "tests_run": 2,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "combined": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-v"
+          ],
+          "exit_code": 0,
+          "tests_run": 3,
+          "test_failures": 0,
+          "test_errors": 0
+        }
+      },
+      "model_calls": 0,
+      "formal_results": false,
+      "boundary": "Offline fixture qualification only; no model-generated Agent result or publication benefit is measured."
+    },
+    {
+      "task_id": "repo_data_gate_transfer_reading",
+      "repository_id": "repo_data",
+      "stage": "transfer",
+      "kind": "task",
+      "checks": {
+        "baseline_public_passes": true,
+        "baseline_target_fails_without_test_errors": true,
+        "baseline_regression_passes": true,
+        "reference_all_pass": true
+      },
+      "passed": true,
+      "future_main_inputs_used": [],
+      "independent_of_main_tasks": true,
+      "manifest_sha256": "0a9cd794476f438b32e42cd9944da4efad623bf9f6a0934c2d8d7594ccaae479",
+      "fingerprints": {
+        "code_dir": {
+          "README.md": "3e5b13634d2ee9f218c93e31213c4f2bb707c303d2700c8c3e4fd46498be7cc5",
+          "docs/data-contract.md": "1c3005eff95af45194c114770bd450a3c931ecf67d5c530b162f40bd8389bc05",
+          "telemetry.py": "e4d3f69306163870138754b9c7a2a1f3b999c3905588d15b796b403400c743c7",
+          "tests/test_public.py": "6f91227fb66c6d7f066e20d2fd7d1af34a6e163b0cf43b235c81da2a34e43db2"
+        },
+        "private_tests_dir": {
+          "test_private_gate.py": "52046543d38efead6935647ab359f52c29493dd9bd07f7d8d30a05c13bde1520"
+        },
+        "regression_tests_dir": {
+          "test_routes.py": "fcd7a99360fc7a608f9bbbe8d322ecbeb247035fe79e6bc562477bb9fbbe76cb"
+        },
+        "reference_dir": {
+          "README.md": "3e5b13634d2ee9f218c93e31213c4f2bb707c303d2700c8c3e4fd46498be7cc5",
+          "docs/data-contract.md": "1c3005eff95af45194c114770bd450a3c931ecf67d5c530b162f40bd8389bc05",
+          "telemetry.py": "9dac3593e792d02d9c8ecee9a9e5b88b9aebabb3686d25f904d0763fec080684",
+          "tests/test_public.py": "6f91227fb66c6d7f066e20d2fd7d1af34a6e163b0cf43b235c81da2a34e43db2"
+        },
+        "task_file": "c5ef9f4b9253fa3a412a671a566b5926105a2f1c83b099b8fe0675e7f2338389"
+      },
+      "baseline": {
+        "public": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-v"
+          ],
+          "exit_code": 0,
+          "tests_run": 1,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "target": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-v"
+          ],
+          "exit_code": 1,
+          "tests_run": 3,
+          "test_failures": 2,
+          "test_errors": 0
+        },
+        "regression": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-v"
+          ],
+          "exit_code": 0,
+          "tests_run": 2,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "combined": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-v"
+          ],
+          "exit_code": 1,
+          "tests_run": 4,
+          "test_failures": 2,
+          "test_errors": 0
+        }
+      },
+      "reference": {
+        "public": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-v"
+          ],
+          "exit_code": 0,
+          "tests_run": 1,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "target": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-v"
+          ],
+          "exit_code": 0,
+          "tests_run": 3,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "regression": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-v"
+          ],
+          "exit_code": 0,
+          "tests_run": 2,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "combined": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-v"
+          ],
+          "exit_code": 0,
+          "tests_run": 4,
+          "test_failures": 0,
+          "test_errors": 0
+        }
+      },
+      "model_calls": 0,
+      "formal_results": false,
+      "boundary": "Offline fixture qualification only; no model-generated Agent result or publication benefit is measured."
+    },
+    {
+      "task_id": "repo_data_gate_stale_telemetry",
+      "repository_id": "repo_data",
+      "stage": "stale",
+      "kind": "task",
+      "checks": {
+        "baseline_public_passes": true,
+        "baseline_target_fails_without_test_errors": true,
+        "baseline_regression_passes": true,
+        "reference_all_pass": true
+      },
+      "passed": true,
+      "future_main_inputs_used": [],
+      "independent_of_main_tasks": true,
+      "manifest_sha256": "fbb8404b3224602b45ab3a9dc0fbecbaaf518bfeeb807cfbaaa1c443f873dd60",
+      "fingerprints": {
+        "code_dir": {
+          "README.md": "3e5b13634d2ee9f218c93e31213c4f2bb707c303d2700c8c3e4fd46498be7cc5",
+          "docs/data-contract.md": "87e2807100387aea8cba3e4ee47d4c1db76b49c0e9bf0217e2acdc9f099bf9c9",
+          "telemetry.py": "91647f406f001221c4bd70e7a75d8d761f4e75bd5dc5e0396bdc8e820dd8f2bf",
+          "tests/test_public.py": "91411119b69573b32f1cadf8eea2c55f3c454159fb72e47dfaa74a3c9b8bcf8e"
+        },
+        "private_tests_dir": {
+          "test_private_gate.py": "ff5fc95332255be9f49db1c602cf39b1cb528506e562c9e6267d45c2a0cf097c"
+        },
+        "regression_tests_dir": {
+          "test_routes.py": "9f641947d732074c09d9bd18200c1f1be2ebf1806ab55fc640fa43dcb324f4a8"
+        },
+        "reference_dir": {
+          "README.md": "3e5b13634d2ee9f218c93e31213c4f2bb707c303d2700c8c3e4fd46498be7cc5",
+          "docs/data-contract.md": "87e2807100387aea8cba3e4ee47d4c1db76b49c0e9bf0217e2acdc9f099bf9c9",
+          "telemetry.py": "63d9bafebdcd7388445158307360df9f3cfa0885fb69b469ab2d7a49af22d77d",
+          "tests/test_public.py": "91411119b69573b32f1cadf8eea2c55f3c454159fb72e47dfaa74a3c9b8bcf8e"
+        },
+        "task_file": "7fdeb0d3a88c72876f1bf68f96d8742e3ebd17c50a28e807d9a3691833bfb831"
+      },
+      "baseline": {
+        "public": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-v"
+          ],
+          "exit_code": 0,
+          "tests_run": 1,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "target": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-v"
+          ],
+          "exit_code": 1,
+          "tests_run": 3,
+          "test_failures": 2,
+          "test_errors": 0
+        },
+        "regression": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-v"
+          ],
+          "exit_code": 0,
+          "tests_run": 2,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "combined": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-v"
+          ],
+          "exit_code": 1,
+          "tests_run": 4,
+          "test_failures": 2,
+          "test_errors": 0
+        }
+      },
+      "reference": {
+        "public": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-v"
+          ],
+          "exit_code": 0,
+          "tests_run": 1,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "target": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-v"
+          ],
+          "exit_code": 0,
+          "tests_run": 3,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "regression": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-v"
+          ],
+          "exit_code": 0,
+          "tests_run": 2,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "combined": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-v"
+          ],
+          "exit_code": 0,
+          "tests_run": 4,
+          "test_failures": 0,
+          "test_errors": 0
+        }
+      },
+      "model_calls": 0,
+      "formal_results": false,
+      "boundary": "Offline fixture qualification only; no model-generated Agent result or publication benefit is measured."
+    },
+    {
+      "task_id": "repo_data_gate_meta_source_merge",
+      "repository_id": "repo_data",
+      "stage": "transfer",
+      "kind": "meta",
+      "checks": {
+        "baseline_public_passes": true,
+        "baseline_target_fails_without_test_errors": true,
+        "baseline_regression_passes": true,
+        "reference_all_pass": true
+      },
+      "passed": true,
+      "future_main_inputs_used": [],
+      "independent_of_main_tasks": true,
+      "manifest_sha256": "c7bccfcd0e1dd524f27f8e6e343e8a77460aed581551528bb029eacc23aa33aa",
+      "fingerprints": {
+        "code_dir": {
+          "README.md": "3e5b13634d2ee9f218c93e31213c4f2bb707c303d2700c8c3e4fd46498be7cc5",
+          "catalog.py": "ad570494060c02bce5950b1abc114b41b8ba657f3893226a9a587dd634ea8b93",
+          "docs/data-contract.md": "a1193624f268003805209f52d8de2462528f4ebd5eb747b1717e23f17c2fd5e3",
+          "tests/test_public.py": "ee8ac146cc0bb1db1ea3ebad0646813d5b8f69ca7804b642f48416c944bb147d"
+        },
+        "private_tests_dir": {
+          "test_private_gate.py": "a318f1ebe8bf8337307cafead112f35538aaff6bf928a7e68cb25bbe0f4e3f76"
+        },
+        "regression_tests_dir": {
+          "test_routes.py": "76703a0fc31fa522dd77bcc27d7d15593ab19a3ab676cb815bd794f57c985a6c"
+        },
+        "reference_dir": {
+          "README.md": "3e5b13634d2ee9f218c93e31213c4f2bb707c303d2700c8c3e4fd46498be7cc5",
+          "catalog.py": "96be7a5a694058bc98bd74593fb6cf3199825cfdf33bd5d7754d5e982f5555de",
+          "docs/data-contract.md": "a1193624f268003805209f52d8de2462528f4ebd5eb747b1717e23f17c2fd5e3",
+          "tests/test_public.py": "ee8ac146cc0bb1db1ea3ebad0646813d5b8f69ca7804b642f48416c944bb147d"
+        },
+        "task_file": "62447275bb5fc8ef2eca3ab009f803d56ee9cbda5e2d0fe70129f54b39d4a75d"
+      },
+      "baseline": {
+        "public": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-v"
+          ],
+          "exit_code": 0,
+          "tests_run": 1,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "target": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-v"
+          ],
+          "exit_code": 1,
+          "tests_run": 3,
+          "test_failures": 2,
+          "test_errors": 0
+        },
+        "regression": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-v"
+          ],
+          "exit_code": 0,
+          "tests_run": 2,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "combined": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-v"
+          ],
+          "exit_code": 1,
+          "tests_run": 4,
+          "test_failures": 2,
+          "test_errors": 0
+        }
+      },
+      "reference": {
+        "public": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-v"
+          ],
+          "exit_code": 0,
+          "tests_run": 1,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "target": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-v"
+          ],
+          "exit_code": 0,
+          "tests_run": 3,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "regression": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-v"
+          ],
+          "exit_code": 0,
+          "tests_run": 2,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "combined": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-v"
+          ],
+          "exit_code": 0,
+          "tests_run": 4,
+          "test_failures": 0,
+          "test_errors": 0
+        }
+      },
+      "model_calls": 0,
+      "formal_results": false,
+      "boundary": "Offline fixture qualification only; no model-generated Agent result or publication benefit is measured."
+    },
+    {
+      "task_id": "repo_data_replay_timecard_rounding",
+      "repository_id": "repo_data",
+      "stage": "seed",
+      "kind": "regression",
+      "checks": {
+        "baseline_public_passes": true,
+        "baseline_target_fails_without_test_errors": true,
+        "baseline_regression_passes": true,
+        "reference_all_pass": true
+      },
+      "passed": true,
+      "future_main_inputs_used": [],
+      "independent_of_main_tasks": true,
+      "manifest_sha256": "5ebbff796710ee1e0620d5db9924f303e96430f241b1aac693a8f74c095f672b",
+      "fingerprints": {
+        "code_dir": {
+          "README.md": "3e5b13634d2ee9f218c93e31213c4f2bb707c303d2700c8c3e4fd46498be7cc5",
+          "docs/data-contract.md": "677557759be426c9a9ce09a7c830cbfb9d986a40d9eea2894472c829c58930ce",
+          "tests/test_public.py": "609c51ada9875b16c0bddbd2acee2ef9fc4c3ed7ab6dfb19552c7381d549ef56",
+          "timecards.py": "1166780ce74447519c4c8db18c4e961ba74171c9610a7cedcf4ba6b9f0ded828"
+        },
+        "private_tests_dir": {
+          "test_private_gate.py": "60fe7a0dfbc1a7ec0bd9ef5aaba3f5e17e3feabed85264d4e4f4de941b2d52c2"
+        },
+        "regression_tests_dir": {
+          "test_routes.py": "fe89a22ea1ce49b23f03401474f1d26931c7fffed9613c8e15fbe96437a96ea4"
+        },
+        "reference_dir": {
+          "README.md": "3e5b13634d2ee9f218c93e31213c4f2bb707c303d2700c8c3e4fd46498be7cc5",
+          "docs/data-contract.md": "677557759be426c9a9ce09a7c830cbfb9d986a40d9eea2894472c829c58930ce",
+          "tests/test_public.py": "609c51ada9875b16c0bddbd2acee2ef9fc4c3ed7ab6dfb19552c7381d549ef56",
+          "timecards.py": "c2c5059390f2bf18e577b14dd0cc79b4bd000d475a73cc79f190f623aeeea311"
+        },
+        "task_file": "71bbffbd9695d80c94a005de7ee42492b3cf06ebc3b5a3f34cdb3a1d9ada2b15"
+      },
+      "baseline": {
+        "public": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-v"
+          ],
+          "exit_code": 0,
+          "tests_run": 1,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "target": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-v"
+          ],
+          "exit_code": 1,
+          "tests_run": 3,
+          "test_failures": 1,
+          "test_errors": 0
+        },
+        "regression": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-v"
+          ],
+          "exit_code": 0,
+          "tests_run": 2,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "combined": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-v"
+          ],
+          "exit_code": 1,
+          "tests_run": 4,
+          "test_failures": 1,
+          "test_errors": 0
+        }
+      },
+      "reference": {
+        "public": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-v"
+          ],
+          "exit_code": 0,
+          "tests_run": 1,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "target": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-v"
+          ],
+          "exit_code": 0,
+          "tests_run": 3,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "regression": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-v"
+          ],
+          "exit_code": 0,
+          "tests_run": 2,
+          "test_failures": 0,
+          "test_errors": 0
+        },
+        "combined": {
+          "argv": [
+            "/Library/Developer/CommandLineTools/usr/bin/python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-v"
+          ],
+          "exit_code": 0,
+          "tests_run": 4,
+          "test_failures": 0,
+          "test_errors": 0
+        }
+      },
+      "model_calls": 0,
+      "formal_results": false,
+      "boundary": "Offline fixture qualification only; no model-generated Agent result or publication benefit is measured."
+    }
+  ],
+  "boundary": "No model calls; validates independent fixture structure and baseline/reference execution only."
+}

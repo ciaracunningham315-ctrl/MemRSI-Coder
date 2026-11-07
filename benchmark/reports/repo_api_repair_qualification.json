@@ -1,0 +1,1335 @@
+{
+  "kind": "offline_reference_repair_qualification",
+  "model_calls": 0,
+  "model_trajectory_revalidation": "not_run",
+  "formal_results": false,
+  "boundary": "Reference edit replay, not an Agent solution. Ablation establishes multi-file reference necessity, not a lower bound for every possible solution or absence of ceiling effects.",
+  "passed": true,
+  "stages": [
+    {
+      "stage": "t1_seed",
+      "changed_business_files": [
+        "api/errors.py",
+        "api/reservations.py",
+        "api/validation.py"
+      ],
+      "ablations": [
+        {
+          "omitted_file": "api/errors.py",
+          "commands": {
+            "public": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/repair_qualification_f0087234467144cd97e5df1d40b39a23/t1_seed/ablations/0/public",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0411,
+              "tests_run": 3,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "acceptance": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_acceptance",
+                "-v"
+              ],
+              "cwd": ".runtime/repair_qualification_f0087234467144cd97e5df1d40b39a23/t1_seed/ablations/0/acceptance",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0407,
+              "tests_run": 4,
+              "test_failures": 18,
+              "test_errors": 0
+            },
+            "regression": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_regression",
+                "-v"
+              ],
+              "cwd": ".runtime/repair_qualification_f0087234467144cd97e5df1d40b39a23/t1_seed/ablations/0/regression",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0384,
+              "tests_run": 2,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "combined": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/repair_qualification_f0087234467144cd97e5df1d40b39a23/t1_seed/ablations/0/combined",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0363,
+              "tests_run": 9,
+              "test_failures": 18,
+              "test_errors": 0
+            }
+          },
+          "rejected": true
+        },
+        {
+          "omitted_file": "api/reservations.py",
+          "commands": {
+            "public": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/repair_qualification_f0087234467144cd97e5df1d40b39a23/t1_seed/ablations/1/public",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.039,
+              "tests_run": 3,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "acceptance": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_acceptance",
+                "-v"
+              ],
+              "cwd": ".runtime/repair_qualification_f0087234467144cd97e5df1d40b39a23/t1_seed/ablations/1/acceptance",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0406,
+              "tests_run": 4,
+              "test_failures": 1,
+              "test_errors": 0
+            },
+            "regression": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_regression",
+                "-v"
+              ],
+              "cwd": ".runtime/repair_qualification_f0087234467144cd97e5df1d40b39a23/t1_seed/ablations/1/regression",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0395,
+              "tests_run": 2,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "combined": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/repair_qualification_f0087234467144cd97e5df1d40b39a23/t1_seed/ablations/1/combined",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0405,
+              "tests_run": 9,
+              "test_failures": 1,
+              "test_errors": 0
+            }
+          },
+          "rejected": true
+        },
+        {
+          "omitted_file": "api/validation.py",
+          "commands": {
+            "public": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/repair_qualification_f0087234467144cd97e5df1d40b39a23/t1_seed/ablations/2/public",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0378,
+              "tests_run": 3,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "acceptance": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_acceptance",
+                "-v"
+              ],
+              "cwd": ".runtime/repair_qualification_f0087234467144cd97e5df1d40b39a23/t1_seed/ablations/2/acceptance",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0406,
+              "tests_run": 4,
+              "test_failures": 17,
+              "test_errors": 0
+            },
+            "regression": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_regression",
+                "-v"
+              ],
+              "cwd": ".runtime/repair_qualification_f0087234467144cd97e5df1d40b39a23/t1_seed/ablations/2/regression",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0404,
+              "tests_run": 2,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "combined": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/repair_qualification_f0087234467144cd97e5df1d40b39a23/t1_seed/ablations/2/combined",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0372,
+              "tests_run": 9,
+              "test_failures": 17,
+              "test_errors": 0
+            }
+          },
+          "rejected": true
+        }
+      ],
+      "actual_reference_edits": [
+        {
+          "file": "api/errors.py",
+          "actual_patch": "--- a/api/errors.py\n+++ b/api/errors.py\n@@ -1,5 +1,5 @@\n class InputError(ValueError):\n     def __init__(self, field, message):\n         super().__init__(message)\n-        self.field = \"body\"\n+        self.field = field\n         self.message = message\n",
+          "metadata": {
+            "git_commit": "edfc6fd7007b585d7f34fe7d1f7ec6aa1635574b",
+            "file_paths": [
+              "api/errors.py"
+            ],
+            "symbols": [],
+            "dependencies": [],
+            "content_evidence": [
+              {
+                "path": "api/errors.py",
+                "sha256": "ba5389a4945da7cb618fc56d992a2b40bc7f36032336e574ace5018d37ef30d7",
+                "source": "edit_file_after"
+              }
+            ],
+            "dependency_evidence": [],
+            "repository_id": "repo_api"
+          },
+          "tool_result": {
+            "tool_call_id": "0",
+            "status": "completed",
+            "output": "Edited api/errors.py",
+            "exit_code": 0,
+            "metadata": {
+              "git_commit": "edfc6fd7007b585d7f34fe7d1f7ec6aa1635574b",
+              "file_paths": [
+                "api/errors.py"
+              ],
+              "patch_artifact_id": "4d0455b9-c011-42a7-b72b-9968597c0346",
+              "content_evidence": [
+                {
+                  "path": "api/errors.py",
+                  "sha256": "ba5389a4945da7cb618fc56d992a2b40bc7f36032336e574ace5018d37ef30d7",
+                  "source": "edit_file_after"
+                }
+              ],
+              "dependency_evidence": [],
+              "truncated": false,
+              "artifact_id": "ecde34b2-94b6-4044-b84b-376bf7262898"
+            }
+          }
+        },
+        {
+          "file": "api/reservations.py",
+          "actual_patch": "--- a/api/reservations.py\n+++ b/api/reservations.py\n@@ -6,10 +6,10 @@\n def reserve(ledger, payload):\n     sku = read_sku(payload.get(\"sku\"), ledger.stock)\n     count = require_count(payload.get(\"count\"), \"count\")\n-    reservation_id = ledger.issue_id()\n+    \n     if count > ledger.stock[sku]:\n         return error_response(409, \"out_of_stock\", \"insufficient stock\", \"count\")\n     ledger.stock[sku] -= count\n-    \n+    reservation_id = ledger.issue_id()\n     return response(201, {\"reservation_id\": reservation_id, \"sku\": sku,\n                           \"count\": count, \"remaining\": ledger.stock[sku]})\n",
+          "metadata": {
+            "git_commit": "edfc6fd7007b585d7f34fe7d1f7ec6aa1635574b",
+            "file_paths": [
+              "api/reservations.py"
+            ],
+            "symbols": [],
+            "dependencies": [],
+            "content_evidence": [
+              {
+                "path": "api/reservations.py",
+                "sha256": "918d24de516bfb3ec70713221f20f7e2914dfdc882bc82cce79713c0e2eb3e1d",
+                "source": "edit_file_after"
+              }
+            ],
+            "dependency_evidence": [],
+            "repository_id": "repo_api"
+          },
+          "tool_result": {
+            "tool_call_id": "1",
+            "status": "completed",
+            "output": "Edited api/reservations.py",
+            "exit_code": 0,
+            "metadata": {
+              "git_commit": "edfc6fd7007b585d7f34fe7d1f7ec6aa1635574b",
+              "file_paths": [
+                "api/reservations.py"
+              ],
+              "patch_artifact_id": "87b7fa46-60f4-46d6-a831-45926988ffdc",
+              "content_evidence": [
+                {
+                  "path": "api/reservations.py",
+                  "sha256": "918d24de516bfb3ec70713221f20f7e2914dfdc882bc82cce79713c0e2eb3e1d",
+                  "source": "edit_file_after"
+                }
+              ],
+              "dependency_evidence": [],
+              "truncated": false,
+              "artifact_id": "943ff3bb-789c-4a9a-aee4-96878fc52b85"
+            }
+          }
+        },
+        {
+          "file": "api/validation.py",
+          "actual_patch": "--- a/api/validation.py\n+++ b/api/validation.py\n@@ -1,5 +1,8 @@\n from .errors import InputError\n \n \n-def require_count(value, field, maximum=50):\n-    return int(value)\n+def require_count(value, field, maximum=20):\n+    path = \".\".join(field) if isinstance(field, tuple) else field\n+    if type(value) is not int or not 1 <= value <= maximum:\n+        raise InputError(field, f\"{path} must be an integer between {1} and {maximum}\")\n+    return value\n",
+          "metadata": {
+            "git_commit": "edfc6fd7007b585d7f34fe7d1f7ec6aa1635574b",
+            "file_paths": [
+              "api/validation.py"
+            ],
+            "symbols": [
+              "require_count"
+            ],
+            "dependencies": [],
+            "content_evidence": [
+              {
+                "path": "api/validation.py",
+                "sha256": "115b3a8b02d368500ccb87568fdbbb16e22ffc6a15e8d078a479479097126268",
+                "source": "edit_file_after"
+              }
+            ],
+            "dependency_evidence": [],
+            "repository_id": "repo_api"
+          },
+          "tool_result": {
+            "tool_call_id": "2",
+            "status": "completed",
+            "output": "Edited api/validation.py",
+            "exit_code": 0,
+            "metadata": {
+              "git_commit": "edfc6fd7007b585d7f34fe7d1f7ec6aa1635574b",
+              "file_paths": [
+                "api/validation.py"
+              ],
+              "patch_artifact_id": "c7efb1bd-c6f2-43cf-a0c1-269bffac14e2",
+              "content_evidence": [
+                {
+                  "path": "api/validation.py",
+                  "sha256": "115b3a8b02d368500ccb87568fdbbb16e22ffc6a15e8d078a479479097126268",
+                  "source": "edit_file_after"
+                }
+              ],
+              "dependency_evidence": [],
+              "truncated": false,
+              "artifact_id": "2665cc13-03c4-4319-a867-f0031782194c"
+            }
+          }
+        }
+      ],
+      "natural_required_evidence": true,
+      "source_fingerprint": {
+        "baseline": {
+          "README.md": "ef99eab2e30a7e14f9a008745d9ad30c135fa0ee63ad18a6093309a03f42296d",
+          "api/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "api/app.py": "6df83a559ae985310315d11cade4c56384201b1e86256b82df5e958de4badb9b",
+          "api/catalog.py": "ce78d18ce305af7753f1cbaea30025e06e276a553c214b5115e82dba1a000dc7",
+          "api/errors.py": "ce9f395abef62bc241dac92d244c4154344b73da108928d76f513212fb82d90f",
+          "api/http.py": "a796f9cf16322b42f5080b50bab30e533c2ad04fc88b1ec14b0952c8a7b8dad5",
+          "api/reservations.py": "85cf2f1f1c53e074f25956f0d3fdcf1d90f51138be5a6b10bc5bea05dca83d98",
+          "api/stock.py": "69336fa2407b020be3b352bcc8d533775dd08ede2e11f9124f793144d1a3a384",
+          "api/validation.py": "9c7ac6529a05c9c23e6da77c647f70fbe84803a7344c0a9dbe373256ec532478",
+          "docs/api-contract.md": "7c6ae0510b080ad55cf74c672558563ade9b015599c737199a57cdce4cdfec60",
+          "tests/test_public_api.py": "e17ed460a7fe974d403216c2b758b00e0e85351fd60dd7e3ef5937ab6a63a306"
+        },
+        "reference": {
+          "README.md": "ef99eab2e30a7e14f9a008745d9ad30c135fa0ee63ad18a6093309a03f42296d",
+          "api/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "api/app.py": "6df83a559ae985310315d11cade4c56384201b1e86256b82df5e958de4badb9b",
+          "api/catalog.py": "ce78d18ce305af7753f1cbaea30025e06e276a553c214b5115e82dba1a000dc7",
+          "api/errors.py": "ba5389a4945da7cb618fc56d992a2b40bc7f36032336e574ace5018d37ef30d7",
+          "api/http.py": "a796f9cf16322b42f5080b50bab30e533c2ad04fc88b1ec14b0952c8a7b8dad5",
+          "api/reservations.py": "918d24de516bfb3ec70713221f20f7e2914dfdc882bc82cce79713c0e2eb3e1d",
+          "api/stock.py": "69336fa2407b020be3b352bcc8d533775dd08ede2e11f9124f793144d1a3a384",
+          "api/validation.py": "115b3a8b02d368500ccb87568fdbbb16e22ffc6a15e8d078a479479097126268",
+          "docs/api-contract.md": "7c6ae0510b080ad55cf74c672558563ade9b015599c737199a57cdce4cdfec60",
+          "tests/test_public_api.py": "e17ed460a7fe974d403216c2b758b00e0e85351fd60dd7e3ef5937ab6a63a306"
+        }
+      },
+      "passed": true
+    },
+    {
+      "stage": "t2_transfer",
+      "changed_business_files": [
+        "api/errors.py",
+        "api/returns.py",
+        "api/validation.py"
+      ],
+      "ablations": [
+        {
+          "omitted_file": "api/errors.py",
+          "commands": {
+            "public": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/repair_qualification_f0087234467144cd97e5df1d40b39a23/t2_transfer/ablations/0/public",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0385,
+              "tests_run": 3,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "acceptance": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_acceptance",
+                "-v"
+              ],
+              "cwd": ".runtime/repair_qualification_f0087234467144cd97e5df1d40b39a23/t2_transfer/ablations/0/acceptance",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0402,
+              "tests_run": 4,
+              "test_failures": 1,
+              "test_errors": 0
+            },
+            "regression": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_regression",
+                "-v"
+              ],
+              "cwd": ".runtime/repair_qualification_f0087234467144cd97e5df1d40b39a23/t2_transfer/ablations/0/regression",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0391,
+              "tests_run": 6,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "combined": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/repair_qualification_f0087234467144cd97e5df1d40b39a23/t2_transfer/ablations/0/combined",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0405,
+              "tests_run": 13,
+              "test_failures": 1,
+              "test_errors": 0
+            }
+          },
+          "rejected": true
+        },
+        {
+          "omitted_file": "api/returns.py",
+          "commands": {
+            "public": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/repair_qualification_f0087234467144cd97e5df1d40b39a23/t2_transfer/ablations/1/public",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0402,
+              "tests_run": 3,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "acceptance": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_acceptance",
+                "-v"
+              ],
+              "cwd": ".runtime/repair_qualification_f0087234467144cd97e5df1d40b39a23/t2_transfer/ablations/1/acceptance",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0406,
+              "tests_run": 4,
+              "test_failures": 13,
+              "test_errors": 0
+            },
+            "regression": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_regression",
+                "-v"
+              ],
+              "cwd": ".runtime/repair_qualification_f0087234467144cd97e5df1d40b39a23/t2_transfer/ablations/1/regression",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0387,
+              "tests_run": 6,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "combined": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/repair_qualification_f0087234467144cd97e5df1d40b39a23/t2_transfer/ablations/1/combined",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0403,
+              "tests_run": 13,
+              "test_failures": 13,
+              "test_errors": 0
+            }
+          },
+          "rejected": true
+        },
+        {
+          "omitted_file": "api/validation.py",
+          "commands": {
+            "public": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/repair_qualification_f0087234467144cd97e5df1d40b39a23/t2_transfer/ablations/2/public",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0403,
+              "tests_run": 3,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "acceptance": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_acceptance",
+                "-v"
+              ],
+              "cwd": ".runtime/repair_qualification_f0087234467144cd97e5df1d40b39a23/t2_transfer/ablations/2/acceptance",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0404,
+              "tests_run": 4,
+              "test_failures": 13,
+              "test_errors": 0
+            },
+            "regression": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_regression",
+                "-v"
+              ],
+              "cwd": ".runtime/repair_qualification_f0087234467144cd97e5df1d40b39a23/t2_transfer/ablations/2/regression",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0404,
+              "tests_run": 6,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "combined": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/repair_qualification_f0087234467144cd97e5df1d40b39a23/t2_transfer/ablations/2/combined",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0405,
+              "tests_run": 13,
+              "test_failures": 13,
+              "test_errors": 0
+            }
+          },
+          "rejected": true
+        }
+      ],
+      "actual_reference_edits": [
+        {
+          "file": "api/errors.py",
+          "actual_patch": "--- a/api/errors.py\n+++ b/api/errors.py\n@@ -1,5 +1,5 @@\n class InputError(ValueError):\n     def __init__(self, field, message):\n         super().__init__(message)\n-        self.field = str(field)\n+        self.field = \".\".join(field) if isinstance(field, tuple) else field\n         self.message = message\n",
+          "metadata": {
+            "git_commit": "42c8870ea4edc705d084d2cef1f9baeb2a3a9978",
+            "file_paths": [
+              "api/errors.py"
+            ],
+            "symbols": [],
+            "dependencies": [],
+            "content_evidence": [
+              {
+                "path": "api/errors.py",
+                "sha256": "ff24e0cff730340f3fbafdd40e0fb17c395fa08a673a0bb30307ad918296663b",
+                "source": "edit_file_after"
+              }
+            ],
+            "dependency_evidence": [],
+            "repository_id": "repo_api"
+          },
+          "tool_result": {
+            "tool_call_id": "0",
+            "status": "completed",
+            "output": "Edited api/errors.py",
+            "exit_code": 0,
+            "metadata": {
+              "git_commit": "42c8870ea4edc705d084d2cef1f9baeb2a3a9978",
+              "file_paths": [
+                "api/errors.py"
+              ],
+              "patch_artifact_id": "452d7980-d070-45db-80ab-fe040271d8ec",
+              "content_evidence": [
+                {
+                  "path": "api/errors.py",
+                  "sha256": "ff24e0cff730340f3fbafdd40e0fb17c395fa08a673a0bb30307ad918296663b",
+                  "source": "edit_file_after"
+                }
+              ],
+              "dependency_evidence": [],
+              "truncated": false,
+              "artifact_id": "5b0396e5-cf16-4a88-a099-b8aa1abd1f58"
+            }
+          }
+        },
+        {
+          "file": "api/returns.py",
+          "actual_patch": "--- a/api/returns.py\n+++ b/api/returns.py\n@@ -12,6 +12,6 @@\n         inspection = payload[\"inspection\"]\n         if type(inspection) is not dict:\n             raise InputError(\"inspection\", \"inspection must be an object\")\n-        damaged = require_count(inspection.get(\"damaged\"), (\"inspection\", \"damaged\"), maximum=count)\n-    ledger.stock[sku] += count\n+        damaged = require_count(inspection.get(\"damaged\"), (\"inspection\", \"damaged\"), maximum=count, minimum=0)\n+    ledger.stock[sku] += count - damaged\n     return response(200, {\"sku\": sku, \"count\": count, \"available\": ledger.stock[sku]})\n",
+          "metadata": {
+            "git_commit": "42c8870ea4edc705d084d2cef1f9baeb2a3a9978",
+            "file_paths": [
+              "api/returns.py"
+            ],
+            "symbols": [],
+            "dependencies": [],
+            "content_evidence": [
+              {
+                "path": "api/returns.py",
+                "sha256": "b9f36b56733b449ac25e7343be2ff2e33fcf5132d318a6a7dd638054368dc15f",
+                "source": "edit_file_after"
+              }
+            ],
+            "dependency_evidence": [],
+            "repository_id": "repo_api"
+          },
+          "tool_result": {
+            "tool_call_id": "1",
+            "status": "completed",
+            "output": "Edited api/returns.py",
+            "exit_code": 0,
+            "metadata": {
+              "git_commit": "42c8870ea4edc705d084d2cef1f9baeb2a3a9978",
+              "file_paths": [
+                "api/returns.py"
+              ],
+              "patch_artifact_id": "30b7044d-f1a6-46c7-8b7c-820680f68a68",
+              "content_evidence": [
+                {
+                  "path": "api/returns.py",
+                  "sha256": "b9f36b56733b449ac25e7343be2ff2e33fcf5132d318a6a7dd638054368dc15f",
+                  "source": "edit_file_after"
+                }
+              ],
+              "dependency_evidence": [],
+              "truncated": false,
+              "artifact_id": "e7b8aa37-6510-4630-9630-8db28d2c04fc"
+            }
+          }
+        },
+        {
+          "file": "api/validation.py",
+          "actual_patch": "--- a/api/validation.py\n+++ b/api/validation.py\n@@ -1,8 +1,8 @@\n from .errors import InputError\n \n \n-def require_count(value, field, maximum=20):\n+def require_count(value, field, maximum=20, *, minimum=1):\n     path = \".\".join(field) if isinstance(field, tuple) else field\n-    if type(value) is not int or not 1 <= value <= maximum:\n-        raise InputError(field, f\"{path} must be an integer between {1} and {maximum}\")\n+    if type(value) is not int or not minimum <= value <= maximum:\n+        raise InputError(field, f\"{path} must be an integer between {minimum} and {maximum}\")\n     return value\n",
+          "metadata": {
+            "git_commit": "42c8870ea4edc705d084d2cef1f9baeb2a3a9978",
+            "file_paths": [
+              "api/validation.py"
+            ],
+            "symbols": [
+              "require_count"
+            ],
+            "dependencies": [],
+            "content_evidence": [
+              {
+                "path": "api/validation.py",
+                "sha256": "03973cab96c00d49833c6a21069341ff274379839c7abd3b228d03b391bbde3b",
+                "source": "edit_file_after"
+              }
+            ],
+            "dependency_evidence": [],
+            "repository_id": "repo_api"
+          },
+          "tool_result": {
+            "tool_call_id": "2",
+            "status": "completed",
+            "output": "Edited api/validation.py",
+            "exit_code": 0,
+            "metadata": {
+              "git_commit": "42c8870ea4edc705d084d2cef1f9baeb2a3a9978",
+              "file_paths": [
+                "api/validation.py"
+              ],
+              "patch_artifact_id": "b5b5425a-9fcf-4b49-a3b4-07a61a548839",
+              "content_evidence": [
+                {
+                  "path": "api/validation.py",
+                  "sha256": "03973cab96c00d49833c6a21069341ff274379839c7abd3b228d03b391bbde3b",
+                  "source": "edit_file_after"
+                }
+              ],
+              "dependency_evidence": [],
+              "truncated": false,
+              "artifact_id": "abfbfbaf-d21b-4dad-84ee-52c626314ea3"
+            }
+          }
+        }
+      ],
+      "natural_required_evidence": true,
+      "source_fingerprint": {
+        "baseline": {
+          "README.md": "ef99eab2e30a7e14f9a008745d9ad30c135fa0ee63ad18a6093309a03f42296d",
+          "api/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "api/app.py": "a89edd15d6d54a9783ca2c74651777a90152cf4089ef31e6788540800a087944",
+          "api/catalog.py": "ce78d18ce305af7753f1cbaea30025e06e276a553c214b5115e82dba1a000dc7",
+          "api/errors.py": "1ff99afc03eb6a56094f91992c0d9a0ae5671c167f73b894a06c873368e537d5",
+          "api/http.py": "a796f9cf16322b42f5080b50bab30e533c2ad04fc88b1ec14b0952c8a7b8dad5",
+          "api/reservations.py": "918d24de516bfb3ec70713221f20f7e2914dfdc882bc82cce79713c0e2eb3e1d",
+          "api/returns.py": "34d299c157adba90625ee6cf99b4f81bb1a83a24f5927b6a3f97a0fa743b40eb",
+          "api/stock.py": "69336fa2407b020be3b352bcc8d533775dd08ede2e11f9124f793144d1a3a384",
+          "api/validation.py": "115b3a8b02d368500ccb87568fdbbb16e22ffc6a15e8d078a479479097126268",
+          "docs/api-contract.md": "3e83ffb6f7c19ca8c6340264657788012c610db4313d2516cde51773d01f3ad6",
+          "tests/test_public_api.py": "598f27de60ac591dda96182b5673a48ccb09b8cd6e0afd08ad583533d0aa1a57"
+        },
+        "reference": {
+          "README.md": "ef99eab2e30a7e14f9a008745d9ad30c135fa0ee63ad18a6093309a03f42296d",
+          "api/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "api/app.py": "a89edd15d6d54a9783ca2c74651777a90152cf4089ef31e6788540800a087944",
+          "api/catalog.py": "ce78d18ce305af7753f1cbaea30025e06e276a553c214b5115e82dba1a000dc7",
+          "api/errors.py": "ff24e0cff730340f3fbafdd40e0fb17c395fa08a673a0bb30307ad918296663b",
+          "api/http.py": "a796f9cf16322b42f5080b50bab30e533c2ad04fc88b1ec14b0952c8a7b8dad5",
+          "api/reservations.py": "918d24de516bfb3ec70713221f20f7e2914dfdc882bc82cce79713c0e2eb3e1d",
+          "api/returns.py": "b9f36b56733b449ac25e7343be2ff2e33fcf5132d318a6a7dd638054368dc15f",
+          "api/stock.py": "69336fa2407b020be3b352bcc8d533775dd08ede2e11f9124f793144d1a3a384",
+          "api/validation.py": "03973cab96c00d49833c6a21069341ff274379839c7abd3b228d03b391bbde3b",
+          "docs/api-contract.md": "3e83ffb6f7c19ca8c6340264657788012c610db4313d2516cde51773d01f3ad6",
+          "tests/test_public_api.py": "598f27de60ac591dda96182b5673a48ccb09b8cd6e0afd08ad583533d0aa1a57"
+        }
+      },
+      "passed": true
+    },
+    {
+      "stage": "t3_stale",
+      "changed_business_files": [
+        "api/holds.py",
+        "api/validation.py"
+      ],
+      "ablations": [
+        {
+          "omitted_file": "api/holds.py",
+          "commands": {
+            "public": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/repair_qualification_f0087234467144cd97e5df1d40b39a23/t3_stale/ablations/0/public",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0401,
+              "tests_run": 3,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "acceptance": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_acceptance",
+                "-v"
+              ],
+              "cwd": ".runtime/repair_qualification_f0087234467144cd97e5df1d40b39a23/t3_stale/ablations/0/acceptance",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0404,
+              "tests_run": 4,
+              "test_failures": 2,
+              "test_errors": 0
+            },
+            "regression": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_regression",
+                "-v"
+              ],
+              "cwd": ".runtime/repair_qualification_f0087234467144cd97e5df1d40b39a23/t3_stale/ablations/0/regression",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0404,
+              "tests_run": 10,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "combined": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/repair_qualification_f0087234467144cd97e5df1d40b39a23/t3_stale/ablations/0/combined",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0405,
+              "tests_run": 17,
+              "test_failures": 2,
+              "test_errors": 0
+            }
+          },
+          "rejected": true
+        },
+        {
+          "omitted_file": "api/validation.py",
+          "commands": {
+            "public": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/repair_qualification_f0087234467144cd97e5df1d40b39a23/t3_stale/ablations/1/public",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0404,
+              "tests_run": 3,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "acceptance": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_acceptance",
+                "-v"
+              ],
+              "cwd": ".runtime/repair_qualification_f0087234467144cd97e5df1d40b39a23/t3_stale/ablations/1/acceptance",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0403,
+              "tests_run": 4,
+              "test_failures": 1,
+              "test_errors": 0
+            },
+            "regression": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_regression",
+                "-v"
+              ],
+              "cwd": ".runtime/repair_qualification_f0087234467144cd97e5df1d40b39a23/t3_stale/ablations/1/regression",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0404,
+              "tests_run": 10,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "combined": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/repair_qualification_f0087234467144cd97e5df1d40b39a23/t3_stale/ablations/1/combined",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0403,
+              "tests_run": 17,
+              "test_failures": 1,
+              "test_errors": 0
+            }
+          },
+          "rejected": true
+        }
+      ],
+      "actual_reference_edits": [],
+      "natural_required_evidence": true,
+      "source_fingerprint": {
+        "baseline": {
+          "README.md": "ef99eab2e30a7e14f9a008745d9ad30c135fa0ee63ad18a6093309a03f42296d",
+          "api/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "api/app.py": "f39ada269c814ef137c7dfbb4102bf868f4dd4147f96d50a74ecd90cb4ac2dce",
+          "api/catalog.py": "31cdbaf87921f21c1ae5069dd33905ee2f878a028c1445054547b5f3a0790bbe",
+          "api/faults.py": "770e14337c39fbb63952617363282ffeef3e9a702b85cf3799fd2aa4669ab28c",
+          "api/holds.py": "6349402cfc75494d59f1752ffe009f128cdd09c25f9f50ac7d9d796bf3e3893d",
+          "api/http.py": "a796f9cf16322b42f5080b50bab30e533c2ad04fc88b1ec14b0952c8a7b8dad5",
+          "api/reservations.py": "299e9881ea07770ec00575faacefa832158156ab223e99af4969529fe5159eea",
+          "api/returns.py": "0b371e0fc780cfe66fb9a45fa8025fdf2333f4975f64cbaa5e319c9bca7134f1",
+          "api/stock.py": "69336fa2407b020be3b352bcc8d533775dd08ede2e11f9124f793144d1a3a384",
+          "api/validation.py": "4caa0d57ad696be718695a64b9179b1ba2ee982bee654c621d6bdcf643f407e0",
+          "docs/api-contract.md": "075d6d59d33bbbd6887faf2085fef2654a72952dd28e84a95877d3033fe091c6",
+          "tests/test_public_api.py": "aa0425a8d51c184ab27e70aa9f7367aa88fc00546ac38a1351b08fc76c599434"
+        },
+        "reference": {
+          "README.md": "ef99eab2e30a7e14f9a008745d9ad30c135fa0ee63ad18a6093309a03f42296d",
+          "api/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "api/app.py": "f39ada269c814ef137c7dfbb4102bf868f4dd4147f96d50a74ecd90cb4ac2dce",
+          "api/catalog.py": "31cdbaf87921f21c1ae5069dd33905ee2f878a028c1445054547b5f3a0790bbe",
+          "api/faults.py": "770e14337c39fbb63952617363282ffeef3e9a702b85cf3799fd2aa4669ab28c",
+          "api/holds.py": "b6ee37b186b6ad0c1847cad9c84bc9ce663e5e06d72144588e525791100f9484",
+          "api/http.py": "a796f9cf16322b42f5080b50bab30e533c2ad04fc88b1ec14b0952c8a7b8dad5",
+          "api/reservations.py": "299e9881ea07770ec00575faacefa832158156ab223e99af4969529fe5159eea",
+          "api/returns.py": "0b371e0fc780cfe66fb9a45fa8025fdf2333f4975f64cbaa5e319c9bca7134f1",
+          "api/stock.py": "69336fa2407b020be3b352bcc8d533775dd08ede2e11f9124f793144d1a3a384",
+          "api/validation.py": "740e4e7f6efb1234cd6dc2136991aecdd8ec99da9f3a7c745c63fd8903468a8c",
+          "docs/api-contract.md": "075d6d59d33bbbd6887faf2085fef2654a72952dd28e84a95877d3033fe091c6",
+          "tests/test_public_api.py": "aa0425a8d51c184ab27e70aa9f7367aa88fc00546ac38a1351b08fc76c599434"
+        }
+      },
+      "passed": true
+    },
+    {
+      "stage": "t4_heldout",
+      "changed_business_files": [
+        "api/batch.py",
+        "api/stock.py",
+        "api/validation.py"
+      ],
+      "ablations": [
+        {
+          "omitted_file": "api/batch.py",
+          "commands": {
+            "public": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/repair_qualification_f0087234467144cd97e5df1d40b39a23/t4_heldout/ablations/0/public",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0403,
+              "tests_run": 3,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "acceptance": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_acceptance",
+                "-v"
+              ],
+              "cwd": ".runtime/repair_qualification_f0087234467144cd97e5df1d40b39a23/t4_heldout/ablations/0/acceptance",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.04,
+              "tests_run": 5,
+              "test_failures": 1,
+              "test_errors": 0
+            },
+            "regression": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_regression",
+                "-v"
+              ],
+              "cwd": ".runtime/repair_qualification_f0087234467144cd97e5df1d40b39a23/t4_heldout/ablations/0/regression",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0404,
+              "tests_run": 14,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "combined": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/repair_qualification_f0087234467144cd97e5df1d40b39a23/t4_heldout/ablations/0/combined",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0365,
+              "tests_run": 22,
+              "test_failures": 1,
+              "test_errors": 0
+            }
+          },
+          "rejected": true
+        },
+        {
+          "omitted_file": "api/stock.py",
+          "commands": {
+            "public": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/repair_qualification_f0087234467144cd97e5df1d40b39a23/t4_heldout/ablations/1/public",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0372,
+              "tests_run": 3,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "acceptance": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_acceptance",
+                "-v"
+              ],
+              "cwd": ".runtime/repair_qualification_f0087234467144cd97e5df1d40b39a23/t4_heldout/ablations/1/acceptance",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0398,
+              "tests_run": 5,
+              "test_failures": 1,
+              "test_errors": 0
+            },
+            "regression": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_regression",
+                "-v"
+              ],
+              "cwd": ".runtime/repair_qualification_f0087234467144cd97e5df1d40b39a23/t4_heldout/ablations/1/regression",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0403,
+              "tests_run": 14,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "combined": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/repair_qualification_f0087234467144cd97e5df1d40b39a23/t4_heldout/ablations/1/combined",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0405,
+              "tests_run": 22,
+              "test_failures": 1,
+              "test_errors": 0
+            }
+          },
+          "rejected": true
+        },
+        {
+          "omitted_file": "api/validation.py",
+          "commands": {
+            "public": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/repair_qualification_f0087234467144cd97e5df1d40b39a23/t4_heldout/ablations/2/public",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0404,
+              "tests_run": 3,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "acceptance": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_acceptance",
+                "-v"
+              ],
+              "cwd": ".runtime/repair_qualification_f0087234467144cd97e5df1d40b39a23/t4_heldout/ablations/2/acceptance",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0402,
+              "tests_run": 5,
+              "test_failures": 1,
+              "test_errors": 0
+            },
+            "regression": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "_grader_regression",
+                "-v"
+              ],
+              "cwd": ".runtime/repair_qualification_f0087234467144cd97e5df1d40b39a23/t4_heldout/ablations/2/regression",
+              "exit_code": 0,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0404,
+              "tests_run": 14,
+              "test_failures": 0,
+              "test_errors": 0
+            },
+            "combined": {
+              "argv": [
+                "python",
+                "-m",
+                "unittest",
+                "discover",
+                "-s",
+                "tests"
+              ],
+              "cwd": ".runtime/repair_qualification_f0087234467144cd97e5df1d40b39a23/t4_heldout/ablations/2/combined",
+              "exit_code": 1,
+              "timed_out": false,
+              "error": null,
+              "duration_seconds": 0.0402,
+              "tests_run": 22,
+              "test_failures": 1,
+              "test_errors": 0
+            }
+          },
+          "rejected": true
+        }
+      ],
+      "actual_reference_edits": [],
+      "natural_required_evidence": true,
+      "source_fingerprint": {
+        "baseline": {
+          "README.md": "ef99eab2e30a7e14f9a008745d9ad30c135fa0ee63ad18a6093309a03f42296d",
+          "api/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "api/app.py": "d101b6429905c79617d0e5bbba84a3b047735ba880b04d0f3560a6923d683bde",
+          "api/batch.py": "ca87bb9887392bf268ef7234e1b992ad7bf8aa1b65eaf0474f83f91e523eec0d",
+          "api/catalog.py": "31cdbaf87921f21c1ae5069dd33905ee2f878a028c1445054547b5f3a0790bbe",
+          "api/faults.py": "770e14337c39fbb63952617363282ffeef3e9a702b85cf3799fd2aa4669ab28c",
+          "api/holds.py": "b6ee37b186b6ad0c1847cad9c84bc9ce663e5e06d72144588e525791100f9484",
+          "api/http.py": "a796f9cf16322b42f5080b50bab30e533c2ad04fc88b1ec14b0952c8a7b8dad5",
+          "api/reservations.py": "299e9881ea07770ec00575faacefa832158156ab223e99af4969529fe5159eea",
+          "api/returns.py": "0b371e0fc780cfe66fb9a45fa8025fdf2333f4975f64cbaa5e319c9bca7134f1",
+          "api/stock.py": "1386bafee95e3ddf617171a554303a41b394f5de174f2b5521e7da983b07ad95",
+          "api/validation.py": "805887de858e3d4e7bbd6bca381b8b41b6e3528563d732a7928ef6e7bcec2538",
+          "docs/api-contract.md": "ac8044e49c4ede8f96059f7b05f62087e333c75810b3045d88f4d7b12245e8fb",
+          "tests/test_public_api.py": "f41b54ed92cf62d234609f51d1b83438832f95697840944aff4468a3548768bf"
+        },
+        "reference": {
+          "README.md": "ef99eab2e30a7e14f9a008745d9ad30c135fa0ee63ad18a6093309a03f42296d",
+          "api/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "api/app.py": "d101b6429905c79617d0e5bbba84a3b047735ba880b04d0f3560a6923d683bde",
+          "api/batch.py": "3c927eba3c0e5084888eae52f02b4d3ba37e1bfb65d98f4cef7ed1f2e431a762",
+          "api/catalog.py": "31cdbaf87921f21c1ae5069dd33905ee2f878a028c1445054547b5f3a0790bbe",
+          "api/faults.py": "770e14337c39fbb63952617363282ffeef3e9a702b85cf3799fd2aa4669ab28c",
+          "api/holds.py": "b6ee37b186b6ad0c1847cad9c84bc9ce663e5e06d72144588e525791100f9484",
+          "api/http.py": "a796f9cf16322b42f5080b50bab30e533c2ad04fc88b1ec14b0952c8a7b8dad5",
+          "api/reservations.py": "299e9881ea07770ec00575faacefa832158156ab223e99af4969529fe5159eea",
+          "api/returns.py": "0b371e0fc780cfe66fb9a45fa8025fdf2333f4975f64cbaa5e319c9bca7134f1",
+          "api/stock.py": "69336fa2407b020be3b352bcc8d533775dd08ede2e11f9124f793144d1a3a384",
+          "api/validation.py": "2bf7b5c3e536c940b8614744881c41d7277f85f14e424a8f3d0811bc9778067c",
+          "docs/api-contract.md": "ac8044e49c4ede8f96059f7b05f62087e333c75810b3045d88f4d7b12245e8fb",
+          "tests/test_public_api.py": "f41b54ed92cf62d234609f51d1b83438832f95697840944aff4468a3548768bf"
+        }
+      },
+      "passed": true
+    }
+  ]
+}

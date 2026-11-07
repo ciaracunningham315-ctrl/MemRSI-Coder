@@ -1,0 +1,15 @@
+from .catalog import read_sku
+from .validation import require_count
+from .http import response, error_response
+
+
+def reserve(ledger, payload):
+    sku = read_sku(payload.get("sku"), ledger.stock)
+    count = require_count(payload.get("count"), "count")
+    reservation_id = ledger.issue_id()
+    if count > ledger.stock[sku]:
+        return error_response(409, "out_of_stock", "insufficient stock", "count")
+    ledger.stock[sku] -= count
+    
+    return response(201, {"reservation_id": reservation_id, "sku": sku,
+                          "count": count, "remaining": ledger.stock[sku]})
