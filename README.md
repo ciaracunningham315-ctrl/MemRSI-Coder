@@ -8,7 +8,7 @@
 
 ## 1. 项目架构
 
-EvoCode 由 **在线双角色执行与验收闭环（Agent Loop）**、**双角色独立上下文与可启停路由层**、**SQLite WAL 事件溯源与 Raw-RAG 长期记忆** 以及 **快慢双环受控 RSI 自进化** 四部分组成：
+MemRSI-Coder/EvoCode 由 **在线双角色执行与验收闭环（Agent Loop）**、**双角色独立上下文与可启停路由层**、**SQLite WAL 事件溯源与 Raw-RAG 长期记忆** 以及 **快慢双环受控 RSI 自进化** 四部分组成：
 
 ![EvoCode 系统架构总览](docs/assets/architecture_overview.png)
 
