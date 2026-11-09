@@ -1,4 +1,4 @@
-# EvoCode
+# MemRSI-Coder
 
 具备 **混合长期记忆（Raw-RAG）** 与 **门禁受控双环技能自进化（RSI）** 的可恢复双角色 Coding Agent。
 
